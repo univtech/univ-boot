@@ -9,7 +9,6 @@
         <groupId>org.univtech.boot</groupId>
         <artifactId>univboot-web</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../univboot</relativePath>
     </parent>
 
     <artifactId>univboot-web-mvc</artifactId>

@@ -12,7 +12,7 @@
     </parent>
 
     <modules>
-        <module>../univboot-web</module>
+        <module>univboot-web</module>
     </modules>
 
     <!--    <parent>-->
