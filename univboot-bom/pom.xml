@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.univtech.boot</groupId>
-    <artifactId>univboot-web-bom</artifactId>
+    <artifactId>univboot-bom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>univboot-web-bom</name>
-    <description>Univboot Boot BOM</description>
+    <name>univboot-bom</name>
+    <description>Univboot BOM</description>
     <url>https://univtech.org.cn/projects/univboot</url>
 
     <scm>
@@ -47,16 +47,14 @@
     </licenses>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>
+
+
 
 </project>
