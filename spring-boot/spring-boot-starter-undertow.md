@@ -1,14 +1,7 @@
 # spring-boot-starter-undertow
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <!-- This module was also published with a richer model, Gradle metadata,  -->
-  <!-- which should be used instead. Do not delete the following line which  -->
-  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
-  <!-- that they should prefer consuming it instead. -->
-  <!-- do_not_remove: published-with-gradle-metadata -->
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-undertow</artifactId>
@@ -48,7 +41,4 @@ io.undertow:undertow-core:2.3.8.Final:compile
 io.undertow:undertow-servlet:2.3.8.Final:compile
 io.undertow:undertow-websockets-jsr:2.3.8.Final:compile
 org.apache.tomcat.embed:tomcat-embed-el:10.1.12:compile
-  </dependencies>
-</project>
-
 ```

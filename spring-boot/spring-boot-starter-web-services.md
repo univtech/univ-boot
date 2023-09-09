@@ -1,14 +1,7 @@
 # spring-boot-starter-web-services
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <!-- This module was also published with a richer model, Gradle metadata,  -->
-  <!-- which should be used instead. Do not delete the following line which  -->
-  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
-  <!-- that they should prefer consuming it instead. -->
-  <!-- do_not_remove: published-with-gradle-metadata -->
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-web-services</artifactId>
@@ -49,7 +42,4 @@ com.sun.xml.messaging.saaj:saaj-impl:3.0.2:compile
 jakarta.xml.ws:jakarta.xml.ws-api:4.0.0:compile
 org.springframework:spring-oxm:6.0.11:compile
 org.springframework.ws:spring-ws-core:4.0.5:compile
-  </dependencies>
-</project>
-
 ```
