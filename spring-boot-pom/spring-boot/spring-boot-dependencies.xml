@@ -7,24 +7,7 @@
   <packaging>pom</packaging>
   <name>spring-boot-dependencies</name>
   <description>Spring Boot Dependencies</description>
-  <url>https://spring.io/projects/spring-boot</url>
-  <licenses>
-    <license>
-      <name>Apache License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-    </license>
-  </licenses>
-  <developers>
-    <developer>
-      <name>Spring</name>
-      <email>ask@spring.io</email>
-      <organization>VMware, Inc.</organization>
-      <organizationUrl>https://www.spring.io</organizationUrl>
-    </developer>
-  </developers>
-  <scm>
-    <url>https://github.com/spring-projects/spring-boot</url>
-  </scm>
+
   <properties>
     <activemq.version>5.18.2</activemq.version>
     <angus-mail.version>1.1.0</angus-mail.version>

@@ -5,16 +5,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.univtech.boot</groupId>
-        <artifactId>univboot</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
+    <groupId>org.univtech.boot</groupId>
+    <artifactId>univboot-web-bom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-    <artifactId>univboot-web-mvc</artifactId>
-
-    <name>univboot-web-mvc</name>
-    <description>Univboot Web MVC</description>
+    <name>univboot-web-bom</name>
+    <description>Univboot Boot BOM</description>
     <url>https://univtech.org.cn/projects/univboot</url>
 
     <scm>
