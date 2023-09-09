@@ -44,48 +44,13 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.14.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.module</groupId>
-      <artifactId>jackson-module-parameter-names</artifactId>
-      <version>2.14.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna-platform</artifactId>
-      <version>5.7.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-compress</artifactId>
-      <version>1.21</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.httpcomponents.client5</groupId>
-      <artifactId>httpclient5</artifactId>
-      <version>5.2.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.tomlj</groupId>
-      <artifactId>tomlj</artifactId>
-      <version>1.0.0</version>
-      <scope>compile</scope>
-    </dependency>
+com.fasterxml.jackson.core:jackson-databind:2.14.2:compile
+com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2:compile
+net.java.dev.jna:jna-platform:5.7.0:compile
+org.apache.commons:commons-compress:1.21:compile
+org.apache.httpcomponents.client5:httpclient5:5.2.1:compile
+org.springframework:spring-core:6.0.11:compile
+org.tomlj:tomlj:1.0.0:compile
   </dependencies>
 </project>
 

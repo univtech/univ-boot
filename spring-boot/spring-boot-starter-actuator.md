@@ -44,30 +44,10 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-actuator-autoconfigure</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-observation</artifactId>
-      <version>1.11.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-core</artifactId>
-      <version>1.11.3</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.springframework.boot:spring-boot-actuator-autoconfigure:3.1.3:compile
+io.micrometer:micrometer-observation:1.11.3:compile
+io.micrometer:micrometer-core:1.11.3:compile
   </dependencies>
 </project>
 

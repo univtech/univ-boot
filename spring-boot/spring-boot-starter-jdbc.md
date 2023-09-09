@@ -44,24 +44,9 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.zaxxer</groupId>
-      <artifactId>HikariCP</artifactId>
-      <version>5.0.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+com.zaxxer:HikariCP:5.0.1:compile
+org.springframework:spring-jdbc:6.0.11:compile
   </dependencies>
 </project>
 

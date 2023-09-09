@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-oauth2-authorization-server</artifactId>
-      <version>1.1.2</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter-web:3.1.3:compile
+org.springframework.security:spring-security-oauth2-authorization-server:1.1.2:compile
   </dependencies>
 </project>
 

@@ -44,36 +44,11 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-config</artifactId>
-      <version>6.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-core</artifactId>
-      <version>6.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-oauth2-client</artifactId>
-      <version>6.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-oauth2-jose</artifactId>
-      <version>6.1.3</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.springframework.security:spring-security-config:6.1.3:compile
+org.springframework.security:spring-security-core:6.1.3:compile
+org.springframework.security:spring-security-oauth2-client:6.1.3:compile
+org.springframework.security:spring-security-oauth2-jose:6.1.3:compile
   </dependencies>
 </project>
 

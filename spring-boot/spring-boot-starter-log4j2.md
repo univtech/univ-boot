@@ -44,24 +44,9 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j2-impl</artifactId>
-      <version>2.20.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>2.20.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-jul</artifactId>
-      <version>2.20.0</version>
-      <scope>compile</scope>
-    </dependency>
+org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0:compile
+org.apache.logging.log4j:log4j-core:2.20.0:compile
+org.apache.logging.log4j:log4j-jul:2.20.0:compile
   </dependencies>
 </project>
 

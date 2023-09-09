@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.integration</groupId>
-      <artifactId>spring-integration-core</artifactId>
-      <version>6.1.2</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter-aop:3.1.3:compile
+org.springframework.integration:spring-integration-core:6.1.2:compile
   </dependencies>
 </project>
 

@@ -44,30 +44,10 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>io.undertow</groupId>
-      <artifactId>undertow-core</artifactId>
-      <version>2.3.8.Final</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.undertow</groupId>
-      <artifactId>undertow-servlet</artifactId>
-      <version>2.3.8.Final</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.undertow</groupId>
-      <artifactId>undertow-websockets-jsr</artifactId>
-      <version>2.3.8.Final</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-el</artifactId>
-      <version>10.1.12</version>
-      <scope>compile</scope>
-    </dependency>
+io.undertow:undertow-core:2.3.8.Final:compile
+io.undertow:undertow-servlet:2.3.8.Final:compile
+io.undertow:undertow-websockets-jsr:2.3.8.Final:compile
+org.apache.tomcat.embed:tomcat-embed-el:10.1.12:compile
   </dependencies>
 </project>
 

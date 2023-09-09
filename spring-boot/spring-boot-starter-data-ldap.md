@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-ldap</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.springframework.data:spring-data-ldap:3.1.3:compile
   </dependencies>
 </project>
 

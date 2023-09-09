@@ -44,24 +44,9 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.4.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-to-slf4j</artifactId>
-      <version>2.20.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>jul-to-slf4j</artifactId>
-      <version>2.0.7</version>
-      <scope>compile</scope>
-    </dependency>
+ch.qos.logback:logback-classic:1.4.11:compile
+org.apache.logging.log4j:log4j-to-slf4j:2.20.0:compile
+org.slf4j:jul-to-slf4j:2.0.7:compile
   </dependencies>
 </project>
 

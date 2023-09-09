@@ -44,12 +44,7 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>com.vaadin.external.google</groupId>
-      <artifactId>android-json</artifactId>
-      <version>0.0.20131108.vaadin1</version>
-      <scope>runtime</scope>
-    </dependency>
+com.vaadin.external.google:android-json:0.0.20131108.vaadin1:runtime
   </dependencies>
 </project>
 

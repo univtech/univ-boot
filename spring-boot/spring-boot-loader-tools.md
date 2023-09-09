@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-compress</artifactId>
-      <version>1.21</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
+org.apache.commons:commons-compress:1.21:compile
+org.springframework:spring-core:6.0.11:compile
   </dependencies>
 </project>
 

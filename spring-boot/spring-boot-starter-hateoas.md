@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.hateoas</groupId>
-      <artifactId>spring-hateoas</artifactId>
-      <version>2.1.2</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter-web:3.1.3:compile
+org.springframework.hateoas:spring-hateoas:2.1.2:compile
   </dependencies>
 </project>
 

@@ -44,24 +44,9 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-sync</artifactId>
-      <version>4.9.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-mongodb</artifactId>
-      <version>4.1.3</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.mongodb:mongodb-driver-sync:4.9.1:compile
+org.springframework.data:spring-data-mongodb:4.1.3:compile
   </dependencies>
 </project>
 

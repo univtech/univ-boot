@@ -44,53 +44,14 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-json</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-tomcat</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-validation</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-web</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.containers</groupId>
-      <artifactId>jersey-container-servlet-core</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.containers</groupId>
-      <artifactId>jersey-container-servlet</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.core</groupId>
-      <artifactId>jersey-server</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.ext</groupId>
-      <artifactId>jersey-bean-validation</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
+org.springframework.boot:spring-boot-starter-json:3.1.3:compile
+org.springframework.boot:spring-boot-starter-tomcat:3.1.3:compile
+org.springframework.boot:spring-boot-starter-validation:3.1.3:compile
+org.springframework:spring-web:6.0.11:compile
+org.glassfish.jersey.containers:jersey-container-servlet-core:3.1.3:compile
+org.glassfish.jersey.containers:jersey-container-servlet:3.1.3:compile
+org.glassfish.jersey.core:jersey-server:3.1.3:compile
+org.glassfish.jersey.ext:jersey-bean-validation:3.1.3:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>jakarta.el</artifactId>
@@ -101,19 +62,8 @@
           <groupId>jakarta.el</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.ext</groupId>
-      <artifactId>jersey-spring6</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jersey.media</groupId>
-      <artifactId>jersey-media-json-jackson</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
+org.glassfish.jersey.ext:jersey-spring6:3.1.3:compile
+org.glassfish.jersey.media:jersey-media-json-jackson:3.1.3:compile
   </dependencies>
 </project>
 

@@ -44,24 +44,9 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-elasticsearch</artifactId>
-      <version>5.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-json</artifactId>
-      <version>3.1.3</version>
-      <scope>runtime</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.springframework.data:spring-data-elasticsearch:5.1.3:compile
+org.springframework.boot:spring-boot-starter-json:3.1.3:runtime
   </dependencies>
 </project>
 

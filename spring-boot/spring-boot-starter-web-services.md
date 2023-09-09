@@ -44,36 +44,11 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.xml.messaging.saaj</groupId>
-      <artifactId>saaj-impl</artifactId>
-      <version>3.0.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.xml.ws</groupId>
-      <artifactId>jakarta.xml.ws-api</artifactId>
-      <version>4.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-oxm</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.ws</groupId>
-      <artifactId>spring-ws-core</artifactId>
-      <version>4.0.5</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter-web:3.1.3:compile
+com.sun.xml.messaging.saaj:saaj-impl:3.0.2:compile
+jakarta.xml.ws:jakarta.xml.ws-api:4.0.0:compile
+org.springframework:spring-oxm:6.0.11:compile
+org.springframework.ws:spring-ws-core:4.0.5:compile
   </dependencies>
 </project>
 

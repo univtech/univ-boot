@@ -44,36 +44,11 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-jdbc</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate.orm</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>6.2.7.Final</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-jpa</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter-aop:3.1.3:compile
+org.springframework.boot:spring-boot-starter-jdbc:3.1.3:compile
+org.hibernate.orm:hibernate-core:6.2.7.Final:compile
+org.springframework.data:spring-data-jpa:3.1.3:compile
+org.springframework:spring-aspects:6.0.11:compile
   </dependencies>
 </project>
 

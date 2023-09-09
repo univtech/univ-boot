@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.groovy</groupId>
-      <artifactId>groovy-templates</artifactId>
-      <version>4.0.14</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter-web:3.1.3:compile
+org.apache.groovy:groovy-templates:4.0.14:compile
   </dependencies>
 </project>
 

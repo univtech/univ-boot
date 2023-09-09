@@ -44,102 +44,27 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-test</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-test-autoconfigure</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.jayway.jsonpath</groupId>
-      <artifactId>json-path</artifactId>
-      <version>2.8.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.minidev</groupId>
-      <artifactId>json-smart</artifactId>
-      <version>2.4.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.assertj</groupId>
-      <artifactId>assertj-core</artifactId>
-      <version>3.24.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest</artifactId>
-      <version>2.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.9.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>5.3.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-junit-jupiter</artifactId>
-      <version>5.3.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.skyscreamer</groupId>
-      <artifactId>jsonassert</artifactId>
-      <version>1.5.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.xmlunit</groupId>
-      <artifactId>xmlunit-core</artifactId>
-      <version>2.9.1</version>
-      <scope>compile</scope>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.springframework.boot:spring-boot-test:3.1.3:compile
+org.springframework.boot:spring-boot-test-autoconfigure:3.1.3:compile
+com.jayway.jsonpath:json-path:2.8.0:compile
+jakarta.xml.bind:jakarta.xml.bind-api:4.0.0:compile
+net.minidev:json-smart:2.4.11:compile
+org.assertj:assertj-core:3.24.2:compile
+org.hamcrest:hamcrest:2.2:compile
+org.junit.jupiter:junit-jupiter:5.9.3:compile
+org.mockito:mockito-core:5.3.1:compile
+org.mockito:mockito-junit-jupiter:5.3.1:compile
+org.skyscreamer:jsonassert:1.5.1:compile
+org.springframework:spring-core:6.0.11:compile
+org.springframework:spring-test:6.0.11:compile
+org.xmlunit:xmlunit-core:2.9.1:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>jaxb-api</artifactId>
           <groupId>javax.xml.bind</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
   </dependencies>
 </project>
 

@@ -44,53 +44,19 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.websocket</groupId>
-      <artifactId>jakarta.websocket-api</artifactId>
-      <version>2.1.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.websocket</groupId>
-      <artifactId>jakarta.websocket-client-api</artifactId>
-      <version>2.1.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-el</artifactId>
-      <version>10.1.12</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-servlets</artifactId>
-      <version>11.0.15</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-webapp</artifactId>
-      <version>11.0.15</version>
-      <scope>compile</scope>
+jakarta.servlet:jakarta.servlet-api:6.0.0:compile
+jakarta.websocket:jakarta.websocket-api:2.1.1:compile
+jakarta.websocket:jakarta.websocket-client-api:2.1.1:compile
+org.apache.tomcat.embed:tomcat-embed-el:10.1.12:compile
+org.eclipse.jetty:jetty-servlets:11.0.15:compile
+org.eclipse.jetty:jetty-webapp:11.0.15:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>jetty-jakarta-servlet-api</artifactId>
           <groupId>org.eclipse.jetty.toolchain</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
-      <artifactId>websocket-jakarta-server</artifactId>
-      <version>11.0.15</version>
-      <scope>compile</scope>
+org.eclipse.jetty.websocket:websocket-jakarta-server:11.0.15:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>jetty-jakarta-servlet-api</artifactId>
@@ -101,12 +67,7 @@
           <groupId>org.eclipse.jetty.toolchain</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
-      <artifactId>websocket-jetty-server</artifactId>
-      <version>11.0.15</version>
-      <scope>compile</scope>
+org.eclipse.jetty.websocket:websocket-jetty-server:11.0.15:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>jetty-jakarta-servlet-api</artifactId>
@@ -117,7 +78,6 @@
           <groupId>org.eclipse.jetty</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
   </dependencies>
 </project>
 

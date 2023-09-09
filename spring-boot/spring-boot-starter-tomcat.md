@@ -44,42 +44,22 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>jakarta.annotation</groupId>
-      <artifactId>jakarta.annotation-api</artifactId>
-      <version>2.1.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-core</artifactId>
-      <version>10.1.12</version>
-      <scope>compile</scope>
+jakarta.annotation:jakarta.annotation-api:2.1.1:compile
+org.apache.tomcat.embed:tomcat-embed-core:10.1.12:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>tomcat-annotations-api</artifactId>
           <groupId>org.apache.tomcat</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-el</artifactId>
-      <version>10.1.12</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-websocket</artifactId>
-      <version>10.1.12</version>
-      <scope>compile</scope>
+org.apache.tomcat.embed:tomcat-embed-el:10.1.12:compile
+org.apache.tomcat.embed:tomcat-embed-websocket:10.1.12:compile</scope>
       <exclusions>
         <exclusion>
           <artifactId>tomcat-annotations-api</artifactId>
           <groupId>org.apache.tomcat</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
   </dependencies>
 </project>
 

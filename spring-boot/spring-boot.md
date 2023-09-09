@@ -43,18 +43,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework:spring-core:6.0.11:compile
+org.springframework:spring-context:6.0.11:compile
   </dependencies>
 </project>
 ```

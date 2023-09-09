@@ -44,48 +44,13 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-json</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-reactor-netty</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.dataformat</groupId>
-      <artifactId>jackson-dataformat-cbor</artifactId>
-      <version>2.15.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.rsocket</groupId>
-      <artifactId>rsocket-core</artifactId>
-      <version>1.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.rsocket</groupId>
-      <artifactId>rsocket-transport-netty</artifactId>
-      <version>1.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-messaging</artifactId>
-      <version>6.0.11</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot-starter:3.1.3:compile
+org.springframework.boot:spring-boot-starter-json:3.1.3:compile
+org.springframework.boot:spring-boot-starter-reactor-netty:3.1.3:compile
+com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.15.2:compile
+io.rsocket:rsocket-core:1.1.3:compile
+io.rsocket:rsocket-transport-netty:1.1.3:compile
+org.springframework:spring-messaging:6.0.11:compile
   </dependencies>
 </project>
 

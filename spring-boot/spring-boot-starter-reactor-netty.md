@@ -44,12 +44,7 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>io.projectreactor.netty</groupId>
-      <artifactId>reactor-netty-http</artifactId>
-      <version>1.1.10</version>
-      <scope>compile</scope>
-    </dependency>
+io.projectreactor.netty:reactor-netty-http:1.1.10:compile
   </dependencies>
 </project>
 

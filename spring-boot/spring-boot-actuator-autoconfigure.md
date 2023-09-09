@@ -44,36 +44,11 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-actuator</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-autoconfigure</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.15.2</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-jsr310</artifactId>
-      <version>2.15.2</version>
-      <scope>runtime</scope>
-    </dependency>
+org.springframework.boot:spring-boot-actuator:3.1.3:compile
+org.springframework.boot:spring-boot:3.1.3:compile
+org.springframework.boot:spring-boot-autoconfigure:3.1.3:compile
+com.fasterxml.jackson.core:jackson-databind:2.15.2:runtime
+com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2:runtime
   </dependencies>
 </project>
 

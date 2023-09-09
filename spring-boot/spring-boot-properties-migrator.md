@@ -44,18 +44,8 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot</artifactId>
-      <version>3.1.3</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-metadata</artifactId>
-      <version>3.1.3</version>
-      <scope>runtime</scope>
-    </dependency>
+org.springframework.boot:spring-boot:3.1.3:runtime
+org.springframework.boot:spring-boot-configuration-metadata:3.1.3:runtime
   </dependencies>
 </project>
 

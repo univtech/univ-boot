@@ -44,12 +44,7 @@
     <url>https://github.com/spring-projects/spring-boot/issues</url>
   </issueManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot</artifactId>
-      <version>3.1.3</version>
-      <scope>compile</scope>
-    </dependency>
+org.springframework.boot:spring-boot:3.1.3:compile
   </dependencies>
 </project>
 
