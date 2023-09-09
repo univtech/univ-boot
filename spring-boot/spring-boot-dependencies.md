@@ -2,10 +2,8 @@
 
 ```xml
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-dependencies</artifactId>
-  <version>3.1.3</version>
+# 构件
+org.springframework.boot:spring-boot-dependencies:3.1.3
   <packaging>pom</packaging>
   <name>spring-boot-dependencies</name>
   <description>Spring Boot Dependencies</description>
