@@ -413,154 +413,6 @@ org.springframework.security:spring-security-bom:${spring-security}:pom:import
 org.springframework.session:spring-session-bom:${spring-session}:pom:import
 org.springframework.ws:spring-ws-bom:${spring-ws}:pom:import
 org.testcontainers:testcontainers-bom:1.18.3:pom:import
-
-
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>build-helper-maven-plugin</artifactId>
-          <version>3.3.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.flywaydb</groupId>
-          <artifactId>flyway-maven-plugin</artifactId>
-          <version>${flyway}</version>
-        </plugin>
-        <plugin>
-          <groupId>io.github.git-commit-id</groupId>
-          <artifactId>git-commit-id-maven-plugin</artifactId>
-          <version>${git-commit-id-maven-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.jooq</groupId>
-          <artifactId>jooq-codegen-maven</artifactId>
-          <version>${jooq}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.jetbrains.kotlin</groupId>
-          <artifactId>kotlin-maven-plugin</artifactId>
-          <version>1.8.22</version>
-        </plugin>
-        <plugin>
-          <groupId>org.liquibase</groupId>
-          <artifactId>liquibase-maven-plugin</artifactId>
-          <version>${liquibase}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>${maven-assembly-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>${maven-clean-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven-compiler-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>${maven-dependency-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <version>${maven-enforcer-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-failsafe-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-help-plugin</artifactId>
-          <version>${maven-help-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-invoker-plugin</artifactId>
-          <version>${maven-invoker-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>${maven-jar-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${maven-javadoc-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>${maven-resources-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-shade-plugin</artifactId>
-          <version>${maven-shade-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>${maven-source-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>${maven-war-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.graalvm.buildtools</groupId>
-          <artifactId>native-maven-plugin</artifactId>
-          <version>0.9.24</version>
-        </plugin>
-        <plugin>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>3.1.3</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>versions-maven-plugin</artifactId>
-          <version>${versions-maven-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>xml-maven-plugin</artifactId>
-          <version>1.0.2</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
 ```
 
 ## Spring依赖
@@ -660,10 +512,41 @@ org.springframework.ws:spring-ws-bom:4.0.5:pom:import
 org.springframework:spring-framework-bom:6.0.11:pom:import
 ```
 
+## 插件管理
 
+```
+org.springframework.boot:spring-boot-maven-plugin:3.1.3
 
+org.apache.maven.plugins:maven-antrun-plugin:3.1.0
+org.apache.maven.plugins:maven-assembly-plugin:3.5.0
+org.apache.maven.plugins:maven-clean-plugin:3.2.0
+org.apache.maven.plugins:maven-compiler-plugin:3.11.0
+org.apache.maven.plugins:maven-dependency-plugin:3.5.0
+org.apache.maven.plugins:maven-deploy-plugin:3.1.1
+org.apache.maven.plugins:maven-enforcer-plugin:3.3.0
+org.apache.maven.plugins:maven-failsafe-plugin:3.0.0
+org.apache.maven.plugins:maven-help-plugin:3.4.0
+org.apache.maven.plugins:maven-install-plugin:3.1.1
+org.apache.maven.plugins:maven-invoker-plugin:3.5.1
+org.apache.maven.plugins:maven-jar-plugin:3.3.0
+org.apache.maven.plugins:maven-javadoc-plugin:3.5.0
+org.apache.maven.plugins:maven-resources-plugin:3.3.1
+org.apache.maven.plugins:maven-shade-plugin:3.4.1
+org.apache.maven.plugins:maven-source-plugin:3.2.1
+org.apache.maven.plugins:maven-surefire-plugin:3.0.0
+org.apache.maven.plugins:maven-war-plugin:3.3.2
 
+org.codehaus.mojo:build-helper-maven-plugin:3.3.0
+org.codehaus.mojo:versions-maven-plugin:2.15.0
+org.codehaus.mojo:xml-maven-plugin:1.0.2
 
+io.github.git-commit-id:git-commit-id-maven-plugin:5.0.1
+org.graalvm.buildtools:native-maven-plugin:0.9.24
+org.jetbrains.kotlin:kotlin-maven-plugin:1.8.22
+org.jooq:jooq-codegen-maven:3.18.6
+org.flywaydb:flyway-maven-plugin:9.16.3
+org.liquibase:liquibase-maven-plugin:4.20.0
+```
 
 
 
