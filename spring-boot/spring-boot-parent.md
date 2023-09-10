@@ -1,5 +1,0 @@
-# spring-boot-parent
-
-```xml
-
-```
