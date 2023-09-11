@@ -73,18 +73,6 @@ Whether to dispatch TRACE requests to the FrameworkServlet doService method.
 
 false
 
-spring.mvc.format.date
-
-Date format to use, for example 'dd/MM/yyyy'.
-
-spring.mvc.format.date-time
-
-Date-time format to use, for example 'yyyy-MM-dd HH:mm:ss'.
-
-spring.mvc.format.time
-
-Time format to use, for example 'HH:mm:ss'.
-
 spring.mvc.formcontent.filter.enabled
 
 Whether to enable Spring's FormContentFilter.
@@ -670,9 +658,6 @@ org.springframework.boot.autoconfigure.web.embedded.NettyWebServerFactoryCustomi
 org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer
 org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer
 org.springframework.boot.autoconfigure.web.ErrorProperties
-org.springframework.boot.autoconfigure.web.format.DateTimeFormatters
-
-org.springframework.boot.autoconfigure.web.format.WebConversionService
 org.springframework.boot.autoconfigure.web.OnEnabledResourceChainCondition
 
 org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler
@@ -823,8 +808,6 @@ org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementCont
 org.springframework.boot.actuate.autoconfigure.web.servlet.WebMvcEndpointChildContextConfiguration
 
 ```
-
-
 
 
 
