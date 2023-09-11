@@ -1,5 +1,7 @@
 # spring-boot-starter-logging
 
+## 构建信息
+
 ```
 # 地址
 https://spring.io
@@ -20,7 +22,7 @@ org.apache.logging.log4j:log4j-to-slf4j:2.20.0
 org.slf4j:jul-to-slf4j:2.0.7
 ```
 
-
+## 配置属性
 
 ```
 debug                                                启用debug日志，默认：false
@@ -52,11 +54,22 @@ logging.threshold.console                            控制台输出的日志级
 logging.threshold.file                               文件输出的日志级别阈值，默认：TRACE
 ```
 
+## java文件
+
+```
+# 日志系统
+org.springframework.boot.logging.LoggingSystem.java
+    + org.springframework.boot.logging.LoggingSystem.NoOpLoggingSystem
+    + org.springframework.boot.logging.AbstractLoggingSystem.java
+        + org.springframework.boot.logging.java.JavaLoggingSystem.java
+        + org.springframework.boot.logging.logback.LogbackLoggingSystem.java
+        + org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.java
+
+```
 
 ```
 org.springframework.boot.context.logging.LoggingApplicationListener.java
 
-org.springframework.boot.logging.AbstractLoggingSystem.java
 org.springframework.boot.logging.DeferredLog.java
 org.springframework.boot.logging.DeferredLogFactory.java
 org.springframework.boot.logging.DeferredLogs.java
@@ -67,12 +80,10 @@ org.springframework.boot.logging.LoggerConfigurationComparator.java
 org.springframework.boot.logging.LoggerGroup.java
 org.springframework.boot.logging.LoggerGroups.java
 org.springframework.boot.logging.LoggingInitializationContext.java
-org.springframework.boot.logging.LoggingSystem.java
 org.springframework.boot.logging.LoggingSystemFactory.java
 org.springframework.boot.logging.LoggingSystemProperties.java
 org.springframework.boot.logging.LogLevel.java
 
-org.springframework.boot.logging.java.JavaLoggingSystem.java
 org.springframework.boot.logging.java.JavaLoggingSystemRuntimeHints.java
 org.springframework.boot.logging.java.SimpleFormatter.java
 
@@ -81,7 +92,6 @@ org.springframework.boot.logging.logback.DebugLogbackConfigurator.java
 org.springframework.boot.logging.logback.DefaultLogbackConfiguration.java
 org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter.java
 org.springframework.boot.logging.logback.LogbackConfigurator.java
-org.springframework.boot.logging.logback.LogbackLoggingSystem.java
 org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.java
 org.springframework.boot.logging.logback.LogbackRuntimeHints.java
 org.springframework.boot.logging.logback.RootLogLevelConfigurator.java
@@ -97,7 +107,6 @@ org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter.java
 
 org.springframework.boot.logging.log4j2.ColorConverter.java
 org.springframework.boot.logging.log4j2.ExtendedWhitespaceThrowablePatternConverter.java
-org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.java
 org.springframework.boot.logging.log4j2.SpringBootConfigurationFactory.java
 org.springframework.boot.logging.log4j2.SpringBootPropertySource.java
 org.springframework.boot.logging.log4j2.SpringEnvironmentLookup.java
