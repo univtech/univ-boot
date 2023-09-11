@@ -1,8 +1,9 @@
 # 配置属性
 
-```
 
-# 1. Core Properties
+## 1. Core Properties
+
+```
 debug
 info.*
 logging.charset.console
@@ -104,8 +105,11 @@ spring.task.scheduling.shutdown.await-termination
 spring.task.scheduling.shutdown.await-termination-period
 spring.task.scheduling.thread-name-prefix
 trace
+```
 
-# 2. Cache Properties
+## 2. Cache Properties
+
+```
 spring.cache.cache-names
 spring.cache.caffeine.spec
 spring.cache.couchbase.expiration
@@ -118,8 +122,11 @@ spring.cache.redis.key-prefix
 spring.cache.redis.time-to-live
 spring.cache.redis.use-key-prefix
 spring.cache.type
+```
 
-# 3. Mail Properties
+## 3. Mail Properties
+
+```
 spring.mail.default-encoding
 spring.mail.host
 spring.mail.jndi-name
@@ -132,8 +139,11 @@ spring.mail.username
 spring.sendgrid.api-key
 spring.sendgrid.proxy.host
 spring.sendgrid.proxy.port
+```
 
-# 4. JSON Properties
+## 4. JSON Properties
+
+```
 spring.gson.date-format
 spring.gson.disable-html-escaping
 spring.gson.disable-inner-class-serialization
@@ -158,8 +168,11 @@ spring.jackson.property-naming-strategy
 spring.jackson.serialization.*
 spring.jackson.time-zone
 spring.jackson.visibility.*
+```
 
-# 5. Data Properties
+## 5. Data Properties
+
+```
 spring.cassandra.compression
 spring.cassandra.config
 spring.cassandra.connection.connect-timeout
@@ -561,8 +574,11 @@ spring.r2dbc.pool.validation-query
 spring.r2dbc.properties.*
 spring.r2dbc.url
 spring.r2dbc.username
+```
 
-# 6. Transaction Properties
+## 6. Transaction Properties
+
+```
 spring.jta.atomikos.connectionfactory.borrow-connection-timeout
 spring.jta.atomikos.connectionfactory.ignore-session-transacted-flag
 spring.jta.atomikos.connectionfactory.local-transaction-mode
@@ -592,8 +608,11 @@ spring.jta.atomikos.datasource.xa-properties
 spring.jta.enabled
 spring.transaction.default-timeout
 spring.transaction.rollback-on-commit-failure
+```
 
-# 7. Data Migration Properties
+## 7. Data Migration Properties
+
+```
 spring.flyway.baseline-description
 spring.flyway.baseline-on-migrate
 spring.flyway.baseline-version
@@ -682,8 +701,11 @@ spring.sql.init.platform
 spring.sql.init.schema-locations
 spring.sql.init.separator
 spring.sql.init.username
+```
 
-# 8. Integration Properties
+## 8. Integration Properties
+
+```
 spring.activemq.broker-url
 spring.activemq.close-timeout
 spring.activemq.non-blocking-redelivery
@@ -986,8 +1008,11 @@ spring.webservices.path
 spring.webservices.servlet.init.*
 spring.webservices.servlet.load-on-startup
 spring.webservices.wsdl-locations
+```
 
-# 9. Web Properties
+## 9. Web Properties
+
+```
 spring.graphql.cors.allow-credentials
 spring.graphql.cors.allowed-headers
 spring.graphql.cors.allowed-methods
@@ -1102,8 +1127,11 @@ spring.webflux.multipart.max-parts
 spring.webflux.problemdetails.enabled
 spring.webflux.static-path-pattern
 spring.webflux.webjars-path-pattern
+```
 
-# 10. Templating Properties
+## 10. Templating Properties
+
+```
 spring.freemarker.allow-request-override
 spring.freemarker.allow-session-override
 spring.freemarker.cache
@@ -1183,8 +1211,11 @@ spring.thymeleaf.servlet.produce-partial-output-while-processing
 spring.thymeleaf.suffix
 spring.thymeleaf.template-resolver-order
 spring.thymeleaf.view-names
+```
 
-# 11. Server Properties
+## 11. Server Properties
+
+```
 server.address
 server.compression.enabled
 server.compression.excluded-user-agents
@@ -1348,8 +1379,11 @@ server.undertow.preserve-path-on-forward
 server.undertow.threads.io
 server.undertow.threads.worker
 server.undertow.url-charset
+```
 
-# 12. Security Properties
+## 12. Security Properties
+
+```
 spring.security.filter.dispatcher-types
 spring.security.filter.order
 spring.security.oauth2.authorizationserver.client.*
@@ -1378,8 +1412,11 @@ spring.security.saml2.relyingparty.registration.*
 spring.security.user.name
 spring.security.user.password
 spring.security.user.roles
+```
 
-# 13. RSocket Properties
+## 13. RSocket Properties
+
+```
 spring.rsocket.server.address
 spring.rsocket.server.fragment-size
 spring.rsocket.server.mapping-path
@@ -1405,8 +1442,11 @@ spring.rsocket.server.ssl.trust-store-password
 spring.rsocket.server.ssl.trust-store-provider
 spring.rsocket.server.ssl.trust-store-type
 spring.rsocket.server.transport
+```
 
-# 14. Actuator Properties
+## 14. Actuator Properties
+
+```
 management.appoptics.metrics.export.api-token
 management.appoptics.metrics.export.batch-size
 management.appoptics.metrics.export.connect-timeout
@@ -1787,8 +1827,11 @@ management.wavefront.uri
 management.zipkin.tracing.connect-timeout
 management.zipkin.tracing.endpoint
 management.zipkin.tracing.read-timeout
+```
 
-# 15. Devtools Properties
+## 15. Devtools Properties
+
+```
 spring.devtools.add-properties
 spring.devtools.livereload.enabled
 spring.devtools.livereload.port
@@ -1806,8 +1849,11 @@ spring.devtools.restart.log-condition-evaluation-delta
 spring.devtools.restart.poll-interval
 spring.devtools.restart.quiet-period
 spring.devtools.restart.trigger-file
+```
 
-# 16. Docker Compose Properties
+## 16. Docker Compose Properties
+
+```
 spring.docker.compose.enabled
 spring.docker.compose.file
 spring.docker.compose.host
@@ -1822,10 +1868,12 @@ spring.docker.compose.start.command
 spring.docker.compose.start.log-level
 spring.docker.compose.stop.command
 spring.docker.compose.stop.timeout
+```
 
-# 17. Testing Properties
+## 17. Testing Properties
+
+```
 spring.test.database.replace
 spring.test.mockmvc.print
 spring.test.observability.auto-configure
-
 ```
