@@ -84,23 +84,6 @@ spring.task.scheduling.thread-name-prefix
 trace
 ```
 
-## 3. Mail Properties
-
-```
-spring.mail.default-encoding
-spring.mail.host
-spring.mail.jndi-name
-spring.mail.password
-spring.mail.port
-spring.mail.properties.*
-spring.mail.protocol
-spring.mail.test-connection
-spring.mail.username
-spring.sendgrid.api-key
-spring.sendgrid.proxy.host
-spring.sendgrid.proxy.port
-```
-
 ## 4. JSON Properties
 
 ```
