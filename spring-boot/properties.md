@@ -987,12 +987,6 @@ spring.webservices.servlet.load-on-startup
 spring.webservices.wsdl-locations
 ```
 
-## 9. Web Properties
-
-```
-
-```
-
 ## 10. Templating Properties
 
 ```
@@ -1075,12 +1069,6 @@ spring.thymeleaf.servlet.produce-partial-output-while-processing
 spring.thymeleaf.suffix
 spring.thymeleaf.template-resolver-order
 spring.thymeleaf.view-names
-```
-
-## 11. Server Properties
-
-```
-
 ```
 
 ## 12. Security Properties

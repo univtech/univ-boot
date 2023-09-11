@@ -22,6 +22,8 @@ org.springframework:spring-web:6.0.11
 org.springframework:spring-webmvc:6.0.11
 ```
 
+## 其他配置属性
+
 ```
 spring.hateoas.use-hal-as-default-json-media-type
 
@@ -29,32 +31,14 @@ Whether application/hal+json responses should be sent to requests that accept ap
 
 true
 
-spring.jersey.application-path
+spring.netty.leak-detection
 
-Path that serves as the base URI for the application. If specified, overrides the value of "@ApplicationPath".
+Level of leak detection for reference-counted buffers. If not configured via 'ResourceLeakDetector.setLevel' or the 'io.netty.leakDetection.level' system property, default to 'simple'.
+```
 
-spring.jersey.filter.order
+## mvc配置属性
 
-Jersey filter chain order.
-
-0
-
-spring.jersey.init.*
-
-Init parameters to pass to Jersey through the servlet or filter.
-
-spring.jersey.servlet.load-on-startup
-
-Load on startup priority of the Jersey servlet.
-
--1
-
-spring.jersey.type
-
-Jersey integration type.
-
-servlet
-
+```
 spring.mvc.async.request-timeout
 
 Amount of time before asynchronous request handling times out. If this value is not set, the default timeout of the underlying implementation is used.
@@ -184,11 +168,11 @@ spring.mvc.webjars-path-pattern
 Path pattern used for WebJar assets.
 
 /webjars/**
+```
 
-spring.netty.leak-detection
+## servlet multipart配置属性
 
-Level of leak detection for reference-counted buffers. If not configured via 'ResourceLeakDetector.setLevel' or the 'io.netty.leakDetection.level' system property, default to 'simple'.
-
+```
 spring.servlet.multipart.enabled
 
 Whether to enable support of multipart uploads.
@@ -222,7 +206,11 @@ spring.servlet.multipart.resolve-lazily
 Whether to resolve the multipart request lazily at the time of file or parameter access.
 
 false
+```
 
+## session配置属性
+
+```
 spring.session.hazelcast.flush-mode
 
 Sessions flush mode. Determines when session changes are written to the session store.
@@ -336,7 +324,11 @@ Session repository filter order.
 spring.session.timeout
 
 Session timeout. If a duration suffix is not specified, seconds will be used.
+```
 
+## web配置属性
+
+```
 spring.web.locale
 
 Locale to use. By default, this locale is overridden by the "Accept-Language" header.
@@ -346,7 +338,11 @@ spring.web.locale-resolver
 Define how the locale should be resolved.
 
 accept-header
+```
 
+### web资源配置属性
+
+```
 spring.web.resources.add-mappings
 
 Whether to enable default resource handling.
@@ -456,5 +452,4 @@ spring.web.resources.static-locations
 Locations of static resources. Defaults to classpath:[/META-INF/resources/, /resources/, /static/, /public/].
 
 [classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/]
-
 ```
