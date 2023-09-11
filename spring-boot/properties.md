@@ -84,35 +84,6 @@ spring.task.scheduling.thread-name-prefix
 trace
 ```
 
-## 4. JSON Properties
-
-```
-spring.gson.date-format
-spring.gson.disable-html-escaping
-spring.gson.disable-inner-class-serialization
-spring.gson.enable-complex-map-key-serialization
-spring.gson.exclude-fields-without-expose-annotation
-spring.gson.field-naming-policy
-spring.gson.generate-non-executable-json
-spring.gson.lenient
-spring.gson.long-serialization-policy
-spring.gson.pretty-printing
-spring.gson.serialize-nulls
-spring.jackson.constructor-detector
-spring.jackson.date-format
-spring.jackson.default-leniency
-spring.jackson.default-property-inclusion
-spring.jackson.deserialization.*
-spring.jackson.generator.*
-spring.jackson.locale
-spring.jackson.mapper.*
-spring.jackson.parser.*
-spring.jackson.property-naming-strategy
-spring.jackson.serialization.*
-spring.jackson.time-zone
-spring.jackson.visibility.*
-```
-
 ## 6. Transaction Properties
 
 ```
