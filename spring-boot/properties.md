@@ -84,23 +84,6 @@ spring.task.scheduling.thread-name-prefix
 trace
 ```
 
-## 2. Cache Properties
-
-```
-spring.cache.cache-names
-spring.cache.caffeine.spec
-spring.cache.couchbase.expiration
-spring.cache.infinispan.config
-spring.cache.jcache.config
-spring.cache.jcache.provider
-spring.cache.redis.cache-null-values
-spring.cache.redis.enable-statistics
-spring.cache.redis.key-prefix
-spring.cache.redis.time-to-live
-spring.cache.redis.use-key-prefix
-spring.cache.type
-```
-
 ## 3. Mail Properties
 
 ```
