@@ -54,45 +54,13 @@ logging.threshold.file                               文件输出的日志级别
 
 
 ```
+org.springframework.boot.context.logging.LoggingApplicationListener.java
 
 org.springframework.boot.logging.AbstractLoggingSystem.java
 org.springframework.boot.logging.DeferredLog.java
 org.springframework.boot.logging.DeferredLogFactory.java
 org.springframework.boot.logging.DeferredLogs.java
 org.springframework.boot.logging.DelegatingLoggingSystemFactory.java
-org.springframework.boot.logging.java.JavaLoggingSystem.java
-org.springframework.boot.logging.java.JavaLoggingSystemRuntimeHints.java
-
-org.springframework.boot.logging.java.SimpleFormatter.java
-org.springframework.boot.logging.log4j2.ColorConverter.java
-org.springframework.boot.logging.log4j2.ExtendedWhitespaceThrowablePatternConverter.java
-org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.java
-
-org.springframework.boot.logging.log4j2.SpringBootConfigurationFactory.java
-org.springframework.boot.logging.log4j2.SpringBootPropertySource.java
-org.springframework.boot.logging.log4j2.SpringEnvironmentLookup.java
-org.springframework.boot.logging.log4j2.SpringEnvironmentPropertySource.java
-org.springframework.boot.logging.log4j2.SpringProfileArbiter.java
-org.springframework.boot.logging.log4j2.WhitespaceThrowablePatternConverter.java
-org.springframework.boot.logging.logback.ColorConverter.java
-org.springframework.boot.logging.logback.DebugLogbackConfigurator.java
-org.springframework.boot.logging.logback.DefaultLogbackConfiguration.java
-org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter.java
-org.springframework.boot.logging.logback.LogbackConfigurator.java
-org.springframework.boot.logging.logback.LogbackLoggingSystem.java
-org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.java
-org.springframework.boot.logging.logback.LogbackRuntimeHints.java
-
-org.springframework.boot.logging.logback.RootLogLevelConfigurator.java
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.java
-org.springframework.boot.logging.logback.SpringProfileAction.java
-org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker.java
-org.springframework.boot.logging.logback.SpringProfileModel.java
-org.springframework.boot.logging.logback.SpringProfileModelHandler.java
-org.springframework.boot.logging.logback.SpringPropertyAction.java
-org.springframework.boot.logging.logback.SpringPropertyModel.java
-org.springframework.boot.logging.logback.SpringPropertyModelHandler.java
-org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter.java
 org.springframework.boot.logging.LogFile.java
 org.springframework.boot.logging.LoggerConfiguration.java
 org.springframework.boot.logging.LoggerConfigurationComparator.java
@@ -103,6 +71,39 @@ org.springframework.boot.logging.LoggingSystem.java
 org.springframework.boot.logging.LoggingSystemFactory.java
 org.springframework.boot.logging.LoggingSystemProperties.java
 org.springframework.boot.logging.LogLevel.java
+
+org.springframework.boot.logging.java.JavaLoggingSystem.java
+org.springframework.boot.logging.java.JavaLoggingSystemRuntimeHints.java
+org.springframework.boot.logging.java.SimpleFormatter.java
+
+org.springframework.boot.logging.logback.ColorConverter.java
+org.springframework.boot.logging.logback.DebugLogbackConfigurator.java
+org.springframework.boot.logging.logback.DefaultLogbackConfiguration.java
+org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter.java
+org.springframework.boot.logging.logback.LogbackConfigurator.java
+org.springframework.boot.logging.logback.LogbackLoggingSystem.java
+org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.java
+org.springframework.boot.logging.logback.LogbackRuntimeHints.java
+org.springframework.boot.logging.logback.RootLogLevelConfigurator.java
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.java
+org.springframework.boot.logging.logback.SpringProfileAction.java
+org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker.java
+org.springframework.boot.logging.logback.SpringProfileModel.java
+org.springframework.boot.logging.logback.SpringProfileModelHandler.java
+org.springframework.boot.logging.logback.SpringPropertyAction.java
+org.springframework.boot.logging.logback.SpringPropertyModel.java
+org.springframework.boot.logging.logback.SpringPropertyModelHandler.java
+org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter.java
+
+org.springframework.boot.logging.log4j2.ColorConverter.java
+org.springframework.boot.logging.log4j2.ExtendedWhitespaceThrowablePatternConverter.java
+org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.java
+org.springframework.boot.logging.log4j2.SpringBootConfigurationFactory.java
+org.springframework.boot.logging.log4j2.SpringBootPropertySource.java
+org.springframework.boot.logging.log4j2.SpringEnvironmentLookup.java
+org.springframework.boot.logging.log4j2.SpringEnvironmentPropertySource.java
+org.springframework.boot.logging.log4j2.SpringProfileArbiter.java
+org.springframework.boot.logging.log4j2.WhitespaceThrowablePatternConverter.java
 
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.java
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.java
@@ -115,7 +116,6 @@ org.springframework.boot.actuate.logging.LoggersEndpoint.java
 org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration.java
 org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties.java
 org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration.java
-
 ```
 
 

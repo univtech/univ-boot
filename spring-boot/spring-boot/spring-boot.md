@@ -125,7 +125,6 @@ org.springframework.boot.context.event.EventPublishingRunListener.java
 
 org.springframework.boot.context.event.SpringApplicationEvent.java
 org.springframework.boot.context.FileEncodingApplicationListener.java
-org.springframework.boot.context.logging.LoggingApplicationListener.java
 
 org.springframework.boot.context.metrics.buffering.BufferedStartupStep.java
 org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup.java
