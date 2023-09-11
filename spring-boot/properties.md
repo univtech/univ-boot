@@ -4,29 +4,6 @@
 ## 1. Core Properties
 
 ```
-debug
-info.*
-logging.charset.console
-logging.charset.file
-logging.config
-logging.exception-conversion-word
-logging.file.name
-logging.file.path
-logging.group.*
-logging.level.*
-logging.log4j2.config.override
-logging.logback.rollingpolicy.clean-history-on-start
-logging.logback.rollingpolicy.file-name-pattern
-logging.logback.rollingpolicy.max-file-size
-logging.logback.rollingpolicy.max-history
-logging.logback.rollingpolicy.total-size-cap
-logging.pattern.console
-logging.pattern.dateformat
-logging.pattern.file
-logging.pattern.level
-logging.register-shutdown-hook
-logging.threshold.console
-logging.threshold.file
 spring.aop.auto
 spring.aop.proxy-target-class
 spring.application.admin.enabled

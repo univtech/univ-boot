@@ -454,11 +454,6 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseDataSource.java
 org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties.java
 org.springframework.boot.autoconfigure.liquibase.LiquibaseSchemaManagementProvider.java
 
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.java
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.java
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingProcessor.java
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportMessage.java
-
 org.springframework.boot.autoconfigure.mail.MailProperties.java
 org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration.java
 org.springframework.boot.autoconfigure.mail.MailSenderJndiConfiguration.java

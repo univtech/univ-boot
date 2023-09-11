@@ -168,10 +168,6 @@ org.springframework.boot.actuate.autoconfigure.ldap.LdapHealthContributorAutoCon
 
 org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration.java
 
-org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration.java
-org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties.java
-org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration.java
-
 org.springframework.boot.actuate.autoconfigure.mail.MailHealthContributorAutoConfiguration.java
 
 org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration.java

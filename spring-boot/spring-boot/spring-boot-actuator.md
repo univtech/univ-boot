@@ -271,9 +271,6 @@ org.springframework.boot.actuate.ldap.LdapHealthIndicator.java
 
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.java
 
-org.springframework.boot.actuate.logging.LogFileWebEndpoint.java
-org.springframework.boot.actuate.logging.LoggersEndpoint.java
-
 org.springframework.boot.actuate.mail.MailHealthIndicator.java
 
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.java
