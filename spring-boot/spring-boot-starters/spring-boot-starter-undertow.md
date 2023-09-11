@@ -104,41 +104,7 @@ Maximum size of the HTTP request header.
 
 8KB
 
-server.netty.connection-timeout
 
-Connection timeout of the Netty channel.
-
-server.netty.h2c-max-content-length
-
-Maximum content length of an H2C upgrade request.
-
-0B
-
-server.netty.idle-timeout
-
-Idle timeout of the Netty channel. When not specified, an infinite timeout is used.
-
-server.netty.initial-buffer-size
-
-Initial buffer size for HTTP request decoding.
-
-128B
-
-server.netty.max-initial-line-length
-
-Maximum length that can be decoded for an HTTP request's initial line.
-
-4KB
-
-server.netty.max-keep-alive-requests
-
-Maximum number of requests that can be made per connection. By default, a connection serves unlimited number of requests.
-
-server.netty.validate-headers
-
-Whether to validate headers when decoding requests.
-
-true
 
 server.port
 
