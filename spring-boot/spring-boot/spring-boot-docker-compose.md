@@ -28,96 +28,96 @@ com.fasterxml.jackson.module:jackson-module-parameter-names:2.15.2
 
 ```
 
-org.springframework.boot.docker.compose.core.ConnectionPorts.java
-org.springframework.boot.docker.compose.core.DefaultConnectionPorts.java
-org.springframework.boot.docker.compose.core.DefaultDockerCompose.java
-org.springframework.boot.docker.compose.core.DefaultRunningService.java
-org.springframework.boot.docker.compose.core.DockerCli.java
-org.springframework.boot.docker.compose.core.DockerCliCommand.java
-org.springframework.boot.docker.compose.core.DockerCliComposeConfigResponse.java
-org.springframework.boot.docker.compose.core.DockerCliComposePsResponse.java
-org.springframework.boot.docker.compose.core.DockerCliComposeVersionResponse.java
-org.springframework.boot.docker.compose.core.DockerCliContextResponse.java
-org.springframework.boot.docker.compose.core.DockerCliInspectResponse.java
-org.springframework.boot.docker.compose.core.DockerCompose.java
-org.springframework.boot.docker.compose.core.DockerComposeFile.java
-org.springframework.boot.docker.compose.core.DockerComposeOrigin.java
-org.springframework.boot.docker.compose.core.DockerEnv.java
-org.springframework.boot.docker.compose.core.DockerException.java
-org.springframework.boot.docker.compose.core.DockerHost.java
-org.springframework.boot.docker.compose.core.DockerJson.java
-org.springframework.boot.docker.compose.core.DockerNotRunningException.java
-org.springframework.boot.docker.compose.core.DockerOutputParseException.java
-org.springframework.boot.docker.compose.core.DockerProcessStartException.java
-org.springframework.boot.docker.compose.core.ImageName.java
-org.springframework.boot.docker.compose.core.ImageReference.java
+org.springframework.boot.docker.compose.core.ConnectionPorts
+org.springframework.boot.docker.compose.core.DefaultConnectionPorts
+org.springframework.boot.docker.compose.core.DefaultDockerCompose
+org.springframework.boot.docker.compose.core.DefaultRunningService
+org.springframework.boot.docker.compose.core.DockerCli
+org.springframework.boot.docker.compose.core.DockerCliCommand
+org.springframework.boot.docker.compose.core.DockerCliComposeConfigResponse
+org.springframework.boot.docker.compose.core.DockerCliComposePsResponse
+org.springframework.boot.docker.compose.core.DockerCliComposeVersionResponse
+org.springframework.boot.docker.compose.core.DockerCliContextResponse
+org.springframework.boot.docker.compose.core.DockerCliInspectResponse
+org.springframework.boot.docker.compose.core.DockerCompose
+org.springframework.boot.docker.compose.core.DockerComposeFile
+org.springframework.boot.docker.compose.core.DockerComposeOrigin
+org.springframework.boot.docker.compose.core.DockerEnv
+org.springframework.boot.docker.compose.core.DockerException
+org.springframework.boot.docker.compose.core.DockerHost
+org.springframework.boot.docker.compose.core.DockerJson
+org.springframework.boot.docker.compose.core.DockerNotRunningException
+org.springframework.boot.docker.compose.core.DockerOutputParseException
+org.springframework.boot.docker.compose.core.DockerProcessStartException
+org.springframework.boot.docker.compose.core.ImageName
+org.springframework.boot.docker.compose.core.ImageReference
 
-org.springframework.boot.docker.compose.core.ProcessExitException.java
-org.springframework.boot.docker.compose.core.ProcessRunner.java
-org.springframework.boot.docker.compose.core.ProcessStartException.java
-org.springframework.boot.docker.compose.core.Regex.java
-org.springframework.boot.docker.compose.core.RunningService.java
-org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.java
-org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.java
-org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.java
-org.springframework.boot.docker.compose.lifecycle.DockerComposeServicesReadyEvent.java
-org.springframework.boot.docker.compose.lifecycle.DockerComposeSkipCheck.java
-org.springframework.boot.docker.compose.lifecycle.LifecycleManagement.java
+org.springframework.boot.docker.compose.core.ProcessExitException
+org.springframework.boot.docker.compose.core.ProcessRunner
+org.springframework.boot.docker.compose.core.ProcessStartException
+org.springframework.boot.docker.compose.core.Regex
+org.springframework.boot.docker.compose.core.RunningService
+org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager
+org.springframework.boot.docker.compose.lifecycle.DockerComposeListener
+org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties
+org.springframework.boot.docker.compose.lifecycle.DockerComposeServicesReadyEvent
+org.springframework.boot.docker.compose.lifecycle.DockerComposeSkipCheck
+org.springframework.boot.docker.compose.lifecycle.LifecycleManagement
 
-org.springframework.boot.docker.compose.lifecycle.ReadinessTimeoutException.java
-org.springframework.boot.docker.compose.lifecycle.ServiceNotReadyException.java
-org.springframework.boot.docker.compose.lifecycle.ServiceReadinessChecks.java
-org.springframework.boot.docker.compose.lifecycle.StartCommand.java
-org.springframework.boot.docker.compose.lifecycle.StopCommand.java
-org.springframework.boot.docker.compose.lifecycle.TcpConnectServiceReadinessCheck.java
-org.springframework.boot.docker.compose.service.connection.cassandra.CassandraDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.cassandra.CassandraEnvironment.java
+org.springframework.boot.docker.compose.lifecycle.ReadinessTimeoutException
+org.springframework.boot.docker.compose.lifecycle.ServiceNotReadyException
+org.springframework.boot.docker.compose.lifecycle.ServiceReadinessChecks
+org.springframework.boot.docker.compose.lifecycle.StartCommand
+org.springframework.boot.docker.compose.lifecycle.StopCommand
+org.springframework.boot.docker.compose.lifecycle.TcpConnectServiceReadinessCheck
+org.springframework.boot.docker.compose.service.connection.cassandra.CassandraDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.cassandra.CassandraEnvironment
 
-org.springframework.boot.docker.compose.service.connection.ConnectionNamePredicate.java
-org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource.java
-org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener.java
-org.springframework.boot.docker.compose.service.connection.elasticsearch.ElasticsearchDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.elasticsearch.ElasticsearchEnvironment.java
+org.springframework.boot.docker.compose.service.connection.ConnectionNamePredicate
+org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource
+org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener
+org.springframework.boot.docker.compose.service.connection.elasticsearch.ElasticsearchDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.elasticsearch.ElasticsearchEnvironment
 
-org.springframework.boot.docker.compose.service.connection.flyway.JdbcAdaptingFlywayConnectionDetailsFactory.java
+org.springframework.boot.docker.compose.service.connection.flyway.JdbcAdaptingFlywayConnectionDetailsFactory
 
-org.springframework.boot.docker.compose.service.connection.jdbc.JdbcUrlBuilder.java
+org.springframework.boot.docker.compose.service.connection.jdbc.JdbcUrlBuilder
 
-org.springframework.boot.docker.compose.service.connection.liquibase.JdbcAdaptingLiquibaseConnectionDetailsFactory.java
+org.springframework.boot.docker.compose.service.connection.liquibase.JdbcAdaptingLiquibaseConnectionDetailsFactory
 
-org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbEnvironment.java
-org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbR2dbcDockerComposeConnectionDetailsFactory.java
+org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbEnvironment
+org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbR2dbcDockerComposeConnectionDetailsFactory
 
-org.springframework.boot.docker.compose.service.connection.mongo.MongoDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.mongo.MongoEnvironment.java
+org.springframework.boot.docker.compose.service.connection.mongo.MongoDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.mongo.MongoEnvironment
 
-org.springframework.boot.docker.compose.service.connection.mysql.MySqlEnvironment.java
-org.springframework.boot.docker.compose.service.connection.mysql.MySqlJdbcDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.mysql.MySqlR2dbcDockerComposeConnectionDetailsFactory.java
+org.springframework.boot.docker.compose.service.connection.mysql.MySqlEnvironment
+org.springframework.boot.docker.compose.service.connection.mysql.MySqlJdbcDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.mysql.MySqlR2dbcDockerComposeConnectionDetailsFactory
 
-org.springframework.boot.docker.compose.service.connection.oracle.OracleEnvironment.java
-org.springframework.boot.docker.compose.service.connection.oracle.OracleJdbcDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.oracle.OracleR2dbcDockerComposeConnectionDetailsFactory.java
-
-
-
-org.springframework.boot.docker.compose.service.connection.postgres.PostgresEnvironment.java
-org.springframework.boot.docker.compose.service.connection.postgres.PostgresJdbcDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.postgres.PostgresR2dbcDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.r2dbc.ConnectionFactoryOptionsBuilder.java
+org.springframework.boot.docker.compose.service.connection.oracle.OracleEnvironment
+org.springframework.boot.docker.compose.service.connection.oracle.OracleJdbcDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.oracle.OracleR2dbcDockerComposeConnectionDetailsFactory
 
 
-org.springframework.boot.docker.compose.service.connection.rabbit.RabbitDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.rabbit.RabbitEnvironment.java
 
-org.springframework.boot.docker.compose.service.connection.redis.RedisDockerComposeConnectionDetailsFactory.java
+org.springframework.boot.docker.compose.service.connection.postgres.PostgresEnvironment
+org.springframework.boot.docker.compose.service.connection.postgres.PostgresJdbcDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.postgres.PostgresR2dbcDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.r2dbc.ConnectionFactoryOptionsBuilder
 
-org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerEnvironment.java
-org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerJdbcDockerComposeConnectionDetailsFactory.java
-org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerR2dbcDockerComposeConnectionDetailsFactory.java
 
-org.springframework.boot.docker.compose.service.connection.zipkin.ZipkinDockerComposeConnectionDetailsFactory.java
+org.springframework.boot.docker.compose.service.connection.rabbit.RabbitDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.rabbit.RabbitEnvironment
+
+org.springframework.boot.docker.compose.service.connection.redis.RedisDockerComposeConnectionDetailsFactory
+
+org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerEnvironment
+org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerJdbcDockerComposeConnectionDetailsFactory
+org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerR2dbcDockerComposeConnectionDetailsFactory
+
+org.springframework.boot.docker.compose.service.connection.zipkin.ZipkinDockerComposeConnectionDetailsFactory
 
 ```
