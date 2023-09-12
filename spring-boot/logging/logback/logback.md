@@ -1,24 +1,35 @@
 # logback
 
+## 层次结构
+
 ```
-# Logback的日志系统属性
-org.springframework.boot.logging.LoggingSystemProperties
-    + org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
-
-# Logback的日志系统工厂
-org.springframework.boot.logging.LoggingSystemFactory
-    + org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
-
 # Logback的日志系统
 org.springframework.boot.logging.LoggingSystem
     + org.springframework.boot.logging.AbstractLoggingSystem
         + org.springframework.boot.logging.logback.LogbackLoggingSystem
 
+# Logback的日志系统工厂
+org.springframework.boot.logging.LoggingSystemFactory
+    + org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
+
+# Logback的日志系统属性
+org.springframework.boot.logging.LoggingSystemProperties
+    + org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
+
 # Logback的编程式配置器
 org.springframework.boot.logging.logback.LogbackConfigurator
     + org.springframework.boot.logging.logback.DebugLogbackConfigurator
+```
 
+## 日志系统
 
+```
+# Logback的日志系统（LoggingSystem）
+org.springframework.boot.logging.logback.LogbackLoggingSystem
+
+# Logback的日志系统工厂（LoggingSystemFactory）。
+# 类路径中存在ch.qos.logback.classic.LoggerContext类时，创建Logback的日志系统（LogbackLoggingSystem）。
+org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
 
 # Logback的日志系统属性（LoggingSystemProperties）。
 # 从属性解析器（PropertyResolver）获取属性值，并设置为系统属性。
@@ -29,14 +40,51 @@ org.springframework.boot.logging.logback.LogbackConfigurator
 # logging.logback.rollingpolicy.total-size-cap         废弃属性：logging.file.total-size-cap，        系统属性：LOGBACK_ROLLINGPOLICY_TOTAL_SIZE_CAP，        删除前日志归档的最大容量，默认值：0
 # logging.logback.rollingpolicy.max-history            废弃属性：logging.file.max-history，           系统属性：LOGBACK_ROLLINGPOLICY_MAX_HISTORY，           删除前日志归档的最大数量，默认值：7
 org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
+```
 
-# Logback的日志系统工厂（LoggingSystemFactory）。
-# 类路径中存在ch.qos.logback.classic.LoggerContext类时，创建Logback的日志系统（LogbackLoggingSystem）。
-org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
+## 默认配置
 
+```
 # META-INF/services/ch.qos.logback.classic.spi.Configurator中注册的配置器（Configurator）。
 # 把ROOT日志记录器的日志级别设置为INFO。
 org.springframework.boot.logging.logback.RootLogLevelConfigurator
+
+# Spring Boot的Joran配置器（JoranConfigurator），用于添加额外的Spring Boot规则。
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelReader
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelWriter
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.PatternRules
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.LogbackConfigurationAotContribution
+
+# Logback的编程式配置器，比解析XML快。
+org.springframework.boot.logging.logback.LogbackConfigurator
+
+# 启用debug时，用于添加额外状态的Logback配置器（LogbackConfigurator）。
+org.springframework.boot.logging.logback.DebugLogbackConfigurator
+
+# Spring Boot中使用的Logback的默认配置。
+# 使用Logback的编程式配置器（LogbackConfigurator）进行配置，以减少启动时间。
+# 参考logback.xml使用的base.xml、defaults.xml、console-appender.xml和file-appender.xml文件：
+# org/springframework/boot/logging/logback/base.xml
+# org/springframework/boot/logging/logback/defaults.xml
+# org/springframework/boot/logging/logback/console-appender.xml
+# org/springframework/boot/logging/logback/file-appender.xml
+org.springframework.boot.logging.logback.DefaultLogbackConfiguration
+```
+
+## 转换器
+
+```
+# Logback的RuntimeHints注册器（RuntimeHintsRegistrar），类路径中存在ch.qos.logback.classic.LoggerContext类时，注册：
+# LoggerContext                             注册类
+# SLF4JBridgeHandler                        类路径中存在org.slf4j.bridge.SLF4JBridgeHandler类时，注册构造器
+# DateTokenConverter                        注册可调用的public构造函数
+# IntegerTokenConverter                     注册可调用的public构造函数
+# SyslogStartConverter                      注册可调用的public构造函数
+# ColorConverter                            注册可调用的public构造函数
+# WhitespaceThrowableProxyConverter         注册可调用的public构造函数
+# ExtendedWhitespaceThrowableProxyConverter 注册可调用的public构造函数
+org.springframework.boot.logging.logback.LogbackRuntimeHints
 
 # 使用AnsiOutput类给输出内容添加颜色的组合转换器（CompositeConverter）。
 # 先根据颜色（第一个选项）选择AnsiElement（AnsiColor或AnsiStyle）：
@@ -68,64 +116,35 @@ org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter
 
 # 在堆栈跟踪前后添加行分隔符的扩展Throwable代理转换器（ExtendedThrowableProxyConverter）。
 org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter
+```
 
+## springProfile标签
 
+```
+# <springProfile>标签的模型（NamedModel），包括以下属性：
+# name
+# 启用特定profile时，可以只启用部分Logback配置。
+org.springframework.boot.logging.logback.SpringProfileModel
 
+# <springProfile>标签的基本模型操作（BaseModelAction）。
+# 获取<springProfile>标签的属性值，创建SpringProfileModel，并设置属性值。
+# 启用特定profile时，可以只启用部分Logback配置。
+org.springframework.boot.logging.logback.SpringProfileAction
 
+# <springProfile>标签的基本模型处理器（ModelHandlerBase）。
+# 启用特定profile时，可以只启用部分Logback配置。
+org.springframework.boot.logging.logback.SpringProfileModelHandler
 
+# 第二相位元素（<appender>、<logger>和<root>）中是否嵌套<springProfile>元素的智能检查器（SanityChecker）。
+# <root>     RootLoggerModel
+# <logger>   LoggerModel
+# <appender> AppenderModel
+org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
+```
 
+## springProperty标签
 
-
-# Logback的日志系统（LoggingSystem）
-org.springframework.boot.logging.logback.LogbackLoggingSystem
-
-
-
-
-----------------------------------------------------------------------------------------------------
-
-# Spring Boot中使用的Logback的默认配置。
-# 使用Logback的编程式配置器（LogbackConfigurator）进行配置，以减少启动时间。
-# 参考logback.xml使用的base.xml、defaults.xml、console-appender.xml和file-appender.xml文件：
-# org/springframework/boot/logging/logback/base.xml
-# org/springframework/boot/logging/logback/defaults.xml
-# org/springframework/boot/logging/logback/console-appender.xml
-# org/springframework/boot/logging/logback/file-appender.xml
-org.springframework.boot.logging.logback.DefaultLogbackConfiguration
-
-# Logback的编程式配置器，比解析XML快。
-org.springframework.boot.logging.logback.LogbackConfigurator
-
-# 启用debug时，用于添加额外状态的Logback配置器（LogbackConfigurator）。
-org.springframework.boot.logging.logback.DebugLogbackConfigurator
-
-# Spring Boot的Joran配置器（JoranConfigurator），用于添加额外的Spring Boot规则。
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelReader
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelWriter
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.PatternRules
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.LogbackConfigurationAotContribution
-
-
-
-
-
-
-
-
-
-
-# Logback的RuntimeHints注册器（RuntimeHintsRegistrar），类路径中存在ch.qos.logback.classic.LoggerContext类时，注册：
-# LoggerContext                             注册类
-# SLF4JBridgeHandler                        类路径中存在org.slf4j.bridge.SLF4JBridgeHandler类时，注册构造器
-# DateTokenConverter                        注册可调用的public构造函数
-# IntegerTokenConverter                     注册可调用的public构造函数
-# SyslogStartConverter                      注册可调用的public构造函数
-# ColorConverter                            注册可调用的public构造函数
-# WhitespaceThrowableProxyConverter         注册可调用的public构造函数
-# ExtendedWhitespaceThrowableProxyConverter 注册可调用的public构造函数
-org.springframework.boot.logging.logback.LogbackRuntimeHints
-
+```
 # <springProperty>标签的模型（NamedModel），包括以下属性：
 # name
 # source
@@ -142,24 +161,4 @@ org.springframework.boot.logging.logback.SpringPropertyAction
 # <springProperty>标签的基本模型处理器（ModelHandlerBase）。
 # 可以从Spring的Environment中获取Logback属性。
 org.springframework.boot.logging.logback.SpringPropertyModelHandler
-
-# <springProfile>标签的模型（NamedModel），包括以下属性：
-# name
-# 启用特定profile时，可以只启用部分Logback配置。
-org.springframework.boot.logging.logback.SpringProfileModel
-
-# <springProfile>标签的基本模型操作（BaseModelAction）。
-# 获取<springProfile>标签的属性值，创建SpringProfileModel，并设置属性值。
-# 启用特定profile时，可以只启用部分Logback配置。
-org.springframework.boot.logging.logback.SpringProfileAction
-
-# <springProfile>标签的基本模型处理器（ModelHandlerBase）。
-# 启用特定profile时，可以只启用部分Logback配置。
-org.springframework.boot.logging.logback.SpringProfileModelHandler
-
-# 确保第二相位元素（<appender>、<logger>和<root>）中没有嵌套<springProfile>元素的智能检查器（SanityChecker）。
-# <root>     RootLoggerModel
-# <logger>   LoggerModel
-# <appender> AppenderModel
-org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
 ```
