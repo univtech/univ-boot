@@ -179,9 +179,6 @@ org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
 # 类路径中存在ch.qos.logback.classic.LoggerContext类时，创建Logback日志系统（LogbackLoggingSystem）。
 org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
 
-# 
-org.springframework.boot.logging.logback.LogbackLoggingSystem
-
 # META-INF/services/ch.qos.logback.classic.spi.Configurator中注册的Configurator。
 # 把ROOT日志记录器的日志级别设置为INFO。
 org.springframework.boot.logging.logback.RootLogLevelConfigurator
@@ -226,22 +223,38 @@ org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConvert
 
 
 
+# 
+org.springframework.boot.logging.logback.LogbackLoggingSystem
 
 
 
 
+
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator
+org.springframework.boot.logging.logback.LogbackConfigurator
 org.springframework.boot.logging.logback.DebugLogbackConfigurator
 org.springframework.boot.logging.logback.DefaultLogbackConfiguration
-org.springframework.boot.logging.logback.LogbackConfigurator
-org.springframework.boot.logging.logback.LogbackRuntimeHints
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator
+
 org.springframework.boot.logging.logback.SpringProfileAction
-org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
 org.springframework.boot.logging.logback.SpringProfileModel
 org.springframework.boot.logging.logback.SpringProfileModelHandler
+org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
+
 org.springframework.boot.logging.logback.SpringPropertyAction
 org.springframework.boot.logging.logback.SpringPropertyModel
 org.springframework.boot.logging.logback.SpringPropertyModelHandler
+
+
+# RuntimeHints注册器（RuntimeHintsRegistrar），类路径中存在ch.qos.logback.classic.LoggerContext类时，注册：
+# LoggerContext                             注册类
+# SLF4JBridgeHandler                        类路径中存在org.slf4j.bridge.SLF4JBridgeHandler类时，注册构造器
+# DateTokenConverter                        注册可调用的public构造函数
+# IntegerTokenConverter                     注册可调用的public构造函数
+# SyslogStartConverter                      注册可调用的public构造函数
+# ColorConverter                            注册可调用的public构造函数
+# WhitespaceThrowableProxyConverter         注册可调用的public构造函数
+# ExtendedWhitespaceThrowableProxyConverter 注册可调用的public构造函数
+org.springframework.boot.logging.logback.LogbackRuntimeHints
 
 
 ```
