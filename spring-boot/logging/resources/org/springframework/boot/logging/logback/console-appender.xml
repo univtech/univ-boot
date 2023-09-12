@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-Console appender logback configuration provided for import, equivalent to the programmatic
-initialization performed by Boot
--->
+<!-- Logback的控制台日志输出器（ConsoleAppender）配置 -->
 
 <included>
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
