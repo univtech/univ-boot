@@ -50,11 +50,37 @@ org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
 org.springframework.boot.logging.logback.RootLogLevelConfigurator
 
 # Spring Boot的Joran配置器（JoranConfigurator），用于添加额外的Spring Boot规则。
+# 1、对模型执行SpringProfileIfNestedWithinSecondPhaseElementSanityChecker检查。
+# 2、添加模型处理器：
+# SpringPropertyModel SpringPropertyModelHandler
+# SpringProfileModel  SpringProfileModelHandler
+# 3、添加元素选择器及其操作：
+# configuration/springProperty SpringPropertyAction
+# */springProfile              SpringProfileAction
+# 4、添加透明路径部分：springProfile。
+# 5、使用AOT生成的构件进行配置：
+# 读取格式规则和模型。
+# 处理模型，模型处理后，如果处于非Native镜像中，并且AOT处理正在进行（系统属性spring.aot.processing=true）时，存储LogbackConfigurationAotContribution对象。
+# 注册安全配置。
 org.springframework.boot.logging.logback.SpringBootJoranConfigurator
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelReader
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelWriter
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator.PatternRules
+
+# Logback配置的AOT Contribution（BeanFactoryInitializationAotContribution）。
+# 把模型写入META-INF/spring/logback-model文件。
+# 把格式规则注册表中的属性写入META-INF/spring/logback-pattern-rules文件中。
 org.springframework.boot.logging.logback.SpringBootJoranConfigurator.LogbackConfigurationAotContribution
+
+# 模型读取器。
+# 从META-INF/spring/logback-model文件读取模型。
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelReader
+
+# 模型写入器。
+# 把模型写入META-INF/spring/logback-model文件。
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.ModelWriter
+
+# 格式规则读写器。
+# 从META-INF/spring/logback-pattern-rules文件读取属性，放入格式规则注册表中。
+# 把格式规则注册表中的属性写入META-INF/spring/logback-pattern-rules文件中。
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator.PatternRules
 
 # Logback的编程式配置器，比解析XML快。
 org.springframework.boot.logging.logback.LogbackConfigurator
