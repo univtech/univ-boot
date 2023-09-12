@@ -24,7 +24,38 @@ org.springframework.boot.logging.logback.LogbackConfigurator
 ## 日志系统
 
 ```
-# Logback的日志系统（LoggingSystem）
+# Logback的日志系统（LoggingSystem）。
+# https://logback.qos.ch
+# 1、日志级别映射：
+# Spring Boot    Logback
+# LogLevel.TRACE Level.TRACE
+# LogLevel.TRACE Level.ALL
+# LogLevel.DEBUG Level.DEBUG
+# LogLevel.INFO  Level.INFO
+# LogLevel.WARN  Level.WARN
+# LogLevel.ERROR Level.ERROR
+# LogLevel.FATAL Level.ERROR
+# LogLevel.OFF   Level.OFF
+# 2、标准配置位置：
+# logback-test.groovy
+# logback-test.xml
+# logback.groovy
+# logback.xml
+# 3、Logback日志系统初始化之前：
+# 如果类路径中存在org.slf4j.bridge.SLF4JBridgeHandler类，并且JUL只使用了一个ConsoleHandler时，移除ConsoleHandler，并配置JDK日志的SLF4J桥接处理器（SLF4JBridgeHandler）。
+# 添加FilterReply.DENY决策的TurboFilter过滤器。
+# 4、初始化Logback日志系统：
+# 启用AOT（系统属性spring.aot.enabled=true）时，应用系统属性，使用AOT生成的构件进行配置，并报告存在的配置错误。
+# 禁用AOT（系统属性spring.aot.enabled=false）或使用AOT生成的构件配置失败时，调用父类的初始化方法。
+# 移除FilterReply.DENY决策的TurboFilter过滤器。
+# 标记正在初始化Logback日志系统。
+# 系统属性中存在logback.configurationFile时，打印警告日志，替代配置属性为logging.config。
+# 5、加载Logback默认配置：
+# 启用debug（系统属性logback.debug=true）时，添加控制台状态监听器（OnConsoleStatusListener），使用DebugLogbackConfigurator配置器。
+# 禁用debug（系统属性logback.debug=false）时，使用LogbackConfigurator配置器。
+# 应用配置属性：Logback日志系统属性（LogbackLoggingSystemProperties）、Logback默认配置（DefaultLogbackConfiguration）。
+# 6、从标准配置位置加载Logback配置，目前只支持xml配置文件，并报告存在的配置错误。
+# 7、配置SLF4J桥接处理器（SLF4JBridgeHandler）时，添加日志级别变更传播者（LevelChangePropagator）
 org.springframework.boot.logging.logback.LogbackLoggingSystem
 
 # Logback的日志系统工厂（LoggingSystemFactory）。
@@ -144,6 +175,27 @@ org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter
 org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter
 ```
 
+## springProperty标签
+
+```
+# <springProperty>标签的模型（NamedModel），包括以下属性：
+# name
+# source
+# scope
+# defaultValue
+# 可以从Spring的Environment中获取Logback属性。
+org.springframework.boot.logging.logback.SpringPropertyModel
+
+# <springProperty>标签的基本模型操作（BaseModelAction）。
+# 获取<springProperty>标签的属性值，创建SpringPropertyModel，并设置属性值。
+# 可以从Spring的Environment中获取Logback属性。
+org.springframework.boot.logging.logback.SpringPropertyAction
+
+# <springProperty>标签的基本模型处理器（ModelHandlerBase）。
+# 可以从Spring的Environment中获取Logback属性。
+org.springframework.boot.logging.logback.SpringPropertyModelHandler
+```
+
 ## springProfile标签
 
 ```
@@ -166,25 +218,4 @@ org.springframework.boot.logging.logback.SpringProfileModelHandler
 # <logger>   LoggerModel
 # <appender> AppenderModel
 org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
-```
-
-## springProperty标签
-
-```
-# <springProperty>标签的模型（NamedModel），包括以下属性：
-# name
-# source
-# scope
-# defaultValue
-# 可以从Spring的Environment中获取Logback属性。
-org.springframework.boot.logging.logback.SpringPropertyModel
-
-# <springProperty>标签的基本模型操作（BaseModelAction）。
-# 获取<springProperty>标签的属性值，创建SpringPropertyModel，并设置属性值。
-# 可以从Spring的Environment中获取Logback属性。
-org.springframework.boot.logging.logback.SpringPropertyAction
-
-# <springProperty>标签的基本模型处理器（ModelHandlerBase）。
-# 可以从Spring的Environment中获取Logback属性。
-org.springframework.boot.logging.logback.SpringPropertyModelHandler
 ```
