@@ -52,14 +52,6 @@ logging.pattern.file                                 日志文件的输出器（
 logging.file.name                                    日志文件的名称，系统属性：LOG_FILE，例如：myapp.log，名称可以是精确位置或当前目录的相对位置
 logging.file.path                                    日志文件的位置，系统属性：LOG_PATH，例如：/var/log
 
-# 参考：LogbackLoggingSystemProperties
-org.jboss.logging.provider                           jboss日志提供者，类路径中包含org.jboss.logging.Logger类时，设置系统属性：org.jboss.logging.provider=slf4j
-logging.logback.rollingpolicy.file-name-pattern      滚动存储的日志文件名称格式，系统属性：LOGBACK_ROLLINGPOLICY_FILE_NAME_PATTERN，废弃属性：logging.pattern.rolling-file-name，默认值：${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
-logging.logback.rollingpolicy.clean-history-on-start 启动时是否清理归档日志文件，系统属性：LOGBACK_ROLLINGPOLICY_CLEAN_HISTORY_ON_START，废弃属性：logging.file.clean-history-on-start，默认值：false
-logging.logback.rollingpolicy.max-file-size          日志文件的最大大小，系统属性：LOGBACK_ROLLINGPOLICY_MAX_FILE_SIZE，废弃属性：logging.file.max-size，默认值：10MB
-logging.logback.rollingpolicy.total-size-cap         日志备份保留的总大小，系统属性：LOGBACK_ROLLINGPOLICY_TOTAL_SIZE_CAP，废弃属性：logging.file.total-size-cap，默认值：0B
-logging.logback.rollingpolicy.max-history            归档日志文件保留的最大数量，系统属性：LOGBACK_ROLLINGPOLICY_MAX_HISTORY，废弃属性：logging.file.max-history，默认值：7
-
 # 参考：Log4J2LoggingSystem
 logging.log4j2.config.override                       创建组合配置时使用的覆盖配置文件
 ```
@@ -92,7 +84,6 @@ org.springframework.boot.logging.LogLevel
 
 # 日志系统工厂
 # 类路径中存在java.util.logging.LogManager类时，创建Java日志系统
-# 类路径中存在ch.qos.logback.classic.LoggerContext类时，创建Logback日志系统
 # 类路径中存在org.apache.logging.log4j.core.impl.Log4jContextFactory类时，创建Log4J2日志系统
 org.springframework.boot.logging.LoggingSystemFactory
     + org.springframework.boot.logging.DelegatingLoggingSystemFactory
@@ -148,23 +139,6 @@ org.springframework.boot.logging.LoggerConfigurationComparator
 org.springframework.boot.logging.java.JavaLoggingSystemRuntimeHints
 org.springframework.boot.logging.java.SimpleFormatter
 
-org.springframework.boot.logging.logback.ColorConverter
-org.springframework.boot.logging.logback.DebugLogbackConfigurator
-org.springframework.boot.logging.logback.DefaultLogbackConfiguration
-org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter
-org.springframework.boot.logging.logback.LogbackConfigurator
-org.springframework.boot.logging.logback.LogbackRuntimeHints
-org.springframework.boot.logging.logback.RootLogLevelConfigurator
-org.springframework.boot.logging.logback.SpringBootJoranConfigurator
-org.springframework.boot.logging.logback.SpringProfileAction
-org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
-org.springframework.boot.logging.logback.SpringProfileModel
-org.springframework.boot.logging.logback.SpringProfileModelHandler
-org.springframework.boot.logging.logback.SpringPropertyAction
-org.springframework.boot.logging.logback.SpringPropertyModel
-org.springframework.boot.logging.logback.SpringPropertyModelHandler
-org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter
-
 org.springframework.boot.logging.log4j2.ColorConverter
 org.springframework.boot.logging.log4j2.ExtendedWhitespaceThrowablePatternConverter
 org.springframework.boot.logging.log4j2.SpringBootConfigurationFactory
@@ -190,9 +164,86 @@ org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfig
 
 
 
+## logback
+
+```
+# logback日志系统属性：从属性解析器（PropertyResolver）获取属性值，并设置为系统属性。
+# 类路径中存在org.jboss.logging.Logger类时，设置系统属性：org.jboss.logging.provider=slf4j。
+# logging.logback.rollingpolicy.file-name-pattern      废弃属性：logging.pattern.rolling-file-name，  系统属性：LOGBACK_ROLLINGPOLICY_FILE_NAME_PATTERN，     日志归档的文件名称格式，默认值：${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
+# logging.logback.rollingpolicy.clean-history-on-start 废弃属性：logging.file.clean-history-on-start，系统属性：LOGBACK_ROLLINGPOLICY_CLEAN_HISTORY_ON_START，启动时是否清理日志归档，默认值：false
+# logging.logback.rollingpolicy.max-file-size          废弃属性：logging.file.max-size，              系统属性：LOGBACK_ROLLINGPOLICY_MAX_FILE_SIZE，         归档前日志文件的最大大小，默认值：10MB
+# logging.logback.rollingpolicy.total-size-cap         废弃属性：logging.file.total-size-cap，        系统属性：LOGBACK_ROLLINGPOLICY_TOTAL_SIZE_CAP，        删除前日志归档的最大容量，默认值：0B
+# logging.logback.rollingpolicy.max-history            废弃属性：logging.file.max-history，           系统属性：LOGBACK_ROLLINGPOLICY_MAX_HISTORY，           删除前日志归档的最大数量，默认值：7
+org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
+
+# 类路径中存在ch.qos.logback.classic.LoggerContext类时，创建Logback日志系统（LogbackLoggingSystem）。
+org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
+
+# 
+org.springframework.boot.logging.logback.LogbackLoggingSystem
+
+# META-INF/services/ch.qos.logback.classic.spi.Configurator中注册的Configurator。
+# 把ROOT日志记录器的日志级别设置为INFO。
+org.springframework.boot.logging.logback.RootLogLevelConfigurator
 
 
 
 
+
+
+
+# 使用AnsiOutput类给输出内容添加颜色的CompositeConverter。
+# 先根据颜色（第一个选项）选择AnsiElement（AnsiColor或AnsiStyle）：
+# black          AnsiColor.BLACK
+# white          AnsiColor.WHITE
+# faint          AnsiStyle.FAINT
+# red            AnsiColor.RED
+# green          AnsiColor.GREEN
+# yellow         AnsiColor.YELLOW
+# blue           AnsiColor.BLUE
+# magenta        AnsiColor.MAGENTA
+# cyan           AnsiColor.CYAN
+# bright_black   AnsiColor.BRIGHT_BLACK
+# bright_white   AnsiColor.BRIGHT_WHITE
+# bright_red     AnsiColor.BRIGHT_RED
+# bright_green   AnsiColor.BRIGHT_GREEN
+# bright_yellow  AnsiColor.BRIGHT_YELLOW
+# bright_blue    AnsiColor.BRIGHT_BLUE
+# bright_magenta AnsiColor.BRIGHT_MAGENTA
+# bright_cyan    AnsiColor.BRIGHT_CYAN
+# 如果颜色不存在，则根据日志级别选择AnsiElement（AnsiColor）：
+# 40000（ERROR）  AnsiColor.RED
+# 30000（WARN）   AnsiColor.YELLOW
+# 否则，默认为绿色（AnsiColor.GREEN）
+org.springframework.boot.logging.logback.ColorConverter
+
+# 在堆栈跟踪前后添加行分隔符的ThrowableProxyConverter。
+org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter
+# 在堆栈跟踪前后添加行分隔符的ExtendedThrowableProxyConverter。
+org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter
+
+
+
+
+
+
+
+
+
+org.springframework.boot.logging.logback.DebugLogbackConfigurator
+org.springframework.boot.logging.logback.DefaultLogbackConfiguration
+org.springframework.boot.logging.logback.LogbackConfigurator
+org.springframework.boot.logging.logback.LogbackRuntimeHints
+org.springframework.boot.logging.logback.SpringBootJoranConfigurator
+org.springframework.boot.logging.logback.SpringProfileAction
+org.springframework.boot.logging.logback.SpringProfileIfNestedWithinSecondPhaseElementSanityChecker
+org.springframework.boot.logging.logback.SpringProfileModel
+org.springframework.boot.logging.logback.SpringProfileModelHandler
+org.springframework.boot.logging.logback.SpringPropertyAction
+org.springframework.boot.logging.logback.SpringPropertyModel
+org.springframework.boot.logging.logback.SpringPropertyModelHandler
+
+
+```
 
 
