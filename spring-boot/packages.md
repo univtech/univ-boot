@@ -60,6 +60,15 @@ org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
 org.springframework.boot.web.embedded.undertow
 ```
 
+## netty
+
+```
+org.springframework.boot.rsocket.netty
+org.springframework.boot.web.embedded.netty
+org.springframework.boot.autoconfigure.netty
+org.springframework.boot.autoconfigure.reactor.netty
+```
+
 ## spring-boot
 
 ```
@@ -101,7 +110,6 @@ org.springframework.boot.r2dbc.init
 org.springframework.boot.reactor
 org.springframework.boot.rsocket.context
 org.springframework.boot.rsocket.messaging
-org.springframework.boot.rsocket.netty
 org.springframework.boot.rsocket.server
 org.springframework.boot.security
 org.springframework.boot.security.reactive
@@ -120,7 +128,6 @@ org.springframework.boot.validation.beanvalidation
 org.springframework.boot.web.client
 org.springframework.boot.web.codec
 org.springframework.boot.web.context
-org.springframework.boot.web.embedded.netty
 org.springframework.boot.web.error
 org.springframework.boot.web.reactive.context
 org.springframework.boot.web.reactive.error
@@ -200,11 +207,9 @@ org.springframework.boot.autoconfigure.mail
 org.springframework.boot.autoconfigure.mongo
 org.springframework.boot.autoconfigure.mustache
 org.springframework.boot.autoconfigure.neo4j
-org.springframework.boot.autoconfigure.netty
 org.springframework.boot.autoconfigure.orm.jpa
 org.springframework.boot.autoconfigure.quartz
 org.springframework.boot.autoconfigure.r2dbc
-org.springframework.boot.autoconfigure.reactor.netty
 org.springframework.boot.autoconfigure.rsocket
 org.springframework.boot.autoconfigure.security
 org.springframework.boot.autoconfigure.security.oauth2.client
