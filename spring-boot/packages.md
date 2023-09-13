@@ -243,8 +243,6 @@ org.springframework.boot.actuate.autoconfigure.jms
 ## sql
 
 ```
-org.springframework.boot.sql.init
-org.springframework.boot.sql.init.dependency
 org.springframework.boot.autoconfigure.sql.init
 ```
 
@@ -404,7 +402,6 @@ org.springframework.boot.testcontainers.service.connection.kafka
 ## jooq
 
 ```
-org.springframework.boot.jooq
 org.springframework.boot.autoconfigure.jooq
 org.springframework.boot.test.autoconfigure.jooq
 ```

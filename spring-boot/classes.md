@@ -524,8 +524,6 @@ org.springframework.boot.jdbc.XADataSourceWrapper
 
 org.springframework.boot.jms.XAConnectionFactoryWrapper
 
-org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
-
 org.springframework.boot.json.AbstractJsonParser
 org.springframework.boot.json.BasicJsonParser
 org.springframework.boot.json.GsonJsonParser.ListTypeToken
@@ -662,22 +660,6 @@ org.springframework.boot.rsocket.server.RSocketServerFactory
 
 org.springframework.boot.security.reactive.ApplicationContextServerWebExchangeMatcher
 org.springframework.boot.security.servlet.ApplicationContextRequestMatcher
-
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.ScriptLocationResolver
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
-org.springframework.boot.sql.init.DatabaseInitializationMode
-org.springframework.boot.sql.init.DatabaseInitializationSettings
-org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
-org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
-org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
-org.springframework.boot.sql.init.dependency.BeansOfTypeDetector
-org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor.InitializerBeanNames
-org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor
-org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer
-org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
-org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization
-org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
 
 org.springframework.boot.ssl.AliasKeyManagerFactory.AliasKeyManagerFactorySpi
 org.springframework.boot.ssl.AliasKeyManagerFactory.AliasX509ExtendedKeyManager
