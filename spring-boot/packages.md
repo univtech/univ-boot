@@ -18,11 +18,15 @@ org.springframework.boot.actuate.autoconfigure.logging
 ```
 org.springframework.boot.autoconfigure.graphql
 org.springframework.boot.autoconfigure.graphql.data
+org.springframework.boot.autoconfigure.graphql.servlet
+org.springframework.boot.autoconfigure.graphql.reactive
+org.springframework.boot.autoconfigure.graphql.rsocket
 org.springframework.boot.autoconfigure.graphql.security
-org.springframework.boot.actuate.autoconfigure.observation.graphql
 org.springframework.boot.test.graphql.tester
 org.springframework.boot.test.autoconfigure.graphql
 org.springframework.boot.test.autoconfigure.graphql.tester
+
+org.springframework.boot.actuate.autoconfigure.observation.graphql
 ```
 
 ## jersey
@@ -76,7 +80,6 @@ org.springframework.boot.web.servlet.filter
 org.springframework.boot.web.servlet.server
 org.springframework.boot.web.servlet.support
 org.springframework.boot.web.servlet.view
-org.springframework.boot.autoconfigure.graphql.servlet
 org.springframework.boot.autoconfigure.security.oauth2.client.servlet
 org.springframework.boot.autoconfigure.security.oauth2.resource.servlet
 org.springframework.boot.autoconfigure.security.oauth2.server.servlet
@@ -105,7 +108,6 @@ org.springframework.boot.web.reactive.filter
 org.springframework.boot.web.reactive.function.client
 org.springframework.boot.web.reactive.result.view
 org.springframework.boot.web.reactive.server
-org.springframework.boot.autoconfigure.graphql.reactive
 org.springframework.boot.autoconfigure.security.oauth2.client.reactive
 org.springframework.boot.autoconfigure.security.oauth2.resource.reactive
 org.springframework.boot.autoconfigure.security.reactive
@@ -133,7 +135,6 @@ org.springframework.boot.rsocket.netty
 org.springframework.boot.rsocket.context
 org.springframework.boot.rsocket.messaging
 org.springframework.boot.rsocket.server
-org.springframework.boot.autoconfigure.graphql.rsocket
 org.springframework.boot.autoconfigure.rsocket
 org.springframework.boot.autoconfigure.security.rsocket
 org.springframework.boot.test.rsocket.server
