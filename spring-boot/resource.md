@@ -5,9 +5,6 @@
 ```
 log4j2.springboot
 META-INF/additional-spring-configuration-metadata.json
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat
 META-INF/services/ch.qos.logback.classic.spi.Configurator
 META-INF/services/org.apache.logging.log4j.util.PropertySource
@@ -21,9 +18,6 @@ META-INF/spring-configuration-metadata.json
 
 ```
 META-INF/additional-spring-configuration-metadata.json
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring-configuration-metadata.json
 ```
 
@@ -31,9 +25,6 @@ META-INF/spring-configuration-metadata.json
 
 ```
 META-INF/additional-spring-configuration-metadata.json
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring/org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
@@ -45,9 +36,6 @@ META-INF/spring-configuration-metadata.json
 
 ```
 META-INF/additional-spring-configuration-metadata.json
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring/aot.factories
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
@@ -59,9 +47,6 @@ META-INF/spring-configuration-metadata.json
 
 ```
 META-INF/additional-spring-configuration-metadata.json
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
 META-INF/spring-autoconfigure-metadata.properties
@@ -73,9 +58,6 @@ META-INF/spring-devtools.properties
 
 ```
 META-INF/additional-spring-configuration-metadata.json
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring-configuration-metadata.json
 ```
@@ -83,9 +65,6 @@ META-INF/spring-configuration-metadata.json
 ## spring-boot-test
 
 ```
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring-boot-test.kotlin_module
 mockito-extensions/org.mockito.plugins.MockResolver
@@ -94,9 +73,6 @@ mockito-extensions/org.mockito.plugins.MockResolver
 ## spring-boot-test-autoconfigure
 
 ```
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring/org.springframework.boot.test.autoconfigure.core.AutoConfigureCache.imports
 META-INF/spring/org.springframework.boot.test.autoconfigure.data.cassandra.AutoConfigureDataCassandra.imports
@@ -135,9 +111,6 @@ META-INF/spring-configuration-metadata.json
 ## spring-boot-testcontainers
 
 ```
-META-INF/LICENSE.txt
-META-INF/MANIFEST.MF
-META-INF/NOTICE.txt
 META-INF/spring.factories
 META-INF/spring/aot.factories
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
