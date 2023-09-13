@@ -1,0 +1,12 @@
+# autoconfigure
+
+```
+
+org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger
+org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
+org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.ConditionEvaluationReportListener
+org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingProcessor
+org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportMessage
+
+
+```

@@ -109,12 +109,15 @@ org.springframework.boot.logging.LoggingInitializationContext
 org.springframework.boot.logging.LoggerConfigurationComparator
 ```
 
+
+
 ```
 
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingProcessor
-org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportMessage
+
+
+
+
+
 
 org.springframework.boot.actuate.logging.LogFileWebEndpoint
 org.springframework.boot.actuate.logging.LoggersEndpoint
