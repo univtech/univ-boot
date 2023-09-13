@@ -41,9 +41,6 @@ logging.pattern.file                                 日志文件的输出器（
 # 参考：LogFile
 logging.file.name                                    日志文件的名称，系统属性：LOG_FILE，例如：myapp.log，名称可以是精确位置或当前目录的相对位置
 logging.file.path                                    日志文件的位置，系统属性：LOG_PATH，例如：/var/log
-
-# 参考：Log4J2LoggingSystem
-logging.log4j2.config.override                       创建组合配置时使用的覆盖配置文件
 ```
 
 ## java文件
@@ -73,11 +70,9 @@ org.springframework.boot.logging.LogLevel
 
 # 日志系统工厂
 # 类路径中存在java.util.logging.LogManager类时，创建Java日志系统
-# 类路径中存在org.apache.logging.log4j.core.impl.Log4jContextFactory类时，创建Log4J2日志系统
 org.springframework.boot.logging.LoggingSystemFactory
     + org.springframework.boot.logging.DelegatingLoggingSystemFactory
     + org.springframework.boot.logging.java.JavaLoggingSystem.Factory
-    + org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.Factory
 
 # 日志记录器分组
 org.springframework.boot.logging.LoggerGroup
@@ -109,10 +104,6 @@ org.springframework.boot.logging.LoggingSystem
     + org.springframework.boot.logging.LoggingSystem.NoOpLoggingSystem
     + org.springframework.boot.logging.AbstractLoggingSystem
         + org.springframework.boot.logging.java.JavaLoggingSystem
-        + org.springframework.boot.logging.log4j2.Log4J2LoggingSystem
-
-# Log4J2日志系统的日志记录器配置
-org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.LevelSetLoggerConfig
 
 # 日志初始化上下文
 org.springframework.boot.logging.LoggingInitializationContext
@@ -125,15 +116,6 @@ org.springframework.boot.logging.LoggerConfigurationComparator
 
 org.springframework.boot.logging.java.JavaLoggingSystemRuntimeHints
 org.springframework.boot.logging.java.SimpleFormatter
-
-org.springframework.boot.logging.log4j2.ColorConverter
-org.springframework.boot.logging.log4j2.ExtendedWhitespaceThrowablePatternConverter
-org.springframework.boot.logging.log4j2.SpringBootConfigurationFactory
-org.springframework.boot.logging.log4j2.SpringBootPropertySource
-org.springframework.boot.logging.log4j2.SpringEnvironmentLookup
-org.springframework.boot.logging.log4j2.SpringEnvironmentPropertySource
-org.springframework.boot.logging.log4j2.SpringProfileArbiter
-org.springframework.boot.logging.log4j2.WhitespaceThrowablePatternConverter
 
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
