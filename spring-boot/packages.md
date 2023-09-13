@@ -72,7 +72,6 @@ org.springframework.boot.autoconfigure.reactor.netty
 ## servlet
 
 ```
-org.springframework.boot.security.servlet
 org.springframework.boot.web.servlet
 org.springframework.boot.web.servlet.context
 org.springframework.boot.web.servlet.error
@@ -80,10 +79,6 @@ org.springframework.boot.web.servlet.filter
 org.springframework.boot.web.servlet.server
 org.springframework.boot.web.servlet.support
 org.springframework.boot.web.servlet.view
-org.springframework.boot.autoconfigure.security.oauth2.client.servlet
-org.springframework.boot.autoconfigure.security.oauth2.resource.servlet
-org.springframework.boot.autoconfigure.security.oauth2.server.servlet
-org.springframework.boot.autoconfigure.security.servlet
 org.springframework.boot.autoconfigure.web.servlet
 org.springframework.boot.autoconfigure.web.servlet.error
 org.springframework.boot.actuate.endpoint.web.servlet
@@ -93,7 +88,6 @@ org.springframework.boot.actuate.web.mappings.servlet
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet
 org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet
-org.springframework.boot.actuate.autoconfigure.security.servlet
 org.springframework.boot.actuate.autoconfigure.web.servlet
 org.springframework.boot.test.autoconfigure.web.servlet
 ```
@@ -101,16 +95,12 @@ org.springframework.boot.test.autoconfigure.web.servlet
 ## reactive
 
 ```
-org.springframework.boot.security.reactive
 org.springframework.boot.web.reactive.context
 org.springframework.boot.web.reactive.error
 org.springframework.boot.web.reactive.filter
 org.springframework.boot.web.reactive.function.client
 org.springframework.boot.web.reactive.result.view
 org.springframework.boot.web.reactive.server
-org.springframework.boot.autoconfigure.security.oauth2.client.reactive
-org.springframework.boot.autoconfigure.security.oauth2.resource.reactive
-org.springframework.boot.autoconfigure.security.reactive
 org.springframework.boot.autoconfigure.web.reactive
 org.springframework.boot.autoconfigure.web.reactive.error
 org.springframework.boot.autoconfigure.web.reactive.function.client
@@ -122,7 +112,6 @@ org.springframework.boot.actuate.web.mappings.reactive
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.reactive
 org.springframework.boot.actuate.autoconfigure.endpoint.web.reactive
 org.springframework.boot.actuate.autoconfigure.observation.web.reactive
-org.springframework.boot.actuate.autoconfigure.security.reactive
 org.springframework.boot.actuate.autoconfigure.web.reactive
 org.springframework.boot.test.web.reactive.server
 org.springframework.boot.test.autoconfigure.web.reactive
@@ -136,7 +125,6 @@ org.springframework.boot.rsocket.context
 org.springframework.boot.rsocket.messaging
 org.springframework.boot.rsocket.server
 org.springframework.boot.autoconfigure.rsocket
-org.springframework.boot.autoconfigure.security.rsocket
 org.springframework.boot.test.rsocket.server
 ```
 
@@ -514,11 +502,23 @@ org.springframework.boot.actuate.autoconfigure.quartz
 
 ```
 org.springframework.boot.security
+org.springframework.boot.security.servlet
+org.springframework.boot.security.reactive
 org.springframework.boot.autoconfigure.security
-org.springframework.boot.autoconfigure.security.oauth2.client
-org.springframework.boot.autoconfigure.security.oauth2.resource
+org.springframework.boot.autoconfigure.security.servlet
+org.springframework.boot.autoconfigure.security.reactive
+org.springframework.boot.autoconfigure.security.rsocket
 org.springframework.boot.autoconfigure.security.saml2
+org.springframework.boot.autoconfigure.security.oauth2.client
+org.springframework.boot.autoconfigure.security.oauth2.client.servlet
+org.springframework.boot.autoconfigure.security.oauth2.client.reactive
+org.springframework.boot.autoconfigure.security.oauth2.resource
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet
+org.springframework.boot.autoconfigure.security.oauth2.resource.reactive
+org.springframework.boot.autoconfigure.security.oauth2.server.servlet
 org.springframework.boot.actuate.security
+org.springframework.boot.actuate.autoconfigure.security.servlet
+org.springframework.boot.actuate.autoconfigure.security.reactive
 ```
 
 ## properties
