@@ -87,7 +87,7 @@ org.springframework.boot.web.server.Http2
 org.springframework.boot.web.server.Compression
 ```
 
-## 
+## SSL证书
 
 ```
 # SSL配置验证器，已废弃。
@@ -96,30 +96,30 @@ org.springframework.boot.web.server.SslConfigurationValidator
 
 # SSL配置。
 # boolean    enabled                    是否启用SSL，默认值：true 
-# String     bundle                     the name of the SSL bundle to use.
-# ClientAuth clientAuth                 Return Whether client authentication is not wanted ("none"), wanted ("want") or needed ("need"). Requires a trust store.
-# String[]   ciphers                    Return the supported SSL ciphers.
-# String[]   enabledProtocols           Return the enabled SSL protocols.
-# String     keyAlias                   Return the alias that identifies the key in the key store.
-# String     keyPassword                Return the password used to access the key in the key store.
-# String     keyStore                   Return the path to the key store that holds the SSL certificate (typically a jks file).
-# String     keyStorePassword           Return the password used to access the key store.
-# String     keyStoreType               Return the type of the key store.
-# String     keyStoreProvider           Return the provider for the key store.
-# String     trustStore                 Return the trust store that holds SSL certificates.
-# String     trustStorePassword         Return the password used to access the trust store.
-# String     trustStoreType             Return the type of the trust store.
-# String     trustStoreProvider         Return the provider for the trust store.
-# String     certificate                Return the location of the certificate in PEM format.
-# String     certificatePrivateKey      Return the location of the private key for the certificate in PEM format.
-# String     trustCertificate           Return the location of the trust certificate authority chain in PEM format.
-# String     trustCertificatePrivateKey Return the location of the private key for the trust certificate in PEM format.
+# String     bundle                     SSL包的名称
+# ClientAuth clientAuth                 客户端认证类型
+# String[]   ciphers                    支持的SSL密码
+# String[]   enabledProtocols           启用的SSL协议
+# String     keyAlias                   标识密钥存储库中的密钥的别名
+# String     keyPassword                访问密钥存储库中的密钥的密码
+# String     keyStore                   存储SSL证书（通常是jks文件）的密钥存储库的路径
+# String     keyStorePassword           访问密钥存储库的密码
+# String     keyStoreType               密钥存储库的类型
+# String     keyStoreProvider           密钥存储库提供者
+# String     trustStore                 受信的存储SSL证书的密钥存储库
+# String     trustStorePassword         访问受信的密钥存储库的密码
+# String     trustStoreType             受信的密钥存储库的类型
+# String     trustStoreProvider         受信的密钥存储库提供者
+# String     certificate                PEM证书的位置
+# String     certificatePrivateKey      PEM证书的私钥位置
+# String     trustCertificate           受信的PEM证书的位置
+# String     trustCertificatePrivateKey 受信的PEM证书的私钥位置
 # String     protocol                   SSL协议，默认值：TLS
-# forBundle
-# isEnabled
-# getXXX
-# isXXX
-# setXXX
+# forBundle                             创建Ssl
+# isEnabled                             SSL是否启用
+# getXXX                                获取XXX
+# isXXX                                 是否XXX
+# setXXX                                设置XXX
 org.springframework.boot.web.server.Ssl
 
 # 客户端认证类型。
@@ -132,7 +132,7 @@ org.springframework.boot.web.server.Ssl.ClientAuth
 # SSL存储库提供者，已废弃。
 # getTrustStore  获取受信的密钥存储库（KeyStore）
 # getKeyStore    获取密钥存储库（KeyStore）
-# getKeyPassword 获取密钥存储库（KeyStore）中私钥的密码
+# getKeyPassword 获取密钥存储库（KeyStore）中的密钥的密码
 org.springframework.boot.web.server.SslStoreProvider
  
 # 根据证书和PEM私钥文件创建密钥和受信存储库的SSL存储库提供者（SslStoreProvider），已废弃。
@@ -140,7 +140,7 @@ org.springframework.boot.web.server.SslStoreProvider
 # from           创建SslStoreProvider
 # getTrustStore  获取受信的密钥存储库（KeyStore）
 # getKeyStore    获取密钥存储库（KeyStore）
-# getKeyPassword 获取密钥存储库（KeyStore）中私钥的密码
+# getKeyPassword 获取密钥存储库（KeyStore）中的密钥的密码
 org.springframework.boot.web.server.CertificateFileSslStoreProvider
 
 # Web服务器的SSL包（SslBundle）。
@@ -171,8 +171,7 @@ org.springframework.boot.web.server.WebServerSslBundle
 org.springframework.boot.web.server.WebServerSslBundle.SslStoreProviderBundleAdapter
 ```
 
-
-## 关闭Web服务器
+## 关闭服务器
 
 ```
 # Web服务器的关闭配置。
