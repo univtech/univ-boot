@@ -1,5 +1,18 @@
 # 包名
 
+## logging
+
+```
+org.springframework.boot.context.logging
+org.springframework.boot.logging
+org.springframework.boot.logging.java
+org.springframework.boot.logging.log4j2
+org.springframework.boot.logging.logback
+org.springframework.boot.autoconfigure.logging
+org.springframework.boot.actuate.logging
+org.springframework.boot.actuate.autoconfigure.logging
+```
+
 ## spring-boot
 
 ```
@@ -13,7 +26,6 @@ org.springframework.boot.context
 org.springframework.boot.context.annotation
 org.springframework.boot.context.config
 org.springframework.boot.context.event
-org.springframework.boot.context.logging
 org.springframework.boot.context.metrics.buffering
 org.springframework.boot.context.properties
 org.springframework.boot.context.properties.bind
@@ -34,10 +46,6 @@ org.springframework.boot.jms
 org.springframework.boot.jooq
 org.springframework.boot.json
 org.springframework.boot.liquibase
-org.springframework.boot.logging
-org.springframework.boot.logging.java
-org.springframework.boot.logging.log4j2
-org.springframework.boot.logging.logback
 org.springframework.boot.origin
 org.springframework.boot.orm.jpa
 org.springframework.boot.orm.jpa.hibernate
@@ -151,7 +159,6 @@ org.springframework.boot.autoconfigure.kafka
 org.springframework.boot.autoconfigure.ldap
 org.springframework.boot.autoconfigure.ldap.embedded
 org.springframework.boot.autoconfigure.liquibase
-org.springframework.boot.autoconfigure.logging
 org.springframework.boot.autoconfigure.mail
 org.springframework.boot.autoconfigure.mongo
 org.springframework.boot.autoconfigure.mustache
@@ -243,7 +250,6 @@ org.springframework.boot.actuate.jdbc
 org.springframework.boot.actuate.jms
 org.springframework.boot.actuate.ldap
 org.springframework.boot.actuate.liquibase
-org.springframework.boot.actuate.logging
 org.springframework.boot.actuate.mail
 org.springframework.boot.actuate.management
 org.springframework.boot.actuate.metrics
@@ -321,7 +327,6 @@ org.springframework.boot.actuate.autoconfigure.jdbc
 org.springframework.boot.actuate.autoconfigure.jms
 org.springframework.boot.actuate.autoconfigure.ldap
 org.springframework.boot.actuate.autoconfigure.liquibase
-org.springframework.boot.actuate.autoconfigure.logging
 org.springframework.boot.actuate.autoconfigure.mail
 org.springframework.boot.actuate.autoconfigure.management
 org.springframework.boot.actuate.autoconfigure.metrics
