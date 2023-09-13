@@ -69,10 +69,8 @@ org.springframework.boot.logging.LogLevel
     + OFF
 
 # 日志系统工厂
-# 类路径中存在java.util.logging.LogManager类时，创建Java日志系统
 org.springframework.boot.logging.LoggingSystemFactory
     + org.springframework.boot.logging.DelegatingLoggingSystemFactory
-    + org.springframework.boot.logging.java.JavaLoggingSystem.Factory
 
 # 日志记录器分组
 org.springframework.boot.logging.LoggerGroup
@@ -103,7 +101,6 @@ org.springframework.boot.logging.LoggerConfiguration.ConfigurationScope
 org.springframework.boot.logging.LoggingSystem
     + org.springframework.boot.logging.LoggingSystem.NoOpLoggingSystem
     + org.springframework.boot.logging.AbstractLoggingSystem
-        + org.springframework.boot.logging.java.JavaLoggingSystem
 
 # 日志初始化上下文
 org.springframework.boot.logging.LoggingInitializationContext
@@ -113,9 +110,6 @@ org.springframework.boot.logging.LoggerConfigurationComparator
 ```
 
 ```
-
-org.springframework.boot.logging.java.JavaLoggingSystemRuntimeHints
-org.springframework.boot.logging.java.SimpleFormatter
 
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
