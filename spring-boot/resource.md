@@ -3,11 +3,7 @@
 ## spring-boot
 
 ```
-log4j2.springboot
 META-INF/additional-spring-configuration-metadata.json
-META-INF/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat
-META-INF/services/ch.qos.logback.classic.spi.Configurator
-META-INF/services/org.apache.logging.log4j.util.PropertySource
 META-INF/spring.factories
 META-INF/spring/aot.factories
 META-INF/spring-boot.kotlin_module
