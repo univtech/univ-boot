@@ -61,15 +61,6 @@ org.springframework.boot.web.server.WebServerException
 org.springframework.boot.web.server.PortInUseException
 ```
 
-## 错误页面
-
-```
-org.springframework.boot.web.server.ErrorPage
-org.springframework.boot.web.server.ErrorPageRegistrar
-org.springframework.boot.web.server.ErrorPageRegistry
-org.springframework.boot.web.server.ErrorPageRegistrarBeanPostProcessor
-```
-
 ```
 org.springframework.boot.web.server.Cookie
 org.springframework.boot.web.server.Cookie.SameSite
@@ -81,8 +72,39 @@ org.springframework.boot.web.server.MimeMappings.Mapping
 org.springframework.boot.web.server.MimeMappings.MimeMappingsRuntimeHints
 ```
 
+## 错误页面
+
 ```
+org.springframework.boot.web.server.ErrorPage
+
+# 错误页面注册表：保存错误页面（ErrorPage）。
+# addErrorPages 添加错误页面
+org.springframework.boot.web.server.ErrorPageRegistry
+
+# 错误页面注册器：注册错误页面（ErrorPage）。
+# registerErrorPages 通过ErrorPageRegistry注册错误页面
+org.springframework.boot.web.server.ErrorPageRegistrar
+
+# 把BeanFactory中的所有ErrorPageRegistrar应用于ErrorPageRegistry的后置处理器（BeanPostProcessor）。
+# 调用ErrorPageRegistrar.registerErrorPages方法。
+org.springframework.boot.web.server.ErrorPageRegistrarBeanPostProcessor
+```
+
+```
+# HTTP/2配置。
+# enabled 是否启用HTTP/2，默认值：false
+# getXXX 获取XXX
+# setXXX 设置XXX
 org.springframework.boot.web.server.Http2
+
+## 压缩配置。
+# enabled            是否启用压缩
+# mimeTypes          MIME类型：text/html、text/xml、text/plain、text/css、text/javascript、application/javascript、application/json、application/xml
+# excludedUserAgents 排除的用户代理
+# minResponseSize    最小的响应大小
+# getXXX             获取XXX
+# isXXX              是否XXX
+# setXXX             设置XXX
 org.springframework.boot.web.server.Compression
 ```
 
@@ -129,21 +151,21 @@ org.springframework.boot.web.server.Ssl
 org.springframework.boot.web.server.Ssl.ClientAuth
 
 # SSL存储库提供者，已废弃。
-# getTrustStore  获取受信的密钥存储库（KeyStore）
 # getKeyStore    获取密钥存储库（KeyStore）
-# getKeyPassword 获取密钥存储库（KeyStore）中的密钥的密码
+# getKeyPassword 获取密钥存储库（KeyStore）中的密钥密码
+# getTrustStore  获取受信的密钥存储库（KeyStore）
 org.springframework.boot.web.server.SslStoreProvider
  
 # 根据证书和PEM私钥文件创建密钥和受信存储库的SSL存储库提供者（SslStoreProvider），已废弃。
 # delegate       SslBundle
 # from           创建SslStoreProvider
-# getTrustStore  获取受信的密钥存储库（KeyStore）
 # getKeyStore    获取密钥存储库（KeyStore）
-# getKeyPassword 获取密钥存储库（KeyStore）中的密钥的密码
+# getKeyPassword 获取密钥存储库（KeyStore）中的密钥密码
+# getTrustStore  获取受信的密钥存储库（KeyStore）
 org.springframework.boot.web.server.CertificateFileSslStoreProvider
 
 # Web服务器的SSL包（SslBundle）。
-# Ssl或SslStoreProvider支持的SslBundle。
+# 基于Ssl或SslStoreProvider的SslBundle，包括两种格式：PEM、JKS。
 # DEFAULT_PROTOCOL 默认协议：TLS
 # stores           SslStoreBundle
 # key              SslBundleKey
@@ -162,11 +184,12 @@ org.springframework.boot.web.server.WebServerSslBundle
 
 # SSL存储库提供者（SslStoreProvider）的SSL存储库包（SslStoreBundle）适配器。
 # 把SslStoreProvider适配成SslStoreBundle。
-# NONE                空SslStoreBundle
+# sslStoreProvider    SSL存储库提供者（SslStoreProvider）
+# NONE                空的SslStoreBundle
 # of                  创建SslStoreBundle
-# getTrustStore       获取受信的密钥存储库（KeyStore）
 # getKeyStore         获取密钥存储库（KeyStore）
-# getKeyStorePassword 获取密钥存储库（KeyStore）中私钥的密码
+# getKeyStorePassword 获取密钥存储库（KeyStore）的密码
+# getTrustStore       获取受信的密钥存储库（KeyStore）
 org.springframework.boot.web.server.WebServerSslBundle.SslStoreProviderBundleAdapter
 ```
 
@@ -179,8 +202,8 @@ org.springframework.boot.web.server.WebServerSslBundle.SslStoreProviderBundleAda
 org.springframework.boot.web.server.Shutdown
 
 # Web服务器的优雅关闭结果。
-# REQUESTS_ACTIVE 在最后的宽限期，激活请求仍然有效
-# IDLE            在最后的宽限期，Web服务器空闲，没有激活请求
+# REQUESTS_ACTIVE 在最后的宽限期内，激活请求仍然有效
+# IDLE            在最后的宽限期内，Web服务器空闲，没有激活请求
 # IMMEDIATE       立即关闭Web服务器，忽略激活请求
 org.springframework.boot.web.server.GracefulShutdownResult
 
