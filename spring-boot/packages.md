@@ -28,6 +28,16 @@ org.springframework.boot.test.autoconfigure.graphql
 org.springframework.boot.test.autoconfigure.graphql.tester
 ```
 
+## jersey
+
+```
+org.springframework.boot.autoconfigure.jersey
+org.springframework.boot.actuate.endpoint.web.jersey
+org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey
+org.springframework.boot.actuate.autoconfigure.metrics.jersey
+org.springframework.boot.actuate.autoconfigure.web.jersey
+```
+
 ## spring-boot
 
 ```
@@ -157,7 +167,6 @@ org.springframework.boot.autoconfigure.integration
 org.springframework.boot.autoconfigure.jackson
 org.springframework.boot.autoconfigure.jdbc
 org.springframework.boot.autoconfigure.jdbc.metadata
-org.springframework.boot.autoconfigure.jersey
 org.springframework.boot.autoconfigure.jms
 org.springframework.boot.autoconfigure.jms.activemq
 org.springframework.boot.autoconfigure.jms.artemis
@@ -245,7 +254,6 @@ org.springframework.boot.actuate.endpoint.jmx
 org.springframework.boot.actuate.endpoint.jmx.annotation
 org.springframework.boot.actuate.endpoint.web
 org.springframework.boot.actuate.endpoint.web.annotation
-org.springframework.boot.actuate.endpoint.web.jersey
 org.springframework.boot.actuate.endpoint.web.reactive
 org.springframework.boot.actuate.endpoint.web.servlet
 org.springframework.boot.actuate.env
@@ -322,7 +330,6 @@ org.springframework.boot.actuate.autoconfigure.endpoint.expose
 org.springframework.boot.actuate.autoconfigure.endpoint.jackson
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx
 org.springframework.boot.actuate.autoconfigure.endpoint.web
-org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey
 org.springframework.boot.actuate.autoconfigure.endpoint.web.reactive
 org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet
 org.springframework.boot.actuate.autoconfigure.env
@@ -365,7 +372,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.export.statsd
 org.springframework.boot.actuate.autoconfigure.metrics.export.wavefront
 org.springframework.boot.actuate.autoconfigure.metrics.integration
 org.springframework.boot.actuate.autoconfigure.metrics.jdbc
-org.springframework.boot.actuate.autoconfigure.metrics.jersey
 org.springframework.boot.actuate.autoconfigure.metrics.mongo
 org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa
 org.springframework.boot.actuate.autoconfigure.metrics.r2dbc
@@ -396,7 +402,6 @@ org.springframework.boot.actuate.autoconfigure.tracing.zipkin
 org.springframework.boot.actuate.autoconfigure.wavefront
 org.springframework.boot.actuate.autoconfigure.web
 org.springframework.boot.actuate.autoconfigure.web.exchanges
-org.springframework.boot.actuate.autoconfigure.web.jersey
 org.springframework.boot.actuate.autoconfigure.web.mappings
 org.springframework.boot.actuate.autoconfigure.web.reactive
 org.springframework.boot.actuate.autoconfigure.web.server
