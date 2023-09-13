@@ -38,6 +38,14 @@ org.springframework.boot.actuate.autoconfigure.metrics.jersey
 org.springframework.boot.actuate.autoconfigure.web.jersey
 ```
 
+## jetty
+
+```
+org.springframework.boot.web.embedded.jetty
+org.springframework.boot.actuate.metrics.web.jetty
+org.springframework.boot.actuate.autoconfigure.metrics.web.jetty
+```
+
 ## spring-boot
 
 ```
@@ -98,7 +106,6 @@ org.springframework.boot.validation.beanvalidation
 org.springframework.boot.web.client
 org.springframework.boot.web.codec
 org.springframework.boot.web.context
-org.springframework.boot.web.embedded.jetty
 org.springframework.boot.web.embedded.netty
 org.springframework.boot.web.embedded.tomcat
 org.springframework.boot.web.embedded.undertow
@@ -281,7 +288,6 @@ org.springframework.boot.actuate.metrics.r2dbc
 org.springframework.boot.actuate.metrics.startup
 org.springframework.boot.actuate.metrics.system
 org.springframework.boot.actuate.metrics.web.client
-org.springframework.boot.actuate.metrics.web.jetty
 org.springframework.boot.actuate.metrics.web.reactive.client
 org.springframework.boot.actuate.metrics.web.reactive.server
 org.springframework.boot.actuate.metrics.web.servlet
@@ -378,7 +384,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.r2dbc
 org.springframework.boot.actuate.autoconfigure.metrics.redis
 org.springframework.boot.actuate.autoconfigure.metrics.startup
 org.springframework.boot.actuate.autoconfigure.metrics.task
-org.springframework.boot.actuate.autoconfigure.metrics.web.jetty
 org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
 org.springframework.boot.actuate.autoconfigure.neo4j
 org.springframework.boot.actuate.autoconfigure.observation
