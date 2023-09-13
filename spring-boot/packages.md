@@ -13,6 +13,21 @@ org.springframework.boot.actuate.logging
 org.springframework.boot.actuate.autoconfigure.logging
 ```
 
+## graphql
+
+```
+org.springframework.boot.autoconfigure.graphql
+org.springframework.boot.autoconfigure.graphql.data
+org.springframework.boot.autoconfigure.graphql.reactive
+org.springframework.boot.autoconfigure.graphql.rsocket
+org.springframework.boot.autoconfigure.graphql.security
+org.springframework.boot.autoconfigure.graphql.servlet
+org.springframework.boot.actuate.autoconfigure.observation.graphql
+org.springframework.boot.test.graphql.tester
+org.springframework.boot.test.autoconfigure.graphql
+org.springframework.boot.test.autoconfigure.graphql.tester
+```
+
 ## spring-boot
 
 ```
@@ -129,12 +144,6 @@ org.springframework.boot.autoconfigure.domain
 org.springframework.boot.autoconfigure.elasticsearch
 org.springframework.boot.autoconfigure.flyway
 org.springframework.boot.autoconfigure.freemarker
-org.springframework.boot.autoconfigure.graphql
-org.springframework.boot.autoconfigure.graphql.data
-org.springframework.boot.autoconfigure.graphql.reactive
-org.springframework.boot.autoconfigure.graphql.rsocket
-org.springframework.boot.autoconfigure.graphql.security
-org.springframework.boot.autoconfigure.graphql.servlet
 org.springframework.boot.autoconfigure.groovy.template
 org.springframework.boot.autoconfigure.gson
 org.springframework.boot.autoconfigure.h2
@@ -368,7 +377,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
 org.springframework.boot.actuate.autoconfigure.neo4j
 org.springframework.boot.actuate.autoconfigure.observation
 org.springframework.boot.actuate.autoconfigure.observation.batch
-org.springframework.boot.actuate.autoconfigure.observation.graphql
 org.springframework.boot.actuate.autoconfigure.observation.web.client
 org.springframework.boot.actuate.autoconfigure.observation.web.reactive
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet
@@ -444,7 +452,6 @@ org.springframework.boot.test.context
 org.springframework.boot.test.context.assertj
 org.springframework.boot.test.context.filter
 org.springframework.boot.test.context.runner
-org.springframework.boot.test.graphql.tester
 org.springframework.boot.test.json
 org.springframework.boot.test.mock.mockito
 org.springframework.boot.test.mock.web
@@ -476,8 +483,6 @@ org.springframework.boot.test.autoconfigure.data.neo4j
 org.springframework.boot.test.autoconfigure.data.r2dbc
 org.springframework.boot.test.autoconfigure.data.redis
 org.springframework.boot.test.autoconfigure.filter
-org.springframework.boot.test.autoconfigure.graphql
-org.springframework.boot.test.autoconfigure.graphql.tester
 org.springframework.boot.test.autoconfigure.jdbc
 org.springframework.boot.test.autoconfigure.jooq
 org.springframework.boot.test.autoconfigure.json
