@@ -6,7 +6,6 @@
 META-INF/additional-spring-configuration-metadata.json
 META-INF/spring.factories
 META-INF/spring/aot.factories
-META-INF/spring-boot.kotlin_module
 META-INF/spring-configuration-metadata.json
 ```
 
@@ -62,7 +61,6 @@ META-INF/spring-configuration-metadata.json
 
 ```
 META-INF/spring.factories
-META-INF/spring-boot-test.kotlin_module
 mockito-extensions/org.mockito.plugins.MockResolver
 ```
 
