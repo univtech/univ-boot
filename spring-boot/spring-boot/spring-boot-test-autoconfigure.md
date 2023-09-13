@@ -1,7 +1,5 @@
 # spring-boot-test-autoconfigure
 
-## 构件信息
-
 ```
 # 构件
 org.springframework.boot:spring-boot-test-autoconfigure:3.1.3

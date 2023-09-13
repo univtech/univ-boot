@@ -1,7 +1,5 @@
 # spring-boot-testcontainers
 
-## 构件信息
-
 ```
 # 构件
 org.springframework.boot:spring-boot-testcontainers:3.1.3

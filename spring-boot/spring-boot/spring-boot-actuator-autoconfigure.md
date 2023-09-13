@@ -1,7 +1,5 @@
 # spring-boot-actuator-autoconfigure
 
-## 构件信息
-
 ```
 # 构件
 org.springframework.boot:spring-boot-actuator-autoconfigure:3.1.3

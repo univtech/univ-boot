@@ -1,7 +1,5 @@
 # spring-boot-starter-logging
 
-## 构建信息
-
 ```
 # 构件
 org.springframework.boot:spring-boot-starter-logging:3.1.3
