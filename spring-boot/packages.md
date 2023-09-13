@@ -54,6 +54,12 @@ org.springframework.boot.actuate.metrics.web.tomcat
 org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
 ```
 
+## undertow
+
+```
+org.springframework.boot.web.embedded.undertow
+```
+
 ## spring-boot
 
 ```
@@ -115,7 +121,6 @@ org.springframework.boot.web.client
 org.springframework.boot.web.codec
 org.springframework.boot.web.context
 org.springframework.boot.web.embedded.netty
-org.springframework.boot.web.embedded.undertow
 org.springframework.boot.web.error
 org.springframework.boot.web.reactive.context
 org.springframework.boot.web.reactive.error
