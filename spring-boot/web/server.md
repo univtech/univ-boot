@@ -26,17 +26,6 @@ org.springframework.boot.ssl.SslStoreBundle
     + org.springframework.boot.web.server.WebServerSslBundle.SslStoreProviderBundleAdapter
 ```
 
-```
-org.springframework.boot.web.server.Cookie
-org.springframework.boot.web.server.Cookie.SameSite
-org.springframework.boot.web.server.MimeMappings
-org.springframework.boot.web.server.MimeMappings.DefaultMimeMappings
-org.springframework.boot.web.server.MimeMappings.LazyMimeMappingsCopy
-org.springframework.boot.web.server.MimeMappings.Mapping
-org.springframework.boot.web.server.MimeMappings.MimeMappingsRuntimeHints
-org.springframework.boot.web.server.PortInUseException
-```
-
 ## Web服务器
 
 ```
@@ -62,14 +51,14 @@ org.springframework.boot.web.server.WebServerFactory
 # setServerHeader     Sets the server header value.
 # setShutdown         Sets the shutdown configuration that will be applied to the server.
 org.springframework.boot.web.server.ConfigurableWebServerFactory
+
 org.springframework.boot.web.server.AbstractConfigurableWebServerFactory
-
-
 
 org.springframework.boot.web.server.WebServerFactoryCustomizer
 org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor
 
 org.springframework.boot.web.server.WebServerException
+org.springframework.boot.web.server.PortInUseException
 ```
 
 ## 错误页面
@@ -82,8 +71,18 @@ org.springframework.boot.web.server.ErrorPageRegistrarBeanPostProcessor
 ```
 
 ```
-org.springframework.boot.web.server.Http2
+org.springframework.boot.web.server.Cookie
+org.springframework.boot.web.server.Cookie.SameSite
 
+org.springframework.boot.web.server.MimeMappings
+org.springframework.boot.web.server.MimeMappings.DefaultMimeMappings
+org.springframework.boot.web.server.MimeMappings.LazyMimeMappingsCopy
+org.springframework.boot.web.server.MimeMappings.Mapping
+org.springframework.boot.web.server.MimeMappings.MimeMappingsRuntimeHints
+```
+
+```
+org.springframework.boot.web.server.Http2
 org.springframework.boot.web.server.Compression
 ```
 
@@ -95,31 +94,31 @@ org.springframework.boot.web.server.Compression
 org.springframework.boot.web.server.SslConfigurationValidator
 
 # SSL配置。
-# boolean    enabled                    是否启用SSL，默认值：true 
-# String     bundle                     SSL包的名称
-# ClientAuth clientAuth                 客户端认证类型
-# String[]   ciphers                    支持的SSL密码
-# String[]   enabledProtocols           启用的SSL协议
-# String     keyAlias                   标识密钥存储库中的密钥的别名
-# String     keyPassword                访问密钥存储库中的密钥的密码
-# String     keyStore                   存储SSL证书（通常是jks文件）的密钥存储库的路径
-# String     keyStorePassword           访问密钥存储库的密码
-# String     keyStoreType               密钥存储库的类型
-# String     keyStoreProvider           密钥存储库提供者
-# String     trustStore                 受信的存储SSL证书的密钥存储库
-# String     trustStorePassword         访问受信的密钥存储库的密码
-# String     trustStoreType             受信的密钥存储库的类型
-# String     trustStoreProvider         受信的密钥存储库提供者
-# String     certificate                PEM证书的位置
-# String     certificatePrivateKey      PEM证书的私钥位置
-# String     trustCertificate           受信的PEM证书的位置
-# String     trustCertificatePrivateKey 受信的PEM证书的私钥位置
-# String     protocol                   SSL协议，默认值：TLS
-# forBundle                             创建Ssl
-# isEnabled                             SSL是否启用
-# getXXX                                获取XXX
-# isXXX                                 是否XXX
-# setXXX                                设置XXX
+# enabled                    是否启用SSL，默认值：true 
+# bundle                     SSL包的名称
+# clientAuth                 客户端认证类型
+# ciphers                    支持的SSL密码
+# enabledProtocols           启用的SSL协议
+# keyAlias                   标识密钥存储库中的密钥的别名
+# keyPassword                访问密钥存储库中的密钥的密码
+# keyStore                   存储SSL证书（通常是jks文件）的密钥存储库的路径
+# keyStorePassword           访问密钥存储库的密码
+# keyStoreType               密钥存储库的类型
+# keyStoreProvider           密钥存储库提供者
+# trustStore                 受信的存储SSL证书的密钥存储库
+# trustStorePassword         访问受信的密钥存储库的密码
+# trustStoreType             受信的密钥存储库的类型
+# trustStoreProvider         受信的密钥存储库提供者
+# certificate                PEM证书的位置
+# certificatePrivateKey      PEM证书的私钥位置
+# trustCertificate           受信的PEM证书的位置
+# trustCertificatePrivateKey 受信的PEM证书的私钥位置
+# protocol                   SSL协议，默认值：TLS
+# forBundle                  创建Ssl
+# isEnabled                  SSL是否启用
+# getXXX                     获取XXX
+# isXXX                      是否XXX
+# setXXX                     设置XXX
 org.springframework.boot.web.server.Ssl
 
 # 客户端认证类型。
