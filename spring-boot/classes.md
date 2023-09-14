@@ -640,34 +640,6 @@ org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter
 org.springframework.boot.validation.MessageInterpolatorFactory
 org.springframework.boot.validation.MessageSourceMessageInterpolator
 
-org.springframework.boot.web.client.BasicAuthentication
-org.springframework.boot.web.client.ClientHttpRequestFactories.HttpComponents
-org.springframework.boot.web.client.ClientHttpRequestFactories.OkHttp
-org.springframework.boot.web.client.ClientHttpRequestFactories.Reflective
-org.springframework.boot.web.client.ClientHttpRequestFactories.Simple.SimpleClientHttpsRequestFactory
-org.springframework.boot.web.client.ClientHttpRequestFactories.Simple
-org.springframework.boot.web.client.ClientHttpRequestFactories
-org.springframework.boot.web.client.ClientHttpRequestFactoriesRuntimeHints
-org.springframework.boot.web.client.ClientHttpRequestFactorySettings
-org.springframework.boot.web.client.ClientHttpRequestFactorySupplier
-org.springframework.boot.web.client.RestTemplateBuilder
-org.springframework.boot.web.client.RestTemplateBuilderClientHttpRequestInitializer
-org.springframework.boot.web.client.RestTemplateCustomizer
-org.springframework.boot.web.client.RestTemplateRequestCustomizer
-org.springframework.boot.web.client.RootUriTemplateHandler
-org.springframework.boot.web.codec.CodecCustomizer
-org.springframework.boot.web.context.ConfigurableWebServerApplicationContext
-org.springframework.boot.web.context.MissingWebServerFactoryBeanException
-org.springframework.boot.web.context.MissingWebServerFactoryBeanFailureAnalyzer
-org.springframework.boot.web.context.ServerPortInfoApplicationContextInitializer
-org.springframework.boot.web.context.WebServerApplicationContext
-org.springframework.boot.web.context.WebServerGracefulShutdownLifecycle
-org.springframework.boot.web.context.WebServerInitializedEvent
-org.springframework.boot.web.context.WebServerPortFileWriter
-
-org.springframework.boot.web.error.ErrorAttributeOptions.Include
-org.springframework.boot.web.error.ErrorAttributeOptions
-
 ```
 
 ## spring-boot-autoconfigure
@@ -1096,52 +1068,6 @@ org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
 org.springframework.boot.autoconfigure.validation.ValidationConfigurationCustomizer
 org.springframework.boot.autoconfigure.validation.ValidatorAdapter
 
-org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication
-org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition
-org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
-org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer
-
-org.springframework.boot.autoconfigure.web.ConditionalOnEnabledResourceChain
-org.springframework.boot.autoconfigure.web.ErrorProperties.IncludeAttribute
-org.springframework.boot.autoconfigure.web.ErrorProperties.IncludeStacktrace
-org.springframework.boot.autoconfigure.web.ErrorProperties.Whitelabel
-org.springframework.boot.autoconfigure.web.ErrorProperties
-org.springframework.boot.autoconfigure.web.format.DateTimeFormatters
-org.springframework.boot.autoconfigure.web.format.WebConversionService
-org.springframework.boot.autoconfigure.web.OnEnabledResourceChainCondition
-
-org.springframework.boot.autoconfigure.web.ServerProperties.ForwardHeadersStrategy
-org.springframework.boot.autoconfigure.web.ServerProperties.Jetty.Accesslog.FORMAT
-org.springframework.boot.autoconfigure.web.ServerProperties.Jetty.Accesslog
-org.springframework.boot.autoconfigure.web.ServerProperties.Jetty.Threads
-org.springframework.boot.autoconfigure.web.ServerProperties.Jetty
-org.springframework.boot.autoconfigure.web.ServerProperties.Netty
-org.springframework.boot.autoconfigure.web.ServerProperties.Reactive.Session
-org.springframework.boot.autoconfigure.web.ServerProperties.Reactive
-org.springframework.boot.autoconfigure.web.ServerProperties.Servlet
-org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Accesslog
-org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Mbeanregistry
-org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Remoteip
-org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Resource
-org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Threads
-org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat
-org.springframework.boot.autoconfigure.web.ServerProperties.Undertow.Accesslog
-org.springframework.boot.autoconfigure.web.ServerProperties.Undertow.Options
-org.springframework.boot.autoconfigure.web.ServerProperties.Undertow.Threads
-org.springframework.boot.autoconfigure.web.ServerProperties.Undertow
-org.springframework.boot.autoconfigure.web.ServerProperties
-
-org.springframework.boot.autoconfigure.web.WebProperties.LocaleResolver
-org.springframework.boot.autoconfigure.web.WebProperties.Resources.Cache.Cachecontrol
-org.springframework.boot.autoconfigure.web.WebProperties.Resources.Cache
-org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy.Content
-org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy.Fixed
-org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy
-org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain
-org.springframework.boot.autoconfigure.web.WebProperties.Resources
-org.springframework.boot.autoconfigure.web.WebProperties
-org.springframework.boot.autoconfigure.web.WebResourcesRuntimeHints
-
 ```
 
 ## spring-boot-actuator
@@ -1259,47 +1185,6 @@ org.springframework.boot.actuate.endpoint.SecurityContext.1
 org.springframework.boot.actuate.endpoint.SecurityContext
 org.springframework.boot.actuate.endpoint.Show.1
 org.springframework.boot.actuate.endpoint.Show
-org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer.ControllerEndpointDiscovererRuntimeHints
-org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer
-org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointFilter
-org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier
-org.springframework.boot.actuate.endpoint.web.annotation.DiscoveredControllerEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.DiscoveredServletEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.DiscoveredWebEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.DiscoveredWebOperation
-org.springframework.boot.actuate.endpoint.web.annotation.EndpointWebExtension
-org.springframework.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.RequestPredicateFactory
-org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer.ServletEndpointDiscovererRuntimeHints
-org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer
-org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointFilter
-org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier
-org.springframework.boot.actuate.endpoint.web.annotation.WebEndpoint
-org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer.WebEndpointDiscovererRuntimeHints
-org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer
-org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointFilter
-org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver
-org.springframework.boot.actuate.endpoint.web.EndpointMapping
-org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes
-org.springframework.boot.actuate.endpoint.web.EndpointServlet
-org.springframework.boot.actuate.endpoint.web.ExposableServletEndpoint
-org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint
-
-org.springframework.boot.actuate.endpoint.web.Link
-org.springframework.boot.actuate.endpoint.web.PathMappedEndpoint
-org.springframework.boot.actuate.endpoint.web.PathMappedEndpoints
-org.springframework.boot.actuate.endpoint.web.PathMapper
-
-org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar
-org.springframework.boot.actuate.endpoint.web.WebEndpointHttpMethod
-org.springframework.boot.actuate.endpoint.web.WebEndpointResponse
-org.springframework.boot.actuate.endpoint.web.WebEndpointsSupplier
-org.springframework.boot.actuate.endpoint.web.WebOperation
-org.springframework.boot.actuate.endpoint.web.WebOperationRequestPredicate
-org.springframework.boot.actuate.endpoint.web.WebServerNamespace
 
 org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor
 org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor
@@ -1440,10 +1325,6 @@ org.springframework.boot.actuate.metrics.MetricsEndpoint
 
 org.springframework.boot.actuate.metrics.startup.StartupTimeMetricsListener
 org.springframework.boot.actuate.metrics.system.DiskSpaceMetricsBinder
-org.springframework.boot.actuate.metrics.web.client.DefaultRestTemplateExchangeTagsProvider
-org.springframework.boot.actuate.metrics.web.client.ObservationRestTemplateCustomizer
-org.springframework.boot.actuate.metrics.web.client.RestTemplateExchangeTags
-org.springframework.boot.actuate.metrics.web.client.RestTemplateExchangeTagsProvider
 
 org.springframework.boot.actuate.quartz.QuartzEndpoint.1
 org.springframework.boot.actuate.quartz.QuartzEndpoint.CalendarIntervalTriggerDescriptor
@@ -1483,28 +1364,6 @@ org.springframework.boot.actuate.startup.StartupEndpoint.StartupEndpointRuntimeH
 org.springframework.boot.actuate.startup.StartupEndpoint
 
 org.springframework.boot.actuate.system.DiskSpaceHealthIndicator
-
-org.springframework.boot.actuate.web.exchanges.HttpExchange.HeadersFilter
-org.springframework.boot.actuate.web.exchanges.HttpExchange.Principal
-org.springframework.boot.actuate.web.exchanges.HttpExchange.Request
-org.springframework.boot.actuate.web.exchanges.HttpExchange.Response
-org.springframework.boot.actuate.web.exchanges.HttpExchange.Session
-org.springframework.boot.actuate.web.exchanges.HttpExchange.Started
-org.springframework.boot.actuate.web.exchanges.HttpExchange
-org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository
-org.springframework.boot.actuate.web.exchanges.HttpExchangesEndpoint.HttpExchangesDescriptor
-org.springframework.boot.actuate.web.exchanges.HttpExchangesEndpoint
-org.springframework.boot.actuate.web.exchanges.Include
-org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository
-
-org.springframework.boot.actuate.web.exchanges.RecordableHttpRequest
-org.springframework.boot.actuate.web.exchanges.RecordableHttpResponse
-
-org.springframework.boot.actuate.web.mappings.HandlerMethodDescription
-org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider
-org.springframework.boot.actuate.web.mappings.MappingsEndpoint.ApplicationMappingsDescriptor
-org.springframework.boot.actuate.web.mappings.MappingsEndpoint.ContextMappingsDescriptor
-org.springframework.boot.actuate.web.mappings.MappingsEndpoint
 
 ```
 
@@ -1563,18 +1422,6 @@ org.springframework.boot.actuate.autoconfigure.endpoint.jmx.DefaultEndpointObjec
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties.Exposure
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties
-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
-
-org.springframework.boot.actuate.autoconfigure.endpoint.web.MappingWebEndpointPathMapper
-
-org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration.JerseyServletEndpointManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration.WebMvcServletEndpointManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration.WebEndpointServletConfiguration
-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties.Discovery
-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties.Exposure
-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
 
 org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties
@@ -1862,21 +1709,6 @@ org.springframework.boot.actuate.autoconfigure.wavefront.WavefrontProperties.Met
 org.springframework.boot.actuate.autoconfigure.wavefront.WavefrontProperties.Sender
 org.springframework.boot.actuate.autoconfigure.wavefront.WavefrontProperties
 org.springframework.boot.actuate.autoconfigure.wavefront.WavefrontSenderConfiguration
-
-org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesAutoConfiguration.ReactiveHttpExchangesConfiguration
-org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesAutoConfiguration.ServletHttpExchangesConfiguration
-org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesEndpointAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesProperties.Recording
-org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesProperties
-
-org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.ManagementContextFactory
-org.springframework.boot.actuate.autoconfigure.web.ManagementContextType
-org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration.ReactiveWebConfiguration
-org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration.ServletWebConfiguration.SpringMvcConfiguration
-org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration.ServletWebConfiguration
-org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration
 
 ```
 
@@ -2231,7 +2063,6 @@ org.springframework.boot.test.mock.mockito.SpyBean
 org.springframework.boot.test.mock.mockito.SpyBeans
 org.springframework.boot.test.mock.mockito.SpyDefinition.SpringAopBypassingVerificationStartedListener
 org.springframework.boot.test.mock.mockito.SpyDefinition
-org.springframework.boot.test.mock.web.SpringBootMockServletContext
 
 org.springframework.boot.test.system.CapturedOutput
 org.springframework.boot.test.system.OutputCapture.AnsiOutputState
@@ -2249,27 +2080,6 @@ org.springframework.boot.test.util.TestPropertyValues.Pair
 org.springframework.boot.test.util.TestPropertyValues.SystemPropertiesHandler
 org.springframework.boot.test.util.TestPropertyValues.Type
 org.springframework.boot.test.util.TestPropertyValues
-org.springframework.boot.test.web.client.LocalHostUriTemplateHandler
-org.springframework.boot.test.web.client.MockServerRestTemplateCustomizer
-org.springframework.boot.test.web.client.RootUriRequestExpectationManager.ReplaceUriClientHttpRequest
-org.springframework.boot.test.web.client.RootUriRequestExpectationManager
-org.springframework.boot.test.web.client.TestRestTemplate.CustomHttpComponentsClientHttpRequestFactory
-org.springframework.boot.test.web.client.TestRestTemplate.HttpClientOption
-org.springframework.boot.test.web.client.TestRestTemplate.NoOpResponseErrorHandler
-org.springframework.boot.test.web.client.TestRestTemplate
-org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer.TestRestTemplateFactory
-org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer.TestRestTemplateRegistrar
-org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer
-org.springframework.boot.test.web.client.TestRestTemplateContextCustomizerFactory
-org.springframework.boot.test.web.client.TestRestTemplateExtensionsKt.exchange.1
-org.springframework.boot.test.web.client.TestRestTemplateExtensionsKt.exchange.2
-org.springframework.boot.test.web.client.TestRestTemplateExtensionsKt.exchange.3
-org.springframework.boot.test.web.client.TestRestTemplateExtensionsKt.exchange.4
-org.springframework.boot.test.web.client.TestRestTemplateExtensionsKt
-org.springframework.boot.test.web.htmlunit.LocalHostWebClient
-org.springframework.boot.test.web.htmlunit.webdriver.LocalHostWebConnectionHtmlUnitDriver
-
-org.springframework.boot.test.web.SpringBootTestRandomPortEnvironmentPostProcessor
 
 ```
 
@@ -2338,15 +2148,6 @@ org.springframework.boot.test.autoconfigure.restdocs.RestDocsWebTestClientBuilde
 org.springframework.boot.test.autoconfigure.restdocs.RestDocsWebTestClientConfigurationCustomizer
 org.springframework.boot.test.autoconfigure.restdocs.RestDocumentationContextProviderRegistrar
 org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener
-org.springframework.boot.test.autoconfigure.web.client.AutoConfigureMockRestServiceServer
-org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient
-org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerAutoConfiguration.DeferredRequestExpectationManager
-org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerAutoConfiguration
-org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener
-org.springframework.boot.test.autoconfigure.web.client.RestClientTest
-org.springframework.boot.test.autoconfigure.web.client.RestClientTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.web.client.RestClientTypeExcludeFilter
-org.springframework.boot.test.autoconfigure.web.client.WebClientRestTemplateAutoConfiguration
 
 ```
 

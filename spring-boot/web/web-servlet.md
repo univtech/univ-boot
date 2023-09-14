@@ -193,6 +193,8 @@ org.springframework.boot.actuate.web.mappings.servlet.ServletRegistrationMapping
 org.springframework.boot.actuate.web.mappings.servlet.ServletsMappingDescriptionProvider.ServletsMappingDescriptionProviderRuntimeHints
 org.springframework.boot.actuate.web.mappings.servlet.ServletsMappingDescriptionProvider
 
+org.springframework.boot.autoconfigure.web.ServerProperties.Servlet
+
 org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration.EndpointObjectMapperWebMvcConfigurer
 org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
 

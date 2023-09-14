@@ -35,6 +35,9 @@ org.springframework.boot.web.reactive.server.AbstractReactiveWebServerFactory
 org.springframework.boot.web.reactive.server.ConfigurableReactiveWebServerFactory
 org.springframework.boot.web.reactive.server.ReactiveWebServerFactory
 
+org.springframework.boot.autoconfigure.web.ServerProperties.Reactive.Session
+org.springframework.boot.autoconfigure.web.ServerProperties.Reactive
+
 org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration.AnnotationConfig
 org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration
 org.springframework.boot.autoconfigure.web.reactive.ProblemDetailsExceptionHandler

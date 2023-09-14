@@ -25,6 +25,7 @@ org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCust
 
 org.springframework.boot.autoconfigure.web.embedded.NettyWebServerFactoryCustomizer
 
+org.springframework.boot.autoconfigure.web.ServerProperties.Netty
 
 
 

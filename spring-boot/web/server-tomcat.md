@@ -37,6 +37,12 @@ org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCust
 
 org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer
 
+org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Accesslog
+org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Mbeanregistry
+org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Remoteip
+org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Resource
+org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat.Threads
+org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat
 
 
 

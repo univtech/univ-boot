@@ -42,6 +42,10 @@ org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCust
 org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer.SocketOptions
 org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer
 
+org.springframework.boot.autoconfigure.web.ServerProperties.Undertow.Accesslog
+org.springframework.boot.autoconfigure.web.ServerProperties.Undertow.Options
+org.springframework.boot.autoconfigure.web.ServerProperties.Undertow.Threads
+org.springframework.boot.autoconfigure.web.ServerProperties.Undertow
 
 
 

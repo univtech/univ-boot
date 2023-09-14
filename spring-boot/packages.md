@@ -132,34 +132,6 @@ org.springframework.boot.actuate.hazelcast
 org.springframework.boot.actuate.autoconfigure.hazelcast
 ```
 
-## web
-
-```
-org.springframework.boot.web.client
-org.springframework.boot.web.codec
-org.springframework.boot.web.context
-org.springframework.boot.web.error
-org.springframework.boot.autoconfigure.web
-org.springframework.boot.autoconfigure.web.client
-org.springframework.boot.autoconfigure.web.embedded
-org.springframework.boot.autoconfigure.web.format
-org.springframework.boot.actuate.endpoint.web
-org.springframework.boot.actuate.endpoint.web.annotation
-org.springframework.boot.actuate.metrics.web.client
-org.springframework.boot.actuate.web.exchanges
-org.springframework.boot.actuate.web.mappings
-org.springframework.boot.actuate.autoconfigure.endpoint.web
-org.springframework.boot.actuate.autoconfigure.web
-org.springframework.boot.actuate.autoconfigure.web.exchanges
-org.springframework.boot.actuate.autoconfigure.web.mappings
-org.springframework.boot.test.mock.web
-org.springframework.boot.test.web
-org.springframework.boot.test.web.client
-org.springframework.boot.test.web.htmlunit
-org.springframework.boot.test.web.htmlunit.webdriver
-org.springframework.boot.test.autoconfigure.web.client
-```
-
 ## jmx
 
 ```

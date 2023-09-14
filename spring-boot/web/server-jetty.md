@@ -43,6 +43,10 @@ org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomi
 org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomizer.MaxHttpResponseHeaderSizeCustomizer
 org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomizer
 
+org.springframework.boot.autoconfigure.web.ServerProperties.Jetty.Accesslog.FORMAT
+org.springframework.boot.autoconfigure.web.ServerProperties.Jetty.Accesslog
+org.springframework.boot.autoconfigure.web.ServerProperties.Jetty.Threads
+org.springframework.boot.autoconfigure.web.ServerProperties.Jetty
 
 
 
