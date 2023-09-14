@@ -195,13 +195,6 @@ org.springframework.boot.test.context.runner
 org.springframework.boot.testcontainers.context
 ```
 
-## transaction
-
-```
-org.springframework.boot.autoconfigure.transaction
-org.springframework.boot.autoconfigure.transaction.jta
-```
-
 ## util
 
 ```
