@@ -245,13 +245,6 @@ org.springframework.boot.docker.compose.service.connection.liquibase
 org.springframework.boot.testcontainers.service.connection.liquibase
 ```
 
-## kafka
-
-```
-org.springframework.boot.autoconfigure.kafka
-org.springframework.boot.testcontainers.service.connection.kafka
-```
-
 ## hazelcast
 
 ```
