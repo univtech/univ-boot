@@ -34,14 +34,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.jersey
 org.springframework.boot.actuate.autoconfigure.web.jersey
 ```
 
-## jetty
-
-```
-org.springframework.boot.web.embedded.jetty
-org.springframework.boot.actuate.metrics.web.jetty
-org.springframework.boot.actuate.autoconfigure.metrics.web.jetty
-```
-
 ## webservices
 
 ```

@@ -664,32 +664,6 @@ org.springframework.boot.web.context.WebServerApplicationContext
 org.springframework.boot.web.context.WebServerGracefulShutdownLifecycle
 org.springframework.boot.web.context.WebServerInitializedEvent
 org.springframework.boot.web.context.WebServerPortFileWriter
-org.springframework.boot.web.embedded.jetty.ConfigurableJettyWebServerFactory
-org.springframework.boot.web.embedded.jetty.ForwardHeadersCustomizer
-org.springframework.boot.web.embedded.jetty.GracefulShutdown
-org.springframework.boot.web.embedded.jetty.JasperInitializer.WarURLConnection
-org.springframework.boot.web.embedded.jetty.JasperInitializer.WarUrlStreamHandler
-org.springframework.boot.web.embedded.jetty.JasperInitializer.WarUrlStreamHandlerFactory
-org.springframework.boot.web.embedded.jetty.JasperInitializer
-org.springframework.boot.web.embedded.jetty.JettyEmbeddedErrorHandler
-org.springframework.boot.web.embedded.jetty.JettyEmbeddedWebAppContext.JettyEmbeddedServletHandler
-org.springframework.boot.web.embedded.jetty.JettyEmbeddedWebAppContext
-org.springframework.boot.web.embedded.jetty.JettyHandlerWrappers.ServerHeaderHandler
-org.springframework.boot.web.embedded.jetty.JettyHandlerWrappers
-org.springframework.boot.web.embedded.jetty.JettyReactiveWebServerFactory
-org.springframework.boot.web.embedded.jetty.JettyServerCustomizer
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.1
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.2
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.3
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.LoaderHidingResource
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.SuppliedSameSiteCookieHandlerWrapper.ResponseWrapper
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.SuppliedSameSiteCookieHandlerWrapper
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.WebListenersConfiguration
-org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory
-org.springframework.boot.web.embedded.jetty.JettyWebServer
-org.springframework.boot.web.embedded.jetty.ServletContextInitializerConfiguration
-org.springframework.boot.web.embedded.jetty.SslServerCustomizer.SslValidatingServerConnector
-org.springframework.boot.web.embedded.jetty.SslServerCustomizer
 
 org.springframework.boot.web.error.ErrorAttributeOptions.Include
 org.springframework.boot.web.error.ErrorAttributeOptions
@@ -1520,10 +1494,6 @@ org.springframework.boot.actuate.metrics.web.client.DefaultRestTemplateExchangeT
 org.springframework.boot.actuate.metrics.web.client.ObservationRestTemplateCustomizer
 org.springframework.boot.actuate.metrics.web.client.RestTemplateExchangeTags
 org.springframework.boot.actuate.metrics.web.client.RestTemplateExchangeTagsProvider
-org.springframework.boot.actuate.metrics.web.jetty.AbstractJettyMetricsBinder
-org.springframework.boot.actuate.metrics.web.jetty.JettyConnectionMetricsBinder
-org.springframework.boot.actuate.metrics.web.jetty.JettyServerThreadPoolMetricsBinder
-org.springframework.boot.actuate.metrics.web.jetty.JettySslHandshakeMetricsBinder
 
 org.springframework.boot.actuate.quartz.QuartzEndpoint.1
 org.springframework.boot.actuate.quartz.QuartzEndpoint.CalendarIntervalTriggerDescriptor
@@ -1839,7 +1809,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetric
 org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.task.TaskExecutorMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.ValidationFailureAnalyzer
-org.springframework.boot.actuate.autoconfigure.metrics.web.jetty.JettyMetricsAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.observation.batch.BatchObservationAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.observation.graphql.GraphQlObservationAutoConfiguration
