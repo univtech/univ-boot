@@ -443,8 +443,6 @@ org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProce
 org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor
 org.springframework.boot.env.YamlPropertySourceLoader
 
-org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
-
 org.springframework.boot.info.BuildProperties.BuildPropertiesRuntimeHints
 org.springframework.boot.info.BuildProperties
 org.springframework.boot.info.GitProperties.GitPropertiesRuntimeHints
@@ -673,31 +671,6 @@ org.springframework.boot.autoconfigure.domain.EntityScanner
 org.springframework.boot.autoconfigure.domain.EntityScanPackages.EntityScanPackagesBeanDefinition
 org.springframework.boot.autoconfigure.domain.EntityScanPackages.Registrar
 org.springframework.boot.autoconfigure.domain.EntityScanPackages
-
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.DataSourceBeanCondition
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.FlywayUrlCondition
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.JdbcConnectionDetailsCondition
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.LocationResolver
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.PropertiesFlywayConnectionDetails
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.StringOrNumberToMigrationVersionConverter
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
-org.springframework.boot.autoconfigure.flyway.FlywayConfigurationCustomizer
-org.springframework.boot.autoconfigure.flyway.FlywayConnectionDetails
-org.springframework.boot.autoconfigure.flyway.FlywayDataSource
-org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer
-org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
-org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy
-org.springframework.boot.autoconfigure.flyway.FlywayProperties
-org.springframework.boot.autoconfigure.flyway.FlywaySchemaManagementProvider
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider.LocatedResource
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer
-org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizer
-org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor.AotContribution
-org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor
 
 org.springframework.boot.autoconfigure.freemarker.AbstractFreeMarkerConfiguration
 org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration
@@ -930,12 +903,6 @@ org.springframework.boot.actuate.env.EnvironmentEndpoint.PropertyValueDescriptor
 org.springframework.boot.actuate.env.EnvironmentEndpoint
 org.springframework.boot.actuate.env.EnvironmentEndpointWebExtension
 
-org.springframework.boot.actuate.flyway.FlywayEndpoint.ContextFlywayBeansDescriptor
-org.springframework.boot.actuate.flyway.FlywayEndpoint.FlywayBeansDescriptor
-org.springframework.boot.actuate.flyway.FlywayEndpoint.FlywayDescriptor
-org.springframework.boot.actuate.flyway.FlywayEndpoint.FlywayMigrationDescriptor
-org.springframework.boot.actuate.flyway.FlywayEndpoint
-
 org.springframework.boot.actuate.health.AbstractHealthIndicator
 org.springframework.boot.actuate.health.AbstractReactiveHealthIndicator
 org.springframework.boot.actuate.health.AdditionalHealthEndpointPath
@@ -1109,8 +1076,6 @@ org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointPropertie
 
 org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties
-
-org.springframework.boot.actuate.autoconfigure.flyway.FlywayEndpointAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.health.AbstractCompositeHealthContributorConfiguration.ReflectionIndicatorFactory
 org.springframework.boot.actuate.autoconfigure.health.AbstractCompositeHealthContributorConfiguration
@@ -1585,9 +1550,6 @@ org.springframework.boot.docker.compose.service.connection.DockerComposeConnecti
 org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource
 org.springframework.boot.docker.compose.service.connection.DockerComposeServiceConnectionsApplicationListener
 
-org.springframework.boot.docker.compose.service.connection.flyway.JdbcAdaptingFlywayConnectionDetailsFactory.1
-org.springframework.boot.docker.compose.service.connection.flyway.JdbcAdaptingFlywayConnectionDetailsFactory
-
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbEnvironment
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory.MariaDbJdbcDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory
@@ -1805,8 +1767,6 @@ org.springframework.boot.testcontainers.service.connection.ContainerConnectionDe
 org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource
 
 org.springframework.boot.testcontainers.service.connection.FieldOrigin
-org.springframework.boot.testcontainers.service.connection.flyway.FlywayContainerConnectionDetailsFactory.FlywayContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.flyway.FlywayContainerConnectionDetailsFactory
 
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory.RedpandaContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory

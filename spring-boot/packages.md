@@ -57,17 +57,6 @@ org.springframework.boot.autoconfigure.data.rest
 org.springframework.boot.autoconfigure.data.web
 ```
 
-## flyway
-
-```
-org.springframework.boot.flyway
-org.springframework.boot.autoconfigure.flyway
-org.springframework.boot.actuate.flyway
-org.springframework.boot.actuate.autoconfigure.flyway
-org.springframework.boot.docker.compose.service.connection.flyway
-org.springframework.boot.testcontainers.service.connection.flyway
-```
-
 ## jmx
 
 ```
