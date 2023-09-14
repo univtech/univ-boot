@@ -64,30 +64,6 @@ org.springframework.boot.autoconfigure.netty
 org.springframework.boot.autoconfigure.reactor.netty
 ```
 
-## reactive
-
-```
-org.springframework.boot.web.reactive.context
-org.springframework.boot.web.reactive.error
-org.springframework.boot.web.reactive.filter
-org.springframework.boot.web.reactive.function.client
-org.springframework.boot.web.reactive.result.view
-org.springframework.boot.web.reactive.server
-org.springframework.boot.autoconfigure.web.reactive
-org.springframework.boot.autoconfigure.web.reactive.error
-org.springframework.boot.autoconfigure.web.reactive.function.client
-org.springframework.boot.actuate.endpoint.web.reactive
-org.springframework.boot.actuate.metrics.web.reactive.client
-org.springframework.boot.actuate.metrics.web.reactive.server
-org.springframework.boot.actuate.web.exchanges.reactive
-org.springframework.boot.actuate.web.mappings.reactive
-org.springframework.boot.actuate.autoconfigure.cloudfoundry.reactive
-org.springframework.boot.actuate.autoconfigure.endpoint.web.reactive
-org.springframework.boot.actuate.autoconfigure.web.reactive
-org.springframework.boot.test.web.reactive.server
-org.springframework.boot.test.autoconfigure.web.reactive
-```
-
 ## webservices
 
 ```
