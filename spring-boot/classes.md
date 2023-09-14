@@ -1369,10 +1369,6 @@ org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration
 org.springframework.boot.autoconfigure.gson.GsonBuilderCustomizer
 org.springframework.boot.autoconfigure.gson.GsonProperties
 
-org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration
-org.springframework.boot.autoconfigure.h2.H2ConsoleProperties.Settings
-org.springframework.boot.autoconfigure.h2.H2ConsoleProperties
-
 org.springframework.boot.autoconfigure.hateoas.HateoasProperties
 org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration.HypermediaConfiguration
 org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration

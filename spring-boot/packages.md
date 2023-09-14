@@ -733,7 +733,7 @@ org.springframework.boot.autoconfigure.batch
 org.springframework.boot.autoconfigure.codec
 org.springframework.boot.autoconfigure.dao
 org.springframework.boot.autoconfigure.domain
-org.springframework.boot.autoconfigure.h2
+
 org.springframework.boot.autoconfigure.hateoas
 org.springframework.boot.autoconfigure.jsonb
 org.springframework.boot.autoconfigure.mustache
