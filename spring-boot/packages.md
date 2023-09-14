@@ -24,16 +24,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.servlet
 org.springframework.boot.actuate.autoconfigure.observation.graphql
 ```
 
-## jersey
-
-```
-org.springframework.boot.autoconfigure.jersey
-org.springframework.boot.actuate.endpoint.web.jersey
-org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey
-org.springframework.boot.actuate.autoconfigure.metrics.jersey
-org.springframework.boot.actuate.autoconfigure.web.jersey
-```
-
 ## webservices
 
 ```

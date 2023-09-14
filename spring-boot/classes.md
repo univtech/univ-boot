@@ -970,17 +970,6 @@ org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
 org.springframework.boot.autoconfigure.jackson.JacksonProperties.ConstructorDetectorStrategy
 org.springframework.boot.autoconfigure.jackson.JacksonProperties
 
-org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration.JacksonResourceConfigCustomizer.JaxbObjectMapperCustomizer
-org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration.JacksonResourceConfigCustomizer.ObjectMapperContextResolver
-org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration.JacksonResourceConfigCustomizer
-org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration.JerseyWebApplicationInitializer
-org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration
-org.springframework.boot.autoconfigure.jersey.JerseyProperties.Filter
-org.springframework.boot.autoconfigure.jersey.JerseyProperties.Servlet
-org.springframework.boot.autoconfigure.jersey.JerseyProperties.Type
-org.springframework.boot.autoconfigure.jersey.JerseyProperties
-org.springframework.boot.autoconfigure.jersey.ResourceConfigCustomizer
-
 org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
 org.springframework.boot.autoconfigure.jmx.JmxProperties
 org.springframework.boot.autoconfigure.jmx.ParentAwareNamingStrategy
@@ -1329,15 +1318,7 @@ org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes
 org.springframework.boot.actuate.endpoint.web.EndpointServlet
 org.springframework.boot.actuate.endpoint.web.ExposableServletEndpoint
 org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory.EndpointLinksInflector
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory.FluxBodyConverter
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory.JerseySecurityContext
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory.MonoBodyConverter
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory.OperationInflector
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory.ResourceBodyConverter
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyEndpointResourceFactory
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyHealthEndpointAdditionalPathResourceFactory
-org.springframework.boot.actuate.endpoint.web.jersey.JerseyRemainingPathSegmentProvider
+
 org.springframework.boot.actuate.endpoint.web.Link
 org.springframework.boot.actuate.endpoint.web.PathMappedEndpoint
 org.springframework.boot.actuate.endpoint.web.PathMappedEndpoints
@@ -1614,10 +1595,7 @@ org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfi
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties.Exposure
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties
 org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
-org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey.JerseyWebEndpointManagementContextConfiguration.EndpointObjectMapperContextResolver
-org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey.JerseyWebEndpointManagementContextConfiguration.JerseyAdditionalHealthEndpointPathsManagementResourcesRegistrar
-org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey.JerseyWebEndpointManagementContextConfiguration.JerseyWebEndpointsResourcesRegistrar
-org.springframework.boot.actuate.autoconfigure.endpoint.web.jersey.JerseyWebEndpointManagementContextConfiguration
+
 org.springframework.boot.actuate.autoconfigure.endpoint.web.MappingWebEndpointPathMapper
 
 org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration.JerseyServletEndpointManagementContextConfiguration
@@ -1772,8 +1750,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.export.statsd.StatsdPrope
 org.springframework.boot.actuate.autoconfigure.metrics.export.wavefront.WavefrontMetricsExportAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.export.wavefront.WavefrontPropertiesConfigAdapter
 
-org.springframework.boot.actuate.autoconfigure.metrics.jersey.JerseyServerMetricsAutoConfiguration.AnnotationUtilsAnnotationFinder
-org.springframework.boot.actuate.autoconfigure.metrics.jersey.JerseyServerMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration.Log4JCoreLoggerContextCondition
@@ -1924,11 +1900,7 @@ org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesAutoCo
 org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesProperties.Recording
 org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesProperties
-org.springframework.boot.actuate.autoconfigure.web.jersey.JerseyChildManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.jersey.JerseyManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.jersey.JerseySameManagementContextConfiguration.JerseyInfrastructureConfiguration
-org.springframework.boot.actuate.autoconfigure.web.jersey.JerseySameManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.jersey.ManagementContextResourceConfigCustomizer
+
 org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration
 org.springframework.boot.actuate.autoconfigure.web.ManagementContextFactory
 org.springframework.boot.actuate.autoconfigure.web.ManagementContextType
