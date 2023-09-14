@@ -257,20 +257,6 @@ org.springframework.boot.actuate.autoconfigure.couchbase
 org.springframework.boot.testcontainers.service.connection.couchbase
 ```
 
-## elasticsearch
-
-```
-org.springframework.boot.autoconfigure.data.elasticsearch
-org.springframework.boot.actuate.data.elasticsearch
-org.springframework.boot.actuate.autoconfigure.data.elasticsearch
-org.springframework.boot.test.autoconfigure.data.elasticsearch
-org.springframework.boot.autoconfigure.elasticsearch
-org.springframework.boot.actuate.elasticsearch
-org.springframework.boot.actuate.autoconfigure.elasticsearch
-org.springframework.boot.docker.compose.service.connection.elasticsearch
-org.springframework.boot.testcontainers.service.connection.elasticsearch
-```
-
 ## ldap
 
 ```
