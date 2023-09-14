@@ -274,17 +274,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.amqp
 org.springframework.boot.testcontainers.service.connection.amqp
 ```
 
-## cache
-
-```
-org.springframework.boot.autoconfigure.cache
-org.springframework.boot.actuate.cache
-org.springframework.boot.actuate.endpoint.invoker.cache
-org.springframework.boot.actuate.metrics.cache
-org.springframework.boot.actuate.autoconfigure.cache
-org.springframework.boot.actuate.autoconfigure.metrics.cache
-```
-
 ## hazelcast
 
 ```

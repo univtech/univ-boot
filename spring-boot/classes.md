@@ -997,43 +997,6 @@ org.springframework.boot.autoconfigure.batch.JobExecutionExitCodeGenerator
 org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner
 org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
 
-org.springframework.boot.autoconfigure.cache.Cache2kBuilderCustomizer
-org.springframework.boot.autoconfigure.cache.Cache2kCacheConfiguration
-org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration.CacheConfigurationImportSelector
-org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor
-org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration.CacheManagerValidator
-org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
-org.springframework.boot.autoconfigure.cache.CacheCondition
-org.springframework.boot.autoconfigure.cache.CacheConfigurations
-org.springframework.boot.autoconfigure.cache.CacheManagerCustomizer
-org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers
-org.springframework.boot.autoconfigure.cache.CacheProperties.Caffeine
-org.springframework.boot.autoconfigure.cache.CacheProperties.Couchbase
-org.springframework.boot.autoconfigure.cache.CacheProperties.Infinispan
-org.springframework.boot.autoconfigure.cache.CacheProperties.JCache
-org.springframework.boot.autoconfigure.cache.CacheProperties.Redis
-org.springframework.boot.autoconfigure.cache.CacheProperties
-org.springframework.boot.autoconfigure.cache.CacheType
-org.springframework.boot.autoconfigure.cache.CaffeineCacheConfiguration
-org.springframework.boot.autoconfigure.cache.CouchbaseCacheConfiguration
-org.springframework.boot.autoconfigure.cache.CouchbaseCacheManagerBuilderCustomizer
-org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration
-org.springframework.boot.autoconfigure.cache.HazelcastCacheConfiguration
-org.springframework.boot.autoconfigure.cache.HazelcastJCacheCustomizationConfiguration.HazelcastPropertiesCustomizer
-org.springframework.boot.autoconfigure.cache.HazelcastJCacheCustomizationConfiguration
-org.springframework.boot.autoconfigure.cache.InfinispanCacheConfiguration
-org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.JCacheAvailableCondition.CustomJCacheCacheManager
-org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.JCacheAvailableCondition.JCacheProvider
-org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.JCacheAvailableCondition
-org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.JCacheProviderAvailableCondition
-org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration
-org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer
-org.springframework.boot.autoconfigure.cache.JCachePropertiesCustomizer
-org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration
-org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration
-org.springframework.boot.autoconfigure.cache.RedisCacheManagerBuilderCustomizer
-org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration
-
 org.springframework.boot.autoconfigure.codec.CodecProperties
 
 org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.MemberConditions
@@ -1930,14 +1893,6 @@ org.springframework.boot.actuate.beans.BeansEndpoint.BeansDescriptor
 org.springframework.boot.actuate.beans.BeansEndpoint.ContextBeansDescriptor
 org.springframework.boot.actuate.beans.BeansEndpoint
 
-org.springframework.boot.actuate.cache.CachesEndpoint.CacheDescriptor
-org.springframework.boot.actuate.cache.CachesEndpoint.CacheEntryDescriptor
-org.springframework.boot.actuate.cache.CachesEndpoint.CacheManagerDescriptor
-org.springframework.boot.actuate.cache.CachesEndpoint.CachesDescriptor
-org.springframework.boot.actuate.cache.CachesEndpoint
-org.springframework.boot.actuate.cache.CachesEndpointWebExtension
-org.springframework.boot.actuate.cache.NonUniqueCacheException
-
 org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint.ConfigurationPropertiesAnnotationIntrospector
 org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint.ConfigurationPropertiesBeanDescriptor
 org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint.ConfigurationPropertiesDescriptor
@@ -1993,11 +1948,7 @@ org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethodParamete
 org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethodParameter
 org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethodParameters
 org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker
-org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker.CachedResponse
-org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker.CacheKey
-org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker.ReactiveCachedResponse
-org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker
-org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor
+
 org.springframework.boot.actuate.endpoint.jackson.EndpointObjectMapper
 org.springframework.boot.actuate.endpoint.jmx.annotation.DiscoveredJmxEndpoint
 org.springframework.boot.actuate.endpoint.jmx.annotation.DiscoveredJmxOperation.DiscoveredJmxOperationParameter
@@ -2238,16 +2189,7 @@ org.springframework.boot.actuate.metrics.amqp.RabbitMetrics
 org.springframework.boot.actuate.metrics.annotation.TimedAnnotations
 org.springframework.boot.actuate.metrics.AutoTimer.1
 org.springframework.boot.actuate.metrics.AutoTimer
-org.springframework.boot.actuate.metrics.cache.Cache2kCacheMeterBinderProvider
-org.springframework.boot.actuate.metrics.cache.CacheMeterBinderProvider
-org.springframework.boot.actuate.metrics.cache.CacheMetricsRegistrar.TransactionAwareCacheDecoratorHandler
-org.springframework.boot.actuate.metrics.cache.CacheMetricsRegistrar
-org.springframework.boot.actuate.metrics.cache.CaffeineCacheMeterBinderProvider
-org.springframework.boot.actuate.metrics.cache.HazelcastCacheMeterBinderProvider.HazelcastCacheMeterBinderProviderRuntimeHints
-org.springframework.boot.actuate.metrics.cache.HazelcastCacheMeterBinderProvider
-org.springframework.boot.actuate.metrics.cache.JCacheCacheMeterBinderProvider
-org.springframework.boot.actuate.metrics.cache.RedisCacheMeterBinderProvider
-org.springframework.boot.actuate.metrics.cache.RedisCacheMetrics
+
 org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider
 org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener
 org.springframework.boot.actuate.metrics.data.RepositoryTagsProvider
@@ -2424,8 +2366,6 @@ org.springframework.boot.actuate.autoconfigure.availability.DelegatingAvailabili
 
 org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration
 
-org.springframework.boot.actuate.autoconfigure.cache.CachesEndpointAutoConfiguration
-
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.AccessLevel
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.CloudFoundryAuthorizationException.Reason
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.CloudFoundryAuthorizationException
@@ -2578,14 +2518,7 @@ org.springframework.boot.actuate.autoconfigure.metrics.amqp.RabbitConnectionFact
 org.springframework.boot.actuate.autoconfigure.metrics.amqp.RabbitMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.AutoConfiguredCompositeMeterRegistry
 org.springframework.boot.actuate.autoconfigure.metrics.AutoTimeProperties
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMeterBinderProvidersConfiguration.Cache2kCacheMeterBinderProviderConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMeterBinderProvidersConfiguration.CaffeineCacheMeterBinderProviderConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMeterBinderProvidersConfiguration.HazelcastCacheMeterBinderProviderConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMeterBinderProvidersConfiguration.JCacheCacheMeterBinderProviderConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMeterBinderProvidersConfiguration.RedisCacheMeterBinderProviderConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMeterBinderProvidersConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMetricsAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMetricsRegistrarConfiguration
+
 org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryConfiguration.MultipleNonPrimaryMeterRegistriesCondition.NoMeterRegistryCondition
 org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryConfiguration.MultipleNonPrimaryMeterRegistriesCondition.SingleInjectableMeterRegistry
