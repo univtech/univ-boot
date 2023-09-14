@@ -1089,10 +1089,6 @@ org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration
 org.springframework.boot.autoconfigure.gson.GsonBuilderCustomizer
 org.springframework.boot.autoconfigure.gson.GsonProperties
 
-org.springframework.boot.autoconfigure.hateoas.HateoasProperties
-org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration.HypermediaConfiguration
-org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration
-
 org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration
 org.springframework.boot.autoconfigure.hazelcast.HazelcastClientConfigAvailableCondition.HazelcastClientValidation
 org.springframework.boot.autoconfigure.hazelcast.HazelcastClientConfigAvailableCondition
