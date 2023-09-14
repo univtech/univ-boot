@@ -240,12 +240,6 @@ org.springframework.boot.actuate.jms
 org.springframework.boot.actuate.autoconfigure.jms
 ```
 
-## sql
-
-```
-org.springframework.boot.autoconfigure.sql.init
-```
-
 ## data
 
 ```
@@ -443,7 +437,6 @@ org.springframework.boot.web.client
 org.springframework.boot.web.codec
 org.springframework.boot.web.context
 org.springframework.boot.web.error
-org.springframework.boot.web.server
 org.springframework.boot.autoconfigure.web
 org.springframework.boot.autoconfigure.web.client
 org.springframework.boot.autoconfigure.web.embedded
