@@ -252,17 +252,6 @@ org.springframework.boot.autoconfigure.kafka
 org.springframework.boot.testcontainers.service.connection.kafka
 ```
 
-## amqp
-
-```
-org.springframework.boot.autoconfigure.amqp
-org.springframework.boot.actuate.amqp
-org.springframework.boot.actuate.metrics.amqp
-org.springframework.boot.actuate.autoconfigure.amqp
-org.springframework.boot.actuate.autoconfigure.metrics.amqp
-org.springframework.boot.testcontainers.service.connection.amqp
-```
-
 ## hazelcast
 
 ```

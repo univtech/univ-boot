@@ -930,48 +930,6 @@ org.springframework.boot.autoconfigure.SpringBootApplication
 
 org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration
 
-org.springframework.boot.autoconfigure.amqp.AbstractConnectionFactoryConfigurer
-org.springframework.boot.autoconfigure.amqp.AbstractRabbitListenerContainerFactoryConfigurer
-org.springframework.boot.autoconfigure.amqp.CachingConnectionFactoryConfigurer
-org.springframework.boot.autoconfigure.amqp.ConnectionFactoryCustomizer
-org.springframework.boot.autoconfigure.amqp.DirectRabbitListenerContainerFactoryConfigurer
-org.springframework.boot.autoconfigure.amqp.EnvironmentBuilderCustomizer
-org.springframework.boot.autoconfigure.amqp.PropertiesRabbitConnectionDetails
-org.springframework.boot.autoconfigure.amqp.RabbitAnnotationDrivenConfiguration.EnableRabbitConfiguration
-org.springframework.boot.autoconfigure.amqp.RabbitAnnotationDrivenConfiguration
-org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration.MessagingTemplateConfiguration
-org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration.RabbitConnectionFactoryCreator
-org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration.RabbitTemplateConfiguration
-org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
-org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address
-org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails
-org.springframework.boot.autoconfigure.amqp.RabbitConnectionFactoryBeanConfigurer
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Address
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.AmqpContainer
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.BaseContainer
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache.Channel
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache.Connection
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.ContainerType
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.DirectContainer
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Listener
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.ListenerRetry
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Retry
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.SimpleContainer
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Ssl
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Stream
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.StreamContainer
-org.springframework.boot.autoconfigure.amqp.RabbitProperties.Template
-org.springframework.boot.autoconfigure.amqp.RabbitProperties
-org.springframework.boot.autoconfigure.amqp.RabbitRetryTemplateCustomizer.Target
-org.springframework.boot.autoconfigure.amqp.RabbitRetryTemplateCustomizer
-org.springframework.boot.autoconfigure.amqp.RabbitStreamConfiguration
-org.springframework.boot.autoconfigure.amqp.RabbitStreamTemplateConfigurer
-org.springframework.boot.autoconfigure.amqp.RabbitTemplateConfigurer
-org.springframework.boot.autoconfigure.amqp.RabbitTemplateCustomizer
-org.springframework.boot.autoconfigure.amqp.RetryTemplateFactory
-org.springframework.boot.autoconfigure.amqp.SimpleRabbitListenerContainerFactoryConfigurer
-
 org.springframework.boot.autoconfigure.aop.AopAutoConfiguration.AspectJAutoProxyingConfiguration.CglibAutoProxyConfiguration
 org.springframework.boot.autoconfigure.aop.AopAutoConfiguration.AspectJAutoProxyingConfiguration.JdkDynamicAutoProxyConfiguration
 org.springframework.boot.autoconfigure.aop.AopAutoConfiguration.AspectJAutoProxyingConfiguration
@@ -1826,8 +1784,6 @@ org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoCon
 
 ```
 
-org.springframework.boot.actuate.amqp.RabbitHealthIndicator
-
 org.springframework.boot.actuate.audit.AuditEvent
 org.springframework.boot.actuate.audit.AuditEventRepository
 org.springframework.boot.actuate.audit.AuditEventsEndpoint.AuditEventsDescriptor
@@ -2136,7 +2092,6 @@ org.springframework.boot.actuate.management.PlainTextThreadDumpFormatter
 org.springframework.boot.actuate.management.ThreadDumpEndpoint.ThreadDumpDescriptor
 org.springframework.boot.actuate.management.ThreadDumpEndpoint
 
-org.springframework.boot.actuate.metrics.amqp.RabbitMetrics
 org.springframework.boot.actuate.metrics.annotation.TimedAnnotations
 org.springframework.boot.actuate.metrics.AutoTimer.1
 org.springframework.boot.actuate.metrics.AutoTimer
@@ -2302,8 +2257,6 @@ org.springframework.boot.actuate.web.mappings.servlet.ServletsMappingDescription
 
 org.springframework.boot.actuate.autoconfigure.OnEndpointElementCondition
 
-org.springframework.boot.actuate.autoconfigure.amqp.RabbitHealthContributorAutoConfiguration
-
 org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
 
@@ -2463,8 +2416,6 @@ org.springframework.boot.actuate.autoconfigure.mail.MailHealthContributorAutoCon
 org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration
 
-org.springframework.boot.actuate.autoconfigure.metrics.amqp.RabbitConnectionFactoryMetricsPostProcessor
-org.springframework.boot.actuate.autoconfigure.metrics.amqp.RabbitMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.AutoConfiguredCompositeMeterRegistry
 org.springframework.boot.actuate.autoconfigure.metrics.AutoTimeProperties
 
@@ -3325,8 +3276,7 @@ org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanFac
 org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor
 org.springframework.boot.testcontainers.properties.TestcontainersPropertySource
 org.springframework.boot.testcontainers.properties.TestcontainersPropertySourceAutoConfiguration
-org.springframework.boot.testcontainers.service.connection.amqp.RabbitContainerConnectionDetailsFactory.RabbitMqContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.amqp.RabbitContainerConnectionDetailsFactory
+
 org.springframework.boot.testcontainers.service.connection.BeanOrigin
 
 org.springframework.boot.testcontainers.service.connection.ConnectionDetailsRegistrar.ServiceConnectionBeanRegistrationExcludeFilter
