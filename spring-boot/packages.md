@@ -124,14 +124,6 @@ org.springframework.boot.docker.compose.service.connection.liquibase
 org.springframework.boot.testcontainers.service.connection.liquibase
 ```
 
-## hazelcast
-
-```
-org.springframework.boot.autoconfigure.hazelcast
-org.springframework.boot.actuate.hazelcast
-org.springframework.boot.actuate.autoconfigure.hazelcast
-```
-
 ## jmx
 
 ```
