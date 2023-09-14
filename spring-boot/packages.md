@@ -1,18 +1,5 @@
 # 包名
 
-## logging
-
-```
-org.springframework.boot.context.logging
-org.springframework.boot.logging
-org.springframework.boot.logging.java
-org.springframework.boot.logging.log4j2
-org.springframework.boot.logging.logback
-org.springframework.boot.autoconfigure.logging
-org.springframework.boot.actuate.logging
-org.springframework.boot.actuate.autoconfigure.logging
-```
-
 ## observation
 
 ```
