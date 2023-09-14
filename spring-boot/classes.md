@@ -2041,24 +2041,6 @@ org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAuto
 org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration.ServletWebConfiguration
 org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration
 
-org.springframework.boot.actuate.autoconfigure.web.server.ChildManagementContextInitializer.AotContribution
-org.springframework.boot.actuate.autoconfigure.web.server.ChildManagementContextInitializer.CloseManagementContextListener
-org.springframework.boot.actuate.autoconfigure.web.server.ChildManagementContextInitializer
-org.springframework.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort
-org.springframework.boot.actuate.autoconfigure.web.server.EnableChildManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.server.EnableManagementContext
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration.DifferentManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration.SameManagementContextConfiguration.1
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration.SameManagementContextConfiguration.EnableSameManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration.SameManagementContextConfiguration
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextConfigurationImportSelector.ManagementConfiguration
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextConfigurationImportSelector
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
-org.springframework.boot.actuate.autoconfigure.web.server.ManagementWebServerFactoryCustomizer
-org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition
-
 ```
 
 ## spring-boot-devtools
@@ -2450,8 +2432,6 @@ org.springframework.boot.test.web.client.TestRestTemplateExtensionsKt
 org.springframework.boot.test.web.htmlunit.LocalHostWebClient
 org.springframework.boot.test.web.htmlunit.webdriver.LocalHostWebConnectionHtmlUnitDriver
 
-org.springframework.boot.test.web.server.LocalManagementPort
-org.springframework.boot.test.web.server.LocalServerPort
 org.springframework.boot.test.web.SpringBootTestRandomPortEnvironmentPostProcessor
 
 ```

@@ -202,13 +202,11 @@ org.springframework.boot.actuate.autoconfigure.endpoint.web
 org.springframework.boot.actuate.autoconfigure.web
 org.springframework.boot.actuate.autoconfigure.web.exchanges
 org.springframework.boot.actuate.autoconfigure.web.mappings
-org.springframework.boot.actuate.autoconfigure.web.server
 org.springframework.boot.test.mock.web
 org.springframework.boot.test.web
 org.springframework.boot.test.web.client
 org.springframework.boot.test.web.htmlunit
 org.springframework.boot.test.web.htmlunit.webdriver
-org.springframework.boot.test.web.server
 org.springframework.boot.test.autoconfigure.web.client
 ```
 
