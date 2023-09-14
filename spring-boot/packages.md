@@ -306,22 +306,6 @@ org.springframework.boot.actuate.autoconfigure.neo4j
 org.springframework.boot.testcontainers.service.connection.neo4j
 ```
 
-## r2dbc
-
-```
-org.springframework.boot.autoconfigure.data.r2dbc
-org.springframework.boot.test.autoconfigure.data.r2dbc
-org.springframework.boot.r2dbc
-org.springframework.boot.r2dbc.init
-org.springframework.boot.autoconfigure.r2dbc
-org.springframework.boot.actuate.metrics.r2dbc
-org.springframework.boot.actuate.r2dbc
-org.springframework.boot.actuate.autoconfigure.metrics.r2dbc
-org.springframework.boot.actuate.autoconfigure.r2dbc
-org.springframework.boot.docker.compose.service.connection.r2dbc
-org.springframework.boot.testcontainers.service.connection.r2dbc
-```
-
 ## redis
 
 ```

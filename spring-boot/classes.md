@@ -578,14 +578,6 @@ org.springframework.boot.origin.SystemEnvironmentOrigin
 org.springframework.boot.origin.TextResourceOrigin.Location
 org.springframework.boot.origin.TextResourceOrigin
 
-org.springframework.boot.r2dbc.ConnectionFactoryBuilder.OptionsCapableWrapper
-org.springframework.boot.r2dbc.ConnectionFactoryBuilder.PoolingAwareOptionsCapableWrapper
-org.springframework.boot.r2dbc.ConnectionFactoryBuilder
-org.springframework.boot.r2dbc.EmbeddedDatabaseConnection
-org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
-org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
-org.springframework.boot.r2dbc.OptionsCapableConnectionFactory
-
 org.springframework.boot.reactor.DebugAgentEnvironmentPostProcessor
 
 org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer.Listener
@@ -1215,10 +1207,7 @@ org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfigura
 org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesRegistrar.EnableNeo4jRepositoriesConfiguration
 org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesRegistrar
 org.springframework.boot.autoconfigure.data.OnRepositoryTypeCondition
-org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration
-org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfigureRegistrar.EnableR2dbcRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfigureRegistrar
+
 org.springframework.boot.autoconfigure.data.redis.ClientResourcesBuilderCustomizer
 org.springframework.boot.autoconfigure.data.redis.JedisClientConfigurationBuilderCustomizer
 org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration
@@ -1681,28 +1670,6 @@ org.springframework.boot.autoconfigure.quartz.QuartzProperties
 org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager
 org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
 org.springframework.boot.autoconfigure.quartz.SchedulerFactoryBeanCustomizer
-
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations.GenericConfiguration
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations.PoolConfiguration.PooledConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations.PoolConfiguration
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations.PooledConnectionFactoryCondition
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryDependentConfiguration
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryOptionsBuilderCustomizer
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryOptionsInitializer.ConnectionFactoryBeanCreationException
-org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryOptionsInitializer
-org.springframework.boot.autoconfigure.r2dbc.MissingR2dbcPoolDependencyException
-org.springframework.boot.autoconfigure.r2dbc.MissingR2dbcPoolDependencyFailureAnalyzer
-org.springframework.boot.autoconfigure.r2dbc.MultipleConnectionPoolConfigurationsException
-org.springframework.boot.autoconfigure.r2dbc.MultipleConnectionPoolConfigurationsFailureAnalyzer
-org.springframework.boot.autoconfigure.r2dbc.NoConnectionFactoryBeanFailureAnalyzer
-org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration.PropertiesR2dbcConnectionDetails
-org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
-org.springframework.boot.autoconfigure.r2dbc.R2dbcConnectionDetails
-org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties.Pool
-org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties
-org.springframework.boot.autoconfigure.r2dbc.R2dbcTransactionManagerAutoConfiguration
 
 org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations.ReactorResourceFactoryConfiguration
 org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations
@@ -2521,7 +2488,7 @@ org.springframework.boot.actuate.metrics.MetricsEndpoint.MetricDescriptor
 org.springframework.boot.actuate.metrics.MetricsEndpoint.MetricNamesDescriptor
 org.springframework.boot.actuate.metrics.MetricsEndpoint.Sample
 org.springframework.boot.actuate.metrics.MetricsEndpoint
-org.springframework.boot.actuate.metrics.r2dbc.ConnectionPoolMetrics
+
 org.springframework.boot.actuate.metrics.startup.StartupTimeMetricsListener
 org.springframework.boot.actuate.metrics.system.DiskSpaceMetricsBinder
 org.springframework.boot.actuate.metrics.web.client.DefaultRestTemplateExchangeTagsProvider
@@ -2572,8 +2539,6 @@ org.springframework.boot.actuate.quartz.QuartzEndpoint
 org.springframework.boot.actuate.quartz.QuartzEndpointWebExtension.QuartzEndpointWebExtensionRuntimeHints
 org.springframework.boot.actuate.quartz.QuartzEndpointWebExtension.ResponseSupplier
 org.springframework.boot.actuate.quartz.QuartzEndpointWebExtension
-
-org.springframework.boot.actuate.r2dbc.ConnectionFactoryHealthIndicator
 
 org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CronTaskDescriptor
 org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CustomTriggerTaskDescriptor
@@ -2983,7 +2948,7 @@ org.springframework.boot.actuate.autoconfigure.metrics.OnlyOnceLoggingDenyMeterF
 org.springframework.boot.actuate.autoconfigure.metrics.PropertiesAutoTimer
 org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter.1
 org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter
-org.springframework.boot.actuate.autoconfigure.metrics.r2dbc.ConnectionPoolMetricsAutoConfiguration
+
 org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.ServiceLevelObjectiveBoundary
 org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetricsListenerAutoConfiguration
@@ -3032,8 +2997,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObs
 
 org.springframework.boot.actuate.autoconfigure.quartz.QuartzEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.quartz.QuartzEndpointProperties
-
-org.springframework.boot.actuate.autoconfigure.r2dbc.ConnectionFactoryHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration
 
@@ -3423,7 +3386,7 @@ org.springframework.boot.docker.compose.service.connection.postgres.PostgresJdbc
 org.springframework.boot.docker.compose.service.connection.postgres.PostgresJdbcDockerComposeConnectionDetailsFactory
 org.springframework.boot.docker.compose.service.connection.postgres.PostgresR2dbcDockerComposeConnectionDetailsFactory.PostgresDbR2dbcDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.postgres.PostgresR2dbcDockerComposeConnectionDetailsFactory
-org.springframework.boot.docker.compose.service.connection.r2dbc.ConnectionFactoryOptionsBuilder
+
 org.springframework.boot.docker.compose.service.connection.rabbit.RabbitDockerComposeConnectionDetailsFactory.RabbitDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.rabbit.RabbitDockerComposeConnectionDetailsFactory
 org.springframework.boot.docker.compose.service.connection.rabbit.RabbitEnvironment
@@ -3629,10 +3592,7 @@ org.springframework.boot.test.autoconfigure.data.neo4j.AutoConfigureDataNeo4j
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTest
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTestContextBootstrapper
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTypeExcludeFilter
-org.springframework.boot.test.autoconfigure.data.r2dbc.AutoConfigureDataR2dbc
-org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest
-org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTypeExcludeFilter
+
 org.springframework.boot.test.autoconfigure.data.redis.AutoConfigureDataRedis
 org.springframework.boot.test.autoconfigure.data.redis.DataRedisTest
 org.springframework.boot.test.autoconfigure.data.redis.DataRedisTestContextBootstrapper
@@ -3804,16 +3764,7 @@ org.springframework.boot.testcontainers.service.connection.mongo.MongoContainerC
 org.springframework.boot.testcontainers.service.connection.mongo.MongoContainerConnectionDetailsFactory
 org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory.Neo4jContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory
-org.springframework.boot.testcontainers.service.connection.r2dbc.MariaDbR2dbcContainerConnectionDetailsFactory.MariaDbR2dbcDatabaseContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.r2dbc.MariaDbR2dbcContainerConnectionDetailsFactory
-org.springframework.boot.testcontainers.service.connection.r2dbc.MySqlR2dbcContainerConnectionDetailsFactory.MySqlR2dbcDatabaseContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.r2dbc.MySqlR2dbcContainerConnectionDetailsFactory
-org.springframework.boot.testcontainers.service.connection.r2dbc.OracleR2dbcContainerConnectionDetailsFactory.R2dbcDatabaseContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.r2dbc.OracleR2dbcContainerConnectionDetailsFactory
-org.springframework.boot.testcontainers.service.connection.r2dbc.PostgresR2dbcContainerConnectionDetailsFactory.PostgresR2dbcDatabaseContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.r2dbc.PostgresR2dbcContainerConnectionDetailsFactory
-org.springframework.boot.testcontainers.service.connection.r2dbc.SqlServerR2dbcContainerConnectionDetailsFactory.MsSqlServerR2dbcDatabaseContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.r2dbc.SqlServerR2dbcContainerConnectionDetailsFactory
+
 org.springframework.boot.testcontainers.service.connection.redis.RedisContainerConnectionDetailsFactory.RedisContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.redis.RedisContainerConnectionDetailsFactory
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory.RedpandaContainerConnectionDetails
