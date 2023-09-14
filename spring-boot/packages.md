@@ -234,17 +234,6 @@ org.springframework.boot.autoconfigure.data.rest
 org.springframework.boot.autoconfigure.data.web
 ```
 
-## couchbase
-
-```
-org.springframework.boot.autoconfigure.data.couchbase
-org.springframework.boot.test.autoconfigure.data.couchbase
-org.springframework.boot.autoconfigure.couchbase
-org.springframework.boot.actuate.couchbase
-org.springframework.boot.actuate.autoconfigure.couchbase
-org.springframework.boot.testcontainers.service.connection.couchbase
-```
-
 ## ldap
 
 ```
