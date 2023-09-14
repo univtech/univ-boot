@@ -24,16 +24,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.servlet
 org.springframework.boot.actuate.autoconfigure.observation.graphql
 ```
 
-## webservices
-
-```
-org.springframework.boot.webservices.client
-org.springframework.boot.autoconfigure.webservices
-org.springframework.boot.autoconfigure.webservices.client
-org.springframework.boot.test.autoconfigure.webservices.client
-org.springframework.boot.test.autoconfigure.webservices.server
-```
-
 ## mail
 
 ```
