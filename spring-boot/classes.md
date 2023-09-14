@@ -1184,19 +1184,7 @@ org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchR
 org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration
 org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesRegistrar.EnableLdapRepositoriesConfiguration
 org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesRegistrar
-org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration.GridFsMongoDatabaseFactory
-org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoReactiveDataAutoConfiguration.GridFsReactiveMongoDatabaseFactory
-org.springframework.boot.autoconfigure.data.mongo.MongoReactiveDataAutoConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoReactiveRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoReactiveRepositoriesRegistrar.EnableReactiveMongoRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoReactiveRepositoriesRegistrar
-org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesRegistrar
+
 org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration
 org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataProperties
 org.springframework.boot.autoconfigure.data.neo4j.Neo4jReactiveDataAutoConfiguration
@@ -1575,26 +1563,6 @@ org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
 org.springframework.boot.autoconfigure.mail.MailSenderJndiConfiguration
 org.springframework.boot.autoconfigure.mail.MailSenderPropertiesConfiguration
 org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration
-
-org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration.MongoClientSettingsConfiguration
-org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
-org.springframework.boot.autoconfigure.mongo.MongoClientFactory
-org.springframework.boot.autoconfigure.mongo.MongoClientFactorySupport
-org.springframework.boot.autoconfigure.mongo.MongoClientSettingsBuilderCustomizer
-org.springframework.boot.autoconfigure.mongo.MongoConnectionDetails.GridFs.1
-org.springframework.boot.autoconfigure.mongo.MongoConnectionDetails.GridFs
-org.springframework.boot.autoconfigure.mongo.MongoConnectionDetails
-org.springframework.boot.autoconfigure.mongo.MongoProperties.Gridfs
-org.springframework.boot.autoconfigure.mongo.MongoProperties.Ssl
-org.springframework.boot.autoconfigure.mongo.MongoProperties
-org.springframework.boot.autoconfigure.mongo.MongoPropertiesClientSettingsBuilderCustomizer
-org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration.MongoClientSettingsConfiguration
-org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration.NettyDriverConfiguration
-org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration.NettyDriverMongoClientSettingsBuilderCustomizer
-org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration
-org.springframework.boot.autoconfigure.mongo.PropertiesMongoConnectionDetails
-org.springframework.boot.autoconfigure.mongo.ReactiveMongoClientFactory
-org.springframework.boot.autoconfigure.mongo.StandardMongoClientSettingsBuilderCustomizer
 
 org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheProperties.Reactive
@@ -2122,8 +2090,6 @@ org.springframework.boot.actuate.couchbase.CouchbaseHealthIndicator
 org.springframework.boot.actuate.couchbase.CouchbaseReactiveHealthIndicator
 
 org.springframework.boot.actuate.data.elasticsearch.ElasticsearchReactiveHealthIndicator
-org.springframework.boot.actuate.data.mongo.MongoHealthIndicator
-org.springframework.boot.actuate.data.mongo.MongoReactiveHealthIndicator
 
 org.springframework.boot.actuate.elasticsearch.ElasticsearchRestClientHealthIndicator
 
@@ -2672,8 +2638,6 @@ org.springframework.boot.actuate.autoconfigure.couchbase.CouchbaseHealthContribu
 org.springframework.boot.actuate.autoconfigure.couchbase.CouchbaseReactiveHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.data.elasticsearch.ElasticsearchReactiveHealthContributorAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.data.mongo.MongoHealthContributorAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.data.mongo.MongoReactiveHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticsearchRestHealthContributorAutoConfiguration
 
@@ -2897,9 +2861,7 @@ org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties.Web.Ser
 org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties.Web.Server
 org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties.Web
 org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
-org.springframework.boot.actuate.autoconfigure.metrics.mongo.MongoMetricsAutoConfiguration.MongoCommandMetricsConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.mongo.MongoMetricsAutoConfiguration.MongoConnectionPoolMetricsConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.mongo.MongoMetricsAutoConfiguration
+
 org.springframework.boot.actuate.autoconfigure.metrics.NoOpMeterRegistryConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.OnlyOnceLoggingDenyMeterFilter
 
@@ -3325,9 +3287,7 @@ org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDo
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbR2dbcDockerComposeConnectionDetailsFactory.MariaDbR2dbcDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbR2dbcDockerComposeConnectionDetailsFactory
-org.springframework.boot.docker.compose.service.connection.mongo.MongoDockerComposeConnectionDetailsFactory.MongoDockerComposeConnectionDetails
-org.springframework.boot.docker.compose.service.connection.mongo.MongoDockerComposeConnectionDetailsFactory
-org.springframework.boot.docker.compose.service.connection.mongo.MongoEnvironment
+
 org.springframework.boot.docker.compose.service.connection.mysql.MySqlEnvironment
 org.springframework.boot.docker.compose.service.connection.mysql.MySqlJdbcDockerComposeConnectionDetailsFactory.MySqlJdbcDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.mysql.MySqlJdbcDockerComposeConnectionDetailsFactory
@@ -3540,10 +3500,7 @@ org.springframework.boot.test.autoconfigure.data.ldap.AutoConfigureDataLdap
 org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTest
 org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTestContextBootstrapper
 org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTypeExcludeFilter
-org.springframework.boot.test.autoconfigure.data.mongo.AutoConfigureDataMongo
-org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest
-org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTypeExcludeFilter
+
 org.springframework.boot.test.autoconfigure.data.neo4j.AutoConfigureDataNeo4j
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTest
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTestContextBootstrapper
@@ -3712,8 +3669,7 @@ org.springframework.boot.testcontainers.service.connection.kafka.KafkaContainerC
 org.springframework.boot.testcontainers.service.connection.kafka.KafkaContainerConnectionDetailsFactory
 org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory
-org.springframework.boot.testcontainers.service.connection.mongo.MongoContainerConnectionDetailsFactory.MongoContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.mongo.MongoContainerConnectionDetailsFactory
+
 org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory.Neo4jContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory
 

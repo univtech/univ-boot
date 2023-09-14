@@ -282,19 +282,6 @@ org.springframework.boot.actuate.ldap
 org.springframework.boot.actuate.autoconfigure.ldap
 ```
 
-## mongo
-
-```
-org.springframework.boot.autoconfigure.data.mongo
-org.springframework.boot.actuate.data.mongo
-org.springframework.boot.actuate.autoconfigure.data.mongo
-org.springframework.boot.test.autoconfigure.data.mongo
-org.springframework.boot.autoconfigure.mongo
-org.springframework.boot.actuate.autoconfigure.metrics.mongo
-org.springframework.boot.docker.compose.service.connection.mongo
-org.springframework.boot.testcontainers.service.connection.mongo
-```
-
 ## neo4j
 
 ```
