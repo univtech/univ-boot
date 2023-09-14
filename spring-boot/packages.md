@@ -44,19 +44,6 @@ org.springframework.boot.actuate.autoconfigure.env
 org.springframework.boot.devtools.env
 ```
 
-## data
-
-```
-org.springframework.boot.autoconfigure.data
-org.springframework.boot.actuate.data
-org.springframework.boot.actuate.metrics.data
-org.springframework.boot.actuate.autoconfigure.data
-org.springframework.boot.actuate.autoconfigure.metrics.data
-
-org.springframework.boot.autoconfigure.data.rest
-org.springframework.boot.autoconfigure.data.web
-```
-
 ## jmx
 
 ```

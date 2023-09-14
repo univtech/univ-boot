@@ -643,23 +643,6 @@ org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfigurat
 
 org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
 
-org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.1
-org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.AutoConfiguredAnnotationRepositoryConfigurationSource
-org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport
-
-org.springframework.boot.autoconfigure.data.ConditionalOnRepositoryType
-
-org.springframework.boot.autoconfigure.data.OnRepositoryTypeCondition
-
-org.springframework.boot.autoconfigure.data.RepositoryType
-org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration
-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties
-org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer
-org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable
-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Sort
-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties
-
 org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer.AutoConfigurationResult
 org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer.BeanMethods
 org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer.Source
@@ -988,9 +971,6 @@ org.springframework.boot.actuate.metrics.annotation.TimedAnnotations
 org.springframework.boot.actuate.metrics.AutoTimer.1
 org.springframework.boot.actuate.metrics.AutoTimer
 
-org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider
-org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener
-org.springframework.boot.actuate.metrics.data.RepositoryTagsProvider
 org.springframework.boot.actuate.metrics.export.prometheus.PrometheusPushGatewayManager.1
 org.springframework.boot.actuate.metrics.export.prometheus.PrometheusPushGatewayManager.PushGatewayTaskScheduler
 org.springframework.boot.actuate.metrics.export.prometheus.PrometheusPushGatewayManager.ShutdownOperation
@@ -1131,9 +1111,7 @@ org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryCon
 org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryConfiguration.MultipleNonPrimaryMeterRegistriesCondition.SingleInjectableMeterRegistry
 org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryConfiguration.MultipleNonPrimaryMeterRegistriesCondition
 org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.data.MetricsRepositoryMethodInvocationListenerBeanPostProcessor.MetricsRepositoryFactoryCustomizer
-org.springframework.boot.actuate.autoconfigure.metrics.data.MetricsRepositoryMethodInvocationListenerBeanPostProcessor
-org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration
+
 org.springframework.boot.actuate.autoconfigure.metrics.export.appoptics.AppOpticsMetricsExportAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.export.appoptics.AppOpticsProperties
 org.springframework.boot.actuate.autoconfigure.metrics.export.appoptics.AppOpticsPropertiesConfigAdapter
