@@ -13,18 +13,14 @@ org.springframework.boot.actuate.logging
 org.springframework.boot.actuate.autoconfigure.logging
 ```
 
-## graphql
+## observation
 
 ```
-org.springframework.boot.autoconfigure.graphql
-org.springframework.boot.autoconfigure.graphql.data
-org.springframework.boot.autoconfigure.graphql.servlet
-org.springframework.boot.autoconfigure.graphql.reactive
-org.springframework.boot.autoconfigure.graphql.security
-org.springframework.boot.test.graphql.tester
-org.springframework.boot.test.autoconfigure.graphql
-org.springframework.boot.test.autoconfigure.graphql.tester
-
+org.springframework.boot.actuate.autoconfigure.observation
+org.springframework.boot.actuate.autoconfigure.observation.batch
+org.springframework.boot.actuate.autoconfigure.observation.web.client
+org.springframework.boot.actuate.autoconfigure.observation.web.reactive
+org.springframework.boot.actuate.autoconfigure.observation.web.servlet
 org.springframework.boot.actuate.autoconfigure.observation.graphql
 ```
 
@@ -86,7 +82,6 @@ org.springframework.boot.actuate.web.exchanges.servlet
 org.springframework.boot.actuate.web.mappings.servlet
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet
 org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet
-org.springframework.boot.actuate.autoconfigure.observation.web.servlet
 org.springframework.boot.actuate.autoconfigure.web.servlet
 org.springframework.boot.test.autoconfigure.web.servlet
 ```
@@ -110,7 +105,6 @@ org.springframework.boot.actuate.web.exchanges.reactive
 org.springframework.boot.actuate.web.mappings.reactive
 org.springframework.boot.actuate.autoconfigure.cloudfoundry.reactive
 org.springframework.boot.actuate.autoconfigure.endpoint.web.reactive
-org.springframework.boot.actuate.autoconfigure.observation.web.reactive
 org.springframework.boot.actuate.autoconfigure.web.reactive
 org.springframework.boot.test.web.reactive.server
 org.springframework.boot.test.autoconfigure.web.reactive
@@ -251,7 +245,6 @@ org.springframework.boot.actuate.metrics.web.client
 org.springframework.boot.actuate.web.exchanges
 org.springframework.boot.actuate.web.mappings
 org.springframework.boot.actuate.autoconfigure.endpoint.web
-org.springframework.boot.actuate.autoconfigure.observation.web.client
 org.springframework.boot.actuate.autoconfigure.web
 org.springframework.boot.actuate.autoconfigure.web.exchanges
 org.springframework.boot.actuate.autoconfigure.web.mappings
@@ -557,8 +550,6 @@ org.springframework.boot.autoconfigure.sendgrid
 
 org.springframework.boot.actuate.autoconfigure
 org.springframework.boot.actuate.autoconfigure.cloudfoundry
-org.springframework.boot.actuate.autoconfigure.observation
-org.springframework.boot.actuate.autoconfigure.observation.batch
 org.springframework.boot.actuate.autoconfigure.wavefront
 
 org.springframework.boot.devtools
