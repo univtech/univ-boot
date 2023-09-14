@@ -33,7 +33,9 @@ org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsA
 
 org.springframework.boot.context.embedded.tomcat.empty-web.xml
 
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration
 
+org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer
 
 
 

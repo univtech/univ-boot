@@ -36,6 +36,12 @@ org.springframework.boot.actuate.metrics.web.jetty.JettySslHandshakeMetricsBinde
 
 org.springframework.boot.actuate.autoconfigure.metrics.web.jetty.JettyMetricsAutoConfiguration
 
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration.JettyWebServerFactoryCustomizerConfiguration
+org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomizer.1
+org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomizer.MaxHttpRequestHeaderSizeCustomizer
+org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomizer.MaxHttpResponseHeaderSizeCustomizer
+org.springframework.boot.autoconfigure.web.embedded.JettyWebServerFactoryCustomizer
 
 
 

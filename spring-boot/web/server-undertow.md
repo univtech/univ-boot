@@ -35,7 +35,12 @@ org.springframework.boot.web.embedded.undertow.UndertowWebServer.UndertowWebServ
 org.springframework.boot.web.embedded.undertow.UndertowWebServer
 org.springframework.boot.web.embedded.undertow.UndertowWebServerFactoryDelegate
 
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration.UndertowWebServerFactoryCustomizerConfiguration
 
+org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer.AbstractOptions
+org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer.ServerOptions
+org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer.SocketOptions
+org.springframework.boot.autoconfigure.web.embedded.UndertowWebServerFactoryCustomizer
 
 
 

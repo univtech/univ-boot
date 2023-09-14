@@ -21,7 +21,9 @@ org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations
 org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties
 
 
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration.NettyWebServerFactoryCustomizerConfiguration
 
+org.springframework.boot.autoconfigure.web.embedded.NettyWebServerFactoryCustomizer
 
 
 
