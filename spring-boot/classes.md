@@ -630,11 +630,6 @@ org.springframework.boot.util.LambdaSafe.InvocationResult
 org.springframework.boot.util.LambdaSafe.LambdaSafeCallback
 org.springframework.boot.util.LambdaSafe
 
-org.springframework.boot.validation.beanvalidation.FilteredMethodValidationPostProcessor
-org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter
-org.springframework.boot.validation.MessageInterpolatorFactory
-org.springframework.boot.validation.MessageSourceMessageInterpolator
-
 ```
 
 ## spring-boot-autoconfigure
@@ -1005,11 +1000,6 @@ org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration.
 org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
 org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers
 org.springframework.boot.autoconfigure.transaction.TransactionProperties
-
-org.springframework.boot.autoconfigure.validation.PrimaryDefaultValidatorPostProcessor
-org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
-org.springframework.boot.autoconfigure.validation.ValidationConfigurationCustomizer
-org.springframework.boot.autoconfigure.validation.ValidatorAdapter
 
 ```
 

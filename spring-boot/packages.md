@@ -178,14 +178,6 @@ org.springframework.boot.actuate.health
 org.springframework.boot.actuate.autoconfigure.health
 ```
 
-## validation
-
-```
-org.springframework.boot.validation
-org.springframework.boot.validation.beanvalidation
-org.springframework.boot.autoconfigure.validation
-```
-
 ## context
 
 ```
