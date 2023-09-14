@@ -43,9 +43,6 @@ org.springframework.boot.autoconfigure.graphql.rsocket.GraphQlRSocketAutoConfigu
 org.springframework.boot.autoconfigure.graphql.rsocket.GraphQlRSocketController
 org.springframework.boot.autoconfigure.graphql.rsocket.RSocketGraphQlClientAutoConfiguration
 
-org.springframework.boot.autoconfigure.security.rsocket.RSocketSecurityAutoConfiguration.RSocketSecurityMessageHandlerConfiguration
-org.springframework.boot.autoconfigure.security.rsocket.RSocketSecurityAutoConfiguration
-
 org.springframework.boot.test.rsocket.server.LocalRSocketServerPort
 
 

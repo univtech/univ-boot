@@ -283,28 +283,6 @@ org.springframework.boot.actuate.quartz
 org.springframework.boot.actuate.autoconfigure.quartz
 ```
 
-## security
-
-```
-org.springframework.boot.security
-org.springframework.boot.security.servlet
-org.springframework.boot.security.reactive
-org.springframework.boot.autoconfigure.security
-org.springframework.boot.autoconfigure.security.servlet
-org.springframework.boot.autoconfigure.security.reactive
-org.springframework.boot.autoconfigure.security.saml2
-org.springframework.boot.autoconfigure.security.oauth2.client
-org.springframework.boot.autoconfigure.security.oauth2.client.servlet
-org.springframework.boot.autoconfigure.security.oauth2.client.reactive
-org.springframework.boot.autoconfigure.security.oauth2.resource
-org.springframework.boot.autoconfigure.security.oauth2.resource.servlet
-org.springframework.boot.autoconfigure.security.oauth2.resource.reactive
-org.springframework.boot.autoconfigure.security.oauth2.server.servlet
-org.springframework.boot.actuate.security
-org.springframework.boot.actuate.autoconfigure.security.servlet
-org.springframework.boot.actuate.autoconfigure.security.reactive
-```
-
 ## properties
 
 ```
