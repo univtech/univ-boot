@@ -210,17 +210,6 @@ org.springframework.boot.ssl.pem
 org.springframework.boot.autoconfigure.ssl
 ```
 
-## jms
-
-```
-org.springframework.boot.jms
-org.springframework.boot.autoconfigure.jms
-org.springframework.boot.autoconfigure.jms.activemq
-org.springframework.boot.autoconfigure.jms.artemis
-org.springframework.boot.actuate.jms
-org.springframework.boot.actuate.autoconfigure.jms
-```
-
 ## data
 
 ```

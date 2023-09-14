@@ -474,8 +474,6 @@ org.springframework.boot.jackson.JsonMixinModuleEntriesBeanRegistrationAotProces
 org.springframework.boot.jackson.JsonObjectDeserializer
 org.springframework.boot.jackson.JsonObjectSerializer
 
-org.springframework.boot.jms.XAConnectionFactoryWrapper
-
 org.springframework.boot.json.AbstractJsonParser
 org.springframework.boot.json.BasicJsonParser
 org.springframework.boot.json.GsonJsonParser.ListTypeToken
@@ -1301,50 +1299,6 @@ org.springframework.boot.autoconfigure.jersey.JerseyProperties.Type
 org.springframework.boot.autoconfigure.jersey.JerseyProperties
 org.springframework.boot.autoconfigure.jersey.ResourceConfigCustomizer
 
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryConfiguration.PooledConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryConfiguration.SimpleConnectionFactoryConfiguration.CachingConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryConfiguration.SimpleConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryCustomizer
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryFactory
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQProperties.Packages
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQProperties
-org.springframework.boot.autoconfigure.jms.activemq.ActiveMQXAConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisAutoConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisConfigurationCustomizer
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryConfiguration.PooledConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryConfiguration.SimpleConnectionFactoryConfiguration.CachingConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryConfiguration.SimpleConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryFactory
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisEmbeddedConfigurationFactory
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisEmbeddedServerConfiguration
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisMode
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisNoOpBindingRegistry
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisProperties.Embedded
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisProperties
-org.springframework.boot.autoconfigure.jms.artemis.ArtemisXAConnectionFactoryConfiguration
-org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer
-org.springframework.boot.autoconfigure.jms.JmsAnnotationDrivenConfiguration.EnableJmsConfiguration
-org.springframework.boot.autoconfigure.jms.JmsAnnotationDrivenConfiguration.JndiConfiguration
-org.springframework.boot.autoconfigure.jms.JmsAnnotationDrivenConfiguration
-org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration.JmsTemplateConfiguration
-org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration.MessagingTemplateConfiguration
-org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration
-org.springframework.boot.autoconfigure.jms.JmsPoolConnectionFactoryFactory
-org.springframework.boot.autoconfigure.jms.JmsPoolConnectionFactoryProperties
-org.springframework.boot.autoconfigure.jms.JmsProperties.AcknowledgeMode
-org.springframework.boot.autoconfigure.jms.JmsProperties.Cache
-org.springframework.boot.autoconfigure.jms.JmsProperties.DeliveryMode
-org.springframework.boot.autoconfigure.jms.JmsProperties.Listener
-org.springframework.boot.autoconfigure.jms.JmsProperties.Template
-org.springframework.boot.autoconfigure.jms.JmsProperties
-org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration.JndiOrPropertyCondition.Jndi
-org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration.JndiOrPropertyCondition.Property
-org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration.JndiOrPropertyCondition
-org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration
-
 org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
 org.springframework.boot.autoconfigure.jmx.JmxProperties
 org.springframework.boot.autoconfigure.jmx.ParentAwareNamingStrategy
@@ -2154,9 +2108,6 @@ org.springframework.boot.actuate.info.SimpleInfoContributor
 org.springframework.boot.actuate.integration.IntegrationGraphEndpoint.GraphDescriptor
 org.springframework.boot.actuate.integration.IntegrationGraphEndpoint
 
-org.springframework.boot.actuate.jms.JmsHealthIndicator.MonitoredConnection
-org.springframework.boot.actuate.jms.JmsHealthIndicator
-
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ChangeSetDescriptor
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextExpressionDescriptor
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextLiquibaseBeansDescriptor
@@ -2497,8 +2448,6 @@ org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguratio
 org.springframework.boot.actuate.autoconfigure.info.OnEnabledInfoContributorCondition
 
 org.springframework.boot.actuate.autoconfigure.integration.IntegrationGraphEndpointAutoConfiguration
-
-org.springframework.boot.actuate.autoconfigure.jms.JmsHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration.1
 org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration
