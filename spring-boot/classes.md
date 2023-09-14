@@ -2013,18 +2013,6 @@ org.springframework.boot.autoconfigure.session.SessionProperties.Servlet
 org.springframework.boot.autoconfigure.session.SessionProperties
 org.springframework.boot.autoconfigure.session.SessionRepositoryFilterConfiguration
 
-org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
-org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
-org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
-org.springframework.boot.autoconfigure.sql.init.SettingsCreator
-org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationScriptsRuntimeHints
-org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
-
 org.springframework.boot.autoconfigure.ssl.JksSslBundleProperties.Store
 org.springframework.boot.autoconfigure.ssl.JksSslBundleProperties
 org.springframework.boot.autoconfigure.ssl.PemSslBundleProperties.Store
