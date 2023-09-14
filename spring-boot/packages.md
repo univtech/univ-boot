@@ -201,25 +201,6 @@ org.springframework.boot.actuate.autoconfigure.env
 org.springframework.boot.devtools.env
 ```
 
-## jdbc
-
-```
-org.springframework.boot.jdbc
-org.springframework.boot.jdbc.init
-org.springframework.boot.jdbc.metadata
-org.springframework.boot.autoconfigure.data.jdbc
-org.springframework.boot.autoconfigure.jdbc
-org.springframework.boot.autoconfigure.jdbc.metadata
-org.springframework.boot.actuate.jdbc
-org.springframework.boot.actuate.metrics.jdbc
-org.springframework.boot.actuate.autoconfigure.jdbc
-org.springframework.boot.actuate.autoconfigure.metrics.jdbc
-org.springframework.boot.docker.compose.service.connection.jdbc
-org.springframework.boot.test.autoconfigure.data.jdbc
-org.springframework.boot.test.autoconfigure.jdbc
-org.springframework.boot.testcontainers.service.connection.jdbc
-```
-
 ## ssl
 
 ```
