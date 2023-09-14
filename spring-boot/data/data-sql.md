@@ -6,14 +6,21 @@
 
 # Spring Boot条件
 org.springframework.boot.autoconfigure.condition.SpringBootCondition
-	+ org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
+    + org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
     + org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
         + org.springframework.boot.autoconfigure.condition.NoneNestedConditions
             + org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
+# 数据库初始化器
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
+    + org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
+        + org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
+    + org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
+        + org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
+
 # 数据库初始化器检测器
 org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
-	+ org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
 
 # 依赖于数据库初始化的Bean检测器
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
