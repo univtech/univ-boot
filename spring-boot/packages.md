@@ -64,28 +64,6 @@ org.springframework.boot.autoconfigure.netty
 org.springframework.boot.autoconfigure.reactor.netty
 ```
 
-## servlet
-
-```
-org.springframework.boot.web.servlet
-org.springframework.boot.web.servlet.context
-org.springframework.boot.web.servlet.error
-org.springframework.boot.web.servlet.filter
-org.springframework.boot.web.servlet.server
-org.springframework.boot.web.servlet.support
-org.springframework.boot.web.servlet.view
-org.springframework.boot.autoconfigure.web.servlet
-org.springframework.boot.autoconfigure.web.servlet.error
-org.springframework.boot.actuate.endpoint.web.servlet
-org.springframework.boot.actuate.metrics.web.servlet
-org.springframework.boot.actuate.web.exchanges.servlet
-org.springframework.boot.actuate.web.mappings.servlet
-org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet
-org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet
-org.springframework.boot.actuate.autoconfigure.web.servlet
-org.springframework.boot.test.autoconfigure.web.servlet
-```
-
 ## reactive
 
 ```
