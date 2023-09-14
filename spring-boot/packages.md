@@ -271,17 +271,6 @@ org.springframework.boot.docker.compose.service.connection.elasticsearch
 org.springframework.boot.testcontainers.service.connection.elasticsearch
 ```
 
-## jpa
-
-```
-org.springframework.boot.orm.jpa
-org.springframework.boot.orm.jpa.hibernate
-org.springframework.boot.autoconfigure.data.jpa
-org.springframework.boot.autoconfigure.orm.jpa
-org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa
-org.springframework.boot.test.autoconfigure.orm.jpa
-```
-
 ## ldap
 
 ```

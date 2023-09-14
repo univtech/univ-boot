@@ -1,4 +1,4 @@
-# jdbc
+# JDBC访问数据库
 
 ```
 
@@ -11,6 +11,7 @@ org.springframework.boot.jdbc.DatabaseDriver.5
 org.springframework.boot.jdbc.DatabaseDriver.6
 org.springframework.boot.jdbc.DatabaseDriver.7
 org.springframework.boot.jdbc.DatabaseDriver
+
 org.springframework.boot.jdbc.DataSourceBuilder.ComboPooledDataSourceProperties
 org.springframework.boot.jdbc.DataSourceBuilder.DataSourceProperties
 org.springframework.boot.jdbc.DataSourceBuilder.DataSourceProperty
@@ -29,11 +30,14 @@ org.springframework.boot.jdbc.DataSourceBuilder.SimpleDataSourceProperties
 org.springframework.boot.jdbc.DataSourceBuilder.TomcatPoolDataSourceProperties
 org.springframework.boot.jdbc.DataSourceBuilder
 org.springframework.boot.jdbc.DataSourceBuilderRuntimeHints
+
 org.springframework.boot.jdbc.DataSourceUnwrapper.DelegatingDataSourceUnwrapper
 org.springframework.boot.jdbc.DataSourceUnwrapper
+
 org.springframework.boot.jdbc.EmbeddedDatabaseConnection.1
 org.springframework.boot.jdbc.EmbeddedDatabaseConnection.IsEmbedded
 org.springframework.boot.jdbc.EmbeddedDatabaseConnection
+
 org.springframework.boot.jdbc.SchemaManagement
 org.springframework.boot.jdbc.SchemaManagementProvider
 org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
@@ -64,21 +68,27 @@ org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.PooledDa
 org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.PooledDataSourceCondition
 org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.PooledDataSourceConfiguration
 org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
 org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer
+
 org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.Dbcp2
 org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.Generic
 org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.Hikari
 org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.OracleUcp
 org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.Tomcat
 org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration
+
 org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration.Hikari
 org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration.TomcatDataSourceJmxConfiguration
 org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration
+
 org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.DataSourceBeanCreationException
 org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.Xa
 org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+
 org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration
 org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+
 org.springframework.boot.autoconfigure.jdbc.Dbcp2JdbcConnectionDetailsBeanPostProcessor
 org.springframework.boot.autoconfigure.jdbc.EmbeddedDataSourceConfiguration
 org.springframework.boot.autoconfigure.jdbc.HikariDriverConfigurationFailureAnalyzer
