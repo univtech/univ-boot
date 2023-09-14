@@ -39,37 +39,11 @@ org.springframework.boot.actuate.autoconfigure.quartz.QuartzEndpointAutoConfigur
 org.springframework.boot.actuate.autoconfigure.quartz.QuartzEndpointProperties
 
 
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CronTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CustomTriggerTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedDelayTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedRateTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.IntervalTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.RunnableDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksEndpointRuntimeHints
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.TaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.TaskType
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint
-
-org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration
 
 
-org.springframework.boot.task.TaskExecutorBuilder
-org.springframework.boot.task.TaskExecutorCustomizer
-org.springframework.boot.task.TaskSchedulerBuilder
-org.springframework.boot.task.TaskSchedulerCustomizer
 
-org.springframework.boot.autoconfigure.task.ScheduledBeanLazyInitializationExcludeFilter
-org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
-org.springframework.boot.autoconfigure.task.TaskExecutionProperties.Pool
-org.springframework.boot.autoconfigure.task.TaskExecutionProperties.Shutdown
-org.springframework.boot.autoconfigure.task.TaskExecutionProperties
-org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties.Pool
-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties.Shutdown
-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
 
-org.springframework.boot.actuate.autoconfigure.metrics.task.TaskExecutorMetricsAutoConfiguration
+
 
 
 
