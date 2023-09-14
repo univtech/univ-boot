@@ -117,13 +117,6 @@ org.springframework.boot.test.web.reactive.server
 org.springframework.boot.test.autoconfigure.web.reactive
 ```
 
-## websocket
-
-```
-org.springframework.boot.autoconfigure.websocket.servlet
-org.springframework.boot.autoconfigure.websocket.reactive
-```
-
 ## webservices
 
 ```
