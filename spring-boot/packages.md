@@ -529,15 +529,6 @@ org.springframework.boot.docker.compose.core
 org.springframework.boot.test.autoconfigure.core
 ```
 
-## integration
-
-```
-org.springframework.boot.autoconfigure.integration
-org.springframework.boot.actuate.integration
-org.springframework.boot.actuate.autoconfigure.integration
-org.springframework.boot.actuate.autoconfigure.metrics.integration
-```
-
 ## condition
 
 ```
