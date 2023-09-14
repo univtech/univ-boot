@@ -578,21 +578,6 @@ org.springframework.boot.origin.TextResourceOrigin
 
 org.springframework.boot.reactor.DebugAgentEnvironmentPostProcessor
 
-org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer.Listener
-org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer
-org.springframework.boot.rsocket.context.RSocketServerBootstrap
-org.springframework.boot.rsocket.context.RSocketServerInitializedEvent
-org.springframework.boot.rsocket.messaging.RSocketStrategiesCustomizer
-org.springframework.boot.rsocket.netty.NettyRSocketServer
-org.springframework.boot.rsocket.netty.NettyRSocketServerFactory.TcpSslServerCustomizer
-org.springframework.boot.rsocket.netty.NettyRSocketServerFactory
-org.springframework.boot.rsocket.server.ConfigurableRSocketServerFactory
-org.springframework.boot.rsocket.server.RSocketServer.Transport
-org.springframework.boot.rsocket.server.RSocketServer
-org.springframework.boot.rsocket.server.RSocketServerCustomizer
-org.springframework.boot.rsocket.server.RSocketServerException
-org.springframework.boot.rsocket.server.RSocketServerFactory
-
 org.springframework.boot.security.reactive.ApplicationContextServerWebExchangeMatcher
 org.springframework.boot.security.servlet.ApplicationContextRequestMatcher
 
@@ -1320,24 +1305,6 @@ org.springframework.boot.autoconfigure.quartz.SchedulerFactoryBeanCustomizer
 org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations.ReactorResourceFactoryConfiguration
 org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations
 org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties
-
-org.springframework.boot.autoconfigure.rsocket.RSocketMessageHandlerCustomizer
-org.springframework.boot.autoconfigure.rsocket.RSocketMessagingAutoConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketProperties.Server
-org.springframework.boot.autoconfigure.rsocket.RSocketProperties
-org.springframework.boot.autoconfigure.rsocket.RSocketRequesterAutoConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.EmbeddedServerConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.OnRSocketWebServerCondition.HasMappingPathConfigured
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.OnRSocketWebServerCondition.HasNoPortConfigured
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.OnRSocketWebServerCondition.HasWebsocketTransportConfigured
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.OnRSocketWebServerCondition.IsReactiveWebApplication
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.OnRSocketWebServerCondition
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration.WebFluxServerConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketStrategiesAutoConfiguration.JacksonCborStrategyConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketStrategiesAutoConfiguration.JacksonJsonStrategyConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketStrategiesAutoConfiguration
-org.springframework.boot.autoconfigure.rsocket.RSocketWebSocketNettyRouteProvider
 
 org.springframework.boot.autoconfigure.security.ConditionalOnDefaultWebSecurity
 org.springframework.boot.autoconfigure.security.DefaultWebSecurityCondition.Beans
@@ -3046,7 +3013,7 @@ org.springframework.boot.test.mock.mockito.SpyBeans
 org.springframework.boot.test.mock.mockito.SpyDefinition.SpringAopBypassingVerificationStartedListener
 org.springframework.boot.test.mock.mockito.SpyDefinition
 org.springframework.boot.test.mock.web.SpringBootMockServletContext
-org.springframework.boot.test.rsocket.server.LocalRSocketServerPort
+
 org.springframework.boot.test.system.CapturedOutput
 org.springframework.boot.test.system.OutputCapture.AnsiOutputState
 org.springframework.boot.test.system.OutputCapture.CapturedString

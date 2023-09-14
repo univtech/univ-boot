@@ -117,17 +117,6 @@ org.springframework.boot.test.web.reactive.server
 org.springframework.boot.test.autoconfigure.web.reactive
 ```
 
-## rsocket
-
-```
-org.springframework.boot.rsocket.netty
-org.springframework.boot.rsocket.context
-org.springframework.boot.rsocket.messaging
-org.springframework.boot.rsocket.server
-org.springframework.boot.autoconfigure.rsocket
-org.springframework.boot.test.rsocket.server
-```
-
 ## websocket
 
 ```
