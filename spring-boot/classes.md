@@ -1291,18 +1291,6 @@ org.springframework.boot.actuate.metrics.MetricsEndpoint
 org.springframework.boot.actuate.metrics.startup.StartupTimeMetricsListener
 org.springframework.boot.actuate.metrics.system.DiskSpaceMetricsBinder
 
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CronTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CustomTriggerTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedDelayTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedRateTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.IntervalTaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.RunnableDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksEndpointRuntimeHints
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.TaskDescriptor
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.TaskType
-org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint
-
 org.springframework.boot.actuate.startup.StartupEndpoint.StartupDescriptor
 org.springframework.boot.actuate.startup.StartupEndpoint.StartupEndpointRuntimeHints
 org.springframework.boot.actuate.startup.StartupEndpoint
@@ -1575,8 +1563,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.reactive.WebFluxO
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet.ServerRequestObservationConventionAdapter
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObservationAutoConfiguration.MeterFilterConfiguration
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObservationAutoConfiguration
-
-org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.startup.StartupEndpointAutoConfiguration.ApplicationStartupCondition
 org.springframework.boot.actuate.autoconfigure.startup.StartupEndpointAutoConfiguration

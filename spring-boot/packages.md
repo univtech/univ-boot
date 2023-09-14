@@ -296,13 +296,6 @@ org.springframework.boot.actuate.startup
 org.springframework.boot.actuate.autoconfigure.startup
 ```
 
-## scheduling
-
-```
-org.springframework.boot.actuate.scheduling
-org.springframework.boot.actuate.autoconfigure.scheduling
-```
-
 ## management
 
 ```
