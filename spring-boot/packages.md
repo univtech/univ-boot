@@ -42,14 +42,6 @@ org.springframework.boot.actuate.metrics.web.jetty
 org.springframework.boot.actuate.autoconfigure.metrics.web.jetty
 ```
 
-## tomcat
-
-```
-org.springframework.boot.web.embedded.tomcat
-org.springframework.boot.actuate.metrics.web.tomcat
-org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
-```
-
 ## webservices
 
 ```
