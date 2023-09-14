@@ -234,17 +234,6 @@ org.springframework.boot.autoconfigure.data.rest
 org.springframework.boot.autoconfigure.data.web
 ```
 
-## ldap
-
-```
-org.springframework.boot.autoconfigure.data.ldap
-org.springframework.boot.test.autoconfigure.data.ldap
-org.springframework.boot.autoconfigure.ldap
-org.springframework.boot.autoconfigure.ldap.embedded
-org.springframework.boot.actuate.ldap
-org.springframework.boot.actuate.autoconfigure.ldap
-```
-
 ## flyway
 
 ```

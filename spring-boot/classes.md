@@ -1117,10 +1117,6 @@ org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourc
 
 org.springframework.boot.autoconfigure.data.ConditionalOnRepositoryType
 
-org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesRegistrar.EnableLdapRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesRegistrar
-
 org.springframework.boot.autoconfigure.data.OnRepositoryTypeCondition
 
 org.springframework.boot.autoconfigure.data.RepositoryType
@@ -1424,17 +1420,6 @@ org.springframework.boot.autoconfigure.kafka.KafkaStreamsAnnotationDrivenConfigu
 org.springframework.boot.autoconfigure.kafka.KafkaStreamsAnnotationDrivenConfiguration
 org.springframework.boot.autoconfigure.kafka.PropertiesKafkaConnectionDetails
 org.springframework.boot.autoconfigure.kafka.StreamsBuilderFactoryBeanCustomizer
-
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration.EmbeddedLdapAutoConfigurationRuntimeHints
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration.EmbeddedLdapCondition
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration.EmbeddedLdapContextConfiguration
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapProperties.Credential
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapProperties.Validation
-org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapProperties
-org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration
-org.springframework.boot.autoconfigure.ldap.LdapProperties.Template
-org.springframework.boot.autoconfigure.ldap.LdapProperties
 
 org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase
 org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseAutoConfigurationRuntimeHints
@@ -2228,9 +2213,6 @@ org.springframework.boot.actuate.integration.IntegrationGraphEndpoint
 org.springframework.boot.actuate.jms.JmsHealthIndicator.MonitoredConnection
 org.springframework.boot.actuate.jms.JmsHealthIndicator
 
-org.springframework.boot.actuate.ldap.LdapHealthIndicator.VersionContextExecutor
-org.springframework.boot.actuate.ldap.LdapHealthIndicator
-
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ChangeSetDescriptor
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextExpressionDescriptor
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextLiquibaseBeansDescriptor
@@ -2586,8 +2568,6 @@ org.springframework.boot.actuate.autoconfigure.info.OnEnabledInfoContributorCond
 org.springframework.boot.actuate.autoconfigure.integration.IntegrationGraphEndpointAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.jms.JmsHealthContributorAutoConfiguration
-
-org.springframework.boot.actuate.autoconfigure.ldap.LdapHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration.1
 org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration
@@ -3332,11 +3312,6 @@ org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityC
 org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory
 org.springframework.boot.test.autoconfigure.ConditionReportApplicationContextFailureProcessor
 org.springframework.boot.test.autoconfigure.core.AutoConfigureCache
-
-org.springframework.boot.test.autoconfigure.data.ldap.AutoConfigureDataLdap
-org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTest
-org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTypeExcludeFilter
 
 org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter.FilterType
 org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter
