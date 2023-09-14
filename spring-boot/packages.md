@@ -353,14 +353,6 @@ org.springframework.boot.test.context.runner
 org.springframework.boot.testcontainers.context
 ```
 
-## session
-
-```
-org.springframework.boot.autoconfigure.session
-org.springframework.boot.actuate.session
-org.springframework.boot.actuate.autoconfigure.session
-```
-
 ## transaction
 
 ```
