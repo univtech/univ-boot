@@ -52,15 +52,15 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfigurati
 # @Configuration：数据源（DataSource）初始化配置类，通过DataSource访问的SQL数据库的初始化配置。
 # @ConditionalOnClass：类路径中必须存在DatabasePopulator类。
 # @ConditionalOnSingleCandidate：BeanFactory中必须存在一个DataSource Bean。
-# @ConditionalOnMissingBean：BeanFactory中不能存在SqlDataSourceScriptDatabaseInitializer Bean和SqlR2dbcScriptDatabaseInitializer Bean。
-# @Bean：创建SqlDataSourceScriptDatabaseInitializer Bean，依赖于DataSource Bean和SqlInitializationProperties Bean。
+# @ConditionalOnMissingBean：BeanFactory中不存在SqlDataSourceScriptDatabaseInitializer Bean和SqlR2dbcScriptDatabaseInitializer Bean。
+# @Bean dataSourceScriptDatabaseInitializer：创建SqlDataSourceScriptDatabaseInitializer Bean，依赖于DataSource Bean和SqlInitializationProperties Bean。
 org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
 
 # @Configuration：R2DBC初始化配置类，通过R2DBC ConnectionFactory访问的SQL数据库的初始化配置。
 # @ConditionalOnClass：类路径中必须存在DatabasePopulator类和ConnectionFactory类。
 # @ConditionalOnSingleCandidate：BeanFactory中必须存在一个ConnectionFactory Bean。
-# @ConditionalOnMissingBean：BeanFactory中不能存在SqlDataSourceScriptDatabaseInitializer Bean和SqlR2dbcScriptDatabaseInitializer Bean。
-# @Bean：创建SqlR2dbcScriptDatabaseInitializer Bean，依赖于ConnectionFactory Bean和SqlInitializationProperties Bean。
+# @ConditionalOnMissingBean：BeanFactory中不存在SqlDataSourceScriptDatabaseInitializer Bean和SqlR2dbcScriptDatabaseInitializer Bean。
+# @Bean r2dbcScriptDatabaseInitializer：创建SqlR2dbcScriptDatabaseInitializer Bean，依赖于ConnectionFactory Bean和SqlInitializationProperties Bean。
 org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 
 # SQL DataSource脚本的数据库初始化器（DataSourceScriptDatabaseInitializer）。
