@@ -50,12 +50,6 @@ org.springframework.boot.actuate.metrics.web.tomcat
 org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
 ```
 
-## undertow
-
-```
-org.springframework.boot.web.embedded.undertow
-```
-
 ## webservices
 
 ```
