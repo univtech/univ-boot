@@ -957,18 +957,6 @@ org.springframework.boot.autoconfigure.mustache.MustacheResourceTemplateLoader
 org.springframework.boot.autoconfigure.mustache.MustacheServletWebConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheTemplateAvailabilityProvider
 
-org.springframework.boot.autoconfigure.quartz.JobStoreType
-org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration.JdbcStoreTypeConfiguration.OnQuartzDatasourceInitializationCondition
-org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration.JdbcStoreTypeConfiguration
-org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration
-org.springframework.boot.autoconfigure.quartz.QuartzDataSource
-org.springframework.boot.autoconfigure.quartz.QuartzDataSourceScriptDatabaseInitializer
-org.springframework.boot.autoconfigure.quartz.QuartzProperties.Jdbc
-org.springframework.boot.autoconfigure.quartz.QuartzProperties
-org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager
-org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
-org.springframework.boot.autoconfigure.quartz.SchedulerFactoryBeanCustomizer
-
 org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration
 org.springframework.boot.autoconfigure.sendgrid.SendGridProperties.Proxy
 org.springframework.boot.autoconfigure.sendgrid.SendGridProperties
@@ -1303,27 +1291,6 @@ org.springframework.boot.actuate.metrics.MetricsEndpoint
 org.springframework.boot.actuate.metrics.startup.StartupTimeMetricsListener
 org.springframework.boot.actuate.metrics.system.DiskSpaceMetricsBinder
 
-org.springframework.boot.actuate.quartz.QuartzEndpoint.1
-org.springframework.boot.actuate.quartz.QuartzEndpoint.CalendarIntervalTriggerDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.CronTriggerDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.CustomTriggerDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.DailyTimeIntervalTriggerDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.GroupNamesDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzGroupsDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzJobDetailsDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzJobGroupSummaryDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzJobSummaryDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzTriggerGroupSummaryDescriptor.Triggers
-org.springframework.boot.actuate.quartz.QuartzEndpoint.QuartzTriggerGroupSummaryDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.SimpleTriggerDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.TriggerDescriptor
-org.springframework.boot.actuate.quartz.QuartzEndpoint.TriggerType
-org.springframework.boot.actuate.quartz.QuartzEndpoint
-org.springframework.boot.actuate.quartz.QuartzEndpointWebExtension.QuartzEndpointWebExtensionRuntimeHints
-org.springframework.boot.actuate.quartz.QuartzEndpointWebExtension.ResponseSupplier
-org.springframework.boot.actuate.quartz.QuartzEndpointWebExtension
-
 org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CronTaskDescriptor
 org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CustomTriggerTaskDescriptor
 org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedDelayTaskDescriptor
@@ -1608,9 +1575,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.reactive.WebFluxO
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet.ServerRequestObservationConventionAdapter
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObservationAutoConfiguration.MeterFilterConfiguration
 org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObservationAutoConfiguration
-
-org.springframework.boot.actuate.autoconfigure.quartz.QuartzEndpointAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.quartz.QuartzEndpointProperties
 
 org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration
 

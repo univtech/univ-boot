@@ -134,14 +134,6 @@ org.springframework.boot.actuate.autoconfigure.endpoint.jmx
 org.springframework.boot.actuate.autoconfigure.metrics.export.jmx
 ```
 
-## quartz
-
-```
-org.springframework.boot.autoconfigure.quartz
-org.springframework.boot.actuate.quartz
-org.springframework.boot.actuate.autoconfigure.quartz
-```
-
 ## properties
 
 ```
