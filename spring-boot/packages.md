@@ -11,21 +11,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.servlet
 org.springframework.boot.actuate.autoconfigure.observation.graphql
 ```
 
-## json
-
-```
-org.springframework.boot.json
-org.springframework.boot.test.json
-org.springframework.boot.test.autoconfigure.json
-
-org.springframework.boot.autoconfigure.gson
-
-org.springframework.boot.jackson
-org.springframework.boot.autoconfigure.jackson
-org.springframework.boot.actuate.endpoint.jackson
-org.springframework.boot.actuate.autoconfigure.endpoint.jackson
-```
-
 ## admin
 
 ```

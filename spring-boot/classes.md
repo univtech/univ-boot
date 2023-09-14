@@ -458,34 +458,6 @@ org.springframework.boot.info.JavaInfo.JavaVirtualMachineInfo
 org.springframework.boot.info.JavaInfo
 org.springframework.boot.info.OsInfo
 
-org.springframework.boot.jackson.JsonComponent.Scope
-org.springframework.boot.jackson.JsonComponent
-org.springframework.boot.jackson.JsonComponentModule.JsonComponentAotContribution
-org.springframework.boot.jackson.JsonComponentModule.JsonComponentBeanFactoryInitializationAotProcessor
-org.springframework.boot.jackson.JsonComponentModule
-org.springframework.boot.jackson.JsonMixin
-org.springframework.boot.jackson.JsonMixinModule
-org.springframework.boot.jackson.JsonMixinModuleEntries.Builder
-org.springframework.boot.jackson.JsonMixinModuleEntries.JsonMixinComponentScanner
-org.springframework.boot.jackson.JsonMixinModuleEntries
-org.springframework.boot.jackson.JsonMixinModuleEntriesBeanRegistrationAotProcessor.AotContribution
-org.springframework.boot.jackson.JsonMixinModuleEntriesBeanRegistrationAotProcessor
-org.springframework.boot.jackson.JsonObjectDeserializer
-org.springframework.boot.jackson.JsonObjectSerializer
-
-org.springframework.boot.json.AbstractJsonParser
-org.springframework.boot.json.BasicJsonParser
-org.springframework.boot.json.GsonJsonParser.ListTypeToken
-org.springframework.boot.json.GsonJsonParser.MapTypeToken
-org.springframework.boot.json.GsonJsonParser
-org.springframework.boot.json.JacksonJsonParser.ListTypeReference
-org.springframework.boot.json.JacksonJsonParser.MapTypeReference
-org.springframework.boot.json.JacksonJsonParser
-org.springframework.boot.json.JacksonRuntimeHints
-org.springframework.boot.json.JsonParseException
-org.springframework.boot.json.JsonParser
-org.springframework.boot.json.JsonParserFactory
-
 org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
 org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
 
@@ -777,11 +749,6 @@ org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAvailabilit
 org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAvailabilityProvider
 org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateProperties
 
-org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration.StandardGsonBuilderCustomizer
-org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration
-org.springframework.boot.autoconfigure.gson.GsonBuilderCustomizer
-org.springframework.boot.autoconfigure.gson.GsonProperties
-
 org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration.DefaultCodecsConfiguration
 org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration.JacksonCodecConfiguration
 org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration
@@ -815,19 +782,6 @@ org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
 org.springframework.boot.autoconfigure.info.ProjectInfoProperties.Build
 org.springframework.boot.autoconfigure.info.ProjectInfoProperties.Git
 org.springframework.boot.autoconfigure.info.ProjectInfoProperties
-
-org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.1
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration.StandardJackson2ObjectMapperBuilderCustomizer
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonAutoConfigurationRuntimeHints
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonMixinConfiguration
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperConfiguration
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.ParameterNamesModuleConfiguration
-org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
-org.springframework.boot.autoconfigure.jackson.JacksonProperties.ConstructorDetectorStrategy
-org.springframework.boot.autoconfigure.jackson.JacksonProperties
 
 org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
 org.springframework.boot.autoconfigure.jmx.JmxProperties
@@ -991,7 +945,6 @@ org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethodParamete
 org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethodParameters
 org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker
 
-org.springframework.boot.actuate.endpoint.jackson.EndpointObjectMapper
 org.springframework.boot.actuate.endpoint.jmx.annotation.DiscoveredJmxEndpoint
 org.springframework.boot.actuate.endpoint.jmx.annotation.DiscoveredJmxOperation.DiscoveredJmxOperationParameter
 org.springframework.boot.actuate.endpoint.jmx.annotation.DiscoveredJmxOperation.JmxType
@@ -1215,7 +1168,7 @@ org.springframework.boot.actuate.autoconfigure.endpoint.EndpointIdTimeToLiveProp
 org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure
 org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.EndpointPatterns
 org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
-org.springframework.boot.actuate.autoconfigure.endpoint.jackson.JacksonEndpointAutoConfiguration
+
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.DefaultEndpointObjectNameFactory
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties.Exposure
@@ -1806,23 +1759,6 @@ org.springframework.boot.test.context.SpringBootTestContextBootstrapper
 org.springframework.boot.test.context.TestComponent
 org.springframework.boot.test.context.TestConfiguration
 
-org.springframework.boot.test.json.AbstractJsonMarshalTester.FieldInitializer
-org.springframework.boot.test.json.AbstractJsonMarshalTester
-org.springframework.boot.test.json.BasicJsonTester
-org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory.DuplicateJsonObjectContextCustomizer
-org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory
-org.springframework.boot.test.json.GsonTester.GsonFieldInitializer
-org.springframework.boot.test.json.GsonTester
-org.springframework.boot.test.json.JacksonTester.JacksonFieldInitializer
-org.springframework.boot.test.json.JacksonTester
-org.springframework.boot.test.json.JsonbTester.JsonbFieldInitializer
-org.springframework.boot.test.json.JsonbTester
-org.springframework.boot.test.json.JsonContent
-org.springframework.boot.test.json.JsonContentAssert.JsonPathValue
-org.springframework.boot.test.json.JsonContentAssert
-org.springframework.boot.test.json.JsonLoader
-org.springframework.boot.test.json.ObjectContent
-org.springframework.boot.test.json.ObjectContentAssert
 org.springframework.boot.test.mock.mockito.Definition
 org.springframework.boot.test.mock.mockito.DefinitionsParser
 org.springframework.boot.test.mock.mockito.MockBean
@@ -1887,23 +1823,6 @@ org.springframework.boot.test.autoconfigure.filter.TypeExcludeFilters
 org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer.1
 org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer
 org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizerFactory
-
-org.springframework.boot.test.autoconfigure.json.AutoConfigureJson
-org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters
-org.springframework.boot.test.autoconfigure.json.JsonTest
-org.springframework.boot.test.autoconfigure.json.JsonTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.AbstractJsonMarshalTesterRuntimeHints
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.BasicJsonTesterRuntimeHints
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.GsonJsonTestersConfiguration.GsonTesterRuntimeHints
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.GsonJsonTestersConfiguration
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.JacksonJsonTestersConfiguration.JacksonTesterRuntimeHints
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.JacksonJsonTestersConfiguration
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.JsonbJsonTesterConfiguration.JsonbJsonTesterRuntimeHints
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.JsonbJsonTesterConfiguration
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.JsonMarshalTestersBeanPostProcessor
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration.JsonTesterFactoryBean
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration
-org.springframework.boot.test.autoconfigure.json.JsonTypeExcludeFilter
 
 org.springframework.boot.test.autoconfigure.OverrideAutoConfiguration
 org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory.DisableAutoConfigurationContextCustomizer
