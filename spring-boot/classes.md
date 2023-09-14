@@ -690,15 +690,7 @@ org.springframework.boot.web.embedded.jetty.JettyWebServer
 org.springframework.boot.web.embedded.jetty.ServletContextInitializerConfiguration
 org.springframework.boot.web.embedded.jetty.SslServerCustomizer.SslValidatingServerConnector
 org.springframework.boot.web.embedded.jetty.SslServerCustomizer
-org.springframework.boot.web.embedded.netty.CompressionCustomizer.CompressionPredicate
-org.springframework.boot.web.embedded.netty.CompressionCustomizer
-org.springframework.boot.web.embedded.netty.GracefulShutdown
-org.springframework.boot.web.embedded.netty.NettyReactiveWebServerFactory
-org.springframework.boot.web.embedded.netty.NettyRouteProvider
-org.springframework.boot.web.embedded.netty.NettyServerCustomizer
-org.springframework.boot.web.embedded.netty.NettyWebServer.1
-org.springframework.boot.web.embedded.netty.NettyWebServer
-org.springframework.boot.web.embedded.netty.SslServerCustomizer
+
 org.springframework.boot.web.embedded.tomcat.CompressionConnectorCustomizer
 org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory
 org.springframework.boot.web.embedded.tomcat.ConnectorStartFailedException
@@ -1113,10 +1105,6 @@ org.springframework.boot.autoconfigure.mustache.MustacheResourceTemplateLoader
 org.springframework.boot.autoconfigure.mustache.MustacheServletWebConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheTemplateAvailabilityProvider
 
-org.springframework.boot.autoconfigure.netty.NettyAutoConfiguration
-org.springframework.boot.autoconfigure.netty.NettyProperties.LeakDetection
-org.springframework.boot.autoconfigure.netty.NettyProperties
-
 org.springframework.boot.autoconfigure.quartz.JobStoreType
 org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration.JdbcStoreTypeConfiguration.OnQuartzDatasourceInitializationCondition
 org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration.JdbcStoreTypeConfiguration
@@ -1128,10 +1116,6 @@ org.springframework.boot.autoconfigure.quartz.QuartzProperties
 org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager
 org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
 org.springframework.boot.autoconfigure.quartz.SchedulerFactoryBeanCustomizer
-
-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations.ReactorResourceFactoryConfiguration
-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations
-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties
 
 org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration
 org.springframework.boot.autoconfigure.sendgrid.SendGridProperties.Proxy

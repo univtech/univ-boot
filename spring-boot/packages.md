@@ -56,14 +56,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat
 org.springframework.boot.web.embedded.undertow
 ```
 
-## netty
-
-```
-org.springframework.boot.web.embedded.netty
-org.springframework.boot.autoconfigure.netty
-org.springframework.boot.autoconfigure.reactor.netty
-```
-
 ## webservices
 
 ```
