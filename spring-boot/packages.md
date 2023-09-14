@@ -234,18 +234,6 @@ org.springframework.boot.autoconfigure.data.rest
 org.springframework.boot.autoconfigure.data.web
 ```
 
-## cassandra
-
-```
-org.springframework.boot.autoconfigure.data.cassandra
-org.springframework.boot.test.autoconfigure.data.cassandra
-org.springframework.boot.autoconfigure.cassandra
-org.springframework.boot.actuate.cassandra
-org.springframework.boot.actuate.autoconfigure.cassandra
-org.springframework.boot.docker.compose.service.connection.cassandra
-org.springframework.boot.testcontainers.service.connection.cassandra
-```
-
 ## couchbase
 
 ```
