@@ -19,7 +19,7 @@ org.springframework.boot.diagnostics.FailureAnalyzer
 
 ```
 
-# @AutoConfiguration：jOOQ数据库自动配置，      (after = { DataSourceAutoConfiguration.class, TransactionAutoConfiguration.class })
+# @AutoConfiguration：jOOQ数据库自动配置，在DataSourceAutoConfiguration和TransactionAutoConfiguration配置之后进行配置。
 # @ConditionalOnClass：类路径中必须存在DSLContext类。
 # @ConditionalOnBean：BeanFactory中必须存在DataSource Bean。
 # @Bean dataSourceConnectionProvider：BeanFactory中不存在ConnectionProvider Bean时，创建DataSourceConnectionProvider Bean，依赖于DataSource Bean。
