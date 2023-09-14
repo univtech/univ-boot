@@ -44,15 +44,6 @@ org.springframework.boot.actuate.autoconfigure.env
 org.springframework.boot.devtools.env
 ```
 
-## ssl
-
-```
-org.springframework.boot.ssl
-org.springframework.boot.ssl.jks
-org.springframework.boot.ssl.pem
-org.springframework.boot.autoconfigure.ssl
-```
-
 ## data
 
 ```
