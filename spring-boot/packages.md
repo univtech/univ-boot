@@ -393,13 +393,6 @@ org.springframework.boot.autoconfigure.kafka
 org.springframework.boot.testcontainers.service.connection.kafka
 ```
 
-## jooq
-
-```
-org.springframework.boot.autoconfigure.jooq
-org.springframework.boot.test.autoconfigure.jooq
-```
-
 ## amqp
 
 ```
