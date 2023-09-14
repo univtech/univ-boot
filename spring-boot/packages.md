@@ -24,14 +24,6 @@ org.springframework.boot.actuate.autoconfigure.observation.web.servlet
 org.springframework.boot.actuate.autoconfigure.observation.graphql
 ```
 
-## mail
-
-```
-org.springframework.boot.autoconfigure.mail
-org.springframework.boot.actuate.mail
-org.springframework.boot.actuate.autoconfigure.mail
-```
-
 ## json
 
 ```

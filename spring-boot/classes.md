@@ -934,15 +934,6 @@ org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingL
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingProcessor
 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportMessage
 
-org.springframework.boot.autoconfigure.mail.MailProperties
-org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration.MailSenderCondition.HostProperty
-org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration.MailSenderCondition.JndiNameProperty
-org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration.MailSenderCondition
-org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
-org.springframework.boot.autoconfigure.mail.MailSenderJndiConfiguration
-org.springframework.boot.autoconfigure.mail.MailSenderPropertiesConfiguration
-org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration
-
 org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheProperties.Reactive
 org.springframework.boot.autoconfigure.mustache.MustacheProperties.Servlet
@@ -1236,8 +1227,6 @@ org.springframework.boot.actuate.logging.LoggersEndpoint.LoggersDescriptor
 org.springframework.boot.actuate.logging.LoggersEndpoint.SingleLoggerLevelsDescriptor
 org.springframework.boot.actuate.logging.LoggersEndpoint
 
-org.springframework.boot.actuate.mail.MailHealthIndicator
-
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.HeapDumper
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.HeapDumperUnavailableException
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.HotSpotDiagnosticMXBeanHeapDumper
@@ -1396,8 +1385,6 @@ org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoCon
 org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties
 org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration.OnEnabledLoggingSystemCondition
 org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration
-
-org.springframework.boot.actuate.autoconfigure.mail.MailHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration
