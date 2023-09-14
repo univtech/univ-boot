@@ -20,7 +20,6 @@ org.springframework.boot.autoconfigure.graphql
 org.springframework.boot.autoconfigure.graphql.data
 org.springframework.boot.autoconfigure.graphql.servlet
 org.springframework.boot.autoconfigure.graphql.reactive
-org.springframework.boot.autoconfigure.graphql.rsocket
 org.springframework.boot.autoconfigure.graphql.security
 org.springframework.boot.test.graphql.tester
 org.springframework.boot.test.autoconfigure.graphql
@@ -293,7 +292,6 @@ org.springframework.boot.security.reactive
 org.springframework.boot.autoconfigure.security
 org.springframework.boot.autoconfigure.security.servlet
 org.springframework.boot.autoconfigure.security.reactive
-org.springframework.boot.autoconfigure.security.rsocket
 org.springframework.boot.autoconfigure.security.saml2
 org.springframework.boot.autoconfigure.security.oauth2.client
 org.springframework.boot.autoconfigure.security.oauth2.client.servlet

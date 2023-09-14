@@ -39,9 +39,14 @@ org.springframework.boot.autoconfigure.rsocket.RSocketStrategiesAutoConfiguratio
 org.springframework.boot.autoconfigure.rsocket.RSocketStrategiesAutoConfiguration
 org.springframework.boot.autoconfigure.rsocket.RSocketWebSocketNettyRouteProvider
 
+org.springframework.boot.autoconfigure.graphql.rsocket.GraphQlRSocketAutoConfiguration
+org.springframework.boot.autoconfigure.graphql.rsocket.GraphQlRSocketController
+org.springframework.boot.autoconfigure.graphql.rsocket.RSocketGraphQlClientAutoConfiguration
+
+org.springframework.boot.autoconfigure.security.rsocket.RSocketSecurityAutoConfiguration.RSocketSecurityMessageHandlerConfiguration
+org.springframework.boot.autoconfigure.security.rsocket.RSocketSecurityAutoConfiguration
+
 org.springframework.boot.test.rsocket.server.LocalRSocketServerPort
-
-
 
 
 
