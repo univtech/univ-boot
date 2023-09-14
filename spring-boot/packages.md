@@ -218,14 +218,6 @@ org.springframework.boot.autoconfigure.transaction
 org.springframework.boot.autoconfigure.transaction.jta
 ```
 
-## task
-
-```
-org.springframework.boot.task
-org.springframework.boot.autoconfigure.task
-org.springframework.boot.actuate.autoconfigure.metrics.task
-```
-
 ## util
 
 ```

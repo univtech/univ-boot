@@ -613,11 +613,6 @@ org.springframework.boot.system.ApplicationTemp
 org.springframework.boot.system.JavaVersion
 org.springframework.boot.system.SystemProperties
 
-org.springframework.boot.task.TaskExecutorBuilder
-org.springframework.boot.task.TaskExecutorCustomizer
-org.springframework.boot.task.TaskSchedulerBuilder
-org.springframework.boot.task.TaskSchedulerCustomizer
-
 org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory
 
 org.springframework.boot.util.Instantiator.1
@@ -981,16 +976,6 @@ org.springframework.boot.autoconfigure.ssl.SslBundleRegistrar
 org.springframework.boot.autoconfigure.ssl.SslProperties.Bundles
 org.springframework.boot.autoconfigure.ssl.SslProperties
 org.springframework.boot.autoconfigure.ssl.SslPropertiesBundleRegistrar
-
-org.springframework.boot.autoconfigure.task.ScheduledBeanLazyInitializationExcludeFilter
-org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
-org.springframework.boot.autoconfigure.task.TaskExecutionProperties.Pool
-org.springframework.boot.autoconfigure.task.TaskExecutionProperties.Shutdown
-org.springframework.boot.autoconfigure.task.TaskExecutionProperties
-org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties.Pool
-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties.Shutdown
-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
 
 org.springframework.boot.autoconfigure.template.AbstractTemplateViewResolverProperties
 org.springframework.boot.autoconfigure.template.AbstractViewResolverProperties
@@ -1529,7 +1514,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter
 org.springframework.boot.actuate.autoconfigure.metrics.ServiceLevelObjectiveBoundary
 org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetricsListenerAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.task.TaskExecutorMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.ValidationFailureAnalyzer
 
 org.springframework.boot.actuate.autoconfigure.observation.batch.BatchObservationAutoConfiguration
