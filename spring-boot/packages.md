@@ -324,15 +324,6 @@ org.springframework.boot.test.web.server
 org.springframework.boot.test.autoconfigure.web.client
 ```
 
-## influx
-
-```
-org.springframework.boot.autoconfigure.influx
-org.springframework.boot.actuate.influx
-org.springframework.boot.actuate.autoconfigure.influx
-org.springframework.boot.actuate.autoconfigure.metrics.export.influx
-```
-
 ## jmx
 
 ```

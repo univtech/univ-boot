@@ -1274,11 +1274,6 @@ org.springframework.boot.autoconfigure.http.JsonbHttpMessageConvertersConfigurat
 org.springframework.boot.autoconfigure.http.JsonbHttpMessageConvertersConfiguration.PreferJsonbOrMissingJacksonAndGsonCondition
 org.springframework.boot.autoconfigure.http.JsonbHttpMessageConvertersConfiguration
 
-org.springframework.boot.autoconfigure.influx.InfluxDbAutoConfiguration
-org.springframework.boot.autoconfigure.influx.InfluxDbCustomizer
-org.springframework.boot.autoconfigure.influx.InfluxDbOkHttpClientBuilderProvider
-org.springframework.boot.autoconfigure.influx.InfluxDbProperties
-
 org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration.GitResourceAvailableCondition
 org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
 org.springframework.boot.autoconfigure.info.ProjectInfoProperties.Build
@@ -2187,8 +2182,6 @@ org.springframework.boot.actuate.health.Status
 org.springframework.boot.actuate.health.StatusAggregator
 org.springframework.boot.actuate.health.SystemHealth
 
-org.springframework.boot.actuate.influx.InfluxDbHealthIndicator
-
 org.springframework.boot.actuate.info.BuildInfoContributor.BuildInfoContributorRuntimeHints
 org.springframework.boot.actuate.info.BuildInfoContributor
 org.springframework.boot.actuate.info.EnvironmentInfoContributor
@@ -2555,8 +2548,6 @@ org.springframework.boot.actuate.autoconfigure.health.IncludeExcludeGroupMemberP
 org.springframework.boot.actuate.autoconfigure.health.OnEnabledHealthIndicatorCondition
 org.springframework.boot.actuate.autoconfigure.health.ReactiveHealthEndpointConfiguration
 
-org.springframework.boot.actuate.autoconfigure.influx.InfluxDbHealthContributorAutoConfiguration
-
 org.springframework.boot.actuate.autoconfigure.info.ConditionalOnEnabledInfoContributor
 org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.info.InfoContributorFallback
@@ -2630,9 +2621,7 @@ org.springframework.boot.actuate.autoconfigure.metrics.export.graphite.GraphiteP
 org.springframework.boot.actuate.autoconfigure.metrics.export.humio.HumioMetricsExportAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.export.humio.HumioProperties
 org.springframework.boot.actuate.autoconfigure.metrics.export.humio.HumioPropertiesConfigAdapter
-org.springframework.boot.actuate.autoconfigure.metrics.export.influx.InfluxMetricsExportAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.export.influx.InfluxProperties
-org.springframework.boot.actuate.autoconfigure.metrics.export.influx.InfluxPropertiesConfigAdapter
+
 org.springframework.boot.actuate.autoconfigure.metrics.export.jmx.JmxMetricsExportAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.export.jmx.JmxProperties
 org.springframework.boot.actuate.autoconfigure.metrics.export.jmx.JmxPropertiesConfigAdapter
