@@ -458,9 +458,6 @@ org.springframework.boot.info.JavaInfo.JavaVirtualMachineInfo
 org.springframework.boot.info.JavaInfo
 org.springframework.boot.info.OsInfo
 
-org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
-org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
-
 org.springframework.boot.origin.JarUri
 org.springframework.boot.origin.Origin
 org.springframework.boot.origin.OriginLookup
@@ -760,20 +757,6 @@ org.springframework.boot.autoconfigure.jmx.ParentAwareNamingStrategy
 
 org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration
 
-org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseAutoConfigurationRuntimeHints
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseConfiguration
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseDataSourceCondition.DataSourceBeanCondition
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseDataSourceCondition.JdbcConnectionDetailsCondition
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseDataSourceCondition.LiquibaseUrlCondition
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseDataSourceCondition
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.PropertiesLiquibaseConnectionDetails
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration
-org.springframework.boot.autoconfigure.liquibase.LiquibaseConnectionDetails
-org.springframework.boot.autoconfigure.liquibase.LiquibaseDataSource
-org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
-org.springframework.boot.autoconfigure.liquibase.LiquibaseSchemaManagementProvider
-
 org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheProperties.Reactive
 org.springframework.boot.autoconfigure.mustache.MustacheProperties.Servlet
@@ -1022,13 +1005,6 @@ org.springframework.boot.actuate.info.OsInfoContributor.OsInfoContributorRuntime
 org.springframework.boot.actuate.info.OsInfoContributor
 org.springframework.boot.actuate.info.SimpleInfoContributor
 
-org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ChangeSetDescriptor
-org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextExpressionDescriptor
-org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextLiquibaseBeansDescriptor
-org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.LiquibaseBeanDescriptor
-org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.LiquibaseBeansDescriptor
-org.springframework.boot.actuate.liquibase.LiquibaseEndpoint
-
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.HeapDumper
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.HeapDumperUnavailableException
 org.springframework.boot.actuate.management.HeapDumpWebEndpoint.HotSpotDiagnosticMXBeanHeapDumper
@@ -1178,9 +1154,6 @@ org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties.Gi
 org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
 org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.info.OnEnabledInfoContributorCondition
-
-org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration.1
-org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration
@@ -1615,8 +1588,6 @@ org.springframework.boot.docker.compose.service.connection.DockerComposeServiceC
 org.springframework.boot.docker.compose.service.connection.flyway.JdbcAdaptingFlywayConnectionDetailsFactory.1
 org.springframework.boot.docker.compose.service.connection.flyway.JdbcAdaptingFlywayConnectionDetailsFactory
 
-org.springframework.boot.docker.compose.service.connection.liquibase.JdbcAdaptingLiquibaseConnectionDetailsFactory.1
-org.springframework.boot.docker.compose.service.connection.liquibase.JdbcAdaptingLiquibaseConnectionDetailsFactory
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbEnvironment
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory.MariaDbJdbcDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.mariadb.MariaDbJdbcDockerComposeConnectionDetailsFactory
@@ -1836,9 +1807,6 @@ org.springframework.boot.testcontainers.service.connection.ContainerConnectionSo
 org.springframework.boot.testcontainers.service.connection.FieldOrigin
 org.springframework.boot.testcontainers.service.connection.flyway.FlywayContainerConnectionDetailsFactory.FlywayContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.flyway.FlywayContainerConnectionDetailsFactory
-
-org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory
 
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory.RedpandaContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory

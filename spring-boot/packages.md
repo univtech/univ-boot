@@ -68,17 +68,6 @@ org.springframework.boot.docker.compose.service.connection.flyway
 org.springframework.boot.testcontainers.service.connection.flyway
 ```
 
-## liquibase
-
-```
-org.springframework.boot.liquibase
-org.springframework.boot.autoconfigure.liquibase
-org.springframework.boot.actuate.liquibase
-org.springframework.boot.actuate.autoconfigure.liquibase
-org.springframework.boot.docker.compose.service.connection.liquibase
-org.springframework.boot.testcontainers.service.connection.liquibase
-```
-
 ## jmx
 
 ```
