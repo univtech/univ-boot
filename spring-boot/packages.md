@@ -306,18 +306,6 @@ org.springframework.boot.actuate.autoconfigure.neo4j
 org.springframework.boot.testcontainers.service.connection.neo4j
 ```
 
-## redis
-
-```
-org.springframework.boot.autoconfigure.data.redis
-org.springframework.boot.actuate.data.redis
-org.springframework.boot.actuate.autoconfigure.data.redis
-org.springframework.boot.test.autoconfigure.data.redis
-org.springframework.boot.actuate.autoconfigure.metrics.redis
-org.springframework.boot.docker.compose.service.connection.redis
-org.springframework.boot.testcontainers.service.connection.redis
-```
-
 ## flyway
 
 ```

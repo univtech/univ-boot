@@ -1208,39 +1208,6 @@ org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesRegistrar.Ena
 org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesRegistrar
 org.springframework.boot.autoconfigure.data.OnRepositoryTypeCondition
 
-org.springframework.boot.autoconfigure.data.redis.ClientResourcesBuilderCustomizer
-org.springframework.boot.autoconfigure.data.redis.JedisClientConfigurationBuilderCustomizer
-org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration
-org.springframework.boot.autoconfigure.data.redis.LettuceClientConfigurationBuilderCustomizer
-org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.PoolBuilderFactory
-org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration
-org.springframework.boot.autoconfigure.data.redis.PropertiesRedisConnectionDetails.1
-org.springframework.boot.autoconfigure.data.redis.PropertiesRedisConnectionDetails
-org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionConfiguration.ConnectionInfo
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionConfiguration
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails.Cluster
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails.Node
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails.Sentinel
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails.Standalone.1
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails.Standalone
-org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.ClientType
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Cluster
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Jedis
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce.Cluster.Refresh
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce.Cluster
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Pool
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Sentinel
-org.springframework.boot.autoconfigure.data.redis.RedisProperties.Ssl
-org.springframework.boot.autoconfigure.data.redis.RedisProperties
-org.springframework.boot.autoconfigure.data.redis.RedisReactiveAutoConfiguration
-org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesRegistrar
-org.springframework.boot.autoconfigure.data.redis.RedisUrlSyntaxException
-org.springframework.boot.autoconfigure.data.redis.RedisUrlSyntaxFailureAnalyzer
 org.springframework.boot.autoconfigure.data.RepositoryType
 org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration
 org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties
@@ -2157,9 +2124,6 @@ org.springframework.boot.actuate.couchbase.CouchbaseReactiveHealthIndicator
 org.springframework.boot.actuate.data.elasticsearch.ElasticsearchReactiveHealthIndicator
 org.springframework.boot.actuate.data.mongo.MongoHealthIndicator
 org.springframework.boot.actuate.data.mongo.MongoReactiveHealthIndicator
-org.springframework.boot.actuate.data.redis.RedisHealth
-org.springframework.boot.actuate.data.redis.RedisHealthIndicator
-org.springframework.boot.actuate.data.redis.RedisReactiveHealthIndicator
 
 org.springframework.boot.actuate.elasticsearch.ElasticsearchRestClientHealthIndicator
 
@@ -2710,8 +2674,6 @@ org.springframework.boot.actuate.autoconfigure.couchbase.CouchbaseReactiveHealth
 org.springframework.boot.actuate.autoconfigure.data.elasticsearch.ElasticsearchReactiveHealthContributorAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.data.mongo.MongoHealthContributorAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.data.mongo.MongoReactiveHealthContributorAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.data.redis.RedisHealthContributorAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.data.redis.RedisReactiveHealthContributorAutoConfiguration
 
 org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticsearchRestHealthContributorAutoConfiguration
 
@@ -2945,7 +2907,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.PropertiesAutoTimer
 org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter.1
 org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter
 
-org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.ServiceLevelObjectiveBoundary
 org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetricsListenerAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
@@ -3386,8 +3347,7 @@ org.springframework.boot.docker.compose.service.connection.postgres.PostgresR2db
 org.springframework.boot.docker.compose.service.connection.rabbit.RabbitDockerComposeConnectionDetailsFactory.RabbitDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.rabbit.RabbitDockerComposeConnectionDetailsFactory
 org.springframework.boot.docker.compose.service.connection.rabbit.RabbitEnvironment
-org.springframework.boot.docker.compose.service.connection.redis.RedisDockerComposeConnectionDetailsFactory.RedisDockerComposeConnectionDetails
-org.springframework.boot.docker.compose.service.connection.redis.RedisDockerComposeConnectionDetailsFactory
+
 org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerEnvironment
 org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerJdbcDockerComposeConnectionDetailsFactory.SqlServerJdbcDockerComposeConnectionDetails
 org.springframework.boot.docker.compose.service.connection.sqlserver.SqlServerJdbcDockerComposeConnectionDetailsFactory
@@ -3589,10 +3549,6 @@ org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTest
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTestContextBootstrapper
 org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTypeExcludeFilter
 
-org.springframework.boot.test.autoconfigure.data.redis.AutoConfigureDataRedis
-org.springframework.boot.test.autoconfigure.data.redis.DataRedisTest
-org.springframework.boot.test.autoconfigure.data.redis.DataRedisTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.data.redis.DataRedisTypeExcludeFilter
 org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter.FilterType
 org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter
 org.springframework.boot.test.autoconfigure.filter.FilterAnnotations.1
@@ -3761,8 +3717,6 @@ org.springframework.boot.testcontainers.service.connection.mongo.MongoContainerC
 org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory.Neo4jContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory
 
-org.springframework.boot.testcontainers.service.connection.redis.RedisContainerConnectionDetailsFactory.RedisContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.redis.RedisContainerConnectionDetailsFactory
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory.RedpandaContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory
 org.springframework.boot.testcontainers.service.connection.ServiceConnection
