@@ -1185,15 +1185,6 @@ org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfigurati
 org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesRegistrar.EnableLdapRepositoriesConfiguration
 org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesRegistrar
 
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataProperties
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jReactiveDataAutoConfiguration
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jReactiveRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jReactiveRepositoriesRegistrar.EnableReactiveNeo4jRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jReactiveRepositoriesRegistrar
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesRegistrar.EnableNeo4jRepositoriesConfiguration
-org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesRegistrar
 org.springframework.boot.autoconfigure.data.OnRepositoryTypeCondition
 
 org.springframework.boot.autoconfigure.data.RepositoryType
@@ -1572,19 +1563,6 @@ org.springframework.boot.autoconfigure.mustache.MustacheReactiveWebConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheResourceTemplateLoader
 org.springframework.boot.autoconfigure.mustache.MustacheServletWebConfiguration
 org.springframework.boot.autoconfigure.mustache.MustacheTemplateAvailabilityProvider
-
-org.springframework.boot.autoconfigure.neo4j.ConfigBuilderCustomizer
-org.springframework.boot.autoconfigure.neo4j.Neo4jAutoConfiguration.1
-org.springframework.boot.autoconfigure.neo4j.Neo4jAutoConfiguration.PropertiesNeo4jConnectionDetails
-org.springframework.boot.autoconfigure.neo4j.Neo4jAutoConfiguration
-org.springframework.boot.autoconfigure.neo4j.Neo4jConnectionDetails
-org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication
-org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Pool
-org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Security.TrustStrategy
-org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Security
-org.springframework.boot.autoconfigure.neo4j.Neo4jProperties
-org.springframework.boot.autoconfigure.neo4j.Neo4jSpringJclLogging.SpringJclLogger
-org.springframework.boot.autoconfigure.neo4j.Neo4jSpringJclLogging
 
 org.springframework.boot.autoconfigure.netty.NettyAutoConfiguration
 org.springframework.boot.autoconfigure.netty.NettyProperties.LeakDetection
@@ -2439,12 +2417,6 @@ org.springframework.boot.actuate.metrics.web.servlet.WebMvcTagsContributor
 org.springframework.boot.actuate.metrics.web.servlet.WebMvcTagsProvider
 org.springframework.boot.actuate.metrics.web.tomcat.TomcatMetricsBinder
 
-org.springframework.boot.actuate.neo4j.Neo4jHealthDetails
-org.springframework.boot.actuate.neo4j.Neo4jHealthDetailsHandler
-org.springframework.boot.actuate.neo4j.Neo4jHealthIndicator
-org.springframework.boot.actuate.neo4j.Neo4jReactiveHealthIndicator.Neo4jHealthDetailsBuilder
-org.springframework.boot.actuate.neo4j.Neo4jReactiveHealthIndicator
-
 org.springframework.boot.actuate.quartz.QuartzEndpoint.1
 org.springframework.boot.actuate.quartz.QuartzEndpoint.CalendarIntervalTriggerDescriptor
 org.springframework.boot.actuate.quartz.QuartzEndpoint.CronTriggerDescriptor
@@ -2876,11 +2848,6 @@ org.springframework.boot.actuate.autoconfigure.metrics.task.TaskExecutorMetricsA
 org.springframework.boot.actuate.autoconfigure.metrics.ValidationFailureAnalyzer
 org.springframework.boot.actuate.autoconfigure.metrics.web.jetty.JettyMetricsAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration
-
-org.springframework.boot.actuate.autoconfigure.neo4j.Neo4jHealthContributorAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.neo4j.Neo4jHealthContributorConfigurations.Neo4jConfiguration
-org.springframework.boot.actuate.autoconfigure.neo4j.Neo4jHealthContributorConfigurations.Neo4jReactiveConfiguration
-org.springframework.boot.actuate.autoconfigure.neo4j.Neo4jHealthContributorConfigurations
 
 org.springframework.boot.actuate.autoconfigure.observation.batch.BatchObservationAutoConfiguration
 org.springframework.boot.actuate.autoconfigure.observation.graphql.GraphQlObservationAutoConfiguration
@@ -3501,11 +3468,6 @@ org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTest
 org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTestContextBootstrapper
 org.springframework.boot.test.autoconfigure.data.ldap.DataLdapTypeExcludeFilter
 
-org.springframework.boot.test.autoconfigure.data.neo4j.AutoConfigureDataNeo4j
-org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTest
-org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTestContextBootstrapper
-org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTypeExcludeFilter
-
 org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter.FilterType
 org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter
 org.springframework.boot.test.autoconfigure.filter.FilterAnnotations.1
@@ -3669,9 +3631,6 @@ org.springframework.boot.testcontainers.service.connection.kafka.KafkaContainerC
 org.springframework.boot.testcontainers.service.connection.kafka.KafkaContainerConnectionDetailsFactory
 org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory
-
-org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory.Neo4jContainerConnectionDetails
-org.springframework.boot.testcontainers.service.connection.neo4j.Neo4jContainerConnectionDetailsFactory
 
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory.RedpandaContainerConnectionDetails
 org.springframework.boot.testcontainers.service.connection.redpanda.RedpandaContainerConnectionDetailsFactory

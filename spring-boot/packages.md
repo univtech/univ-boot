@@ -282,17 +282,6 @@ org.springframework.boot.actuate.ldap
 org.springframework.boot.actuate.autoconfigure.ldap
 ```
 
-## neo4j
-
-```
-org.springframework.boot.autoconfigure.data.neo4j
-org.springframework.boot.test.autoconfigure.data.neo4j
-org.springframework.boot.autoconfigure.neo4j
-org.springframework.boot.actuate.neo4j
-org.springframework.boot.actuate.autoconfigure.neo4j
-org.springframework.boot.testcontainers.service.connection.neo4j
-```
-
 ## flyway
 
 ```
