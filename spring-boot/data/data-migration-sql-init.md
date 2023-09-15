@@ -33,20 +33,21 @@ org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDete
 
 ```
 
-# @AutoConfiguration：SQL数据库初始化的自动配置。
-# @EnableConfigurationProperties：启用SqlInitializationProperties配置属性。
-# @Import：引入DatabaseInitializationDependencyConfigurer、DataSourceInitializationConfiguration、R2dbcInitializationConfiguration配置类。
-# @ConditionalOnProperty：spring.sql.init.enabled不存在或spring.sql.init.enabled=true时，启用数据库初始化。
-# @Conditional：必须满足SqlInitializationModeCondition条件，spring.sql.init.mode=never不成立。
+# @AutoConfiguration：自动配置：SQL数据库初始化。
+# @EnableConfigurationProperties：启用配置属性：SqlInitializationProperties。
+# @Import：引入配置类：DatabaseInitializationDependencyConfigurer、DataSourceInitializationConfiguration、R2dbcInitializationConfiguration。
+# @ConditionalOnProperty：自动配置的属性条件：spring.sql.init.enabled=true或spring.sql.init.enabled不存在。
+# @Conditional：自动配置的其他条件：满足SqlInitializationModeCondition。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
 
-# SQL数据库初始化模式条件
-# 条件匹配阶段为解析配置（PARSE_CONFIGURATION）时。
-# NoneNestedConditions：所有条件都不匹配时，则符合条件。
-# 即spring.sql.init.mode=never不成立。
+# SQL数据库初始化模式条件。
+# NoneNestedConditions：所有嵌套的条件类都不匹配时，则满足条件。
+# 满足条件的情况：spring.sql.init.mode!=never。
+# 测试条件的阶段：PARSE_CONFIGURATION（解析配置时）。
+# 嵌套的条件类：ModeIsNever。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
-# @ConditionalOnProperty：spring.sql.init.mode=never
+# @ConditionalOnProperty：属性条件：spring.sql.init.mode=never
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
 
 # @Configuration：数据源（DataSource）初始化配置类，通过DataSource访问的SQL数据库的初始化配置。
