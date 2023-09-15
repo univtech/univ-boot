@@ -7,9 +7,6 @@
 # Spring Boot条件
 org.springframework.boot.autoconfigure.condition.SpringBootCondition
     + org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
-    + org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
-        + org.springframework.boot.autoconfigure.condition.NoneNestedConditions
-            + org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
 # 数据库初始化器
 org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
@@ -31,13 +28,20 @@ org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDete
 
 ## 自动配置
 
+### SqlInitializationAutoConfiguration
+
 ```
+# SQL数据库初始化模式条件。
+org.springframework.boot.autoconfigure.condition.SpringBootCondition
+    + org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
+        + org.springframework.boot.autoconfigure.condition.NoneNestedConditions
+            + org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
 # @AutoConfiguration：自动配置：SQL数据库初始化。
 # @EnableConfigurationProperties：启用配置属性：SqlInitializationProperties。
 # @Import：引入配置类：DatabaseInitializationDependencyConfigurer、DataSourceInitializationConfiguration、R2dbcInitializationConfiguration。
 # @ConditionalOnProperty：自动配置的属性条件：spring.sql.init.enabled=true或spring.sql.init.enabled不存在。
-# @Conditional：自动配置的其他条件：满足SqlInitializationModeCondition。
+# @Conditional：自动配置的其他条件：满足条件SqlInitializationModeCondition，即spring.sql.init.mode!=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
 
 # SQL数据库初始化模式条件。
@@ -47,9 +51,28 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfigurati
 # 嵌套的条件类：ModeIsNever。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
-# @ConditionalOnProperty：属性条件：spring.sql.init.mode=never
+# @ConditionalOnProperty：属性条件：spring.sql.init.mode=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
+```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 # @Configuration：数据源（DataSource）初始化配置类，通过DataSource访问的SQL数据库的初始化配置。
 # @ConditionalOnClass：类路径中必须存在DatabasePopulator类。
 # @ConditionalOnSingleCandidate：BeanFactory中必须存在一个DataSource Bean。
