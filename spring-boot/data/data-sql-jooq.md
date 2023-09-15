@@ -1,5 +1,21 @@
 # jOOQ
 
+## 启动器
+
+### spring-boot-starter-jooq
+
+```
+
+# 启动器构件：使用jOOQ，通过JDBC来访问SQL数据库，用于替换：spring-boot-starter-jdbc或spring-boot-starter-data-jpa。
+org.springframework.boot:spring-boot-starter-jooq:3.1.3
+
+# 依赖：compile
+org.springframework.boot:spring-boot-starter-jdbc:3.1.3
+org.springframework:spring-tx:6.0.11
+org.jooq:jooq:3.18.6
+
+```
+
 ## jOOQ配置
 
 ### JooqAutoConfiguration
