@@ -61,8 +61,7 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfigurati
 
 ```
 
-# 数据库初始化依赖配置器。
-# ImportBeanDefinitionRegistrar：引入Bean定义的注册器。
+# ImportBeanDefinitionRegistrar：引入Bean定义的注册器：数据库初始化依赖配置器。
 # 把依赖于数据库初始化的Bean配置为依赖于执行数据库初始化的Bean。
 # 在定义数据库初始化Bean或定义依赖于数据库初始化的Bean的配置类中引入这个配置器：@Import(DatabaseInitializationDependencyConfigurer.class)。
 # DatabaseInitializerDetector：用于检测初始化数据库的Bean。
@@ -108,6 +107,24 @@ org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 
 ```
 
+### SqlInitializationProperties
+
+```
+
+# @ConfigurationProperties：配置属性，SQL数据库初始化配置属性前缀：spring.sql.init。
+# schemaLocations：数据库schema脚本（DDL）的位置
+# dataLocations：  数据库data脚本（DML）的位置
+# platform：       默认的schema脚本（DDL）位置和data脚本（DML）位置中使用的平台，schema-${platform}.sql和data-${platform}.sql，默认值：all
+# username：       Username of the database to use when applying initialization scripts (if different).
+# password：       Password of the database to use when applying initialization scripts (if different).
+# continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false
+# separator：      数据库初始化脚本的分隔符，默认值：";"
+# encoding：       数据库初始化脚本使用的编码
+# mode：           数据库初始化模式，默认值：EMBEDDED
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
+
+```
+
 ### 
 
 ```
@@ -149,18 +166,6 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationScriptsRuntimeH
 # optional:classpath*:data.sql（可能存在bug，应该是：data-all.sql）
 # createFrom 根据SqlInitializationProperties创建DatabaseInitializationSettings
 org.springframework.boot.autoconfigure.sql.init.SettingsCreator
-
-# @ConfigurationProperties：前缀为spring.sql.init的SQL数据库初始化配置属性。
-# schemaLocations 数据库schema脚本（DDL）的位置
-# dataLocations   数据库data脚本（DML）的位置
-# platform        默认的schema脚本（DDL）位置和data脚本（DML）位置中使用的平台，schema-${platform}.sql和data-${platform}.sql，默认值：all
-# username        Username of the database to use when applying initialization scripts (if different).
-# password        Password of the database to use when applying initialization scripts (if different).
-# continueOnError 数据库初始化脚本发生错误时，是否继续，默认值：false
-# separator       数据库初始化脚本的分隔符，默认值：";"
-# encoding        数据库初始化脚本使用的编码
-# mode            数据库初始化模式，默认值：EMBEDDED
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
 
 # 数据库初始化条件。
 # 如果设置了属性，则使用属性值来确定匹配结果，不测试其他属性。
