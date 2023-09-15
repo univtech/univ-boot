@@ -90,11 +90,29 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyCon
 # @ConditionalOnClass：配置的类条件，类路径中存在类：DatabasePopulator。
 # @ConditionalOnSingleCandidate：配置的Bean条件，BeanFactory中存在一个候选Bean：DataSource。
 # @ConditionalOnMissingBean：配置的Bean条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
-# @Bean dataSourceScriptDatabaseInitializer：创建Bean：SqlDataSourceScriptDatabaseInitializer，依赖Bean：DataSource、SqlInitializationProperties。
+# @Bean dataSourceScriptDatabaseInitializer：创建Bean：SqlDataSourceScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、DataSource。
 org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
 
 ```
 
+### R2dbcInitializationConfiguration
+
+```
+
+# @Configuration：配置类：通过R2DBC ConnectionFactory访问的SQL数据库的初始化。
+# @ConditionalOnClass：配置的类条件，类路径中存在类：DatabasePopulator、ConnectionFactory。
+# @ConditionalOnSingleCandidate：配置的Bean条件，BeanFactory中存在一个候选Bean：ConnectionFactory。
+# @ConditionalOnMissingBean：配置的Bean条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
+# @Bean r2dbcScriptDatabaseInitializer：创建Bean：SqlR2dbcScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、ConnectionFactory。
+org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
+
+```
+
+### 
+
+```
+
+```
 
 
 
@@ -107,12 +125,7 @@ org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfigur
 
 
 ```
-# @Configuration：R2DBC初始化配置类，通过R2DBC ConnectionFactory访问的SQL数据库的初始化配置。
-# @ConditionalOnClass：类路径中必须存在DatabasePopulator类和ConnectionFactory类。
-# @ConditionalOnSingleCandidate：BeanFactory中必须存在一个ConnectionFactory Bean。
-# @ConditionalOnMissingBean：BeanFactory中不存在SqlDataSourceScriptDatabaseInitializer Bean和SqlR2dbcScriptDatabaseInitializer Bean。
-# @Bean r2dbcScriptDatabaseInitializer：创建SqlR2dbcScriptDatabaseInitializer Bean，依赖于ConnectionFactory Bean和SqlInitializationProperties Bean。
-org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
+
 
 # SQL DataSource脚本的数据库初始化器（DataSourceScriptDatabaseInitializer）。
 # 可以注册自定义SqlDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
