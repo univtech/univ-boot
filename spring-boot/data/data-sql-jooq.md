@@ -1,6 +1,6 @@
 # jOOQ
 
-## 启动器
+## jOOQ启动器
 
 ### spring-boot-starter-jooq
 
@@ -154,7 +154,7 @@ org.springframework.boot.autoconfigure.jooq.JooqExceptionTranslator
 
 ```
 
-## 测试
+## jOOQ测试
 
 ### AutoConfigureJooq
 

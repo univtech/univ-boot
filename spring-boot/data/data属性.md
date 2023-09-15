@@ -1290,3 +1290,631 @@ Login username of the database. Set if no username is specified in the url.
 
 
 ```
+
+# 6. Transaction Properties
+
+```
+
+spring.jta.atomikos.connectionfactory.borrow-connection-timeout
+
+Timeout, in seconds, for borrowing connections from the pool.
+
+30
+
+spring.jta.atomikos.connectionfactory.ignore-session-transacted-flag
+
+Whether to ignore the transacted flag when creating session.
+
+true
+
+spring.jta.atomikos.connectionfactory.local-transaction-mode
+
+Whether local transactions are desired.
+
+false
+
+spring.jta.atomikos.connectionfactory.maintenance-interval
+
+Time, in seconds, between runs of the pool's maintenance thread.
+
+60
+
+spring.jta.atomikos.connectionfactory.max-idle-time
+
+Time, in seconds, after which connections are cleaned up from the pool.
+
+60
+
+spring.jta.atomikos.connectionfactory.max-lifetime
+
+Time, in seconds, that a connection can be pooled for before being destroyed. 0 denotes no limit.
+
+0
+
+spring.jta.atomikos.connectionfactory.max-pool-size
+
+Maximum size of the pool.
+
+1
+
+spring.jta.atomikos.connectionfactory.min-pool-size
+
+Minimum size of the pool.
+
+1
+
+spring.jta.atomikos.connectionfactory.reap-timeout
+
+Reap timeout, in seconds, for borrowed connections. 0 denotes no limit.
+
+0
+
+spring.jta.atomikos.connectionfactory.unique-resource-name
+
+Unique name used to identify the resource during recovery.
+
+jmsConnectionFactory
+
+spring.jta.atomikos.connectionfactory.xa-connection-factory-class-name
+
+Vendor-specific implementation of XAConnectionFactory.
+
+spring.jta.atomikos.connectionfactory.xa-properties
+
+Vendor-specific XA properties.
+
+spring.jta.atomikos.datasource.borrow-connection-timeout
+
+Timeout, in seconds, for borrowing connections from the pool.
+
+30
+
+spring.jta.atomikos.datasource.concurrent-connection-validation
+
+Whether to use concurrent connection validation.
+
+true
+
+spring.jta.atomikos.datasource.default-isolation-level
+
+Default isolation level of connections provided by the pool.
+
+spring.jta.atomikos.datasource.login-timeout
+
+Timeout, in seconds, for establishing a database connection.
+
+0
+
+spring.jta.atomikos.datasource.maintenance-interval
+
+Time, in seconds, between runs of the pool's maintenance thread.
+
+60
+
+spring.jta.atomikos.datasource.max-idle-time
+
+Time, in seconds, after which connections are cleaned up from the pool.
+
+60
+
+spring.jta.atomikos.datasource.max-lifetime
+
+Time, in seconds, that a connection can be pooled for before being destroyed. 0 denotes no limit.
+
+0
+
+spring.jta.atomikos.datasource.max-pool-size
+
+Maximum size of the pool.
+
+1
+
+spring.jta.atomikos.datasource.min-pool-size
+
+Minimum size of the pool.
+
+1
+
+spring.jta.atomikos.datasource.reap-timeout
+
+Reap timeout, in seconds, for borrowed connections. 0 denotes no limit.
+
+0
+
+spring.jta.atomikos.datasource.test-query
+
+SQL query or statement used to validate a connection before returning it.
+
+spring.jta.atomikos.datasource.unique-resource-name
+
+Unique name used to identify the resource during recovery.
+
+dataSource
+
+spring.jta.atomikos.datasource.xa-data-source-class-name
+
+Vendor-specific implementation of XAConnectionFactory.
+
+spring.jta.atomikos.datasource.xa-properties
+
+Vendor-specific XA properties.
+
+spring.jta.enabled
+
+Whether to enable JTA support.
+
+true
+
+spring.transaction.default-timeout
+
+Default transaction timeout. If a duration suffix is not specified, seconds will be used.
+
+spring.transaction.rollback-on-commit-failure
+
+Whether to roll back on commit failures.
+
+
+```
+
+# 7. Data Migration Properties
+
+```
+
+spring.flyway.baseline-description
+
+Description to tag an existing schema with when applying a baseline.
+
+<< Flyway Baseline >>
+
+spring.flyway.baseline-on-migrate
+
+Whether to automatically call baseline when migrating a non-empty schema.
+
+false
+
+spring.flyway.baseline-version
+
+Version to tag an existing schema with when executing baseline.
+
+1
+
+spring.flyway.batch
+
+Whether to batch SQL statements when executing them. Requires Flyway Teams.
+
+spring.flyway.cherry-pick
+
+Migrations that Flyway should consider when migrating or undoing. When empty all available migrations are considered. Requires Flyway Teams.
+
+spring.flyway.clean-disabled
+
+Whether to disable cleaning of the database.
+
+true
+
+spring.flyway.clean-on-validation-error
+
+Whether to automatically call clean when a validation error occurs.
+
+false
+
+spring.flyway.connect-retries
+
+Maximum number of retries when attempting to connect to the database.
+
+0
+
+spring.flyway.connect-retries-interval
+
+Maximum time between retries when attempting to connect to the database. If a duration suffix is not specified, seconds will be used.
+
+120s
+
+spring.flyway.create-schemas
+
+Whether Flyway should attempt to create the schemas specified in the schemas property.
+
+true
+
+spring.flyway.default-schema
+
+Default schema name managed by Flyway (case-sensitive).
+
+spring.flyway.detect-encoding
+
+Whether to attempt to automatically detect SQL migration file encoding. Requires Flyway Teams.
+
+spring.flyway.driver-class-name
+
+Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
+
+spring.flyway.enabled
+
+Whether to enable flyway.
+
+true
+
+spring.flyway.encoding
+
+Encoding of SQL migrations.
+
+UTF-8
+
+spring.flyway.error-overrides
+
+Rules for the built-in error handling to override specific SQL states and error codes. Requires Flyway Teams.
+
+spring.flyway.execute-in-transaction
+
+Whether Flyway should execute SQL within a transaction.
+
+true
+
+spring.flyway.fail-on-missing-locations
+
+Whether to fail if a location of migration scripts doesn't exist.
+
+false
+
+spring.flyway.group
+
+Whether to group all pending migrations together in the same transaction when applying them.
+
+false
+
+spring.flyway.ignore-migration-patterns
+
+Ignore migrations that match this comma-separated list of patterns when validating migrations. Requires Flyway Teams.
+
+spring.flyway.init-sqls
+
+SQL statements to execute to initialize a connection immediately after obtaining it.
+
+spring.flyway.installed-by
+
+Username recorded in the schema history table as having applied the migration.
+
+spring.flyway.jdbc-properties.*
+
+Properties to pass to the JDBC driver. Requires Flyway Teams.
+
+spring.flyway.kerberos-config-file
+
+Path of the Kerberos config file. Requires Flyway Teams.
+
+spring.flyway.license-key
+
+Licence key for Flyway Teams.
+
+spring.flyway.locations
+
+Locations of migrations scripts. Can contain the special "{vendor}" placeholder to use vendor-specific locations.
+
+[classpath:db/migration]
+
+spring.flyway.lock-retry-count
+
+Maximum number of retries when trying to obtain a lock.
+
+50
+
+spring.flyway.loggers
+
+Loggers Flyway should use.
+
+[slf4j]
+
+spring.flyway.mixed
+
+Whether to allow mixing transactional and non-transactional statements within the same migration.
+
+false
+
+spring.flyway.oracle-kerberos-cache-file
+
+Path of the Oracle Kerberos cache file. Requires Flyway Teams.
+
+spring.flyway.oracle-sqlplus
+
+Whether to enable support for Oracle SQL*Plus commands. Requires Flyway Teams.
+
+spring.flyway.oracle-sqlplus-warn
+
+Whether to issue a warning rather than an error when a not-yet-supported Oracle SQL*Plus statement is encountered. Requires Flyway Teams.
+
+spring.flyway.oracle-wallet-location
+
+Location of the Oracle Wallet, used to sign in to the database automatically. Requires Flyway Teams.
+
+spring.flyway.out-of-order
+
+Whether to allow migrations to be run out of order.
+
+false
+
+spring.flyway.output-query-results
+
+Whether Flyway should output a table with the results of queries when executing migrations. Requires Flyway Teams.
+
+spring.flyway.password
+
+Login password of the database to migrate.
+
+spring.flyway.placeholder-prefix
+
+Prefix of placeholders in migration scripts.
+
+${
+
+spring.flyway.placeholder-replacement
+
+Perform placeholder replacement in migration scripts.
+
+true
+
+spring.flyway.placeholder-separator
+
+Separator of default placeholders.
+
+:
+
+spring.flyway.placeholder-suffix
+
+Suffix of placeholders in migration scripts.
+
+}
+
+spring.flyway.placeholders.*
+
+Placeholders and their replacements to apply to sql migration scripts.
+
+spring.flyway.repeatable-sql-migration-prefix
+
+File name prefix for repeatable SQL migrations.
+
+R
+
+spring.flyway.schemas
+
+Scheme names managed by Flyway (case-sensitive).
+
+spring.flyway.script-placeholder-prefix
+
+Prefix of placeholders in migration scripts.
+
+FP__
+
+spring.flyway.script-placeholder-suffix
+
+Suffix of placeholders in migration scripts.
+
+__
+
+spring.flyway.skip-default-callbacks
+
+Whether to skip default callbacks. If true, only custom callbacks are used.
+
+false
+
+spring.flyway.skip-default-resolvers
+
+Whether to skip default resolvers. If true, only custom resolvers are used.
+
+false
+
+spring.flyway.skip-executing-migrations
+
+Whether Flyway should skip executing the contents of the migrations and only update the schema history table. Requires Flyway teams.
+
+spring.flyway.sql-migration-prefix
+
+File name prefix for SQL migrations.
+
+V
+
+spring.flyway.sql-migration-separator
+
+File name separator for SQL migrations.
+
+__
+
+spring.flyway.sql-migration-suffixes
+
+File name suffix for SQL migrations.
+
+[.sql]
+
+spring.flyway.sql-server-kerberos-login-file
+
+Path to the SQL Server Kerberos login file. Requires Flyway Teams.
+
+spring.flyway.stream
+
+Whether to stream SQL migrations when executing them. Requires Flyway Teams.
+
+spring.flyway.table
+
+Name of the schema history table that will be used by Flyway.
+
+flyway_schema_history
+
+spring.flyway.tablespace
+
+Tablespace in which the schema history table is created. Ignored when using a database that does not support tablespaces. Defaults to the default tablespace of the connection used by Flyway.
+
+spring.flyway.target
+
+Target version up to which migrations should be considered.
+
+latest
+
+spring.flyway.url
+
+JDBC url of the database to migrate. If not set, the primary configured data source is used.
+
+spring.flyway.user
+
+Login user of the database to migrate.
+
+spring.flyway.validate-migration-naming
+
+Whether to validate migrations and callbacks whose scripts do not obey the correct naming convention.
+
+false
+
+spring.flyway.validate-on-migrate
+
+Whether to automatically call validate when performing a migration.
+
+true
+
+spring.liquibase.change-log
+
+Change log configuration path.
+
+classpath:/db/changelog/db.changelog-master.yaml
+
+spring.liquibase.clear-checksums
+
+Whether to clear all checksums in the current changelog, so they will be recalculated upon the next update.
+
+false
+
+spring.liquibase.contexts
+
+Comma-separated list of runtime contexts to use.
+
+spring.liquibase.database-change-log-lock-table
+
+Name of table to use for tracking concurrent Liquibase usage.
+
+DATABASECHANGELOGLOCK
+
+spring.liquibase.database-change-log-table
+
+Name of table to use for tracking change history.
+
+DATABASECHANGELOG
+
+spring.liquibase.default-schema
+
+Default database schema.
+
+spring.liquibase.driver-class-name
+
+Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
+
+spring.liquibase.drop-first
+
+Whether to first drop the database schema.
+
+false
+
+spring.liquibase.enabled
+
+Whether to enable Liquibase support.
+
+true
+
+spring.liquibase.label-filter
+
+Comma-separated list of runtime labels to use.
+
+spring.liquibase.liquibase-schema
+
+Schema to use for Liquibase objects.
+
+spring.liquibase.liquibase-tablespace
+
+Tablespace to use for Liquibase objects.
+
+spring.liquibase.parameters.*
+
+Change log parameters.
+
+spring.liquibase.password
+
+Login password of the database to migrate.
+
+spring.liquibase.rollback-file
+
+File to which rollback SQL is written when an update is performed.
+
+spring.liquibase.tag
+
+Tag name to use when applying database changes. Can also be used with "rollbackFile" to generate a rollback script for all existing changes associated with that tag.
+
+spring.liquibase.test-rollback-on-update
+
+Whether rollback should be tested before update is performed.
+
+false
+
+spring.liquibase.url
+
+JDBC URL of the database to migrate. If not set, the primary configured data source is used.
+
+spring.liquibase.user
+
+Login user of the database to migrate.
+
+spring.sql.init.continue-on-error
+
+Whether initialization should continue when an error occurs.
+
+false
+
+spring.sql.init.data-locations
+
+Locations of the data (DML) scripts to apply to the database.
+
+spring.sql.init.encoding
+
+Encoding of the schema and data scripts.
+
+spring.sql.init.mode
+
+Mode to apply when determining whether initialization should be performed.
+
+embedded
+
+spring.sql.init.password
+
+Password of the database to use when applying initialization scripts (if different).
+
+spring.sql.init.platform
+
+Platform to use in the default schema or data script locations, schema-${platform}.sql and data-${platform}.sql.
+
+all
+
+spring.sql.init.schema-locations
+
+Locations of the schema (DDL) scripts to apply to the database.
+
+spring.sql.init.separator
+
+Statement separator in the schema and data scripts.
+
+;
+
+spring.sql.init.username
+
+Username of the database to use when applying initialization scripts (if different).
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
