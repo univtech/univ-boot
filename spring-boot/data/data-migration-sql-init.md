@@ -1,5 +1,24 @@
 # 数据库初始化
 
+## 配置属性
+
+### spring.sql.init.*
+
+```
+
+# 配置属性类：SqlInitializationProperties
+spring.sql.init.schema-locations  数据库schema脚本（DDL）的位置
+spring.sql.init.data-locations    数据库data脚本（DML）的位置
+spring.sql.init.platform          默认的schema脚本（DDL）位置和data脚本（DML）位置中使用的平台，schema-${platform}.sql和data-${platform}.sql，默认值：all
+spring.sql.init.username          数据库的用户名
+spring.sql.init.password          数据库的密码
+spring.sql.init.continue-on-error 数据库初始化脚本发生错误时，是否继续，默认值：false
+spring.sql.init.separator         数据库初始化脚本的分隔符，默认值：";"
+spring.sql.init.encoding          数据库初始化脚本使用的编码
+spring.sql.init.mode              数据库初始化模式，默认值：EMBEDDED
+
+```
+
 ## 初始化配置
 
 ### SqlInitializationAutoConfiguration

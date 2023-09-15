@@ -1858,50 +1858,6 @@ spring.liquibase.user
 
 Login user of the database to migrate.
 
-spring.sql.init.continue-on-error
-
-Whether initialization should continue when an error occurs.
-
-false
-
-spring.sql.init.data-locations
-
-Locations of the data (DML) scripts to apply to the database.
-
-spring.sql.init.encoding
-
-Encoding of the schema and data scripts.
-
-spring.sql.init.mode
-
-Mode to apply when determining whether initialization should be performed.
-
-embedded
-
-spring.sql.init.password
-
-Password of the database to use when applying initialization scripts (if different).
-
-spring.sql.init.platform
-
-Platform to use in the default schema or data script locations, schema-${platform}.sql and data-${platform}.sql.
-
-all
-
-spring.sql.init.schema-locations
-
-Locations of the schema (DDL) scripts to apply to the database.
-
-spring.sql.init.separator
-
-Statement separator in the schema and data scripts.
-
-;
-
-spring.sql.init.username
-
-Username of the database to use when applying initialization scripts (if different).
-
 
 ```
 
