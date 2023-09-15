@@ -13,7 +13,6 @@
 # @Conditional：自动配置的其他条件：满足条件SqlInitializationModeCondition，即spring.sql.init.mode!=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
 
-
 ```
 
 ### DatabaseInitializationDependencyConfigurer
