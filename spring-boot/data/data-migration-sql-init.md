@@ -31,6 +31,7 @@ org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDete
 ### SqlInitializationAutoConfiguration
 
 ```
+
 # SQL数据库初始化模式条件。
 org.springframework.boot.autoconfigure.condition.SpringBootCondition
     + org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
@@ -53,9 +54,33 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfigurati
 
 # @ConditionalOnProperty：属性条件：spring.sql.init.mode=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
+
 ```
 
+### DatabaseInitializationDependencyConfigurer
 
+```
+
+# 数据库初始化依赖配置器。
+# ImportBeanDefinitionRegistrar：引入Bean定义的注册器。
+# 把依赖于数据库初始化的Bean配置为依赖于执行数据库初始化的Bean。
+# 在定义数据库初始化Bean或定义依赖于数据库初始化的Bean的配置类中引入这个配置器：@Import(DatabaseInitializationDependencyConfigurer.class)。
+# DatabaseInitializerDetector：用于检测初始化数据库的Bean。
+# DependsOnDatabaseInitializationDetector：用于检测依赖于数据库初始化的Bean。
+# registerBeanDefinitions：如果BeanDefinitionRegistry中不存在DependsOnDatabaseInitializationPostProcessor Bean，则构造这个Bean，并把它注册到BeanDefinitionRegistry中。
+org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer
+
+# 配置数据库初始化依赖关系的后置处理器。
+# BeanFactoryPostProcessor BeanFactory的后置处理器。
+# postProcessBeanFactory：检测数据库初始化器和依赖于数据库初始化的Bean，调用BeanDefinition.setDependsOn方法，设置数据库初始化器和依赖于数据库初始化的Bean的依赖关系。
+org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor
+
+# 数据库初始化器的Bean名称。
+# beanNames           所有数据库初始化器的Bean名称
+# byDetectorBeanNames 数据库初始化器检测器与数据库初始化器的Bean名称之间的映射
+org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor.InitializerBeanNames
+
+```
 
 
 
@@ -177,23 +202,6 @@ org.springframework.boot.sql.init.DatabaseInitializationMode
 ## 数据库初始化依赖
 
 ```
-
-# 数据库初始化依赖配置器（ImportBeanDefinitionRegistrar）。
-# 把依赖于数据库初始化的Bean配置为依赖于执行数据库初始化的Bean。
-# 在定义数据库初始化Bean或定义依赖于数据库初始化的Bean的配置类中引入这个配置器（@Import(DatabaseInitializationDependencyConfigurer.class)）。
-# DatabaseInitializerDetector用于检测初始化数据库的Bean。
-# DependsOnDatabaseInitializationDetector用于检测依赖于数据库初始化的Bean。
-# 如果DependsOnDatabaseInitializationPostProcessor Bean未注册，则构造这个Bean，并注册到BeanDefinitionRegistry中。
-org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer
-
-# 用于配置数据库初始化依赖关系的后置处理器（BeanFactoryPostProcessor）。
-# 即调用BeanDefinition.setDependsOn方法，设置数据库初始化器和依赖于数据库初始化的Bean的依赖关系。
-org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor
-
-# 数据库初始化器的Bean名称。
-# beanNames           所有数据库初始化器的Bean名称
-# byDetectorBeanNames 数据库初始化器检测器与数据库初始化器的Bean名称之间的映射
-org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor.InitializerBeanNames
 
 ----------------------------------------------------------------------------------------------------
 
