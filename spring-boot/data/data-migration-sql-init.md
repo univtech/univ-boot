@@ -1,6 +1,8 @@
 # 数据库初始化
 
-## SqlInitializationAutoConfiguration
+## 初始化配置
+
+### SqlInitializationAutoConfiguration
 
 ```
 
@@ -14,7 +16,7 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfigurati
 
 ```
 
-## DatabaseInitializationDependencyConfigurer
+### DatabaseInitializationDependencyConfigurer
 
 ```
 
@@ -38,7 +40,7 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyCon
 
 ```
 
-## DataSourceInitializationConfiguration
+### DataSourceInitializationConfiguration
 
 ```
 
@@ -51,7 +53,7 @@ org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfigur
 
 ```
 
-## R2dbcInitializationConfiguration
+### R2dbcInitializationConfiguration
 
 ```
 
