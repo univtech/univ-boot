@@ -1,34 +1,6 @@
 # 数据库初始化
 
-## 层次结构
-
-```
-
-# Spring Boot条件
-org.springframework.boot.autoconfigure.condition.SpringBootCondition
-    + org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
-
-# 数据库初始化器
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
-    + org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
-        + org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
-    + org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
-        + org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
-
-# 数据库初始化器检测器
-org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
-    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
-
-# 依赖于数据库初始化的Bean检测器
-org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
-    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
-    + org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
-
-```
-
-## 自动配置
-
-### SqlInitializationAutoConfiguration
+## SqlInitializationAutoConfiguration
 
 ```
 
@@ -57,7 +29,7 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfigurati
 
 ```
 
-### DatabaseInitializationDependencyConfigurer
+## DatabaseInitializationDependencyConfigurer
 
 ```
 
@@ -81,7 +53,7 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyCon
 
 ```
 
-### DataSourceInitializationConfiguration
+## DataSourceInitializationConfiguration
 
 ```
 
@@ -94,7 +66,7 @@ org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfigur
 
 ```
 
-### R2dbcInitializationConfiguration
+## R2dbcInitializationConfiguration
 
 ```
 
@@ -107,7 +79,7 @@ org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 
 ```
 
-### SqlInitializationProperties
+## SqlInitializationProperties
 
 ```
 
@@ -115,34 +87,85 @@ org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 # schemaLocations：数据库schema脚本（DDL）的位置
 # dataLocations：  数据库data脚本（DML）的位置
 # platform：       默认的schema脚本（DDL）位置和data脚本（DML）位置中使用的平台，schema-${platform}.sql和data-${platform}.sql，默认值：all
-# username：       Username of the database to use when applying initialization scripts (if different).
-# password：       Password of the database to use when applying initialization scripts (if different).
+# username：       数据库的用户名
+# password：       数据库的密码
 # continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false
 # separator：      数据库初始化脚本的分隔符，默认值：";"
 # encoding：       数据库初始化脚本使用的编码
 # mode：           数据库初始化模式，默认值：EMBEDDED
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
 
+# 数据库初始化设置。
+# schemaLocations：数据库schema脚本（DDL）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
+# dataLocations：  数据库data脚本（DML）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
+# continueOnError：schema脚本（DDL）或data脚本（DML）发生错误时，是否继续，默认值：false
+# separator：      schema脚本（DDL）或data脚本（DML）的分隔符，默认值：";"
+# encoding：       schema脚本（DDL）或data脚本（DML）使用的编码
+# mode：           数据库初始化模式，默认值：EMBEDDED
+org.springframework.boot.sql.init.DatabaseInitializationSettings
+
+# 数据库初始化模式。
+# ALWAYS：  总是初始化数据库
+# EMBEDDED：只初始化嵌入式数据库
+# NEVER：   从不初始化数据库
+org.springframework.boot.sql.init.DatabaseInitializationMode
+
+# 数据库初始化设置创建器。
+# 未指定数据库schema脚本（DDL）的位置时，默认为：optional:classpath*:schema-all.sql或optional:classpath*:schema.sql。
+# 未指定数据库data脚本（DML）的位置时，默认为：optional:classpath*:data-all.sql或optional:classpath*:data.sql。
+# createFrom：根据SqlInitializationProperties创建DatabaseInitializationSettings
+org.springframework.boot.autoconfigure.sql.init.SettingsCreator
+
 ```
 
-### 
+## OnDatabaseInitializationCondition
 
 ```
 
-```
+# 数据库初始化条件。
+org.springframework.boot.autoconfigure.condition.SpringBootCondition
+    + org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
 
-
-
-
-
-
-
-
-
-
+# 数据库初始化条件：检查是否应该考虑特定组件的数据库初始化。
+# name：           组件名称
+# propertyNames：  属性名称，根据属性名称查找配置属性，使用第一个查找到的配置属性，忽略剩余的属性名称
+# getMatchOutcome：根据查找到的配置属性的值（默认为EMBEDDED）进行检测，配置属性的值不等于NEVER时，表示满足条件
+org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
 
 ```
 
+## AbstractScriptDatabaseInitializer
+
+```
+
+# 数据库初始化器
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
+    + org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
+        + org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
+    + org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
+        + org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
+
+# 数据库初始化器：通过schema脚本（DDL）或data脚本（DML）执行SQL数据库的初始化。
+# OPTIONAL_LOCATION_PREFIX：可选位置前缀，默认值：optional:
+# settings：                数据库初始化配置（DatabaseInitializationSettings）
+# resourceLoader：          资源加载器（ResourceLoader）
+# setResourceLoader：       设置资源加载器（ResourceLoaderAware）
+# afterPropertiesSet：      属性设置之后（InitializingBean），调用initializeDatabase
+# initializeDatabase：      初始化数据库
+# runScripts：              执行数据库初始化脚本
+# isEmbeddedDatabase：      是否嵌入式数据库
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
+
+# 数据库初始化脚本的位置解析器。
+# resourcePatternResolver：资源模式解析器（ResourcePatternResolver）
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.ScriptLocationResolver
+
+# 数据库初始化脚本（Resource）。
+# resources：      数据库初始化脚本
+# continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false
+# separator：      数据库初始化脚本的分隔符，默认值：";"
+# encoding：       数据库初始化脚本使用的编码
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
 
 # SQL DataSource脚本的数据库初始化器（DataSourceScriptDatabaseInitializer）。
 # 可以注册自定义SqlDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
@@ -160,77 +183,26 @@ org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitialize
 # 注册资源模式：schema.sql、schema-*.sql、data.sql   data-*.sql。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationScriptsRuntimeHints
 
-# 数据库初始化设置创建器。
-# 未指定数据库初始化脚本的位置时，默认位置如下：
-# optional:classpath*:schema-all.sql"
-# optional:classpath*:data.sql（可能存在bug，应该是：data-all.sql）
-# createFrom 根据SqlInitializationProperties创建DatabaseInitializationSettings
-org.springframework.boot.autoconfigure.sql.init.SettingsCreator
-
-# 数据库初始化条件。
-# 如果设置了属性，则使用属性值来确定匹配结果，不测试其他属性。
-# name            组件名称
-# propertyNames   属性名称
-# getMatchOutcome 确定匹配结果，并输出适当的日志
-org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
-
 ```
 
-## 数据库初始化器
+## BeansOfTypeDetector
 
 ```
-
-# 数据库初始化器：通过schema脚本（DDL）或data脚本（DML）执行SQL数据库的初始化。
-# OPTIONAL_LOCATION_PREFIX 可选位置前缀，默认值：optional:
-# settings                 数据库初始化配置（DatabaseInitializationSettings）
-# resourceLoader           资源加载器（ResourceLoader）
-# setResourceLoader        设置资源加载器（ResourceLoaderAware）
-# afterPropertiesSet       属性设置之后（InitializingBean），调用initializeDatabase
-# initializeDatabase       初始化数据库
-# runScripts               执行数据库初始化脚本
-# isEmbeddedDatabase       是否嵌入式数据库
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
-
-# 数据库初始化脚本的位置解析器。
-# resourcePatternResolver 资源模式解析器（ResourcePatternResolver）
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.ScriptLocationResolver
-
-# 数据库初始化脚本（Resource）。
-# resources       数据库初始化脚本
-# continueOnError 数据库初始化脚本发生错误时，是否继续，默认值：false
-# separator       数据库初始化脚本的分隔符，默认值：";"
-# encoding        数据库初始化脚本使用的编码
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
-
-# 数据库初始化配置。
-# schemaLocations 数据库schema脚本（DDL）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
-# dataLocations   数据库data脚本（DML）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
-# continueOnError schema脚本（DDL）或data脚本（DML）发生错误时，是否继续，默认值：false
-# separator       schema脚本（DDL）或data脚本（DML）的分隔符，默认值：";"
-# encoding        schema脚本（DDL）或data脚本（DML）使用的编码
-# mode            数据库初始化模式，默认值：EMBEDDED
-org.springframework.boot.sql.init.DatabaseInitializationSettings
-
-# 数据库初始化模式。
-# ALWAYS   总是初始化数据库
-# EMBEDDED 只初始化嵌入式数据库
-# NEVER    从不初始化数据库
-org.springframework.boot.sql.init.DatabaseInitializationMode
-
-```
-
-## 数据库初始化依赖
-
-```
-
-----------------------------------------------------------------------------------------------------
 
 # Bean检测器：检测指定类型的Bean。
 # types  检测的Bean类型
 # detect 检测ListableBeanFactory中types类型的Bean
 org.springframework.boot.sql.init.dependency.BeansOfTypeDetector
 
-----------------------------------------------------------------------------------------------------
+```
+
+## DatabaseInitializerDetector
+
+```
+
+# 数据库初始化器检测器
+org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
+    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
 
 # 数据库初始化器检测器。
 # 实现类应该注册在META-INF/spring.factories的org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector下面。
@@ -243,7 +215,16 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
 # getDatabaseInitializerBeanTypes 获取数据库初始化器的Bean类型
 org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
 
-----------------------------------------------------------------------------------------------------
+```
+
+## DependsOnDatabaseInitializationDetector
+
+```
+
+# 依赖于数据库初始化的Bean检测器
+org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
+    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
+    + org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
 
 # 依赖于数据库初始化的Bean检测器。
 # 实现类应该注册在META-INF/spring.factories的org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector下面。
