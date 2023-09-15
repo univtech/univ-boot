@@ -38,7 +38,7 @@ org.springframework.boot.autoconfigure.condition.SpringBootCondition
         + org.springframework.boot.autoconfigure.condition.NoneNestedConditions
             + org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
-# @AutoConfiguration：自动配置：SQL数据库初始化。
+# @AutoConfiguration：自动配置类：SQL数据库初始化。
 # @EnableConfigurationProperties：启用配置属性：SqlInitializationProperties。
 # @Import：引入配置类：DatabaseInitializationDependencyConfigurer、DataSourceInitializationConfiguration、R2dbcInitializationConfiguration。
 # @ConditionalOnProperty：自动配置的属性条件：spring.sql.init.enabled=true或spring.sql.init.enabled不存在。
@@ -76,15 +76,24 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyCon
 org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor
 
 # 数据库初始化器的Bean名称。
-# beanNames           所有数据库初始化器的Bean名称
-# byDetectorBeanNames 数据库初始化器检测器与数据库初始化器的Bean名称之间的映射
+# beanNames：          所有数据库初始化器的Bean名称
+# byDetectorBeanNames：数据库初始化器检测器与数据库初始化器的Bean名称之间的映射
 org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer.DependsOnDatabaseInitializationPostProcessor.InitializerBeanNames
 
 ```
 
+### DataSourceInitializationConfiguration
 
+```
 
+# @Configuration：配置类：通过DataSource访问的SQL数据库的初始化。
+# @ConditionalOnClass：配置的类条件，类路径中存在类：DatabasePopulator。
+# @ConditionalOnSingleCandidate：配置的Bean条件，BeanFactory中存在一个候选Bean：DataSource。
+# @ConditionalOnMissingBean：配置的Bean条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
+# @Bean dataSourceScriptDatabaseInitializer：创建Bean：SqlDataSourceScriptDatabaseInitializer，依赖Bean：DataSource、SqlInitializationProperties。
+org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
 
+```
 
 
 
@@ -98,13 +107,6 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyCon
 
 
 ```
-# @Configuration：数据源（DataSource）初始化配置类，通过DataSource访问的SQL数据库的初始化配置。
-# @ConditionalOnClass：类路径中必须存在DatabasePopulator类。
-# @ConditionalOnSingleCandidate：BeanFactory中必须存在一个DataSource Bean。
-# @ConditionalOnMissingBean：BeanFactory中不存在SqlDataSourceScriptDatabaseInitializer Bean和SqlR2dbcScriptDatabaseInitializer Bean。
-# @Bean dataSourceScriptDatabaseInitializer：创建SqlDataSourceScriptDatabaseInitializer Bean，依赖于DataSource Bean和SqlInitializationProperties Bean。
-org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
-
 # @Configuration：R2DBC初始化配置类，通过R2DBC ConnectionFactory访问的SQL数据库的初始化配置。
 # @ConditionalOnClass：类路径中必须存在DatabasePopulator类和ConnectionFactory类。
 # @ConditionalOnSingleCandidate：BeanFactory中必须存在一个ConnectionFactory Bean。
