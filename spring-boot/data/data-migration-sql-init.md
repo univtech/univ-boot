@@ -4,12 +4,6 @@
 
 ```
 
-# SQL数据库初始化模式条件。
-org.springframework.boot.autoconfigure.condition.SpringBootCondition
-    org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
-        org.springframework.boot.autoconfigure.condition.NoneNestedConditions
-            org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
-
 # @AutoConfiguration：自动配置类：SQL数据库初始化。
 # @EnableConfigurationProperties：启用配置属性：SqlInitializationProperties。
 # @Import：引入配置类：DatabaseInitializationDependencyConfigurer、DataSourceInitializationConfiguration、R2dbcInitializationConfiguration。
@@ -17,15 +11,6 @@ org.springframework.boot.autoconfigure.condition.SpringBootCondition
 # @Conditional：自动配置的其他条件：满足条件SqlInitializationModeCondition，即spring.sql.init.mode!=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
 
-# SQL数据库初始化模式条件。
-# NoneNestedConditions：所有嵌套的条件类都不匹配时，则满足条件。
-# 满足条件的情况：spring.sql.init.mode!=never。
-# 测试条件的阶段：PARSE_CONFIGURATION（解析配置时）。
-# 嵌套的条件类：ModeIsNever。
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
-
-# @ConditionalOnProperty：属性条件：spring.sql.init.mode=never。
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
 
 ```
 
@@ -118,19 +103,64 @@ org.springframework.boot.autoconfigure.sql.init.SettingsCreator
 
 ```
 
-## OnDatabaseInitializationCondition
+## 初始化条件
+
+### SqlInitializationModeCondition
+
+```
+
+# 数据库初始化条件。
+org.springframework.boot.autoconfigure.condition.SpringBootCondition
+    org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
+        org.springframework.boot.autoconfigure.condition.NoneNestedConditions
+            org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
+
+# 数据库初始化条件。
+# NoneNestedConditions：所有嵌套的条件类都不匹配时，则满足条件。
+# 满足条件的情况：spring.sql.init.mode!=never。
+# 测试条件的阶段：PARSE_CONFIGURATION（解析配置时）。
+# 嵌套的条件类：ModeIsNever。
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
+
+# @ConditionalOnProperty：属性条件：spring.sql.init.mode=never。
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
+
+```
+
+### OnDatabaseInitializationCondition
 
 ```
 
 # 数据库初始化条件。
 org.springframework.boot.autoconfigure.condition.SpringBootCondition
     org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
+        org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration.OnBatchDatasourceInitializationCondition
+        org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration.OnIntegrationDatasourceInitializationCondition
+        org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration.JdbcStoreTypeConfiguration.OnQuartzDatasourceInitializationCondition
+        org.springframework.boot.autoconfigure.session.JdbcSessionConfiguration.OnJdbcSessionDatasourceInitializationCondition
 
-# 数据库初始化条件：检查是否应该考虑特定组件的数据库初始化。
-# name：           组件名称
-# propertyNames：  属性名称，根据属性名称查找配置属性，使用第一个查找到的配置属性，忽略剩余的属性名称
-# getMatchOutcome：根据查找到的配置属性的值（默认为EMBEDDED）进行检测，配置属性的值不等于NEVER时，表示满足条件
+# 数据库初始化条件：检查是否应该执行特定组件的数据库初始化。
+# name：           组件名称。
+# propertyNames：  属性名称，根据属性名称查找配置属性，使用第一个查找到的配置属性，忽略剩余的属性名称。
+# getMatchOutcome：根据查找到的配置属性的值（默认为EMBEDDED）进行检测，配置属性的值不等于NEVER时，则满足条件。
 org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
+
+# Spring Batch的数据库初始化条件。
+# spring.batch.jdbc.initialize-schema!=NEVER
+# spring.batch.initialize-schema!=NEVER
+org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration.OnBatchDatasourceInitializationCondition
+
+# Spring Integration的数据库初始化条件。
+# spring.integration.jdbc.initialize-schema!=NEVER
+org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration.OnIntegrationDatasourceInitializationCondition
+
+# Quartz Scheduler的数据库初始化条件。
+# spring.quartz.jdbc.initialize-schema!=NEVER
+org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration.JdbcStoreTypeConfiguration.OnQuartzDatasourceInitializationCondition
+
+# Spring Session JDBC的数据库初始化条件。
+# spring.session.jdbc.initialize-schema!=NEVER
+org.springframework.boot.autoconfigure.session.JdbcSessionConfiguration.OnJdbcSessionDatasourceInitializationCondition
 
 ```
 
@@ -140,7 +170,7 @@ org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationConditio
 
 ```
 
-# 数据库初始化器
+# 数据库初始化器。
 org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
     org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
         org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
@@ -161,17 +191,6 @@ org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
 # runScripts：              执行数据库初始化脚本。
 # isEmbeddedDatabase：      是否嵌入式数据库。
 org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
-
-# 数据库初始化脚本的位置解析器。
-# resourcePatternResolver：资源模式解析器（ResourcePatternResolver）。
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.ScriptLocationResolver
-
-# 数据库初始化脚本（Resource）。
-# resources：      数据库初始化脚本。
-# continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false。
-# separator：      数据库初始化脚本的分隔符，默认值：";"。
-# encoding：       数据库初始化脚本使用的编码。
-org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
 
 # DataSource的数据库初始化器。
 # dataSource：        数据源（DataSource）。
@@ -221,6 +240,35 @@ org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
 # getSettings：根据SqlInitializationProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
 
+```
+
+### ScriptLocationResolver
+
+```
+
+# 数据库初始化脚本的位置解析器。
+# resourcePatternResolver：资源模式解析器（ResourcePatternResolver）。
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.ScriptLocationResolver
+
+```
+
+### Scripts
+
+```
+
+# 数据库初始化脚本（Resource）。
+# resources：      数据库初始化脚本。
+# continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false。
+# separator：      数据库初始化脚本的分隔符，默认值：";"。
+# encoding：       数据库初始化脚本使用的编码。
+org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
+
+```
+
+### SqlInitializationScriptsRuntimeHints
+
+```
+
 # SQL数据库初始化脚本的RuntimeHints注册器（RuntimeHintsRegistrar）。
 # registerHints：注册资源模式schema.sql、schema-*.sql、data.sql、data-*.sql。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationScriptsRuntimeHints
@@ -244,7 +292,7 @@ org.springframework.boot.sql.init.dependency.BeansOfTypeDetector
 
 ```
 
-# 数据库初始化器检测器
+# 数据库初始化器检测器。
 org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
     org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
         org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
@@ -294,7 +342,7 @@ org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabase
 
 ```
 
-# 依赖于数据库初始化的Bean检测器
+# 依赖于数据库初始化的Bean检测器。
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
     org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
         org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
@@ -336,6 +384,12 @@ org.springframework.boot.autoconfigure.session.JdbcIndexedSessionRepositoryDepen
 
 # 依赖于数据库初始化的Bean检测器，检测指定注解注释的Bean：@DependsOnDatabaseInitialization。
 org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
+
+```
+
+### DependsOnDatabaseInitialization
+
+```
 
 # 注解@DependsOnDatabaseInitialization：表示Bean的创建和初始化依赖于数据库初始化。
 # 注解的目标：
