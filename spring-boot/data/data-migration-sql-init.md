@@ -64,7 +64,9 @@ org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 
 ```
 
-## SqlInitializationProperties
+## 初始化属性
+
+### SqlInitializationProperties
 
 ```
 
@@ -80,6 +82,12 @@ org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 # mode：           数据库初始化模式，默认值：EMBEDDED
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
 
+```
+
+### DatabaseInitializationSettings
+
+```
+
 # 数据库初始化设置。
 # schemaLocations：数据库schema脚本（DDL）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
 # dataLocations：  数据库data脚本（DML）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
@@ -89,11 +97,23 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
 # mode：           数据库初始化模式，默认值：EMBEDDED
 org.springframework.boot.sql.init.DatabaseInitializationSettings
 
+```
+
+### DatabaseInitializationMode
+
+```
+
 # 数据库初始化模式。
 # ALWAYS：  总是初始化数据库
 # EMBEDDED：只初始化嵌入式数据库
 # NEVER：   从不初始化数据库
 org.springframework.boot.sql.init.DatabaseInitializationMode
+
+```
+
+### SettingsCreator
+
+```
 
 # 数据库初始化设置创建器。
 # 未指定数据库schema脚本（DDL）的位置时，默认为：optional:classpath*:schema-all.sql或optional:classpath*:schema.sql。
