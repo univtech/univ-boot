@@ -9,8 +9,8 @@
 # @AutoConfiguration：自动配置类：SQL数据库初始化。
 # @EnableConfigurationProperties：启用配置属性：SqlInitializationProperties。
 # @Import：引入配置类：DatabaseInitializationDependencyConfigurer、DataSourceInitializationConfiguration、R2dbcInitializationConfiguration。
-# @ConditionalOnProperty：自动配置的属性条件：spring.sql.init.enabled=true或spring.sql.init.enabled不存在。
-# @Conditional：自动配置的其他条件：满足条件SqlInitializationModeCondition，即spring.sql.init.mode!=never。
+# @ConditionalOnProperty：前提条件：spring.sql.init.enabled=true或spring.sql.init.enabled不存在。
+# @Conditional：前提条件：满足SqlInitializationModeCondition，即spring.sql.init.mode!=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
 
 ```
@@ -44,10 +44,12 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyCon
 ```
 
 # @Configuration：配置类：配置DataSource访问的SQL数据库初始化。
-# @ConditionalOnClass：配置的类条件，类路径中存在类：DatabasePopulator。
-# @ConditionalOnSingleCandidate：配置的Bean条件，BeanFactory中存在一个候选Bean：DataSource。
-# @ConditionalOnMissingBean：配置的Bean条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
-# @Bean dataSourceScriptDatabaseInitializer：创建Bean：SqlDataSourceScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、DataSource。
+# @ConditionalOnClass：前提条件，类路径中存在类：DatabasePopulator。
+# @ConditionalOnSingleCandidate：前提条件，BeanFactory中存在一个候选Bean：DataSource。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
+#
+# dataSourceScriptDatabaseInitializer：
+# @Bean：创建Bean：SqlDataSourceScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、DataSource。
 org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
 
 ```
@@ -57,10 +59,12 @@ org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfigur
 ```
 
 # @Configuration：配置类：配置R2DBC ConnectionFactory访问的SQL数据库初始化。
-# @ConditionalOnClass：配置的类条件，类路径中存在类：DatabasePopulator、ConnectionFactory。
-# @ConditionalOnSingleCandidate：配置的Bean条件，BeanFactory中存在一个候选Bean：ConnectionFactory。
-# @ConditionalOnMissingBean：配置的Bean条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
-# @Bean r2dbcScriptDatabaseInitializer：创建Bean：SqlR2dbcScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、ConnectionFactory。
+# @ConditionalOnClass：前提条件，类路径中存在类：DatabasePopulator、ConnectionFactory。
+# @ConditionalOnSingleCandidate：前提条件，BeanFactory中存在一个候选Bean：ConnectionFactory。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：SqlDataSourceScriptDatabaseInitializer、SqlR2dbcScriptDatabaseInitializer。
+#
+# r2dbcScriptDatabaseInitializer：
+# @Bean：创建Bean：SqlR2dbcScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、ConnectionFactory。
 org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
 
 ```
@@ -143,7 +147,7 @@ org.springframework.boot.autoconfigure.condition.SpringBootCondition
 # 嵌套的条件类：ModeIsNever。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
-# @ConditionalOnProperty：属性条件：spring.sql.init.mode=never。
+# @ConditionalOnProperty：前提条件：spring.sql.init.mode=never。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever
 
 ```
