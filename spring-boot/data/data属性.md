@@ -984,10 +984,6 @@ spring.jdbc.template.query-timeout
 
 Query timeout. Default is to use the JDBC driver's default configuration. If a duration suffix is not specified, seconds will be used.
 
-spring.jooq.sql-dialect
-
-SQL dialect to use. Auto-detected by default.
-
 spring.jpa.database
 
 Target database to operate on, auto-detected by default. Can be alternatively set using the "databasePlatform" property.

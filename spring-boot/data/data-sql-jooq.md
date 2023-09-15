@@ -16,6 +16,18 @@ org.jooq:jooq:3.18.6
 
 ```
 
+## jOOQ配置属性
+
+### spring.jooq.*
+
+```
+
+# 配置属性类：JooqProperties
+
+spring.jooq.sql-dialect SQL方言，默认自动检测
+
+```
+
 ## jOOQ配置
 
 ### JooqAutoConfiguration
