@@ -173,42 +173,52 @@ org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.ScriptLocati
 # encoding：       数据库初始化脚本使用的编码。
 org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
 
-# DataSource访问的数据库初始化器。
+# DataSource的数据库初始化器。
 # dataSource：        数据源（DataSource）。
-# runScripts：        通过DatabasePopulatorUtils.execute执行数据库初始化脚本。
-# isEmbeddedDatabase：通过EmbeddedDatabaseConnection.isEmbedded检查是否嵌入式数据库。
 # getDataSource：     获取DataSource。
 # customize：         自定义ResourceDatabasePopulator。
+# runScripts：        通过ResourceDatabasePopulator.populate执行数据库初始化脚本。
+# isEmbeddedDatabase：通过EmbeddedDatabaseConnection.isEmbedded检查是否嵌入式数据库。
 org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
 
-# DataSource脚本的数据库初始化器。
+# SQL DataSource的数据库初始化器。
 # 可以注册自定义SqlDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
-# @ImportRuntimeHints：引入SQL数据库初始化脚本的RuntimeHints注册器：SqlInitializationScriptsRuntimeHints。
-# getSettings：调用SettingsCreator.createFrom，根据SqlInitializationProperties创建DatabaseInitializationSettings。
+# @ImportRuntimeHints：引入RuntimeHints注册器：SqlInitializationScriptsRuntimeHints。
+# getSettings：根据SqlInitializationProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
 
-# 
+# Spring Batch DataSource的数据库初始化器。
+# 可以注册自定义BatchDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# getSettings：根据BatchProperties.Jdbc创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer
 
-# 
+# Spring Integration DataSource的数据库初始化器。
+# 可以注册自定义IntegrationDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# getSettings：根据IntegrationProperties.Jdbc创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.integration.IntegrationDataSourceScriptDatabaseInitializer
 
-# 
+# Quartz Scheduler DataSource的数据库初始化器。
+# 可以注册自定义QuartzDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# commentPrefixes：注释前缀。
+# customize：      commentPrefixes不为空时，设置ResourceDatabasePopulator的注释前缀。
+# getSettings：    根据QuartzProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.quartz.QuartzDataSourceScriptDatabaseInitializer
 
-# 
+# Spring Session JDBC DataSource的数据库初始化器。
+# 可以注册自定义JdbcSessionDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# getSettings：根据JdbcSessionProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.session.JdbcSessionDataSourceScriptDatabaseInitializer
 
-# R2DBC ConnectionFactory访问的数据库初始化器。
+# R2DBC ConnectionFactory的数据库初始化器。
 # connectionFactory： 连接工厂（ConnectionFactory）。
 # runScripts：        通过ResourceDatabasePopulator.populate执行数据库初始化脚本。
 # isEmbeddedDatabase：通过EmbeddedDatabaseConnection.isEmbedded检查是否嵌入式数据库。
 org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
 
-# R2DBC脚本的数据库初始化器。
+# SQL R2DBC ConnectionFactory的数据库初始化器。
 # 可以注册自定义SqlR2dbcScriptDatabaseInitializer Bean，覆盖自动化配置。
-# @ImportRuntimeHints：引入SQL数据库初始化脚本的RuntimeHints注册器：SqlInitializationScriptsRuntimeHints。
-# getSettings：调用SettingsCreator.createFrom，根据SqlInitializationProperties创建DatabaseInitializationSettings。
+# @ImportRuntimeHints：引入RuntimeHints注册器：SqlInitializationScriptsRuntimeHints。
+# getSettings：根据SqlInitializationProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
 
 # SQL数据库初始化脚本的RuntimeHints注册器（RuntimeHintsRegistrar）。
