@@ -6,9 +6,9 @@
 
 # SQL数据库初始化模式条件。
 org.springframework.boot.autoconfigure.condition.SpringBootCondition
-    + org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
-        + org.springframework.boot.autoconfigure.condition.NoneNestedConditions
-            + org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
+    org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
+        org.springframework.boot.autoconfigure.condition.NoneNestedConditions
+            org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration.SqlInitializationModeCondition
 
 # @AutoConfiguration：自动配置类：SQL数据库初始化。
 # @EnableConfigurationProperties：启用配置属性：SqlInitializationProperties。
@@ -124,7 +124,7 @@ org.springframework.boot.autoconfigure.sql.init.SettingsCreator
 
 # 数据库初始化条件。
 org.springframework.boot.autoconfigure.condition.SpringBootCondition
-    + org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
+    org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationCondition
 
 # 数据库初始化条件：检查是否应该考虑特定组件的数据库初始化。
 # name：           组件名称
@@ -140,10 +140,10 @@ org.springframework.boot.autoconfigure.sql.init.OnDatabaseInitializationConditio
 
 # 数据库初始化器
 org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
-    + org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
-        + org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
-    + org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
-        + org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
+    org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
+        org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
+    org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
+        org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
 
 # 数据库初始化器：通过schema脚本（DDL）或data脚本（DML）执行SQL数据库的初始化。
 # OPTIONAL_LOCATION_PREFIX：可选位置前缀，默认值：optional:
@@ -185,61 +185,120 @@ org.springframework.boot.autoconfigure.sql.init.SqlInitializationScriptsRuntimeH
 
 ```
 
-## BeansOfTypeDetector
+## 检测器
+
+### BeansOfTypeDetector
 
 ```
 
 # Bean检测器：检测指定类型的Bean。
-# types  检测的Bean类型
-# detect 检测ListableBeanFactory中types类型的Bean
+# types： 检测的Bean类型。
+# detect：检测ListableBeanFactory中types类型的Bean。
 org.springframework.boot.sql.init.dependency.BeansOfTypeDetector
 
 ```
 
-## DatabaseInitializerDetector
+### DatabaseInitializerDetector
 
 ```
 
 # 数据库初始化器检测器
 org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
-    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+        org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
+        org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
+        org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
+        org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+        org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
+        org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
 
 # 数据库初始化器检测器。
 # 实现类应该注册在META-INF/spring.factories的org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector下面。
-# detect            检测ConfigurableListableBeanFactory中定义的初始化DataSource的Bean
-# detectionComplete 所有数据库初始化器检测器都已调用，并且初始化DataSource的Bean都已检测完成的回调方法
-# getOrder          获取顺序，默认值：0
+# detect：           检测ConfigurableListableBeanFactory中定义的初始化DataSource的Bean。
+# detectionComplete：所有数据库初始化器检测器都已调用，并且初始化DataSource的Bean都已检测完成后的回调方法。
+# getOrder：         获取优先级顺序，数值越小，优先级越高，默认值：0。
 org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
 
 # 数据库初始化器检测器：检测指定类型的Bean。
-# getDatabaseInitializerBeanTypes 获取数据库初始化器的Bean类型
+# getDatabaseInitializerBeanTypes：获取数据库初始化器的Bean类型。
 org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：DataSourceScriptDatabaseInitializer。
+# 优先级顺序：Ordered.LOWEST_PRECEDENCE - 100。
+org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：。
+# spring.jpa.defer-datasource-initialization=true时：检测：EntityManagerFactory。
+# spring.jpa.defer-datasource-initialization=false或不存在时：不进行检测。
+# detectionComplete：配置其他依赖于JPA初始化器的初始化器。
+org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：R2dbcScriptDatabaseInitializer。
+org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：SpringLiquibase。
+org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：Flyway。
+org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：FlywayMigrationInitializer。
+# 优先级顺序：1。
+org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
 
 ```
 
-## DependsOnDatabaseInitializationDetector
+### DependsOnDatabaseInitializationDetector
 
 ```
 
 # 依赖于数据库初始化的Bean检测器
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
-    + org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
-    + org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
+        org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
+        org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
+        org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
+        org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
+        org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
+        org.springframework.boot.autoconfigure.session.JdbcIndexedSessionRepositoryDependsOnDatabaseInitializationDetector
+    org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
 
 # 依赖于数据库初始化的Bean检测器。
 # 实现类应该注册在META-INF/spring.factories的org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector下面。
-# detect 检测ConfigurableListableBeanFactory中定义的依赖于数据库初始化的Bean
+# detect：检测ConfigurableListableBeanFactory中定义的依赖于数据库初始化的Bean。
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
 
 # 依赖于数据库初始化的Bean检测器：检测指定类型的Bean。
-# getDependsOnDatabaseInitializationBeanTypes 获取依赖于数据库初始化的Bean类型
+# getDependsOnDatabaseInitializationBeanTypes：获取依赖于数据库初始化的Bean的类型。
 org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
 
-# 依赖于数据库初始化的Bean检测器：检测@DependsOnDatabaseInitialization注解的Bean。
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：JdbcOperations、NamedParameterJdbcOperations。
+org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：
+# spring.jpa.defer-datasource-initialization=true时：不进行检测。
+# spring.jpa.defer-datasource-initialization=false或不存在时：检测EntityManagerFactory、AbstractEntityManagerFactoryBean。
+org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：DSLContext。
+org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：JobRepository。
+org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：Scheduler、SchedulerFactoryBean。
+org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：JdbcIndexedSessionRepository。
+org.springframework.boot.autoconfigure.session.JdbcIndexedSessionRepositoryDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定注解注释的Bean：@DependsOnDatabaseInitialization。
 org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector
 
-# @DependsOnDatabaseInitialization注解：表示Bean的创建和初始化依赖于数据库初始化。
-# 可用于Bean的class类或@Bean注解的方法。
+# 注解@DependsOnDatabaseInitialization：表示Bean的创建和初始化依赖于数据库初始化。
+# 注解的目标：
+# ElementType.TYPE：  Bean的class类。
+# ElementType.METHOD：@Bean注解的方法。
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization
 
 ```
