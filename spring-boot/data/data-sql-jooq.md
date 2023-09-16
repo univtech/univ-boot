@@ -16,7 +16,7 @@ org.jooq:jooq:3.18.6
 
 ```
 
-## jOOQ配置属性
+## jOOQ属性
 
 ### spring.jooq.*
 
@@ -25,6 +25,29 @@ org.jooq:jooq:3.18.6
 # 配置属性类：JooqProperties
 
 spring.jooq.sql-dialect SQL方言，默认自动检测
+
+```
+
+### JooqProperties
+
+```
+
+# @ConfigurationProperties：配置属性，jOOQ配置属性前缀：spring.jooq。
+# sqlDialect：         SQL方言，默认自动检测
+# determineSqlDialect：根据DataSource确定SQL方言（SQLDialect），调用SqlDialectLookup.getDialect方法。
+# getXXX：             获取XXX
+# setXXX：             设置XXX
+org.springframework.boot.autoconfigure.jooq.JooqProperties
+
+```
+
+### SqlDialectLookup
+
+```
+
+# SQL方言查找器。
+# getDialect：根据DataSource查找SQL方言（SQLDialect）。
+org.springframework.boot.autoconfigure.jooq.SqlDialectLookup
 
 ```
 
@@ -83,28 +106,19 @@ org.springframework.boot.autoconfigure.jooq.DefaultConfigurationCustomizer
 
 ```
 
-## jOOQ属性
+## jOOQ检测器
 
-### JooqProperties
-
-```
-
-# @ConfigurationProperties：配置属性，jOOQ配置属性前缀：spring.jooq。
-# sqlDialect：         SQL方言，默认自动检测
-# determineSqlDialect：根据DataSource确定SQL方言（SQLDialect），调用SqlDialectLookup.getDialect方法。
-# getXXX：             获取XXX
-# setXXX：             设置XXX
-org.springframework.boot.autoconfigure.jooq.JooqProperties
+### JooqDependsOnDatabaseInitializationDetector
 
 ```
 
-### SqlDialectLookup
+# 依赖于数据库初始化的Bean检测器。
+org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
+        org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
 
-```
-
-# SQL方言查找器。
-# getDialect：根据DataSource查找SQL方言（SQLDialect）。
-org.springframework.boot.autoconfigure.jooq.SqlDialectLookup
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：DSLContext。
+org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
 
 ```
 
@@ -163,20 +177,6 @@ org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer
 # jOOQ异常转换器。
 # exception：把SQLException转换为Spring的DataAccessException。
 org.springframework.boot.autoconfigure.jooq.JooqExceptionTranslator
-
-```
-
-### JooqDependsOnDatabaseInitializationDetector
-
-```
-
-# 依赖于数据库初始化的Bean检测器。
-org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
-    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
-        org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
-
-# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：DSLContext。
-org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
 
 ```
 
