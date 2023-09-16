@@ -5,25 +5,25 @@
 ```
 # Web服务器工厂
 org.springframework.boot.web.server.WebServerFactory
-    + org.springframework.boot.web.server.ConfigurableWebServerFactory
-        + org.springframework.boot.web.server.AbstractConfigurableWebServerFactory
+    org.springframework.boot.web.server.ConfigurableWebServerFactory
+        org.springframework.boot.web.server.AbstractConfigurableWebServerFactory
 
 # 错误页面注册表
 org.springframework.boot.web.server.ErrorPageRegistry
-    + org.springframework.boot.web.server.ConfigurableWebServerFactory
-        + org.springframework.boot.web.server.AbstractConfigurableWebServerFactory
+    org.springframework.boot.web.server.ConfigurableWebServerFactory
+        org.springframework.boot.web.server.AbstractConfigurableWebServerFactory
 
 ## SSL存储库提供者
 org.springframework.boot.web.server.SslStoreProvider
-    + org.springframework.boot.web.server.CertificateFileSslStoreProvider
+    org.springframework.boot.web.server.CertificateFileSslStoreProvider
 
 # Web服务器的SSL包
 org.springframework.boot.ssl.SslBundle
-    + org.springframework.boot.web.server.WebServerSslBundle
+    org.springframework.boot.web.server.WebServerSslBundle
 
 # SSL存储库提供者的SSL存储库包适配器
 org.springframework.boot.ssl.SslStoreBundle
-    + org.springframework.boot.web.server.WebServerSslBundle.SslStoreProviderBundleAdapter
+    org.springframework.boot.web.server.WebServerSslBundle.SslStoreProviderBundleAdapter
 ```
 
 ## Web服务器

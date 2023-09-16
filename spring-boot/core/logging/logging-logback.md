@@ -5,20 +5,20 @@
 ```
 # Logback的日志系统
 org.springframework.boot.logging.LoggingSystem
-    + org.springframework.boot.logging.AbstractLoggingSystem
-        + org.springframework.boot.logging.logback.LogbackLoggingSystem
+    org.springframework.boot.logging.AbstractLoggingSystem
+        org.springframework.boot.logging.logback.LogbackLoggingSystem
 
 # Logback的日志系统工厂
 org.springframework.boot.logging.LoggingSystemFactory
-    + org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
+    org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory
 
 # Logback的日志系统属性
 org.springframework.boot.logging.LoggingSystemProperties
-    + org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
+    org.springframework.boot.logging.logback.LogbackLoggingSystemProperties
 
 # Logback的编程式配置器
 org.springframework.boot.logging.logback.LogbackConfigurator
-    + org.springframework.boot.logging.logback.DebugLogbackConfigurator
+    org.springframework.boot.logging.logback.DebugLogbackConfigurator
 ```
 
 ## 日志系统

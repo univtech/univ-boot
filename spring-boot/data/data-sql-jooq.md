@@ -140,10 +140,10 @@ org.springframework.boot.autoconfigure.jooq.SpringTransactionProvider
 
 ```
 
-# 失败分析器。
+# 不存在DSLContext Bean的失败分析器。
 org.springframework.boot.diagnostics.FailureAnalyzer
-    + org.springframework.boot.diagnostics.AbstractFailureAnalyzer
-        + org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer
+    org.springframework.boot.diagnostics.AbstractFailureAnalyzer
+        org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer
 
 # 不存在DSLContext Bean的失败分析器（FailureAnalyzer）。
 # 存在R2dbcAutoConfiguration时，R2DBC自动配置为支持JDBC。

@@ -314,7 +314,7 @@ org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.Scripts
 ```
 
 # SQL数据库初始化脚本的RuntimeHints注册器（RuntimeHintsRegistrar）。
-# registerHints：注册资源模式schema.sql、schema-*.sql、data.sql、data-*.sql。
+# registerHints：注册资源模式：schema.sql、schema-*.sql、data.sql、data-*.sql。
 org.springframework.boot.autoconfigure.sql.init.SqlInitializationScriptsRuntimeHints
 
 ```
@@ -436,7 +436,7 @@ org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitiali
 ```
 
 # 注解@DependsOnDatabaseInitialization：表示Bean的创建和初始化依赖于数据库初始化。
-# 注解的目标：
+# @Target：注解的目标：
 # ElementType.TYPE：  Bean的class类。
 # ElementType.METHOD：@Bean注解的方法。
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization

@@ -58,7 +58,7 @@ org.springframework.boot.logging.LogLevel
 
 # 日志系统工厂
 org.springframework.boot.logging.LoggingSystemFactory
-    + org.springframework.boot.logging.DelegatingLoggingSystemFactory
+    org.springframework.boot.logging.DelegatingLoggingSystemFactory
 
 # 日志记录器分组
 org.springframework.boot.logging.LoggerGroup
@@ -71,7 +71,7 @@ org.springframework.boot.logging.DeferredLog.Lines
 
 # 延迟日志记录器工厂
 org.springframework.boot.logging.DeferredLogFactory
-    + org.springframework.boot.logging.DeferredLogs
+    org.springframework.boot.logging.DeferredLogs
 
 # 日志记录器配置
 org.springframework.boot.logging.LoggerConfiguration
@@ -87,8 +87,8 @@ org.springframework.boot.logging.LoggerConfiguration.ConfigurationScope
 
 # 日志系统
 org.springframework.boot.logging.LoggingSystem
-    + org.springframework.boot.logging.LoggingSystem.NoOpLoggingSystem
-    + org.springframework.boot.logging.AbstractLoggingSystem
+    org.springframework.boot.logging.LoggingSystem.NoOpLoggingSystem
+    org.springframework.boot.logging.AbstractLoggingSystem
 
 # 日志初始化上下文
 org.springframework.boot.logging.LoggingInitializationContext
