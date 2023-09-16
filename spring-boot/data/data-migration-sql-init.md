@@ -342,7 +342,6 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
         org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
         org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
         org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
-        org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
         org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
         org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
 
@@ -370,9 +369,6 @@ org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
 # 数据库初始化器检测器，检测指定类型的Bean：R2dbcScriptDatabaseInitializer。
 org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
 
-# 数据库初始化器检测器，检测指定类型的Bean：SpringLiquibase。
-org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
-
 # 数据库初始化器检测器，检测指定类型的Bean：Flyway。
 org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
 
@@ -391,7 +387,6 @@ org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDete
     org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
         org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
         org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
-        org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
         org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
         org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
         org.springframework.boot.autoconfigure.session.JdbcIndexedSessionRepositoryDependsOnDatabaseInitializationDetector
@@ -413,9 +408,6 @@ org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
 # spring.jpa.defer-datasource-initialization=true时：不进行检测。
 # spring.jpa.defer-datasource-initialization=false或不存在时：检测EntityManagerFactory、AbstractEntityManagerFactoryBean。
 org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
-
-# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：DSLContext。
-org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector
 
 # 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：JobRepository。
 org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
