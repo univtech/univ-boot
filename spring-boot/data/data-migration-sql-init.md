@@ -1,6 +1,6 @@
 # 数据库初始化
 
-## 配置属性
+## 初始化属性
 
 ### spring.sql.init.*
 
@@ -16,6 +16,63 @@ spring.sql.init.continue-on-error 数据库初始化脚本发生错误时，是�
 spring.sql.init.separator         数据库初始化脚本的分隔符，默认值：";"
 spring.sql.init.encoding          数据库初始化脚本使用的编码
 spring.sql.init.mode              数据库初始化模式，默认值：EMBEDDED
+
+```
+
+### SqlInitializationProperties
+
+```
+
+# @ConfigurationProperties：配置属性，SQL数据库初始化配置属性前缀：spring.sql.init。
+# schemaLocations：数据库schema脚本（DDL）的位置
+# dataLocations：  数据库data脚本（DML）的位置
+# platform：       默认的schema脚本（DDL）位置和data脚本（DML）位置中使用的平台，schema-${platform}.sql和data-${platform}.sql，默认值：all
+# username：       数据库的用户名
+# password：       数据库的密码
+# continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false
+# separator：      数据库初始化脚本的分隔符，默认值：";"
+# encoding：       数据库初始化脚本使用的编码
+# mode：           数据库初始化模式，默认值：EMBEDDED
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
+
+```
+
+### DatabaseInitializationSettings
+
+```
+
+# 数据库初始化设置。
+# schemaLocations：数据库schema脚本（DDL）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
+# dataLocations：  数据库data脚本（DML）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
+# continueOnError：schema脚本（DDL）或data脚本（DML）发生错误时，是否继续，默认值：false
+# separator：      schema脚本（DDL）或data脚本（DML）的分隔符，默认值：";"
+# encoding：       schema脚本（DDL）或data脚本（DML）使用的编码
+# mode：           数据库初始化模式，默认值：EMBEDDED
+org.springframework.boot.sql.init.DatabaseInitializationSettings
+
+```
+
+### DatabaseInitializationMode
+
+```
+
+# 数据库初始化模式。
+# ALWAYS：  总是初始化数据库
+# EMBEDDED：只初始化嵌入式数据库
+# NEVER：   从不初始化数据库
+org.springframework.boot.sql.init.DatabaseInitializationMode
+
+```
+
+### SettingsCreator
+
+```
+
+# 数据库初始化设置创建器。
+# 未指定数据库schema脚本（DDL）的位置时，默认为：optional:classpath*:schema-all.sql或optional:classpath*:schema.sql。
+# 未指定数据库data脚本（DML）的位置时，默认为：optional:classpath*:data-all.sql或optional:classpath*:data.sql。
+# createFrom：根据SqlInitializationProperties创建DatabaseInitializationSettings
+org.springframework.boot.autoconfigure.sql.init.SettingsCreator
 
 ```
 
@@ -85,65 +142,6 @@ org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfigur
 # r2dbcScriptDatabaseInitializer：
 # @Bean：创建Bean：SqlR2dbcScriptDatabaseInitializer，依赖Bean：SqlInitializationProperties、ConnectionFactory。
 org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration
-
-```
-
-## 初始化属性
-
-### SqlInitializationProperties
-
-```
-
-# @ConfigurationProperties：配置属性，SQL数据库初始化配置属性前缀：spring.sql.init。
-# schemaLocations：数据库schema脚本（DDL）的位置
-# dataLocations：  数据库data脚本（DML）的位置
-# platform：       默认的schema脚本（DDL）位置和data脚本（DML）位置中使用的平台，schema-${platform}.sql和data-${platform}.sql，默认值：all
-# username：       数据库的用户名
-# password：       数据库的密码
-# continueOnError：数据库初始化脚本发生错误时，是否继续，默认值：false
-# separator：      数据库初始化脚本的分隔符，默认值：";"
-# encoding：       数据库初始化脚本使用的编码
-# mode：           数据库初始化模式，默认值：EMBEDDED
-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
-
-```
-
-### DatabaseInitializationSettings
-
-```
-
-# 数据库初始化设置。
-# schemaLocations：数据库schema脚本（DDL）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
-# dataLocations：  数据库data脚本（DML）的位置，默认情况下，位置不存在时数据库初始化失败，在位置前面添加optional:前缀可以防止数据库初始化失败
-# continueOnError：schema脚本（DDL）或data脚本（DML）发生错误时，是否继续，默认值：false
-# separator：      schema脚本（DDL）或data脚本（DML）的分隔符，默认值：";"
-# encoding：       schema脚本（DDL）或data脚本（DML）使用的编码
-# mode：           数据库初始化模式，默认值：EMBEDDED
-org.springframework.boot.sql.init.DatabaseInitializationSettings
-
-```
-
-### DatabaseInitializationMode
-
-```
-
-# 数据库初始化模式。
-# ALWAYS：  总是初始化数据库
-# EMBEDDED：只初始化嵌入式数据库
-# NEVER：   从不初始化数据库
-org.springframework.boot.sql.init.DatabaseInitializationMode
-
-```
-
-### SettingsCreator
-
-```
-
-# 数据库初始化设置创建器。
-# 未指定数据库schema脚本（DDL）的位置时，默认为：optional:classpath*:schema-all.sql或optional:classpath*:schema.sql。
-# 未指定数据库data脚本（DML）的位置时，默认为：optional:classpath*:data-all.sql或optional:classpath*:data.sql。
-# createFrom：根据SqlInitializationProperties创建DatabaseInitializationSettings
-org.springframework.boot.autoconfigure.sql.init.SettingsCreator
 
 ```
 
