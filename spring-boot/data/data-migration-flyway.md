@@ -178,16 +178,21 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayAuto
 
 ```
 
+# 支持GraalVM Native镜像的Flyway资源提供者（ResourceProvider）。
+# 委托Flyways Scanner，并使用PathMatchingResourcePatternResolver在Native镜像中查找迁移文件。
+# scanner：               扫描器（Scanner<?>）。
+# classLoader：           类加载器（ClassLoader）。
+# locations：             位置（Location）集合。
+# encoding：              字符集（Charset）。
+# failOnMissingLocations：位置错误时是否抛出异常。
+# locatedResources：      定位到的资源（LocatedResource）列表。
+# lock：                  锁（ReentrantLock）。
+# initialized：           是否已经初始化。
+# getResource：           获取资源。
 org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider
+
+# 定位到的资源。
 org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider.LocatedResource
-
-```
-
-### NativeImageResourceProviderCustomizer
-
-```
-
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer
 
 ```
 
@@ -196,7 +201,32 @@ org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomi
 ```
 
 org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizer
+    org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer
+
+# 资源提供者定制器。
+# 在Native镜像中运行时，会被NativeImageResourceProviderCustomizer替代。
+# customize：自定义FluentConfiguration。
+org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizer
+
+# Native镜像的资源提供者定制器。
+# 把NativeImageResourceProvider注册为Flyway的ResourceProvider。
+# customize：自定义FluentConfiguration。
+org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer
+
+```
+
+### ResourceProviderCustomizerBeanRegistrationAotProcessor
+
+```
+
+# ResourceProviderCustomizer Bean注册的AOT处理器（BeanRegistrationAotProcessor）。
+# 把ResourceProviderCustomizer Bean替换为NativeImageResourceProviderCustomizer Bean。
+# processAheadOfTime：根据RegisteredBean创建BeanRegistrationAotContribution（AotContribution）。
 org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor
+
+# AOT Bean注册代码片段装饰器。
+# registeredBean：              注册的Bean（RegisteredBean）。
+# generateInstanceSupplierCode：生成实例的Supplier代码。
 org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor.AotContribution
 
 ```
