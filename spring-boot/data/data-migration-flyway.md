@@ -232,6 +232,36 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.Properties
 
 ```
 
+## Flyway数据源
+
+### FlywayDataSource
+
+```
+
+# 注解@FlywayDataSource：注入到Flyway的DataSource的限定符注解。
+# 如果用于注解第二个DataSource，则第一个主DataSource应该标记为@Primary。
+# @Target：注解的目标：类（TYPE）、注解（ANNOTATION_TYPE）、字段（FIELD）、方法（METHOD）、参数（PARAMETER）。
+# @Qualifier：限定符注解。
+org.springframework.boot.autoconfigure.flyway.FlywayDataSource
+
+```
+
+### FlywaySchemaManagementProvider
+
+```
+
+# Flyway Schema管理提供者。
+org.springframework.boot.jdbc.SchemaManagementProvider
+    org.springframework.boot.autoconfigure.flyway.FlywaySchemaManagementProvider
+
+# Flyway Schema管理提供者（SchemaManagementProvider）。
+# 通过查找可用的Flyway实例来确定是否管理Schema。
+# flywayInstances：    Flyway实例。
+# getSchemaManagement：根据DataSource获取SchemaManagement。
+org.springframework.boot.autoconfigure.flyway.FlywaySchemaManagementProvider
+
+```
+
 ## XXX
 
 ```
@@ -239,10 +269,10 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.Properties
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.LocationResolver
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.StringOrNumberToMigrationVersionConverter
 
-org.springframework.boot.autoconfigure.flyway.FlywayDataSource
+
 org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer
 org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy
-org.springframework.boot.autoconfigure.flyway.FlywaySchemaManagementProvider
+
 org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider.LocatedResource
 org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider
 org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer

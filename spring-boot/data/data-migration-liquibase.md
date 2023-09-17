@@ -204,7 +204,7 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.Prop
 ```
 
 # 注解@LiquibaseDataSource：注入到Liquibase的DataSource的限定符注解。
-# 如果用于第二个DataSource，则第一个主DataSource通常标记为@Primary。
+# 如果用于注解第二个DataSource，则第一个主DataSource应该标记为@Primary。
 # @Target：注解的目标：类（TYPE）、注解（ANNOTATION_TYPE）、字段（FIELD）、方法（METHOD）、参数（PARAMETER）。
 # @Qualifier：限定符注解。
 org.springframework.boot.autoconfigure.liquibase.LiquibaseDataSource
@@ -234,7 +234,7 @@ org.springframework.boot.jdbc.SchemaManagementProvider
 
 # Liquibase Schema管理提供者（SchemaManagementProvider）。
 # 通过查找可用的SpringLiquibase实例来确定是否管理Schema。
-# liquibaseInstances:  Liquibase实例。
+# liquibaseInstances： Liquibase实例。
 # getSchemaManagement：根据DataSource获取SchemaManagement。
 org.springframework.boot.autoconfigure.liquibase.LiquibaseSchemaManagementProvider
 
