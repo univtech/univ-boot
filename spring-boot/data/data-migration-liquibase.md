@@ -1,6 +1,6 @@
 # Liquibase
 
-## 配置属性
+## Liquibase属性
 
 ### spring.liquibase.*
 
@@ -99,6 +99,37 @@ Login user of the database to migrate.
 
 ```
 
+### LiquibaseProperties
+
+```
+
+# @ConfigurationProperties：配置属性，Liquibase配置属性前缀：spring.liquibase，不忽略未知字段。
+# changeLog：                 Change log configuration path. = "classpath:/db/changelog/db.changelog-master.yaml";
+# clearChecksums：            Whether to clear all checksums in the current changelog, so they will be recalculated upon the next update.
+# contexts：                  Comma-separated list of runtime contexts to use.
+# defaultSchema：             Default database schema.
+# liquibaseSchema：           Schema to use for Liquibase objects.
+# liquibaseTablespace：       Tablespace to use for Liquibase objects.
+# databaseChangeLogTable：    Name of table to use for tracking change history. = "DATABASECHANGELOG"; 
+# databaseChangeLogLockTable：Name of table to use for tracking concurrent Liquibase usage. = "DATABASECHANGELOGLOCK";
+# dropFirst：                 Whether to first drop the database schema.
+# enabled：                   Whether to enable Liquibase support. = true
+# user：                      Login user of the database to migrate.
+# password：                  Login password of the database to migrate.
+# driverClassName：           Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
+# url：                       JDBC URL of the database to migrate. If not set, the primary configured data source is used.
+# labelFilter：               Comma-separated list of runtime labels to use.
+# parameters：                Map<String, String>  Change log parameters.
+# rollbackFile：              File File to which rollback SQL is written when an update is performed.
+# testRollbackOnUpdate：      Whether rollback should be tested before update is performed.
+# tag：                       Tag name to use when applying database changes. Can also be used with "rollbackFile" to generate a rollback script for all existing changes associated with that tag.
+# getXXX：                     获取XXX
+# isXXX：                      是否XXX
+# setXXX：                     设置XXX
+org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
+
+```
+
 ## Liquibase配置
 
 ### LiquibaseAutoConfiguration
@@ -137,6 +168,37 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.Liqu
 
 ```
 
+### LiquibaseEndpointAutoConfiguration
+
+```
+# @AutoConfiguration：自动配置类：在LiquibaseAutoConfiguration配置之后配置LiquibaseEndpoint。
+# @ConditionalOnClass：前提条件，类路径中存在类：SpringLiquibase。
+# @ConditionalOnAvailableEndpoint：前提条件，端点可用：LiquibaseEndpoint。
+# 
+# liquibaseEndpoint：
+# @Bean：创建Bean：LiquibaseEndpoint，依赖Bean：ApplicationContext。
+# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：SpringLiquibase。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：LiquibaseEndpoint。
+# 
+# preventDataSourceCloseBeanPostProcessor：
+# @Bean：创建Bean：阻止关闭DataSource的Bean后置处理器（BeanPostProcessor），调用DataSourceClosingSpringLiquibase.setCloseDataSourceOnceMigrated(false)。
+# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：SpringLiquibase。
+org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration
+
+```
+
+## Liquibase资源
+
+### LiquibaseAutoConfigurationRuntimeHints
+
+```
+
+# Liquibase自动配置的RuntimeHints注册器（RuntimeHintsRegistrar）。
+# registerHints：注册资源模式：db/changelog/*。
+org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseAutoConfigurationRuntimeHints
+
+```
+
 ## Liquibase条件
 
 ### LiquibaseDataSourceCondition
@@ -167,67 +229,7 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.Liqu
 
 ```
 
-### LiquibaseEndpointAutoConfiguration
-
-```
-# @AutoConfiguration：自动配置类：在LiquibaseAutoConfiguration配置之后配置LiquibaseEndpoint。
-# @ConditionalOnClass：前提条件，类路径中存在类：SpringLiquibase。
-# @ConditionalOnAvailableEndpoint：前提条件，端点可用：LiquibaseEndpoint。
-# 
-# liquibaseEndpoint：
-# @Bean：创建Bean：LiquibaseEndpoint，依赖Bean：ApplicationContext。
-# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：SpringLiquibase。
-# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：LiquibaseEndpoint。
-# 
-# preventDataSourceCloseBeanPostProcessor：
-# @Bean：创建Bean：阻止关闭DataSource的Bean后置处理器（BeanPostProcessor），调用DataSourceClosingSpringLiquibase.setCloseDataSourceOnceMigrated(false)。
-# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：SpringLiquibase。
-org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration
-
-```
-
-### LiquibaseAutoConfigurationRuntimeHints
-
-```
-
-# Liquibase自动配置的RuntimeHints注册器（RuntimeHintsRegistrar）。
-# registerHints：注册资源模式：db/changelog/*。
-org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseAutoConfigurationRuntimeHints
-
-```
-
-## Liquibase属性
-
-### LiquibaseProperties
-
-```
-
-# @ConfigurationProperties：配置属性，Liquibase配置属性前缀：spring.liquibase，不忽略未知字段。
-# changeLog：                 Change log configuration path. = "classpath:/db/changelog/db.changelog-master.yaml";
-# clearChecksums：            Whether to clear all checksums in the current changelog, so they will be recalculated upon the next update.
-# contexts：                  Comma-separated list of runtime contexts to use.
-# defaultSchema：             Default database schema.
-# liquibaseSchema：           Schema to use for Liquibase objects.
-# liquibaseTablespace：       Tablespace to use for Liquibase objects.
-# databaseChangeLogTable：    Name of table to use for tracking change history. = "DATABASECHANGELOG"; 
-# databaseChangeLogLockTable：Name of table to use for tracking concurrent Liquibase usage. = "DATABASECHANGELOGLOCK";
-# dropFirst：                 Whether to first drop the database schema.
-# enabled：                   Whether to enable Liquibase support. = true
-# user：                      Login user of the database to migrate.
-# password：                  Login password of the database to migrate.
-# driverClassName：           Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
-# url：                       JDBC URL of the database to migrate. If not set, the primary configured data source is used.
-# labelFilter：               Comma-separated list of runtime labels to use.
-# parameters：                Map<String, String>  Change log parameters.
-# rollbackFile：              File File to which rollback SQL is written when an update is performed.
-# testRollbackOnUpdate：      Whether rollback should be tested before update is performed.
-# tag：                       Tag name to use when applying database changes. Can also be used with "rollbackFile" to generate a rollback script for all existing changes associated with that tag.
-# getXXX：                     获取XXX
-# isXXX：                      是否XXX
-# setXXX：                     设置XXX
-org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
-
-```
+## Liquibase连接
 
 ### LiquibaseConnectionDetails
 
@@ -237,7 +239,6 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
 org.springframework.boot.autoconfigure.service.connection.ConnectionDetails
     org.springframework.boot.autoconfigure.liquibase.LiquibaseConnectionDetails
         org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.PropertiesLiquibaseConnectionDetails
-        org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 
 # Liquibase连接详情。
 # getUsername：       获取数据库的用户名。
@@ -254,13 +255,6 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseConnectionDetails
 # getDriverClassName：根据LiquibaseProperties获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
 org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.PropertiesLiquibaseConnectionDetails
 
-# Liquibase容器的连接详情。
-# getUsername：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的用户名。
-# getPassword：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的密码。
-# getJdbcUrl：        根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的JDBC URL。
-# getDriverClassName：根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
-org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
-
 ```
 
 ## Liquibase数据源
@@ -269,7 +263,7 @@ org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseCo
 
 ```
 
-# @LiquibaseDataSource注解：注入到Liquibase的DataSource的限定符注解。
+# 注解@LiquibaseDataSource：注入到Liquibase的DataSource的限定符注解。
 # 如果用于第二个DataSource，则第一个主DataSource通常标记为@Primary。
 # @Target：注解的目标：类（TYPE）、注解（ANNOTATION_TYPE）、字段（FIELD）、方法（METHOD）、参数（PARAMETER）。
 # @Qualifier：限定符注解。
@@ -281,7 +275,7 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseDataSource
 
 ```
 
-# 数据库迁移完成之后关闭底层DataSource的自定义SpringLiquibase。
+# 自定义SpringLiquibase扩展：数据库迁移完成之后关闭底层DataSource。
 # closeDataSourceOnceMigrated：   是否关闭数据源。
 # setCloseDataSourceOnceMigrated：设置是否关闭数据源。
 # afterPropertiesSet：            关闭数据源，通过反射调用DataSource.close方法。
@@ -306,6 +300,39 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseSchemaManagementProvid
 
 ```
 
+## Liquibase检测器
+
+### LiquibaseDatabaseInitializerDetector
+
+```
+
+# 数据库初始化器检测器。
+org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+        org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：SpringLiquibase。
+org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+
+```
+
+## Liquibase分析器
+
+### LiquibaseChangelogMissingFailureAnalyzer
+
+```
+
+# Liquibase Changelog缺失的失败分析器。
+org.springframework.boot.diagnostics.FailureAnalyzer
+    org.springframework.boot.diagnostics.AbstractFailureAnalyzer
+        org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
+
+# Liquibase Changelog缺失的失败分析器。
+# analyze：分析ChangeLogParseException异常。
+org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
+
+```
+
 ## Liquibase端点
 
 ### LiquibaseEndpoint
@@ -314,6 +341,7 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseSchemaManagementProvid
 
 # @Endpoint：端点，暴露liquibase信息的端点ID：liquibase。
 # context：应用程序上下文。
+#
 # liquibaseBeans：
 # @ReadOperation：读取操作，读取liquibase信息，创建LiquibaseBeansDescriptor。
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint
@@ -363,26 +391,9 @@ org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.LiquibaseBeanDescri
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ChangeSetDescriptor
 
 # ChangeSetDescriptor中的上下文表达式描述符。
-# contexts：   上下文名称集合。
-# getContexts：获取上下文名称集合。
+# contexts：   上下文集合。
+# getContexts：获取上下文集合。
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.ContextExpressionDescriptor
-
-```
-
-## Liquibase异常
-
-### LiquibaseChangelogMissingFailureAnalyzer
-
-```
-
-# Liquibase Changelog缺失的失败分析器。
-org.springframework.boot.diagnostics.FailureAnalyzer
-    org.springframework.boot.diagnostics.AbstractFailureAnalyzer
-        org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
-
-# Liquibase Changelog缺失的失败分析器。
-# analyze：分析ChangeLogParseException异常。
-org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
 
 ```
 
@@ -416,17 +427,20 @@ org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseCo
 
 ```
 
-### LiquibaseDatabaseInitializerDetector
+### LiquibaseContainerConnectionDetails
 
 ```
 
-# 数据库初始化器检测器。
-org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
-    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
-        org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+# Liquibase容器的连接详情。
+org.springframework.boot.autoconfigure.service.connection.ConnectionDetails
+    org.springframework.boot.autoconfigure.liquibase.LiquibaseConnectionDetails
+        org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 
-# 数据库初始化器检测器，检测指定类型的Bean：SpringLiquibase。
-org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+# Liquibase容器的连接详情。
+# getUsername：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的用户名。
+# getPassword：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的密码。
+# getJdbcUrl：        根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的JDBC URL。
+# getDriverClassName：根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
+org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 
 ```
-
