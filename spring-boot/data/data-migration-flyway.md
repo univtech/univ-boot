@@ -83,337 +83,90 @@ management.endpoint.flyway.enabled
 ```
 
 # @ConfigurationProperties：配置属性，Flyway数据库迁移的配置属性前缀：spring.flyway。
+# enabled：是否启用Flyway，默认值：true。
+# failOnMissingLocations：迁移脚本的位置不存在时是否抛出异常。
 
 	/**
-	 * Whether to enable flyway.
+	 * Locations of migrations scripts. Can contain the special "{vendor}" placeholder to use vendor-specific locations.
 	 */
-	private boolean enabled = true;
+	private List<String> locations = new ArrayList<>(Collections.singletonList("classpath:db/migration"))：
+# encoding = StandardCharsets.UTF_8：SQL迁移的编码。
+# connectRetries：尝试连接数据库时的最大重试次数。
 
 	/**
-	 * Whether to fail if a location of migration scripts doesn't exist.
-	 */
-	private boolean failOnMissingLocations;
-
-	/**
-	 * Locations of migrations scripts. Can contain the special "{vendor}" placeholder to
-	 * use vendor-specific locations.
-	 */
-	private List<String> locations = new ArrayList<>(Collections.singletonList("classpath:db/migration"));
-
-	/**
-	 * Encoding of SQL migrations.
-	 */
-	private Charset encoding = StandardCharsets.UTF_8;
-
-	/**
-	 * Maximum number of retries when attempting to connect to the database.
-	 */
-	private int connectRetries;
-
-	/**
-	 * Maximum time between retries when attempting to connect to the database. If a
-	 * duration suffix is not specified, seconds will be used.
+	 * Maximum time between retries when attempting to connect to the database. If a duration suffix is not specified, seconds will be used.
 	 */
 	@DurationUnit(ChronoUnit.SECONDS)
-	private Duration connectRetriesInterval = Duration.ofSeconds(120);
+	private Duration connectRetriesInterval = Duration.ofSeconds(120)：
+
+# lockRetryCount = 50：尝试获取锁时的最大重试次数。
+# defaultSchema：Flyway管理的默认Schema名称（区分大小写）。
+# schemas = new ArrayList<>()：Flyway管理的Schema名称（区分大小写）。
+# createSchemas = true：Flyway是否应该尝试创建schemas属性中指定的Schema。
+# table = "flyway_schema_history"：Flyway使用的Schema历史表。
+# tablespace：创建Schema历史表的表空间，使用不支持表空间的数据库时会被忽略，默认为Flyway使用的连接的默认表空间。
+# baselineDescription = "<< Flyway Baseline >>"：应用基线时，标记现有Schema的描述。
+# baselineVersion = "1"：执行基线时，标记现有Schema的版本。
+# installedBy：Schema历史表中记录的已应用迁移的用户名。
+# placeholders = new HashMap<>()：应用于SQL迁移脚本的占位符及其替代值key=value。
+# placeholderPrefix = "${"：迁移脚本中占位符的前缀。
+# placeholderSuffix = "}"：迁移脚本中占位符的后缀。
+# placeholderSeparator = ":"：默认占位符的分隔符。
+# placeholderReplacement = true：是否替换迁移脚本中的占位符。
+# sqlMigrationPrefix = "V"：SQL迁移的文件名前缀。
+# sqlMigrationSuffixes = new ArrayList<>(Collections.singleton(".sql"))：SQL迁移的文件名后缀列表。
+# sqlMigrationSeparator = "__"：SQL迁移的文件名分隔符。
+# repeatableSqlMigrationPrefix = "R"：可重复的SQL迁移的文件名前缀。
+# target = "latest"：迁移的目标版本。
+# user：迁移数据库的用户名。
+# password：迁移数据库的密码。
+# driverClassName：JDBC驱动的全限定类名，默认根据URL自动检测。
+# url：迁移数据库的JDBC URL，未设置时，使用配置的主数据源。
+# initSqls = new ArrayList<>()：获得连接后立即初始化连接时执行的SQL语句列表。
+# baselineOnMigrate：迁移非空Schema时是否自动调用基线。
+# cleanDisabled = true：是否禁用数据库清理。
+# cleanOnValidationError：验证错误时是否自动调用清理。
+# group：应用所有挂起的迁移时，是否把它们分组到同一事务中。
+# mixed：同一迁移中是否允许混合事务和非事务语句。
+# outOfOrder：是否允许不按顺序运行迁移。
+# skipDefaultCallbacks：是否跳过默认回调，true：只使用自定义回调。
+# skipDefaultResolvers：是否跳过默认解析器，true：只使用自定义解析器。
+# validateMigrationNaming = false：是否验证脚本不遵循正确命名约定的迁移和回调。
+# validateOnMigrate = true：执行迁移时是否自动调用验证。
+# scriptPlaceholderPrefix = "FP__"：迁移脚本中占位符的前缀。
+# scriptPlaceholderSuffix = "__"：迁移脚本中占位符的后缀。
+# executeInTransaction = true：Flyway是否应该在事务中执行SQL。
+# loggers = { "slf4j" }：Flyway使用的日志记录器。
+# batch：执行SQL语句时是否批量处理，需要Flyway Team的支持。
 
 	/**
-	 * Maximum number of retries when trying to obtain a lock.
+	 * File to which the SQL statements of a migration dry run should be output. 需要Flyway Team的支持。
 	 */
-	private int lockRetryCount = 50;
+	private File dryRunOutput：
 
 	/**
-	 * Default schema name managed by Flyway (case-sensitive).
+	 * Rules for the built-in error handling to override specific SQL states and error codes. 需要Flyway Team的支持。
 	 */
-	private String defaultSchema;
+	private String[] errorOverrides：
 
-	/**
-	 * Scheme names managed by Flyway (case-sensitive).
-	 */
-	private List<String> schemas = new ArrayList<>();
-
-	/**
-	 * Whether Flyway should attempt to create the schemas specified in the schemas
-	 * property.
-	 */
-	private boolean createSchemas = true;
-
-	/**
-	 * Name of the schema history table that will be used by Flyway.
-	 */
-	private String table = "flyway_schema_history";
-
-	/**
-	 * Tablespace in which the schema history table is created. Ignored when using a
-	 * database that does not support tablespaces. Defaults to the default tablespace of
-	 * the connection used by Flyway.
-	 */
-	private String tablespace;
-
-	/**
-	 * Description to tag an existing schema with when applying a baseline.
-	 */
-	private String baselineDescription = "<< Flyway Baseline >>";
-
-	/**
-	 * Version to tag an existing schema with when executing baseline.
-	 */
-	private String baselineVersion = "1";
-
-	/**
-	 * Username recorded in the schema history table as having applied the migration.
-	 */
-	private String installedBy;
-
-	/**
-	 * Placeholders and their replacements to apply to sql migration scripts.
-	 */
-	private Map<String, String> placeholders = new HashMap<>();
-
-	/**
-	 * Prefix of placeholders in migration scripts.
-	 */
-	private String placeholderPrefix = "${";
-
-	/**
-	 * Suffix of placeholders in migration scripts.
-	 */
-	private String placeholderSuffix = "}";
-
-	/**
-	 * Separator of default placeholders.
-	 */
-	private String placeholderSeparator = ":";
-
-	/**
-	 * Perform placeholder replacement in migration scripts.
-	 */
-	private boolean placeholderReplacement = true;
-
-	/**
-	 * File name prefix for SQL migrations.
-	 */
-	private String sqlMigrationPrefix = "V";
-
-	/**
-	 * File name suffix for SQL migrations.
-	 */
-	private List<String> sqlMigrationSuffixes = new ArrayList<>(Collections.singleton(".sql"));
-
-	/**
-	 * File name separator for SQL migrations.
-	 */
-	private String sqlMigrationSeparator = "__";
-
-	/**
-	 * File name prefix for repeatable SQL migrations.
-	 */
-	private String repeatableSqlMigrationPrefix = "R";
-
-	/**
-	 * Target version up to which migrations should be considered.
-	 */
-	private String target = "latest";
-
-	/**
-	 * Login user of the database to migrate.
-	 */
-	private String user;
-
-	/**
-	 * Login password of the database to migrate.
-	 */
-	private String password;
-
-	/**
-	 * Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
-	 */
-	private String driverClassName;
-
-	/**
-	 * JDBC url of the database to migrate. If not set, the primary configured data source
-	 * is used.
-	 */
-	private String url;
-
-	/**
-	 * SQL statements to execute to initialize a connection immediately after obtaining
-	 * it.
-	 */
-	private List<String> initSqls = new ArrayList<>();
-
-	/**
-	 * Whether to automatically call baseline when migrating a non-empty schema.
-	 */
-	private boolean baselineOnMigrate;
-
-	/**
-	 * Whether to disable cleaning of the database.
-	 */
-	private boolean cleanDisabled = true;
-
-	/**
-	 * Whether to automatically call clean when a validation error occurs.
-	 */
-	private boolean cleanOnValidationError;
-
-	/**
-	 * Whether to group all pending migrations together in the same transaction when
-	 * applying them.
-	 */
-	private boolean group;
-
-	/**
-	 * Whether to allow mixing transactional and non-transactional statements within the
-	 * same migration.
-	 */
-	private boolean mixed;
-
-	/**
-	 * Whether to allow migrations to be run out of order.
-	 */
-	private boolean outOfOrder;
-
-	/**
-	 * Whether to skip default callbacks. If true, only custom callbacks are used.
-	 */
-	private boolean skipDefaultCallbacks;
-
-	/**
-	 * Whether to skip default resolvers. If true, only custom resolvers are used.
-	 */
-	private boolean skipDefaultResolvers;
-
-	/**
-	 * Whether to validate migrations and callbacks whose scripts do not obey the correct
-	 * naming convention.
-	 */
-	private boolean validateMigrationNaming = false;
-
-	/**
-	 * Whether to automatically call validate when performing a migration.
-	 */
-	private boolean validateOnMigrate = true;
-
-	/**
-	 * Prefix of placeholders in migration scripts.
-	 */
-	private String scriptPlaceholderPrefix = "FP__";
-
-	/**
-	 * Suffix of placeholders in migration scripts.
-	 */
-	private String scriptPlaceholderSuffix = "__";
-
-	/**
-	 * Whether Flyway should execute SQL within a transaction.
-	 */
-	private boolean executeInTransaction = true;
-
-	/**
-	 * Loggers Flyway should use.
-	 */
-	private String[] loggers = { "slf4j" };
-
-	/**
-	 * Whether to batch SQL statements when executing them. Requires Flyway Teams.
-	 */
-	private Boolean batch;
-
-	/**
-	 * File to which the SQL statements of a migration dry run should be output. Requires
-	 * Flyway Teams.
-	 */
-	private File dryRunOutput;
-
-	/**
-	 * Rules for the built-in error handling to override specific SQL states and error
-	 * codes. Requires Flyway Teams.
-	 */
-	private String[] errorOverrides;
-
-	/**
-	 * Licence key for Flyway Teams.
-	 */
-	private String licenseKey;
-
-	/**
-	 * Whether to enable support for Oracle SQL*Plus commands. Requires Flyway Teams.
-	 */
-	private Boolean oracleSqlplus;
-
-	/**
-	 * Whether to issue a warning rather than an error when a not-yet-supported Oracle
-	 * SQL*Plus statement is encountered. Requires Flyway Teams.
-	 */
-	private Boolean oracleSqlplusWarn;
-
-	/**
-	 * Whether to stream SQL migrations when executing them. Requires Flyway Teams.
-	 */
-	private Boolean stream;
-
-	/**
-	 * File name prefix for undo SQL migrations. Requires Flyway Teams.
-	 */
-	private String undoSqlMigrationPrefix;
-
-	/**
-	 * Migrations that Flyway should consider when migrating or undoing. When empty all
-	 * available migrations are considered. Requires Flyway Teams.
-	 */
-	private String[] cherryPick;
-
-	/**
-	 * Properties to pass to the JDBC driver. Requires Flyway Teams.
-	 */
-	private Map<String, String> jdbcProperties = new HashMap<>();
-
-	/**
-	 * Path of the Kerberos config file. Requires Flyway Teams.
-	 */
-	private String kerberosConfigFile;
-
-	/**
-	 * Path of the Oracle Kerberos cache file. Requires Flyway Teams.
-	 */
-	private String oracleKerberosCacheFile;
-
-	/**
-	 * Location of the Oracle Wallet, used to sign in to the database automatically.
-	 * Requires Flyway Teams.
-	 */
-	private String oracleWalletLocation;
-
-	/**
-	 * Whether Flyway should output a table with the results of queries when executing
-	 * migrations. Requires Flyway Teams.
-	 */
-	private Boolean outputQueryResults;
-
-	/**
-	 * Path to the SQL Server Kerberos login file. Requires Flyway Teams.
-	 */
-	private String sqlServerKerberosLoginFile;
-
-	/**
-	 * Whether Flyway should skip executing the contents of the migrations and only update
-	 * the schema history table. Requires Flyway teams.
-	 */
-	private Boolean skipExecutingMigrations;
-
-	/**
-	 * Ignore migrations that match this comma-separated list of patterns when validating
-	 * migrations. Requires Flyway Teams.
-	 */
-	private List<String> ignoreMigrationPatterns;
-
-	/**
-	 * Whether to attempt to automatically detect SQL migration file encoding. Requires
-	 * Flyway Teams.
-	 */
-	private Boolean detectEncoding;
-
+# licenseKey：Flyway Team的许可密钥。
+# oracleSqlplus：是否启用Oracle SQL*Plus命令，需要Flyway Team的支持。
+# oracleSqlplusWarn：碰到不支持的Oracle SQL*Plus语句时，是否发出警告，而不是错误，需要Flyway Team的支持。
+# stream：执行SQL语句时是否流式处理，需要Flyway Team的支持。
+# undoSqlMigrationPrefix：撤销SQL迁移的文件名前缀，需要Flyway Team的支持。
+# cherryPick：迁移或撤销时，Flyway应该考虑的迁移，为空时，考虑所有可用迁移，需要Flyway Team的支持。
+# jdbcProperties：JDBC驱动的属性key=value，需要Flyway Team的支持。
+# kerberosConfigFile：Kerberos配置文件的路径，需要Flyway Team的支持。
+# oracleKerberosCacheFile：Oracle Kerberos缓存文件的路径，需要Flyway Team的支持。
+# oracleWalletLocation：Oracle Wallet的位置，用于自动登录数据库，需要Flyway Team的支持。
+# outputQueryResults：执行迁移时，Flyway是否应该输出包含查询结果的表，需要Flyway Team的支持。
+# sqlServerKerberosLoginFile：SQL服务器的Kerberos登录文件路径，需要Flyway Team的支持。
+# skipExecutingMigrations：Flyway是否应该跳过迁移内容的执行，只更新Schema的历史表，需要Flyway Team的支持。
+# ignoreMigrationPatterns：逗号分隔的模式列表，验证迁移时，忽略的迁移，需要Flyway Team的支持。
+# detectEncoding：是否尝试自动检测SQL迁移文件的编码，需要Flyway Team的支持。
+# getXXX：                    获取XXX
+# isXXX：                     是否XXX
+# setXXX：                    设置XXX
 org.springframework.boot.autoconfigure.flyway.FlywayProperties
 
 ```
