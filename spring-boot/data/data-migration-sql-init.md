@@ -426,9 +426,7 @@ org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitiali
 ```
 
 # 注解@DependsOnDatabaseInitialization：表示Bean的创建和初始化依赖于数据库初始化。
-# @Target：注解的目标：
-# ElementType.TYPE：  Bean的class类。
-# ElementType.METHOD：@Bean注解的方法。
+# @Target：注解的目标：Bean的class类（TYPE）、@Bean注解的方法（METHOD）。
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization
 
 ```

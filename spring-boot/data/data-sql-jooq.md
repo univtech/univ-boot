@@ -182,19 +182,45 @@ org.springframework.boot.autoconfigure.jooq.JooqExceptionTranslator
 
 ## jOOQ测试
 
-### AutoConfigureJooq
-
-```
-
-org.springframework.boot.test.autoconfigure.jooq.AutoConfigureJooq
-
-```
-
 ### JooqTest
 
 ```
 
+# 只关注jOOQ组件的jOOQ测试注解。
+# 这个组件会禁用完整的自动配置，只使用jOOQ测试相关的配置。
+# 默认情况下，@JooqTest注解的测试会使用配置的数据库。
+# 如果要使用嵌入式内存数据库替换显式的或自动配置的DataSource，可以使用@AutoConfigureTestDatabase覆盖这些配置。
+# 使用JUnit 4时，@JooqTest注解应该与@RunWith(SpringRunner.class)一起使用。
+#
+# @Target：类（TYPE）。
+# @Inherited：可继承。
+# @BootstrapWith：TestContext启动器类：JooqTestContextBootstrapper。
+# @ExtendWith：注册扩展：SpringExtension。
+# @OverrideAutoConfiguration：覆盖自动配置：false。
+# @TypeExcludeFilters：类型排除过滤器：JooqTypeExcludeFilter。
+# @Transactional：开启事务。
+# @AutoConfigureCache：自动配置缓存。
+# @AutoConfigureJooq：自动配置jOOQ。
+# @ImportAutoConfiguration：引入自动配置。
+#
+# properties：              key=value属性（String[]），在运行测试之前添加到Spring Environment。
+# useDefaultFilters：       默认过滤器是否应该与@SpringBootApplication一起使用，默认情况下不包含任何Bean，默认值：true。
+# includeFilters：          包含过滤器（Filter[]），把过滤后的Bean添加到应用程序上下文。
+# excludeFilters：          排除过滤器（Filter[]），过滤掉要添加到应用程序上下文的Bean。
+# excludeAutoConfiguration：排除自动配置类（Class<?>[]），排除应用于@JooqTest的自动配置类，@ImportAutoConfiguration.exclude的别名。
 org.springframework.boot.test.autoconfigure.jooq.JooqTest
+
+```
+
+### AutoConfigureJooq
+
+```
+
+# 为jOOQ测试引入自动配置。应该使用@JooqTest，而不是直接使用@AutoConfigureJooq
+# @Target：类（TYPE）。
+# @Inherited：可继承。
+# @ImportAutoConfiguration：引入自动配置。
+org.springframework.boot.test.autoconfigure.jooq.AutoConfigureJooq
 
 ```
 
@@ -202,6 +228,12 @@ org.springframework.boot.test.autoconfigure.jooq.JooqTest
 
 ```
 
+# 支持@JooqTest的测试上下文启动器。
+org.springframework.boot.test.context.SpringBootTestContextBootstrapper
+    org.springframework.boot.test.autoconfigure.jooq.JooqTestContextBootstrapper
+
+# 支持@JooqTest的测试上下文启动器（TestContextBootstrapper）。
+# getProperties：获取@JooqTest.properties。
 org.springframework.boot.test.autoconfigure.jooq.JooqTestContextBootstrapper
 
 ```
@@ -210,6 +242,13 @@ org.springframework.boot.test.autoconfigure.jooq.JooqTestContextBootstrapper
 
 ```
 
+# @JooqTest注解的类型排除过滤器。
+org.springframework.boot.context.TypeExcludeFilter
+    org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter
+        org.springframework.boot.test.autoconfigure.filter.StandardAnnotationCustomizableTypeExcludeFilter
+            org.springframework.boot.test.autoconfigure.jooq.JooqTypeExcludeFilter
+
+# @JooqTest注解的类型排除过滤器（TypeExcludeFilter）。
 org.springframework.boot.test.autoconfigure.jooq.JooqTypeExcludeFilter
 
 ```

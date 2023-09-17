@@ -271,12 +271,7 @@ org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseCo
 
 # @LiquibaseDataSource注解：注入到Liquibase的DataSource的限定符注解。
 # 如果用于第二个DataSource，则第一个主DataSource通常标记为@Primary。
-# @Target：注解的目标：
-# ElementType.FIELD：          字段
-# ElementType.METHOD：         方法
-# ElementType.PARAMETER：      参数
-# ElementType.TYPE：           类
-# ElementType.ANNOTATION_TYPE：注解
+# @Target：注解的目标：类（TYPE）、注解（ANNOTATION_TYPE）、字段（FIELD）、方法（METHOD）、参数（PARAMETER）。
 # @Qualifier：限定符注解。
 org.springframework.boot.autoconfigure.liquibase.LiquibaseDataSource
 
