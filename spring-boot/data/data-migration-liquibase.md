@@ -6,96 +6,26 @@
 
 ```
 
-spring.liquibase.change-log
-
-Change log configuration path.
-
-classpath:/db/changelog/db.changelog-master.yaml
-
-spring.liquibase.clear-checksums
-
-Whether to clear all checksums in the current changelog, so they will be recalculated upon the next update.
-
-false
-
-spring.liquibase.contexts
-
-Comma-separated list of runtime contexts to use.
-
-spring.liquibase.database-change-log-lock-table
-
-Name of table to use for tracking concurrent Liquibase usage.
-
-DATABASECHANGELOGLOCK
-
-spring.liquibase.database-change-log-table
-
-Name of table to use for tracking change history.
-
-DATABASECHANGELOG
-
-spring.liquibase.default-schema
-
-Default database schema.
-
-spring.liquibase.driver-class-name
-
-Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
-
-spring.liquibase.drop-first
-
-Whether to first drop the database schema.
-
-false
-
-spring.liquibase.enabled
-
-Whether to enable Liquibase support.
-
-true
-
-spring.liquibase.label-filter
-
-Comma-separated list of runtime labels to use.
-
-spring.liquibase.liquibase-schema
-
-Schema to use for Liquibase objects.
-
-spring.liquibase.liquibase-tablespace
-
-Tablespace to use for Liquibase objects.
-
-spring.liquibase.parameters.*
-
-Change log parameters.
-
-spring.liquibase.password
-
-Login password of the database to migrate.
-
-spring.liquibase.rollback-file
-
-File to which rollback SQL is written when an update is performed.
-
-spring.liquibase.tag
-
-Tag name to use when applying database changes. Can also be used with "rollbackFile" to generate a rollback script for all existing changes associated with that tag.
-
-spring.liquibase.test-rollback-on-update
-
-Whether rollback should be tested before update is performed.
-
-false
-
-spring.liquibase.url
-
-JDBC URL of the database to migrate. If not set, the primary configured data source is used.
-
-spring.liquibase.user
-
-Login user of the database to migrate.
-
+# 配置属性类：LiquibaseProperties
+spring.liquibase.change-log：                    变更日志的配置路径，默认值："classpath:/db/changelog/db.changelog-master.yaml"。
+spring.liquibase.clear-checksums：               是否清除当前变更日志中的所有校验和，在下次更新时重新计算校验和。
+spring.liquibase.contexts：                      逗号分隔的运行时上下文列表。
+spring.liquibase.default-schema：                默认的数据库Schema。
+spring.liquibase.liquibase-schema：              Liquibase对象的Schema。
+spring.liquibase.liquibase-tablespace：          Liquibase对象的Tablespace。
+spring.liquibase.database-change-log-lock-table：数据库变更日志并发使用的表名，默认值："DATABASECHANGELOGLOCK"。
+spring.liquibase.database-change-log-table：     数据库变更日志历史记录的表名，默认值："DATABASECHANGELOG"。
+spring.liquibase.drop-first：                    是否先删除数据库Schema。
+spring.liquibase.enabled：                       是否启用Liquibase，默认值：true。
+spring.liquibase.user：                          数据库的用户名。
+spring.liquibase.password：                      数据库的密码。
+spring.liquibase.driver-class-name：             数据库JDBC驱动的全限定类名，默认情况下根据URL自动检测。
+spring.liquibase.url：                           数据库的JDBC URL，如果没有设置，则使用主数据源。
+spring.liquibase.label-filter：                  逗号分隔的运行时标签列表。
+spring.liquibase.parameters.*：                  变更日志的参数key=value。
+spring.liquibase.rollback-file：                 执行更新时写入回滚SQL的文件（File）。
+spring.liquibase.test-rollback-on-update：       执行更新前是否测试回滚。
+spring.liquibase.tag：                           应用数据库变更时使用的标记名，可以与rollbackFile一起使用，为所有关联这个标记的变更生成回滚脚本。
 
 ```
 
@@ -104,28 +34,28 @@ Login user of the database to migrate.
 ```
 
 # @ConfigurationProperties：配置属性，Liquibase配置属性前缀：spring.liquibase，不忽略未知字段。
-# changeLog：                 Change log configuration path. = "classpath:/db/changelog/db.changelog-master.yaml";
-# clearChecksums：            Whether to clear all checksums in the current changelog, so they will be recalculated upon the next update.
-# contexts：                  Comma-separated list of runtime contexts to use.
-# defaultSchema：             Default database schema.
-# liquibaseSchema：           Schema to use for Liquibase objects.
-# liquibaseTablespace：       Tablespace to use for Liquibase objects.
-# databaseChangeLogTable：    Name of table to use for tracking change history. = "DATABASECHANGELOG"; 
-# databaseChangeLogLockTable：Name of table to use for tracking concurrent Liquibase usage. = "DATABASECHANGELOGLOCK";
-# dropFirst：                 Whether to first drop the database schema.
-# enabled：                   Whether to enable Liquibase support. = true
-# user：                      Login user of the database to migrate.
-# password：                  Login password of the database to migrate.
-# driverClassName：           Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
-# url：                       JDBC URL of the database to migrate. If not set, the primary configured data source is used.
-# labelFilter：               Comma-separated list of runtime labels to use.
-# parameters：                Map<String, String>  Change log parameters.
-# rollbackFile：              File File to which rollback SQL is written when an update is performed.
-# testRollbackOnUpdate：      Whether rollback should be tested before update is performed.
-# tag：                       Tag name to use when applying database changes. Can also be used with "rollbackFile" to generate a rollback script for all existing changes associated with that tag.
-# getXXX：                     获取XXX
-# isXXX：                      是否XXX
-# setXXX：                     设置XXX
+# changeLog：                 变更日志的配置路径，默认值："classpath:/db/changelog/db.changelog-master.yaml"。
+# clearChecksums：            是否清除当前变更日志中的所有校验和，在下次更新时重新计算校验和。
+# contexts：                  逗号分隔的运行时上下文列表。
+# defaultSchema：             默认的数据库Schema。
+# liquibaseSchema：           Liquibase对象的Schema。
+# liquibaseTablespace：       Liquibase对象的Tablespace。
+# databaseChangeLogTable：    数据库变更日志历史记录的表名，默认值："DATABASECHANGELOG"。
+# databaseChangeLogLockTable：数据库变更日志并发使用的表名，默认值："DATABASECHANGELOGLOCK"。
+# dropFirst：                 是否先删除数据库Schema。
+# enabled：                   是否启用Liquibase，默认值：true。
+# user：                      数据库的用户名。
+# password：                  数据库的密码。
+# driverClassName：           数据库JDBC驱动的全限定类名，默认情况下根据URL自动检测。
+# url：                       数据库的JDBC URL，如果没有设置，则使用主数据源。
+# labelFilter：               逗号分隔的运行时标签列表。
+# parameters：                变更日志的参数key=value。
+# rollbackFile：              执行更新时写入回滚SQL的文件（File）。
+# testRollbackOnUpdate：      执行更新前是否测试回滚。
+# tag：                       应用数据库变更时使用的标记名，可以与rollbackFile一起使用，为所有关联这个标记的变更生成回滚脚本。
+# getXXX：                    获取XXX
+# isXXX：                     是否XXX
+# setXXX：                    设置XXX
 org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
 
 ```
