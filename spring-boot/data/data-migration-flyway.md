@@ -92,6 +92,19 @@ org.springframework.boot.autoconfigure.flyway.FlywayProperties
 
 ```
 
+# @AutoConfiguration：自动配置类：在DataSourceAutoConfiguration、JdbcTemplateAutoConfiguration和HibernateJpaAutoConfiguration配置之后配置Flyway数据库迁移。
+# @Import：引入配置类：DatabaseInitializationDependencyConfigurer。
+# @ImportRuntimeHints：引入RuntimeHints注册器：FlywayAutoConfigurationRuntimeHints。
+# @ConditionalOnClass：前提条件，类路径中存在类：Flyway。
+# @ConditionalOnProperty：前提条件，spring.flyway.enabled=true或spring.flyway.enabled不存在。
+# @Conditional：前提条件：满足FlywayDataSourceCondition，即。
+#
+# stringOrNumberMigrationVersionConverter：
+# @Bean：创建Bean：StringOrNumberToMigrationVersionConverter。
+# @ConfigurationPropertiesBinding：需要配置@ConfigurationProperties的绑定。
+#
+# flywayDefaultDdlModeProvider：
+# @Bean：创建Bean：FlywaySchemaManagementProvider，依赖Bean：Flyway。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
 
 ```
@@ -100,7 +113,36 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
 
 ```
 
+# @Configuration：配置类：配置Flyway。
+# @EnableConfigurationProperties：启用配置属性：FlywayProperties。
+# @ConditionalOnClass：前提条件，类路径中存在类：JdbcUtils。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：Flyway。
+#
+# resourceProviderCustomizer：
+# @Bean：创建Bean：ResourceProviderCustomizer。
+#
+# flywayConnectionDetails：
+# @Bean：创建Bean：PropertiesFlywayConnectionDetails，依赖Bean：FlywayProperties。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：FlywayConnectionDetails。
+#
+# flyway：
+# @Bean：创建Bean：Flyway，依赖Bean：FlywayProperties、FlywayConnectionDetails、FlywayConfigurationCustomizer、ResourceLoader、ResourceProviderCustomizer、DataSource、@FlywayDataSource注解的DataSource、JavaMigration、Callback。
+#
+# flywayInitializer：
+# @Bean：创建Bean：FlywayMigrationInitializer，依赖Bean：FlywayMigrationStrategy。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：FlywayMigrationInitializer。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration
+
+```
+
+### FlywayConfigurationCustomizer
+
+```
+
+# FlywayConfiguration定制器。
+# 要自定义Flyway配置的Bean实现的回调接口。
+# customize：自定义Flyway配置（FluentConfiguration）。
+org.springframework.boot.autoconfigure.flyway.FlywayConfigurationCustomizer
 
 ```
 
@@ -111,7 +153,7 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConf
 # @AutoConfiguration：自动配置类：在FlywayAutoConfiguration配置之后配置FlywayEndpoint。
 # @ConditionalOnClass：前提条件，类路径中存在类：Flyway。
 # @ConditionalOnAvailableEndpoint：前提条件，端点可用：FlywayEndpoint。
-# 
+#
 # flywayEndpoint：
 # @Bean：创建Bean：FlywayEndpoint，依赖Bean：ApplicationContext。
 # @ConditionalOnBean：前提条件，BeanFactory中存在Bean：Flyway。
@@ -120,14 +162,24 @@ org.springframework.boot.actuate.autoconfigure.flyway.FlywayEndpointAutoConfigur
 
 ```
 
+## Flyway资源
+
+### FlywayAutoConfigurationRuntimeHints
+
+```
+
+# Flyway自动配置的RuntimeHints注册器（RuntimeHintsRegistrar）。
+# registerHints：注册资源模式：db/migration/*。
+org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints
+
+```
+
 ## XXX
 
 ```
 
-org.springframework.boot.autoconfigure.flyway.FlywayConfigurationCustomizer
 
 
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints
 
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.DataSourceBeanCondition

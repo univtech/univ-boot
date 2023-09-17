@@ -81,7 +81,7 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
 # @ConditionalOnClass：前提条件，类路径中存在类：SpringLiquibase、DatabaseChange。
 # @ConditionalOnProperty：前提条件，spring.liquibase.enabled=true或spring.liquibase.enabled不存在。
 # @Conditional：前提条件：满足LiquibaseDataSourceCondition，即BeanFactory中存在Bean：DataSource或JdbcConnectionDetails，或者存在spring.liquibase.url。
-# 
+#
 # liquibaseDefaultDdlModeProvider：
 # @Bean：创建Bean：LiquibaseSchemaManagementProvider，依赖Bean：SpringLiquibase。
 org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration
@@ -96,11 +96,11 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration
 # @EnableConfigurationProperties：启用配置属性：LiquibaseProperties。
 # @ConditionalOnClass：前提条件，类路径中存在类：ConnectionCallback。
 # @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：SpringLiquibase。
-# 
+#
 # liquibaseConnectionDetails：
 # @Bean：创建Bean：PropertiesLiquibaseConnectionDetails，依赖Bean：LiquibaseProperties、JdbcConnectionDetails。
 # @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：LiquibaseConnectionDetails。
-# 
+#
 # liquibase：
 # @Bean：创建Bean：SpringLiquibase，依赖Bean：DataSource、@LiquibaseDataSource注解的DataSource、LiquibaseProperties、LiquibaseConnectionDetails。
 org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.LiquibaseConfiguration
@@ -114,12 +114,12 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.Liqu
 # @AutoConfiguration：自动配置类：在LiquibaseAutoConfiguration配置之后配置LiquibaseEndpoint。
 # @ConditionalOnClass：前提条件，类路径中存在类：SpringLiquibase。
 # @ConditionalOnAvailableEndpoint：前提条件，端点可用：LiquibaseEndpoint。
-# 
+#
 # liquibaseEndpoint：
 # @Bean：创建Bean：LiquibaseEndpoint，依赖Bean：ApplicationContext。
 # @ConditionalOnBean：前提条件，BeanFactory中存在Bean：SpringLiquibase。
 # @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：LiquibaseEndpoint。
-# 
+#
 # preventDataSourceCloseBeanPostProcessor：
 # @Bean：创建Bean：阻止关闭DataSource的Bean后置处理器（BeanPostProcessor），调用DataSourceClosingSpringLiquibase.setCloseDataSourceOnceMigrated(false)。
 # @ConditionalOnBean：前提条件，BeanFactory中存在Bean：SpringLiquibase。
