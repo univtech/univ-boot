@@ -174,6 +174,33 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayAuto
 
 ```
 
+### NativeImageResourceProvider
+
+```
+
+org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider
+org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider.LocatedResource
+
+```
+
+### NativeImageResourceProviderCustomizer
+
+```
+
+org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer
+
+```
+
+### ResourceProviderCustomizer
+
+```
+
+org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizer
+org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor
+org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor.AotContribution
+
+```
+
 ## Flyway条件
 
 ### FlywayDataSourceCondition
@@ -232,6 +259,34 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.Properties
 
 ```
 
+## Flyway策略
+
+### FlywayMigrationStrategy
+
+```
+
+# Flyway迁移策略：初始化Flyway迁移。
+# 可以注册自定义FlywayMigrationStrategy Bean，覆盖自动配置的迁移行为。
+# migrate：执行Flyway迁移。
+org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy
+
+```
+
+### FlywayMigrationInitializer
+
+```
+
+# Flyway迁移初始化器：通过FlywayMigrationStrategy执行Flyway迁移。
+# flyway：            Flyway对象。
+# migrationStrategy： Flyway迁移策略。
+# order：             优先级顺序，默认值：0，最高优先级。
+# afterPropertiesSet：属性设置之后，通过FlywayMigrationStrategy执行Flyway迁移。
+# getOrder：          获取优先级顺序。
+# setOrder：          设置优先级顺序。
+org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer
+
+```
+
 ## Flyway数据源
 
 ### FlywayDataSource
@@ -264,92 +319,21 @@ org.springframework.boot.autoconfigure.flyway.FlywaySchemaManagementProvider
 
 ## XXX
 
+### LocationResolver
+
 ```
 
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.LocationResolver
+
+```
+
+### StringOrNumberToMigrationVersionConverter
+
+```
+
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.StringOrNumberToMigrationVersionConverter
 
-
-org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer
-org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy
-
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider.LocatedResource
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProvider
-org.springframework.boot.autoconfigure.flyway.NativeImageResourceProviderCustomizer
-org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizer
-org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor.AotContribution
-org.springframework.boot.autoconfigure.flyway.ResourceProviderCustomizerBeanRegistrationAotProcessor
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
-
-```
-
-
-
-
 
 ## Flyway检测器
 

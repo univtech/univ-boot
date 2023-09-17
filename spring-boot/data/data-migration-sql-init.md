@@ -243,30 +243,30 @@ org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer
 org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer
 
 # SQL DataSource的数据库初始化器。
-# 可以注册自定义SqlDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# 可以注册自定义SqlDataSourceScriptDatabaseInitializer Bean，覆盖自动配置。
 # @ImportRuntimeHints：引入RuntimeHints注册器：SqlInitializationScriptsRuntimeHints。
 # getSettings：根据SqlInitializationProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer
 
 # Spring Batch DataSource的数据库初始化器。
-# 可以注册自定义BatchDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# 可以注册自定义BatchDataSourceScriptDatabaseInitializer Bean，覆盖自动配置。
 # getSettings：根据BatchProperties.Jdbc创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer
 
 # Spring Integration DataSource的数据库初始化器。
-# 可以注册自定义IntegrationDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# 可以注册自定义IntegrationDataSourceScriptDatabaseInitializer Bean，覆盖自动配置。
 # getSettings：根据IntegrationProperties.Jdbc创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.integration.IntegrationDataSourceScriptDatabaseInitializer
 
 # Quartz Scheduler DataSource的数据库初始化器。
-# 可以注册自定义QuartzDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# 可以注册自定义QuartzDataSourceScriptDatabaseInitializer Bean，覆盖自动配置。
 # commentPrefixes：注释前缀。
 # customize：      commentPrefixes不为空时，设置ResourceDatabasePopulator的注释前缀。
 # getSettings：    根据QuartzProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.quartz.QuartzDataSourceScriptDatabaseInitializer
 
 # Spring Session JDBC DataSource的数据库初始化器。
-# 可以注册自定义JdbcSessionDataSourceScriptDatabaseInitializer Bean，覆盖自动化配置。
+# 可以注册自定义JdbcSessionDataSourceScriptDatabaseInitializer Bean，覆盖自动配置。
 # getSettings：根据JdbcSessionProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.session.JdbcSessionDataSourceScriptDatabaseInitializer
 
@@ -277,7 +277,7 @@ org.springframework.boot.autoconfigure.session.JdbcSessionDataSourceScriptDataba
 org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer
 
 # SQL R2DBC ConnectionFactory的数据库初始化器。
-# 可以注册自定义SqlR2dbcScriptDatabaseInitializer Bean，覆盖自动化配置。
+# 可以注册自定义SqlR2dbcScriptDatabaseInitializer Bean，覆盖自动配置。
 # @ImportRuntimeHints：引入RuntimeHints注册器：SqlInitializationScriptsRuntimeHints。
 # getSettings：根据SqlInitializationProperties创建DatabaseInitializationSettings。
 org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer
