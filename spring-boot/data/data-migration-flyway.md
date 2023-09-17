@@ -97,7 +97,7 @@ org.springframework.boot.autoconfigure.flyway.FlywayProperties
 # @ImportRuntimeHints：引入RuntimeHints注册器：FlywayAutoConfigurationRuntimeHints。
 # @ConditionalOnClass：前提条件，类路径中存在类：Flyway。
 # @ConditionalOnProperty：前提条件，spring.flyway.enabled=true或spring.flyway.enabled不存在。
-# @Conditional：前提条件：满足FlywayDataSourceCondition，即。
+# @Conditional：前提条件：满足FlywayDataSourceCondition，即BeanFactory中存在Bean：DataSource或JdbcConnectionDetails，或者存在spring.flyway.url。
 #
 # stringOrNumberMigrationVersionConverter：
 # @Bean：创建Bean：StringOrNumberToMigrationVersionConverter。
@@ -174,17 +174,39 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayAuto
 
 ```
 
-## XXX
+## Flyway条件
+
+### FlywayDataSourceCondition
 
 ```
 
+# Flyway DataSource条件。
+org.springframework.boot.autoconfigure.condition.SpringBootCondition
+    org.springframework.boot.autoconfigure.condition.AbstractNestedCondition
+        org.springframework.boot.autoconfigure.condition.AnyNestedCondition
+            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition
 
-
-
+# Flyway DataSource条件。
+# AnyNestedCondition：任何嵌套的条件类匹配时，则满足条件。
+# 满足条件的情况：BeanFactory中存在Bean：DataSource或JdbcConnectionDetails，或者存在spring.flyway.url。
+# 测试条件的阶段：REGISTER_BEAN（注册Bean时）。
+# 嵌套的条件类：DataSourceBeanCondition、JdbcConnectionDetailsCondition、FlywayUrlCondition。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition
+
+# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：DataSource。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.DataSourceBeanCondition
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.FlywayUrlCondition
+
+# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：JdbcConnectionDetails。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.JdbcConnectionDetailsCondition
+
+# @ConditionalOnProperty：前提条件，存在spring.flyway.url
+org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.FlywayUrlCondition
+
+```
+
+## XXX
+
+```
 
 org.springframework.boot.autoconfigure.flyway.FlywayConnectionDetails
 
