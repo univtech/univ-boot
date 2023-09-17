@@ -29,6 +29,15 @@ spring.liquibase.tag：                           应用数据库变更时使用
 
 ```
 
+### management.endpoint.liquibase.*
+
+```
+
+management.endpoint.liquibase.enabled：           是否启用liquibase端点，默认值：true。
+management.endpoint.liquibase.cache.time-to-live：缓存响应的最长时间，默认值：0ms。
+
+```
+
 ### LiquibaseProperties
 
 ```
