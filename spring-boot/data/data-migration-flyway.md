@@ -204,14 +204,39 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayData
 
 ```
 
+## Flyway连接
+
+### FlywayConnectionDetails
+
+```
+
+# Flyway连接详情。
+org.springframework.boot.autoconfigure.service.connection.ConnectionDetails
+    org.springframework.boot.autoconfigure.flyway.FlywayConnectionDetails
+        org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.PropertiesFlywayConnectionDetails
+
+# Flyway连接详情：使用JDBC建立SQL服务连接。
+# getUsername：       获取数据库的用户名。
+# getPassword：       获取数据库的密码。
+# getJdbcUrl：        获取数据库的JDBC URL。
+# getDriverClassName：获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
+org.springframework.boot.autoconfigure.flyway.FlywayConnectionDetails
+
+# Flyway属性的连接详情。
+# properties：        Flyway配置属性：FlywayProperties。
+# getUsername：       根据FlywayProperties获取数据库的用户名。
+# getPassword：       根据FlywayProperties获取数据库的密码。
+# getJdbcUrl：        根据FlywayProperties获取数据库的JDBC URL。
+# getDriverClassName：根据FlywayProperties获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
+org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.PropertiesFlywayConnectionDetails
+
+```
+
 ## XXX
 
 ```
 
-org.springframework.boot.autoconfigure.flyway.FlywayConnectionDetails
-
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.LocationResolver
-org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.PropertiesFlywayConnectionDetails
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.StringOrNumberToMigrationVersionConverter
 
 org.springframework.boot.autoconfigure.flyway.FlywayDataSource
