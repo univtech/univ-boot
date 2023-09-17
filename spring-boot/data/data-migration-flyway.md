@@ -317,12 +317,16 @@ org.springframework.boot.autoconfigure.flyway.FlywaySchemaManagementProvider
 
 ```
 
-## XXX
+## Flyway转换器
 
 ### LocationResolver
 
 ```
 
+# 位置解析器。
+# VENDOR_PLACEHOLDER：供应商占位符："{vendor}"。
+# dataSource：        DataSource对象。
+# resolveLocations：  解析位置列表。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.LocationResolver
 
 ```
@@ -331,6 +335,10 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.LocationRe
 
 ```
 
+# 迁移版本转换器。
+# CONVERTIBLE_TYPES：  获取可转换的类型集合，把String或Number转换为MigrationVersion的ConvertiblePair集合。
+# getConvertibleTypes：获取可转换的类型集合。
+# convert：            把String或Number转换为MigrationVersion的ConvertiblePair集合。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.StringOrNumberToMigrationVersionConverter
 
 ```
