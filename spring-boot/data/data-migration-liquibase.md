@@ -282,7 +282,7 @@ org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
 # context：应用程序上下文。
 #
 # liquibaseBeans：
-# @ReadOperation：读取操作，读取liquibase信息，创建LiquibaseBeansDescriptor。
+# @ReadOperation：读取操作，读取Liquibase Bean信息，创建LiquibaseBeansDescriptor。
 org.springframework.boot.actuate.liquibase.LiquibaseEndpoint
 
 ```
@@ -317,7 +317,7 @@ org.springframework.boot.actuate.liquibase.LiquibaseEndpoint.LiquibaseBeanDescri
 # changeLog：    变更日志。
 # comments：     注释。
 # contexts：     上下文名称集合。
-# dateExecuted： 执行时间点Instant。
+# dateExecuted： 执行时间点（Instant）。
 # deploymentId： 部署ID。
 # description：  描述。
 # execType：     执行类型。
@@ -376,10 +376,10 @@ org.springframework.boot.autoconfigure.service.connection.ConnectionDetails
         org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 
 # Liquibase容器的连接详情。
-# getUsername：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的用户名。
-# getPassword：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的密码。
-# getJdbcUrl：        根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的JDBC URL。
-# getDriverClassName：根据ContainerConnectionSource<JdbcDatabaseContainer<?>获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
+# getUsername：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>>获取数据库的用户名。
+# getPassword：       根据ContainerConnectionSource<JdbcDatabaseContainer<?>>获取数据库的密码。
+# getJdbcUrl：        根据ContainerConnectionSource<JdbcDatabaseContainer<?>>获取数据库的JDBC URL。
+# getDriverClassName：根据ContainerConnectionSource<JdbcDatabaseContainer<?>>获取数据库的驱动器类名，默认值：JDBC URL中指定的驱动器类名。
 org.springframework.boot.testcontainers.service.connection.liquibase.LiquibaseContainerConnectionDetailsFactory.LiquibaseContainerConnectionDetails
 
 ```
