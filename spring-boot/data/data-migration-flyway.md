@@ -1,14 +1,128 @@
-# flyway
+# Flyway
+
+## Flyway属性
+
+### spring.flyway.*
+
+```
+
+spring.flyway.baseline-description
+spring.flyway.baseline-on-migrate
+spring.flyway.baseline-version
+spring.flyway.batch
+spring.flyway.cherry-pick
+spring.flyway.clean-disabled
+spring.flyway.clean-on-validation-error
+spring.flyway.connect-retries
+spring.flyway.connect-retries-interval
+spring.flyway.create-schemas
+spring.flyway.default-schema
+spring.flyway.detect-encoding
+spring.flyway.driver-class-name
+spring.flyway.enabled
+spring.flyway.encoding
+spring.flyway.error-overrides
+spring.flyway.execute-in-transaction
+spring.flyway.fail-on-missing-locations
+spring.flyway.group
+spring.flyway.ignore-migration-patterns
+spring.flyway.init-sqls
+spring.flyway.installed-by
+spring.flyway.jdbc-properties.*
+spring.flyway.kerberos-config-file
+spring.flyway.license-key
+spring.flyway.locations
+spring.flyway.lock-retry-count
+spring.flyway.loggers
+spring.flyway.mixed
+spring.flyway.oracle-kerberos-cache-file
+spring.flyway.oracle-sqlplus
+spring.flyway.oracle-sqlplus-warn
+spring.flyway.oracle-wallet-location
+spring.flyway.out-of-order
+spring.flyway.output-query-results
+spring.flyway.password
+spring.flyway.placeholder-prefix
+spring.flyway.placeholder-replacement
+spring.flyway.placeholder-separator
+spring.flyway.placeholder-suffix
+spring.flyway.placeholders.*
+spring.flyway.repeatable-sql-migration-prefix
+spring.flyway.schemas
+spring.flyway.script-placeholder-prefix
+spring.flyway.script-placeholder-suffix
+spring.flyway.skip-default-callbacks
+spring.flyway.skip-default-resolvers
+spring.flyway.skip-executing-migrations
+spring.flyway.sql-migration-prefix
+spring.flyway.sql-migration-separator
+spring.flyway.sql-migration-suffixes
+spring.flyway.sql-server-kerberos-login-file
+spring.flyway.stream
+spring.flyway.table
+spring.flyway.tablespace
+spring.flyway.target
+spring.flyway.url
+spring.flyway.user
+spring.flyway.validate-migration-naming
+spring.flyway.validate-on-migrate
+
+```
+
+### management.endpoint.flyway.*
+
+```
+
+management.endpoint.flyway.cache.time-to-live
+management.endpoint.flyway.enabled
+
+```
+
+### FlywayProperties
 
 ```
 
 org.springframework.boot.autoconfigure.flyway.FlywayProperties
 
+```
+
+## Flyway配置
+
+### FlywayAutoConfiguration
+
+```
+
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
+
+```
+
+### FlywayConfiguration
+
+```
 
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration
 
+```
+
+### FlywayEndpointAutoConfiguration
+
+```
+
+# @AutoConfiguration：自动配置类：在FlywayAutoConfiguration配置之后配置FlywayEndpoint。
+# @ConditionalOnClass：前提条件，类路径中存在类：Flyway。
+# @ConditionalOnAvailableEndpoint：前提条件，端点可用：FlywayEndpoint。
+# 
+# flywayEndpoint：
+# @Bean：创建Bean：FlywayEndpoint，依赖Bean：ApplicationContext。
+# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：Flyway。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：FlywayEndpoint。
 org.springframework.boot.actuate.autoconfigure.flyway.FlywayEndpointAutoConfiguration
+
+```
+
+## XXX
+
+```
 
 org.springframework.boot.autoconfigure.flyway.FlywayConfigurationCustomizer
 

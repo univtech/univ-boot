@@ -110,6 +110,7 @@ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration.Liqu
 ### LiquibaseEndpointAutoConfiguration
 
 ```
+
 # @AutoConfiguration：自动配置类：在LiquibaseAutoConfiguration配置之后配置LiquibaseEndpoint。
 # @ConditionalOnClass：前提条件，类路径中存在类：SpringLiquibase。
 # @ConditionalOnAvailableEndpoint：前提条件，端点可用：LiquibaseEndpoint。
