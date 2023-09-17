@@ -87,7 +87,36 @@ org.springframework.boot.testcontainers.service.connection.flyway.FlywayContaine
 
 
 
+## Flyway检测器
 
+### FlywayDatabaseInitializerDetector
+
+```
+
+# 数据库初始化器检测器。
+org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+        org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：Flyway。
+org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
+
+```
+
+### FlywayMigrationInitializerDatabaseInitializerDetector
+
+```
+
+# 数据库初始化器检测器。
+org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+        org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：FlywayMigrationInitializer。
+# 优先级顺序：1。
+org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
+
+```
 
 
 

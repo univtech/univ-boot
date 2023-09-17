@@ -340,8 +340,6 @@ org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
         org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
         org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
         org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
-        org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
-        org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
 
 # 数据库初始化器检测器。
 # 实现类应该注册在META-INF/spring.factories的org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector下面。
@@ -366,13 +364,6 @@ org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
 
 # 数据库初始化器检测器，检测指定类型的Bean：R2dbcScriptDatabaseInitializer。
 org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
-
-# 数据库初始化器检测器，检测指定类型的Bean：Flyway。
-org.springframework.boot.flyway.FlywayDatabaseInitializerDetector
-
-# 数据库初始化器检测器，检测指定类型的Bean：FlywayMigrationInitializer。
-# 优先级顺序：1。
-org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector
 
 ```
 
