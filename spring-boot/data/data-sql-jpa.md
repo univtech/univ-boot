@@ -60,25 +60,18 @@ org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.PersistenceM
 
 org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.HibernateRuntimeHints
 
-
-org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder
-org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder.Builder
-
-org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
-org.springframework.boot.orm.jpa.hibernate.SpringJtaPlatform
-
 org.springframework.boot.autoconfigure.orm.jpa.EntityManagerFactoryBuilderCustomizer
 org.springframework.boot.autoconfigure.orm.jpa.EntityManagerFactoryDependsOnPostProcessor
 org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider
 org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings
-
-
 ```
 
 
 
-
-
+```
+org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder
+org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder.Builder
+```
 
 ### JpaDatabaseInitializerDetector
 
@@ -112,6 +105,29 @@ org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDete
 # spring.jpa.defer-datasource-initialization=true时：不进行检测。
 # spring.jpa.defer-datasource-initialization=false或不存在时：检测EntityManagerFactory、AbstractEntityManagerFactoryBean。
 org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
+
+```
+
+### SpringImplicitNamingStrategy
+
+```
+
+# Spring的Hibernate ImplicitNamingStrategy：遵循Spring推荐的命名约定。
+# 除了连接表的名称为：{owning_physical_table_name}_{association_owning_property_name}，SpringImplicitNamingStrategy实现的命名约定与ImplicitNamingStrategyJpaCompliantImpl相同。
+# determineJoinTableName：没有显式给定名称时，根据给定的ImplicitJoinTableNameSource，确定连接表的名称。
+org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+
+```
+
+### SpringJtaPlatform
+
+```
+
+# Spring的Hibernate JtaPlatform：从Spring配置的JtaTransactionManager中解析JTA UserTransaction和TransactionManager。
+# transactionManager：      JTA事务管理器（JtaTransactionManager）。
+# locateTransactionManager：从Spring配置的JtaTransactionManager中获取事务管理器（TransactionManager）。
+# locateUserTransaction：   从Spring配置的JtaTransactionManager中获取用户事务（UserTransaction）。
+org.springframework.boot.orm.jpa.hibernate.SpringJtaPlatform
 
 ```
 
