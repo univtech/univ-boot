@@ -1,4 +1,33 @@
-# JPA访问数据库
+# JPA
+
+## JPA属性
+
+### spring.jpa.*
+
+```
+
+spring.jpa.database
+spring.jpa.database-platform
+spring.jpa.defer-datasource-initialization
+spring.jpa.generate-ddl
+spring.jpa.hibernate.ddl-auto
+spring.jpa.hibernate.naming.implicit-strategy
+spring.jpa.hibernate.naming.physical-strategy
+spring.jpa.mapping-resources
+spring.jpa.open-in-view
+spring.jpa.properties.*
+spring.jpa.show-sql
+
+```
+
+### spring.data.jpa.repositories.*
+
+```
+
+spring.data.jpa.repositories.enabled
+spring.data.jpa.repositories.bootstrap-mode
+
+```
 
 ```
 
