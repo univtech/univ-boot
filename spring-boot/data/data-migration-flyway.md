@@ -73,8 +73,8 @@ spring.flyway.validate-on-migrate
 
 ```
 
-management.endpoint.flyway.cache.time-to-live
-management.endpoint.flyway.enabled
+management.endpoint.flyway.cache.time-to-live：缓存响应的最长时间，默认值：0ms。
+management.endpoint.flyway.enabled：           是否启用flyway端点，默认值：true。
 
 ```
 
@@ -82,91 +82,72 @@ management.endpoint.flyway.enabled
 
 ```
 
-# @ConfigurationProperties：配置属性，Flyway数据库迁移的配置属性前缀：spring.flyway。
-# enabled：是否启用Flyway，默认值：true。
-# failOnMissingLocations：迁移脚本的位置不存在时是否抛出异常。
-
-	/**
-	 * Locations of migrations scripts. Can contain the special "{vendor}" placeholder to use vendor-specific locations.
-	 */
-	private List<String> locations = new ArrayList<>(Collections.singletonList("classpath:db/migration"))：
-# encoding = StandardCharsets.UTF_8：SQL迁移的编码。
-# connectRetries：尝试连接数据库时的最大重试次数。
-
-	/**
-	 * Maximum time between retries when attempting to connect to the database. If a duration suffix is not specified, seconds will be used.
-	 */
-	@DurationUnit(ChronoUnit.SECONDS)
-	private Duration connectRetriesInterval = Duration.ofSeconds(120)：
-
-# lockRetryCount = 50：尝试获取锁时的最大重试次数。
-# defaultSchema：Flyway管理的默认Schema名称（区分大小写）。
-# schemas = new ArrayList<>()：Flyway管理的Schema名称（区分大小写）。
-# createSchemas = true：Flyway是否应该尝试创建schemas属性中指定的Schema。
-# table = "flyway_schema_history"：Flyway使用的Schema历史表。
-# tablespace：创建Schema历史表的表空间，使用不支持表空间的数据库时会被忽略，默认为Flyway使用的连接的默认表空间。
-# baselineDescription = "<< Flyway Baseline >>"：应用基线时，标记现有Schema的描述。
-# baselineVersion = "1"：执行基线时，标记现有Schema的版本。
-# installedBy：Schema历史表中记录的已应用迁移的用户名。
-# placeholders = new HashMap<>()：应用于SQL迁移脚本的占位符及其替代值key=value。
-# placeholderPrefix = "${"：迁移脚本中占位符的前缀。
-# placeholderSuffix = "}"：迁移脚本中占位符的后缀。
-# placeholderSeparator = ":"：默认占位符的分隔符。
-# placeholderReplacement = true：是否替换迁移脚本中的占位符。
-# sqlMigrationPrefix = "V"：SQL迁移的文件名前缀。
-# sqlMigrationSuffixes = new ArrayList<>(Collections.singleton(".sql"))：SQL迁移的文件名后缀列表。
-# sqlMigrationSeparator = "__"：SQL迁移的文件名分隔符。
-# repeatableSqlMigrationPrefix = "R"：可重复的SQL迁移的文件名前缀。
-# target = "latest"：迁移的目标版本。
-# user：迁移数据库的用户名。
-# password：迁移数据库的密码。
-# driverClassName：JDBC驱动的全限定类名，默认根据URL自动检测。
-# url：迁移数据库的JDBC URL，未设置时，使用配置的主数据源。
-# initSqls = new ArrayList<>()：获得连接后立即初始化连接时执行的SQL语句列表。
-# baselineOnMigrate：迁移非空Schema时是否自动调用基线。
-# cleanDisabled = true：是否禁用数据库清理。
-# cleanOnValidationError：验证错误时是否自动调用清理。
-# group：应用所有挂起的迁移时，是否把它们分组到同一事务中。
-# mixed：同一迁移中是否允许混合事务和非事务语句。
-# outOfOrder：是否允许不按顺序运行迁移。
-# skipDefaultCallbacks：是否跳过默认回调，true：只使用自定义回调。
-# skipDefaultResolvers：是否跳过默认解析器，true：只使用自定义解析器。
-# validateMigrationNaming = false：是否验证脚本不遵循正确命名约定的迁移和回调。
-# validateOnMigrate = true：执行迁移时是否自动调用验证。
-# scriptPlaceholderPrefix = "FP__"：迁移脚本中占位符的前缀。
-# scriptPlaceholderSuffix = "__"：迁移脚本中占位符的后缀。
-# executeInTransaction = true：Flyway是否应该在事务中执行SQL。
-# loggers = { "slf4j" }：Flyway使用的日志记录器。
-# batch：执行SQL语句时是否批量处理，需要Flyway Team的支持。
-
-	/**
-	 * File to which the SQL statements of a migration dry run should be output. 需要Flyway Team的支持。
-	 */
-	private File dryRunOutput：
-
-	/**
-	 * Rules for the built-in error handling to override specific SQL states and error codes. 需要Flyway Team的支持。
-	 */
-	private String[] errorOverrides：
-
-# licenseKey：Flyway Team的许可密钥。
-# oracleSqlplus：是否启用Oracle SQL*Plus命令，需要Flyway Team的支持。
-# oracleSqlplusWarn：碰到不支持的Oracle SQL*Plus语句时，是否发出警告，而不是错误，需要Flyway Team的支持。
-# stream：执行SQL语句时是否流式处理，需要Flyway Team的支持。
-# undoSqlMigrationPrefix：撤销SQL迁移的文件名前缀，需要Flyway Team的支持。
-# cherryPick：迁移或撤销时，Flyway应该考虑的迁移，为空时，考虑所有可用迁移，需要Flyway Team的支持。
-# jdbcProperties：JDBC驱动的属性key=value，需要Flyway Team的支持。
-# kerberosConfigFile：Kerberos配置文件的路径，需要Flyway Team的支持。
-# oracleKerberosCacheFile：Oracle Kerberos缓存文件的路径，需要Flyway Team的支持。
-# oracleWalletLocation：Oracle Wallet的位置，用于自动登录数据库，需要Flyway Team的支持。
-# outputQueryResults：执行迁移时，Flyway是否应该输出包含查询结果的表，需要Flyway Team的支持。
-# sqlServerKerberosLoginFile：SQL服务器的Kerberos登录文件路径，需要Flyway Team的支持。
-# skipExecutingMigrations：Flyway是否应该跳过迁移内容的执行，只更新Schema的历史表，需要Flyway Team的支持。
-# ignoreMigrationPatterns：逗号分隔的模式列表，验证迁移时，忽略的迁移，需要Flyway Team的支持。
-# detectEncoding：是否尝试自动检测SQL迁移文件的编码，需要Flyway Team的支持。
-# getXXX：                    获取XXX
-# isXXX：                     是否XXX
-# setXXX：                    设置XXX
+# @ConfigurationProperties：    配置属性，Flyway数据库迁移的配置属性前缀：spring.flyway。
+# enabled：                     是否启用Flyway，默认值：true。
+# failOnMissingLocations：      迁移脚本的位置不存在时是否抛出异常。
+# locations：                   迁移脚本的位置列表，"{vendor}"占位符用于供应商特定的位置，默认值："classpath:db/migration"。
+# encoding：                    SQL迁移的编码，默认值：UTF-8。
+# connectRetries：              尝试连接数据库时的最大重试次数。
+# connectRetriesInterval：      尝试连接数据库时的最大重试时间间隔，默认时间后缀为秒（SECONDS），默认值：120秒。
+# lockRetryCount：              尝试获取锁时的最大重试次数，默认值：50。
+# defaultSchema：               Flyway管理的默认Schema名称（区分大小写）。
+# schemas：                     Flyway管理的Schema名称（区分大小写）。
+# createSchemas：               Flyway是否应该尝试创建schemas属性中指定的Schema，默认值：true。
+# table：                       Flyway使用的Schema历史表，默认值："flyway_schema_history"。
+# tablespace：                  创建Schema历史表的表空间，使用不支持表空间的数据库时会被忽略，默认为Flyway使用的连接的默认表空间。
+# baselineDescription：         应用基线时，标记现有Schema的描述，默认值："<< Flyway Baseline >>"。
+# baselineVersion：             执行基线时，标记现有Schema的版本，默认值："1"。
+# installedBy：                 Schema历史表中记录的已应用迁移的用户名。
+# placeholders：                应用于SQL迁移脚本的占位符及其替代值key=value。
+# placeholderPrefix：           迁移脚本中占位符的前缀，默认值："${"。
+# placeholderSuffix：           迁移脚本中占位符的后缀，默认值："}"。
+# placeholderSeparator：        默认占位符的分隔符，默认值：":"。
+# placeholderReplacement：      是否替换迁移脚本中的占位符，默认值：true。
+# sqlMigrationPrefix：          SQL迁移的文件名前缀，默认值："V"。
+# sqlMigrationSuffixes：        SQL迁移的文件名后缀列表，默认值：".sql"。
+# sqlMigrationSeparator：       SQL迁移的文件名分隔符，默认值："__"。
+# repeatableSqlMigrationPrefix：可重复的SQL迁移的文件名前缀，默认值："R"。
+# target：                      迁移的目标版本，默认值："latest"。
+# user：                        迁移数据库的用户名。
+# password：                    迁移数据库的密码。
+# driverClassName：             JDBC驱动的全限定类名，默认根据URL自动检测。
+# url：                         迁移数据库的JDBC URL，未设置时，使用配置的主数据源。
+# initSqls：                    获得连接后立即初始化连接时执行的SQL语句列表。
+# baselineOnMigrate：           迁移非空Schema时是否自动调用基线。
+# cleanDisabled：               是否禁用数据库清理，默认值：true。
+# cleanOnValidationError：      验证错误时是否自动调用清理。
+# group：                       应用所有挂起的迁移时，是否把它们分组到同一事务中。
+# mixed：                       同一迁移中是否允许混合事务和非事务语句。
+# outOfOrder：                  是否允许不按顺序运行迁移。
+# skipDefaultCallbacks：        是否跳过默认回调，true：只使用自定义回调。
+# skipDefaultResolvers：        是否跳过默认解析器，true：只使用自定义解析器。
+# validateMigrationNaming：     是否验证脚本不遵循正确命名约定的迁移和回调，默认值：false。
+# validateOnMigrate：           执行迁移时是否自动调用验证，默认值：true。
+# scriptPlaceholderPrefix：     迁移脚本中占位符的前缀，默认值："FP__"。
+# scriptPlaceholderSuffix：     迁移脚本中占位符的后缀，默认值："__"。
+# executeInTransaction：        Flyway是否应该在事务中执行SQL，默认值：true。
+# loggers：                     Flyway使用的日志记录器，默认值：{ "slf4j" }。
+# batch：                       执行SQL语句时是否批量处理，需要Flyway Team的支持。
+# dryRunOutput：                试运行迁移的SQL语句输出的文件，需要Flyway Team的支持。
+# errorOverrides：              内置的错误处理规则，以覆盖特定的SQL状态和错误代码，需要Flyway Team的支持。
+# licenseKey：                  Flyway Team的许可密钥。
+# oracleSqlplus：               是否启用Oracle SQL*Plus命令，需要Flyway Team的支持。
+# oracleSqlplusWarn：           碰到不支持的Oracle SQL*Plus语句时，是否发出警告，而不是错误，需要Flyway Team的支持。
+# stream：                      执行SQL语句时是否流式处理，需要Flyway Team的支持。
+# undoSqlMigrationPrefix：      撤销SQL迁移的文件名前缀，需要Flyway Team的支持。
+# cherryPick：                  迁移或撤销时，Flyway应该考虑的迁移，为空时，考虑所有可用迁移，需要Flyway Team的支持。
+# jdbcProperties：              JDBC驱动的属性key=value，需要Flyway Team的支持。
+# kerberosConfigFile：          Kerberos配置文件的路径，需要Flyway Team的支持。
+# oracleKerberosCacheFile：     Oracle Kerberos缓存文件的路径，需要Flyway Team的支持。
+# oracleWalletLocation：        Oracle Wallet的位置，用于自动登录数据库，需要Flyway Team的支持。
+# outputQueryResults：          执行迁移时，Flyway是否应该输出包含查询结果的表，需要Flyway Team的支持。
+# sqlServerKerberosLoginFile：  SQL服务器的Kerberos登录文件路径，需要Flyway Team的支持。
+# skipExecutingMigrations：     Flyway是否应该跳过迁移内容的执行，只更新Schema的历史表，需要Flyway Team的支持。
+# ignoreMigrationPatterns：     逗号分隔的模式列表，验证迁移时，忽略的迁移，需要Flyway Team的支持。
+# detectEncoding：              是否尝试自动检测SQL迁移文件的编码，需要Flyway Team的支持。
+# getXXX：                      获取XXX
+# isXXX：                       是否XXX
+# setXXX：                      设置XXX
 org.springframework.boot.autoconfigure.flyway.FlywayProperties
 
 ```
