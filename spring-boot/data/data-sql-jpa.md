@@ -1,7 +1,6 @@
 # JPA
 
 org.springframework.boot.autoconfigure.orm.jpa
-org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa
 org.springframework.boot.test.autoconfigure.orm.jpa
 
 ## JPA属性
@@ -38,7 +37,7 @@ org.springframework.boot.autoconfigure.orm.jpa.HibernatePropertiesCustomizer
 org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.NamingStrategiesHibernatePropertiesCustomizer
 ```
 
-## Hibernate JPA
+## HibernateJpa
 
 ```
 
@@ -160,7 +159,7 @@ org.springframework.boot.orm.jpa.hibernate.SpringJtaPlatform
 
 ```
 
-## Hibernate指标
+## HibernateMetrics
 
 ### HibernateMetricsAutoConfiguration
 
@@ -182,7 +181,7 @@ org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa.HibernateMetricsA
 
 ```
 
-## JPA仓库
+## JpaRepository
 
 ### JpaRepositoriesAutoConfiguration
 
@@ -276,7 +275,9 @@ org.springframework.boot.autoconfigure.data.jpa.EnversRevisionRepositoriesRegist
 
 ```
 
-## JPA测试
+## JpaTest
+
+### TestEntityManagerAutoConfiguration
 
 ```
 
@@ -288,11 +289,117 @@ org.springframework.boot.autoconfigure.data.jpa.EnversRevisionRepositoriesRegist
 # @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：TestEntityManager。
 org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration
 
-org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa
-org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestEntityManager
+```
+
+### DataJpaTest
+
+```
+
+# 只关注JPA组件的JPA测试注解。
+# 这个组件会禁用完整的自动配置，只使用JPA测试相关的配置。
+# 默认情况下，@DataJpaTest注解的测试是事务性的，测试结束时会进行回滚。
+# 如果要使用嵌入式内存数据库替换显式的或自动配置的DataSource，可以使用@AutoConfigureTestDatabase覆盖这些配置。
+# 如果既要加载完整的应用程序配置，又要使用嵌入式数据库，应该使用@SpringBootTest和@AutoConfigureTestDatabase，而不是使用@DataJpaTest。
+# 使用JUnit 4时，@DataJpaTest注解应该与@RunWith(SpringRunner.class)一起使用。
+#
+# @Target：类（TYPE）。
+# @Inherited：可继承。
+# @BootstrapWith：TestContext启动器类：DataJpaTestContextBootstrapper。
+# @ExtendWith：注册扩展：SpringExtension。
+# @OverrideAutoConfiguration：覆盖自动配置：false。
+# @TypeExcludeFilters：类型排除过滤器：DataJpaTypeExcludeFilter。
+# @Transactional：开启事务。
+# @AutoConfigureCache：自动配置缓存。
+# @AutoConfigureDataJpa：自动配置Spring Data JPA。
+# @AutoConfigureTestDatabase：自动配置测试数据库。
+# @AutoConfigureTestEntityManager：自动配置TestEntityManager。
+# @ImportAutoConfiguration：引入自动配置。
+#
+# properties：              key=value属性（String[]），在运行测试之前添加到Spring Environment。
+# showSql：                 是否输出SQL，默认值：true，属性映射：spring.jpa.show-sql。
+# bootstrapMode：           测试仓库支持的BootstrapMode，默认值：DEFAULT，属性映射：spring.data.jpa.repositories.bootstrap-mode。
+# useDefaultFilters：       默认过滤器是否应该与@SpringBootApplication一起使用，默认情况下不包含任何Bean，默认值：true。
+# includeFilters：          包含过滤器（Filter[]），把过滤后的Bean添加到应用程序上下文。
+# excludeFilters：          排除过滤器（Filter[]），过滤掉要添加到应用程序上下文的Bean。
+# excludeAutoConfiguration：排除自动配置类（Class<?>[]），排除应用于@DataJpaTest的自动配置类，@ImportAutoConfiguration.exclude的别名。
 org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+
+```
+
+### AutoConfigureDataJpa
+
+```
+
+# @AutoConfigureDataJpa：为Spring Data JPA测试引入自动配置。
+# 应该使用@DataJpaTest，而不是直接使用@AutoConfigureDataJpa。
+# @Target：类（TYPE）。
+# @Inherited：可继承。
+# @ImportAutoConfiguration：引入自动配置。
+org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa
+
+```
+
+### AutoConfigureTestEntityManager
+
+```
+
+# @AutoConfigureTestEntityManager：为测试类自动配置TestEntityManager。
+# @Target：类（TYPE）、方法（METHOD）。
+# @Inherited：可继承。
+# @ImportAutoConfiguration：引入自动配置。
+org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestEntityManager
+
+```
+
+### DataJpaTestContextBootstrapper
+
+```
+
+# 支持@DataJpaTest的测试上下文启动器。
+org.springframework.boot.test.context.SpringBootTestContextBootstrapper
+    org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper
+
+# 支持@DataJpaTest的测试上下文启动器（TestContextBootstrapper）。
+# getProperties：获取@DataJpaTest.properties。
 org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper
+
+```
+
+### DataJpaTypeExcludeFilter
+
+```
+
+# @DataJpaTest注解的类型排除过滤器。
+org.springframework.boot.context.TypeExcludeFilter
+    org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter
+        org.springframework.boot.test.autoconfigure.filter.StandardAnnotationCustomizableTypeExcludeFilter
+            org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTypeExcludeFilter
+
+# @DataJpaTest注解的类型排除过滤器（TypeExcludeFilter）。
 org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTypeExcludeFilter
+
+```
+
+### TestEntityManager
+
+```
+
+# JPA测试中使用的EntityManager。
+# 提供了EntityManager方法的子集，以及persist/flush/find等的辅助方法。
+# entityManagerFactory：实体管理器工厂。
+# persistAndGetId： 持久化实体并返回ID。
+# persist：         持久化实体。
+# persistFlushFind：持久化实体，把持久化上下文同步到数据库，并根据ID进行查找。
+# persistAndFlush： 持久化实体，把持久化上下文同步到数据库。
+# merge：           合并实体状态。
+# remove：          删除实体。
+# find：            查找实体。
+# flush：           把持久化上下文同步到数据库。
+# refresh：         刷新实体状态。
+# clear：           清理持久化上下文，使所有实体游离。
+# detach：          从持久化上下文删除实体，使实体游离。
+# getId：           获取ID。
+# getEntityManager：获取EntityManager。
 org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 
 ```

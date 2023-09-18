@@ -216,7 +216,8 @@ org.springframework.boot.test.autoconfigure.jooq.JooqTest
 
 ```
 
-# 为jOOQ测试引入自动配置。应该使用@JooqTest，而不是直接使用@AutoConfigureJooq
+# 为jOOQ测试引入自动配置。
+# 应该使用@JooqTest，而不是直接使用@AutoConfigureJooq。
 # @Target：类（TYPE）。
 # @Inherited：可继承。
 # @ImportAutoConfiguration：引入自动配置。
