@@ -1,7 +1,5 @@
 # JPA
 
-org.springframework.boot.orm.jpa
-org.springframework.boot.orm.jpa.hibernate
 org.springframework.boot.autoconfigure.orm.jpa
 org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa
 org.springframework.boot.test.autoconfigure.orm.jpa
@@ -40,12 +38,11 @@ org.springframework.boot.autoconfigure.orm.jpa.HibernatePropertiesCustomizer
 org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.NamingStrategiesHibernatePropertiesCustomizer
 ```
 
-## JPA配置
+## Hibernate JPA
 
 ```
 
 org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
-org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa.HibernateMetricsAutoConfiguration
 
 org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration
 
@@ -160,6 +157,28 @@ org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
 # locateTransactionManager：从Spring配置的JtaTransactionManager中获取事务管理器（TransactionManager）。
 # locateUserTransaction：   从Spring配置的JtaTransactionManager中获取用户事务（UserTransaction）。
 org.springframework.boot.orm.jpa.hibernate.SpringJtaPlatform
+
+```
+
+## Hibernate指标
+
+### HibernateMetricsAutoConfiguration
+
+```
+
+# @Configuration：配置类。
+# @AutoConfigureAfter：自动配置类，在MetricsAutoConfiguration、HibernateJpaAutoConfiguration和SimpleMetricsExportAutoConfiguration配置之后配置Hibernate指标。
+# @ConditionalOnClass：前提条件，类路径中存在类：EntityManagerFactory、SessionFactory、HibernateMetrics、MeterRegistry。
+# @ConditionalOnBean：前提条件，BeanFactory中存在Bean：EntityManagerFactory、MeterRegistry。
+#
+# ENTITY_MANAGER_FACTORY_SUFFIX：       实体管理器工厂后缀："entityManagerFactory"。
+# entityManagerFactories：              实体管理器工厂映射。
+# meterRegistry：                       指标注册表。
+# afterSingletonsInstantiated：         在单例实例化之后，把实体管理器工厂绑定到指标注册表中。
+# bindEntityManagerFactoriesToRegistry：把实体管理器工厂绑定到指标注册表中。
+# bindEntityManagerFactoryToRegistry：  把实体管理器工厂绑定到指标注册表中。
+# getEntityManagerFactoryName：         根据Bean名称，获取实体管理器工厂的名称。
+org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa.HibernateMetricsAutoConfiguration
 
 ```
 
