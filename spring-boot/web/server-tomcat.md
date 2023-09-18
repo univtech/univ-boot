@@ -323,7 +323,61 @@ org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader
 
 
 
+```
 
+
+spring.datasource.tomcat.abandon-when-percentage-full
+spring.datasource.tomcat.access-to-underlying-connection-allowed
+spring.datasource.tomcat.alternate-username-allowed
+spring.datasource.tomcat.commit-on-return
+spring.datasource.tomcat.connection-properties
+spring.datasource.tomcat.data-source-j-n-d-i
+spring.datasource.tomcat.db-properties
+spring.datasource.tomcat.default-auto-commit
+spring.datasource.tomcat.default-catalog
+spring.datasource.tomcat.default-read-only
+spring.datasource.tomcat.default-transaction-isolation
+spring.datasource.tomcat.driver-class-name
+spring.datasource.tomcat.fair-queue
+spring.datasource.tomcat.ignore-exception-on-pre-load
+spring.datasource.tomcat.init-s-q-l
+spring.datasource.tomcat.initial-size
+spring.datasource.tomcat.jdbc-interceptors
+spring.datasource.tomcat.jmx-enabled
+spring.datasource.tomcat.log-abandoned
+spring.datasource.tomcat.log-validation-errors
+spring.datasource.tomcat.login-timeout
+spring.datasource.tomcat.max-active
+spring.datasource.tomcat.max-age
+spring.datasource.tomcat.max-idle
+spring.datasource.tomcat.max-wait
+spring.datasource.tomcat.min-evictable-idle-time-millis
+spring.datasource.tomcat.min-idle
+spring.datasource.tomcat.name
+spring.datasource.tomcat.num-tests-per-eviction-run
+spring.datasource.tomcat.password
+spring.datasource.tomcat.propagate-interrupt-state
+spring.datasource.tomcat.remove-abandoned
+spring.datasource.tomcat.remove-abandoned-timeout
+spring.datasource.tomcat.rollback-on-return
+spring.datasource.tomcat.suspect-timeout
+spring.datasource.tomcat.test-on-borrow
+spring.datasource.tomcat.test-on-connect
+spring.datasource.tomcat.test-on-return
+spring.datasource.tomcat.test-while-idle
+spring.datasource.tomcat.time-between-eviction-runs-millis
+spring.datasource.tomcat.url
+spring.datasource.tomcat.use-disposable-connection-facade
+spring.datasource.tomcat.use-equals
+spring.datasource.tomcat.use-lock
+spring.datasource.tomcat.use-statement-facade
+spring.datasource.tomcat.username
+spring.datasource.tomcat.validation-interval
+spring.datasource.tomcat.validation-query
+spring.datasource.tomcat.validation-query-timeout
+spring.datasource.tomcat.validator-class-name
+
+```
 
 
 ```
@@ -348,6 +402,8 @@ org.springframework.boot.autoconfigure.websocket.reactive.WebSocketReactiveAutoC
 
 org.springframework.boot.actuate.web.mappings.servlet.DispatcherServletHandlerMappings.TomcatServletInitializer
 
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration.EmbeddedTomcat
+org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryConfiguration.EmbeddedTomcat
 ```
 
 
