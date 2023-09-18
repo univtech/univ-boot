@@ -1,5 +1,11 @@
 # JPA
 
+org.springframework.boot.orm.jpa
+org.springframework.boot.orm.jpa.hibernate
+org.springframework.boot.autoconfigure.orm.jpa
+org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa
+org.springframework.boot.test.autoconfigure.orm.jpa
+
 ## JPA属性
 
 ### spring.jpa.*
@@ -72,7 +78,7 @@ org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings
 
 ```
 
-## JpaRepository
+## JPA仓库
 
 ### JpaRepositoriesAutoConfiguration
 
