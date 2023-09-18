@@ -162,7 +162,7 @@ org.springframework.boot.autoconfigure.flyway.FlywayProperties
 # @Import：引入配置类：DatabaseInitializationDependencyConfigurer。
 # @ImportRuntimeHints：引入RuntimeHints注册器：FlywayAutoConfigurationRuntimeHints。
 # @ConditionalOnClass：前提条件，类路径中存在类：Flyway。
-# @ConditionalOnProperty：前提条件，spring.flyway.enabled=true或spring.flyway.enabled不存在。
+# @ConditionalOnProperty：前提条件：spring.flyway.enabled=true或spring.flyway.enabled不存在。
 # @Conditional：前提条件：满足FlywayDataSourceCondition，即BeanFactory中存在Bean：DataSource或JdbcConnectionDetails，或者存在spring.flyway.url。
 #
 # stringOrNumberMigrationVersionConverter：
@@ -322,7 +322,7 @@ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayData
 # @ConditionalOnBean：前提条件，BeanFactory中存在Bean：JdbcConnectionDetails。
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.JdbcConnectionDetailsCondition
 
-# @ConditionalOnProperty：前提条件，存在spring.flyway.url
+# @ConditionalOnProperty：前提条件：存在spring.flyway.url
 org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayDataSourceCondition.FlywayUrlCondition
 
 ```
