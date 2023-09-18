@@ -66,11 +66,43 @@ org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider
 org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings
 ```
 
-
+### EntityManagerFactoryBuilder
 
 ```
+
+# JPA EntityManagerFactory实例的构造器。
+# 在构造时收集常见配置，通过流式构造器可以创建一个或多个LocalContainerEntityManagerFactoryBean。
+# 构造器中包含了最常见的选项，也可以@Bean注解的方法返回LocalContainerEntityManagerFactoryBean之前执行更多的操作。
+# jpaVendorAdapter：                JPA供应商适配器。
+# persistenceUnitManager：          持久化单元管理器。
+# jpaProperties：                   JPA属性。
+# persistenceUnitRootLocation：     持久化单元的根目录。
+# bootstrapExecutor：               启动时的异步任务执行器。
+# persistenceUnitPostProcessors：   持久化单元的后置处理器。
+#
+# dataSource：                      根据DataSource，创建EntityManagerFactoryBuilder.Builder。
+# setBootstrapExecutor：            设置AsyncTaskExecutor，用于LocalContainerEntityManagerFactoryBean。
+# setPersistenceUnitPostProcessors：设置PersistenceUnitPostProcessor，应用于创建LocalContainerEntityManagerFactoryBean的PersistenceUnitInfo。
 org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder
+
+# LocalContainerEntityManagerFactoryBean的流式构造器。
+# dataSource：      数据源。
+# managedTypes：    持久化托管的类型。
+# packagesToScan：  扫描@Entity注解的包名。
+# persistenceUnit： 持久化单元的名称。
+# properties：      标准JPA或供应商特定配置的属性key=value。
+# mappingResources：持久化单元的映射资源。
+# jta：             是否使用JTA数据源。
+#
+# managedTypes：    配置持久化托管的类型。
+# packages：        配置扫描@Entity注解的包名。
+# persistenceUnit： 配置持久化单元的名称。
+# properties：      配置标准JPA或供应商特定配置的属性。
+# mappingResources：配置持久化单元的映射资源（等同于persistence.xml中的<mapping-file>）。映射资源必须相对于类路径的根目录，例如："META-INF/mappings.xml"或"com/mycompany/repository/mappings.xml"。
+# jta：             配置是否使用JTA数据源。
+# build：           构造LocalContainerEntityManagerFactoryBean。
 org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder.Builder
+
 ```
 
 ### JpaDatabaseInitializerDetector
