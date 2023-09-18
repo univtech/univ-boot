@@ -64,9 +64,6 @@ org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.Hiberna
 org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder
 org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder.Builder
 
-org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
-org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
-
 org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
 org.springframework.boot.orm.jpa.hibernate.SpringJtaPlatform
 
@@ -75,6 +72,46 @@ org.springframework.boot.autoconfigure.orm.jpa.EntityManagerFactoryDependsOnPost
 org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider
 org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings
 
+
+```
+
+
+
+
+
+
+### JpaDatabaseInitializerDetector
+
+```
+
+# 数据库初始化器检测器。
+org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
+        org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
+        org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
+
+# 数据库初始化器检测器，检测指定类型的Bean：
+# spring.jpa.defer-datasource-initialization=true时：检测：EntityManagerFactory。
+# spring.jpa.defer-datasource-initialization=false或不存在时：不进行检测。
+# detectionComplete：配置其他依赖于JPA初始化器的初始化器。
+org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
+
+```
+
+### JpaDependsOnDatabaseInitializationDetector
+
+```
+
+# 依赖于数据库初始化的Bean检测器。
+org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
+    org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
+        org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
+        org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
+
+# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：
+# spring.jpa.defer-datasource-initialization=true时：不进行检测。
+# spring.jpa.defer-datasource-initialization=false或不存在时：检测EntityManagerFactory、AbstractEntityManagerFactoryBean。
+org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
 
 ```
 

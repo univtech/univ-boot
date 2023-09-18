@@ -338,7 +338,6 @@ org.springframework.boot.sql.init.dependency.BeansOfTypeDetector
 org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector
     org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector
         org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
-        org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
         org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
 
 # 数据库初始化器检测器。
@@ -356,12 +355,6 @@ org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitiali
 # 优先级顺序：Ordered.LOWEST_PRECEDENCE - 100。
 org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector
 
-# 数据库初始化器检测器，检测指定类型的Bean：。
-# spring.jpa.defer-datasource-initialization=true时：检测：EntityManagerFactory。
-# spring.jpa.defer-datasource-initialization=false或不存在时：不进行检测。
-# detectionComplete：配置其他依赖于JPA初始化器的初始化器。
-org.springframework.boot.orm.jpa.JpaDatabaseInitializerDetector
-
 # 数据库初始化器检测器，检测指定类型的Bean：R2dbcScriptDatabaseInitializer。
 org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
 
@@ -375,7 +368,6 @@ org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializerDetector
 org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector
     org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector
         org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
-        org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
         org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
         org.springframework.boot.autoconfigure.quartz.SchedulerDependsOnDatabaseInitializationDetector
         org.springframework.boot.autoconfigure.session.JdbcIndexedSessionRepositoryDependsOnDatabaseInitializationDetector
@@ -392,11 +384,6 @@ org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabas
 
 # 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：JdbcOperations、NamedParameterJdbcOperations。
 org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector
-
-# 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：
-# spring.jpa.defer-datasource-initialization=true时：不进行检测。
-# spring.jpa.defer-datasource-initialization=false或不存在时：检测EntityManagerFactory、AbstractEntityManagerFactoryBean。
-org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector
 
 # 依赖于数据库初始化的Bean检测器，检测指定类型的Bean：JobRepository。
 org.springframework.boot.autoconfigure.batch.JobRepositoryDependsOnDatabaseInitializationDetector
