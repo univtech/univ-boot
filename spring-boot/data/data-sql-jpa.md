@@ -176,6 +176,12 @@ org.springframework.boot.autoconfigure.data.jpa.EnversRevisionRepositoriesRegist
 
 ```
 
+# @AutoConfiguration：自动配置类：在HibernateJpaAutoConfiguration配置之后配置TestEntityManager。
+# @ConditionalOnClass：前提条件，类路径中存在类：EntityManagerFactory。
+#
+# testEntityManager：
+# @Bean：创建Bean：TestEntityManager，依赖Bean：EntityManagerFactory。
+# @ConditionalOnMissingBean：前提条件，BeanFactory中不存在Bean：TestEntityManager。
 org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration
 
 org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa
