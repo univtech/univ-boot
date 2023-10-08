@@ -6,23 +6,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.univtech.boot</groupId>
-    <artifactId>univboot-bom</artifactId>
+    <artifactId>univ-boot-bom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>univboot-bom</name>
-    <description>Univboot BOM</description>
-    <url>https://univtech.org.cn/projects/univboot</url>
+    <name>univ-boot-bom</name>
+    <description>Univ Boot BOM</description>
+    <url>https://univtech.org.cn/projects/univ-boot</url>
 
     <scm>
-        <connection>scm:git:git://github.com/univtech/univboot.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/univtech/univboot.git</developerConnection>
-        <url>https://github.com/univtech/univboot</url>
+        <connection>scm:git:git://github.com/univtech/univ-boot.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/univtech/univ-boot.git</developerConnection>
+        <url>https://github.com/univtech/univ-boot</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/univtech/univboot/issues</url>
+        <url>https://github.com/univtech/univ-boot/issues</url>
     </issueManagement>
 
     <organization>
@@ -54,7 +54,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.univtech.boot</groupId>
-                <artifactId>univboot-web-mvc</artifactId>
+                <artifactId>univ-boot-web-mvc</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

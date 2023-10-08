@@ -7,25 +7,25 @@
 
     <parent>
         <groupId>org.univtech.boot</groupId>
-        <artifactId>univboot</artifactId>
+        <artifactId>univ-boot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>univboot-web-mvc</artifactId>
+    <artifactId>univ-boot-web-mvc</artifactId>
 
-    <name>univboot-web-mvc</name>
-    <description>Univboot Web MVC</description>
-    <url>https://univtech.org.cn/projects/univboot</url>
+    <name>univ-boot-web-mvc</name>
+    <description>Univ Boot Web MVC</description>
+    <url>https://univtech.org.cn/projects/univ-boot</url>
 
     <scm>
-        <connection>scm:git:git://github.com/univtech/univboot.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/univtech/univboot.git</developerConnection>
-        <url>https://github.com/univtech/univboot</url>
+        <connection>scm:git:git://github.com/univtech/univ-boot.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/univtech/univ-boot.git</developerConnection>
+        <url>https://github.com/univtech/univ-boot</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/univtech/univboot/issues</url>
+        <url>https://github.com/univtech/univ-boot/issues</url>
     </issueManagement>
 
     <organization>

@@ -12,27 +12,27 @@
     </parent>
 
     <modules>
-        <module>univboot-web-mvc</module>
+        <module>univ-boot-web-mvc</module>
     </modules>
 
     <groupId>org.univtech.boot</groupId>
-    <artifactId>univboot</artifactId>
+    <artifactId>univ-boot</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>univboot</name>
-    <description>Univboot</description>
-    <url>https://univtech.org.cn/projects/univboot</url>
+    <name>univ-boot</name>
+    <description>Univ Boot</description>
+    <url>https://univtech.org.cn/projects/univ-boot</url>
 
     <scm>
-        <connection>scm:git:git://github.com/univtech/univboot.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/univtech/univboot.git</developerConnection>
-        <url>https://github.com/univtech/univboot</url>
+        <connection>scm:git:git://github.com/univtech/univ-boot.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/univtech/univ-boot.git</developerConnection>
+        <url>https://github.com/univtech/univ-boot</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/univtech/univboot/issues</url>
+        <url>https://github.com/univtech/univ-boot/issues</url>
     </issueManagement>
 
     <organization>
@@ -57,7 +57,7 @@
     </licenses>
 
     <properties>
-        <univboot.version>1.0.0-SNAPSHOT</univboot.version>
+        <univ-boot.version>1.0.0-SNAPSHOT</univ-boot.version>
 
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
@@ -77,7 +77,7 @@
 
 <!--            <dependency>
                 <groupId>org.univtech.boot</groupId>
-                <artifactId>univboot-bom</artifactId>
+                <artifactId>univ-boot-bom</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
